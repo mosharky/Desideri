@@ -25,3 +25,6 @@ realms_persistence.json
 TrashSlotSaveState.json
 usercache.json
 usernamecache.json
+
+# ide files
+.vscode/settings.json
