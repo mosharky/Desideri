@@ -1,3 +1,7 @@
+# config
+jei/world/*
+jei/blacklist.cfg
+
 # kubejs
 kubejs/assets/*
 kubejs/exported/*
