@@ -1,0 +1,23 @@
+# kubejs
+kubejs/assets/*
+kubejs/exported/*
+
+# root folders
+not-enough-crashes/*
+crash-reports/*
+resourcepacks/*
+screenshots/*
+saves/*
+logs/*
+mods/*
+
+# root files
+.curseclient
+knownkeys.txt
+minecraftinstance.json
+options.txt
+patchouli_data.json
+realms_persistence.json
+TrashSlotSaveState.json
+usercache.json
+usernamecache.json
