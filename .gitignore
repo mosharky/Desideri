@@ -1,19 +1,19 @@
 # config
-config/jei/world/*
-config/jei/bookmarks.ini
+/config/jei/world/
+/config/jei/bookmarks.ini
 
 # kubejs
-kubejs/assets/*
-kubejs/exported/*
+/kubejs/assets/*
+/kubejs/exported/*
 
 # root folders
-not-enough-crashes/*
-crash-reports/*
-resourcepacks/*
-screenshots/*
-saves/*
-logs/*
-mods/*
+/not-enough-crashes/
+/crash-reports/
+/resourcepacks/
+/screenshots/
+/saves/
+/logs/
+/mods/
 
 # root files
 .curseclient
