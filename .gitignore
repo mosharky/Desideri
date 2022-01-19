@@ -1,6 +1,6 @@
 # config
-jei/world/*
-jei/blacklist.cfg
+config/jei/world/*
+config/jei/blacklist.cfg
 
 # kubejs
 kubejs/assets/*
