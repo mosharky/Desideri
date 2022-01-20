@@ -3,7 +3,6 @@
 /config/jei/bookmarks.ini
 
 # kubejs
-/kubejs/assets/*
 /kubejs/exported/*
 
 # root folders
