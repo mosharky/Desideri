@@ -1,6 +1,6 @@
 {
   "bamboo_grove_enabled": true,
-  "bayou_enabled": true,
+  "bayou_enabled": false,
   "bog_enabled": true,
   "boreal_forest_enabled": true,
   "cherry_blossom_grove_enabled": true,
