@@ -10,7 +10,6 @@ onEvent('recipes', event => {
 
 	// Beyond Earth Plates
 	event.recipes.createPressing('beyond_earth:compressed_steel', 'beyond_earth:steel_ingot').id('beyond_earth:compressing/compressed_steel')
-	event.recipes.createPressing('beyond_earth:compressed_silicon', 'beyond_earth:silicon_ingot').id('beyond_earth:compressing/compressed_silicon')
 	event.recipes.createPressing('beyond_earth:desh_plate', 'beyond_earth:desh_ingot').id('beyond_earth:desh_plate')
 	event.recipes.createMixing('beyond_earth:steel_ingot', ['#forge:ingots/iron', '4x minecraft:charcoal']).superheated().id('beyond_earth:steel_ingot_blasting')
 })

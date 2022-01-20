@@ -8,8 +8,7 @@ onEvent('tags.items', event => {
     // Add (and create) tag to item
     const addTagToItem = [
         { tag: 'forge:plates', item: '#beyond_earth:compresseds' },
-        { tag: 'forge:plates/steel', item: 'beyond_earth:compressed_steel' },
-        { tag: 'forge:plates/silicon', item: 'beyond_earth:compressed_silicon' },
+        { tag: 'forge:plates/steel', item: 'beyond_earth:compressed_steel' }
     ]
 
     // ForEach loop that adds tags to an item from constant addTagToItem
