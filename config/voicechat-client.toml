@@ -75,7 +75,7 @@ denoiser = false
 #If sound physics integration should be enabled
 soundphysics = true
 #If voice chat should work in singleplayer/LAN worlds
-run_local_server = true
+run_local_server = false
 #Whether to use the Java implementation of microphone capturing instead of OpenAL
 java_microphone_implementation = false
 #If the microphone workaround hack should be used (MacOS only)
