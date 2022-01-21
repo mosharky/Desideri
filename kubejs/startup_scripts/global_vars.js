@@ -4,3 +4,12 @@ global.fullRemovals = [
     'beyond_earth:iron_plate',
     'beyond_earth:compressor'
 ]
+
+// Replace output
+global.outputReplace = []
+
+// Replace input
+global.inputReplace = []
+
+// Replace input AND output
+global.InputOutputReplace = []
