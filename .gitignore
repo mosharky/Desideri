@@ -1,6 +1,7 @@
 # config
 /config/jei/world/
 /config/jei/bookmarks.ini
+config/jei-client.toml
 
 # kubejs
 /kubejs/exported/*
@@ -30,3 +31,5 @@ patchouli_data.json
 # launcher-related
 .curseclient
 icon.png
+/server-resource-packs/
+/coremods/
