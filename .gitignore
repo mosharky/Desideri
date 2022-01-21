@@ -15,7 +15,6 @@
 /mods/
 
 # root files
-.curseclient
 knownkeys.txt
 minecraftinstance.json
 options.txt
@@ -27,3 +26,7 @@ patchouli_data.json
 
 # ide files
 /.vscode/
+
+# launcher-related
+.curseclient
+icon.png
