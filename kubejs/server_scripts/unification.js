@@ -2,10 +2,10 @@
 onEvent('recipes', (event) => {
 
     // ------------------------------ REPLACING ------------------------------
-    let ingots = ['steel']
+    let materials = ['steel']
     let mod = 'immersiveengineering'
     if (mod = 'immersiveengineering') {
-        for (let i of ingots) {
+        for (let i of materials) {
             event.replaceOutput({}, `#forge:ingots/${i}`, `${mod}:ingot_${i}`)
             event.replaceOutput({}, `#forge:plates/${i}`, `${mod}:plate_${i}`)
             event.replaceOutput({}, `#forge:nuggets/${i}`, `${mod}:nugget_${i}`)
