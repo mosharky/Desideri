@@ -63,5 +63,11 @@ global.fullRemovals.push(
     'beyond_earth:iron_stick',
     'beyond_earth:iron_plate',
     'beyond_earth:compressed_desh',
+    'beyond_earth:steel_ingot',
+    'beyond_earth:steel_nugget',
+    'beyond_earth:steel_block',
+    'create:iron_sheet',
+    'create:golden_sheet',
+    'create:copper_sheet',
 )
 
