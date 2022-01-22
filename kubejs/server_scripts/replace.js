@@ -6,9 +6,6 @@ onEvent('recipes', (event) => {
     )
     global.inputReplace.push(
         { condition: {}, toReplace: 'minecraft:ender_eye', replaceWith: 'kubejs:lesser_ender_eye' },
-        { condition: { mod: 'beyond_earth' }, toReplace: '#forge:plates/iron', replaceWith: '#forge:plates/steel' },
-        { condition: { mod: 'beyond_earth' }, toReplace: '#forge:nuggets/iron', replaceWith: '#forge:nuggets/steel' },
-        { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' }
     )
     global.InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }

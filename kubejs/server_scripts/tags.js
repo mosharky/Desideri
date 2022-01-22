@@ -1,4 +1,4 @@
-// priority: 750
+// priority: 500
 // Item Tags
 onEvent('tags.items', event => {
 
@@ -7,7 +7,6 @@ onEvent('tags.items', event => {
 
     // Add (and create) tag to item
     const addTagToItem = [
-        // { tag: 'forge:plates', item: '#beyond_earth:compresseds' },
     ]
 
     // ForEach loop that adds tags to an item from constant addTagToItem

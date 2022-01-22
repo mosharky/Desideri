@@ -1,3 +1,9 @@
+// priority: 750
+
+global.fullRemovals.push(
+    'beyond_earth:compressor',
+)
+
 onEvent('recipes', (event) => {
 
     // Removes by recipe ID
