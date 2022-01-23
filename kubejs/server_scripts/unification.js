@@ -1,6 +1,11 @@
 // priority: 9999
-// This script attempts to make future work easier with the for loops. 
-// This doesn't purely just unify, it also attempts to remove rather useless metals/ores.
+/*
+Keep in mind that this script attempts to make future work easier with the for loops,
+and that this script doesn't just unify, it also attempts to remove useless metals/ores, such as:
+- Lead
+- Uranium
+- Silver
+*/
 
 let materials = ['steel']
 let vanillaMaterials = ['iron', 'gold', 'copper']
@@ -45,10 +50,11 @@ global.inputReplace.push(
     { condition: {}, toReplace: '#beyond_earth:compresseds/steel', replaceWith: '#forge:plates/steel' },
     { condition: {}, toReplace: '#forge:plates/zinc', replaceWith: '#forge:plates/aluminum' },
     { condition: {}, toReplace: '#forge:rods/iron', replaceWith: 'immersiveengineering:stick_iron' },
+    { condition: {}, toReplace: '#forge:plates/constantan', replaceWith: '#forge:plates/copper' },
     { condition: { mod: 'beyond_earth' }, toReplace: '#forge:plates/iron', replaceWith: '#forge:plates/steel' },
     { condition: { mod: 'beyond_earth' }, toReplace: '#forge:nuggets/iron', replaceWith: '#forge:nuggets/steel' },
     { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' },
-    { condition: { id: 'immersiveengineering:crafting/capacitor_lv' }, toReplace: '#forge:plates/lead', replaceWith: '#forge:plates/brass' }
+    { condition: { id: 'immersiveengineering:crafting/capacitor_lv' }, toReplace: '#forge:plates/lead', replaceWith: '#forge:plates/brass' },
 )
 // Replace inputs and outputs
 global.InputOutputReplace.push(
@@ -67,7 +73,7 @@ global.idRemovals.push(
     /beyond_earth:generating*./,
     'beyond_earth:fuelrefining/fuel_from_oil',
     'create:crafting/materials/copper_ingot',
-    'create:crafting/materials/copper_nugget'
+    'create:crafting/materials/copper_nugget',
 )
 
 // Add to fullRemovals array
@@ -88,8 +94,64 @@ global.fullRemovals.push(
     'beyond_earth:fuel_refinery',
     'beyond_earth:fuel_bucket',
     'beyond_earth:oil_bucket',
-    /.*uranium*./,
-    'immersiveengineering:plate_uranium',
-    'create:copper_nugget'
+    /immersiveengineering:.*uranium*./,
+    'immersiveengineering:plate_uranium', // remove when .removeAllTagsFrom() accepts regex
+    'create:copper_nugget',
+    /immersiveengineering:.*lead*./,
+    'immersiveengineering:plate_lead', // remove when .removeAllTagsFrom() accepts regex
+    /immersiveengineering:.*constantan*./,
+    'immersiveengineering:plate_constantan', // remove when .removeAllTagsFrom() accepts regex
+    /immersiveengineering:.*nickel*./,
+    'immersiveengineering:plate_nickel', // remove when .removeAllTagsFrom() accepts regex
+    'immersiveengineering:ingot_nickel', // remove when .removeAllTagsFrom() accepts regex
 )
 
+// ------------------------------ RECIPES ------------------------------
+// Remove blueprint recipes when KubeJS Immersive Engineering addon fixes recipes not being applied to blueprint recipes
+onEvent('recipes', event => {
+    event.custom({
+        type: 'immersiveengineering:blueprint',
+        inputs: [
+            { item: 'immersiveengineering:empty_casing' },
+            { tag: 'forge:gunpowder' },
+            {
+                base_ingredient: { tag: 'forge:nuggets/steel' },
+                count: 2
+            },
+        ],
+        category: 'bullet',
+        result: {
+            item: 'immersiveengineering:casull'
+        }
+    }).id('immersiveengineering:blueprint/bullet_casull')
+    event.custom({
+        type: 'immersiveengineering:blueprint',
+        inputs: [
+            { item: 'immersiveengineering:empty_casing' },
+            { tag: 'forge:gunpowder' },
+            {
+                base_ingredient: { tag: 'forge:nuggets/steel' },
+                count: 2
+            },
+            { item: 'kubejs:lesser_ender_eye' }
+        ],
+        category: 'specialBullet',
+        result: { item: 'immersiveengineering:homing' }
+    }).id('immersiveengineering:blueprint/bullet_homing')
+    event.custom({
+        type: 'immersiveengineering:blueprint',
+        inputs: [
+            { item: 'immersiveengineering:empty_casing' },
+            { tag: 'forge:gunpowder' },
+            {
+                base_ingredient: { tag: 'forge:nuggets/silver' },
+                count: 2
+            },
+            { tag: 'forge:nuggets/steel' }
+        ],
+        category: 'bullet',
+        result: {
+            item: 'immersiveengineering:silver'
+        }
+    }).id('immersiveengineering:blueprint/bullet_silver')
+})
