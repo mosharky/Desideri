@@ -1,4 +1,10 @@
 // priority: 9999
+// This script attempts to make future work easier with the for loops. 
+// This doesn't purely just unify, it also attempts to remove rather useless metals/ores.
+
+let materials = ['steel']
+let vanillaMaterials = ['iron', 'gold', 'copper']
+let mod = 'immersiveengineering'
 
 // ------------------------------ TAGS ------------------------------
 onEvent('tags.fluids', event => {
@@ -10,9 +16,6 @@ onEvent('tags.fluids', event => {
 })
 
 // ------------------------------ REPLACING ------------------------------
-let materials = ['steel']
-let vanillaMaterials = ['iron', 'gold', 'copper']
-let mod = 'immersiveengineering'
 if (mod = 'immersiveengineering') {
     for (let i of materials) {
         global.inputReplace.push(
@@ -35,7 +38,7 @@ if (mod = 'immersiveengineering') {
 
 // Replace outputs
 global.outputReplace.push(
-    { condition: {}, toReplace: '', replaceWith: '' },
+    { condition: {}, toReplace: 'create:copper_nugget', replaceWith: 'immersiveengineering:nugget_copper' },
 )
 // Replace inputs
 global.inputReplace.push(
@@ -44,7 +47,8 @@ global.inputReplace.push(
     { condition: {}, toReplace: '#forge:rods/iron', replaceWith: 'immersiveengineering:stick_iron' },
     { condition: { mod: 'beyond_earth' }, toReplace: '#forge:plates/iron', replaceWith: '#forge:plates/steel' },
     { condition: { mod: 'beyond_earth' }, toReplace: '#forge:nuggets/iron', replaceWith: '#forge:nuggets/steel' },
-    { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' }
+    { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' },
+    { condition: { id: 'immersiveengineering:crafting/capacitor_lv' }, toReplace: '#forge:plates/lead', replaceWith: '#forge:plates/brass' }
 )
 // Replace inputs and outputs
 global.InputOutputReplace.push(
@@ -61,8 +65,9 @@ global.idRemovals.push(
     /immersiveengineering:crafting\/(raw_hammercrushing*.|hammercrushing*.|plate*.)/,
     /immersiveengineering:crafting\/stick_*./,
     /beyond_earth:generating*./,
-    'beyond_earth:fuelrefining/fuel_from_oil'
-
+    'beyond_earth:fuelrefining/fuel_from_oil',
+    'create:crafting/materials/copper_ingot',
+    'create:crafting/materials/copper_nugget'
 )
 
 // Add to fullRemovals array
@@ -83,5 +88,8 @@ global.fullRemovals.push(
     'beyond_earth:fuel_refinery',
     'beyond_earth:fuel_bucket',
     'beyond_earth:oil_bucket',
+    /.*uranium*./,
+    'immersiveengineering:plate_uranium',
+    'create:copper_nugget'
 )
 
