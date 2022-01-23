@@ -1,4 +1,4 @@
-// Registers items into the game
+// Registers items/blocks/fluids into the game
 
 // Rarity constants:
 // RARITY_UNCOMMON
