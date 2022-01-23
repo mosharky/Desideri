@@ -1,4 +1,14 @@
 // priority: 9999
+
+// ------------------------------ TAGS ------------------------------
+onEvent('tags.fluids', event => {
+    event.add('beyond_earth:vehicle_fuel', 'immersiveengineering:biodiesel')
+    event.remove('minecraft:water', 'beyond_earth:fuel')
+    event.remove('beyond_earth:vehicle_fuel', 'beyond_earth:fuel')
+    event.remove('minecraft:water', 'beyond_earth:oil')
+    event.remove('beyond_earth:oil', 'beyond_earth:oil')
+})
+
 // ------------------------------ REPLACING ------------------------------
 let materials = ['steel']
 let vanillaMaterials = ['iron', 'gold', 'copper']
@@ -22,9 +32,12 @@ if (mod = 'immersiveengineering') {
 
 // Manual replace
 //{ condition: {}, toReplace: '', replaceWith: '' },
+
+// Replace outputs
 global.outputReplace.push(
     { condition: {}, toReplace: '', replaceWith: '' },
 )
+// Replace inputs
 global.inputReplace.push(
     { condition: {}, toReplace: '#beyond_earth:compresseds/steel', replaceWith: '#forge:plates/steel' },
     { condition: {}, toReplace: '#forge:plates/zinc', replaceWith: '#forge:plates/aluminum' },
@@ -33,30 +46,27 @@ global.inputReplace.push(
     { condition: { mod: 'beyond_earth' }, toReplace: '#forge:nuggets/iron', replaceWith: '#forge:nuggets/steel' },
     { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' }
 )
+// Replace inputs and outputs
 global.InputOutputReplace.push(
     { condition: {}, toReplace: 'create:iron_sheet', replaceWith: 'immersiveengineering:plate_iron' },
     { condition: {}, toReplace: 'create:golden_sheet', replaceWith: 'immersiveengineering:plate_gold' },
     { condition: {}, toReplace: 'create:copper_sheet', replaceWith: 'immersiveengineering:plate_copper' },
 )
 
+// ------------------------------ REMOVING ------------------------------
 
-onEvent('recipes', (event) => {
-    // ------------------------------ REMOVING ------------------------------
+// Remove by recipe ID
+global.idRemovals.push(
+    'beyond_earth:desh_plate',
+    /immersiveengineering:crafting\/(raw_hammercrushing*.|hammercrushing*.|plate*.)/,
+    /immersiveengineering:crafting\/stick_*./,
+    /beyond_earth:generating*./,
+    'beyond_earth:fuelrefining/fuel_from_oil'
 
-    // Removes by recipe ID
-    const idRemovals = [
-        'beyond_earth:desh_plate',
-        // Disable hammering recipes
-        /immersiveengineering:crafting\/(raw_hammercrushing*.|hammercrushing*.|plate*.)/,
-        // Disable crafting grid rod recipes
-        /immersiveengineering:crafting\/stick_*./
-    ]
-    idRemovals.forEach((removal) => {
-        event.remove({ id: removal })
-    })
-})
+)
 
 // Add to fullRemovals array
+// Regex no worky :(
 global.fullRemovals.push(
     'beyond_earth:hammer',
     'beyond_earth:compressed_steel',
@@ -69,5 +79,9 @@ global.fullRemovals.push(
     'create:iron_sheet',
     'create:golden_sheet',
     'create:copper_sheet',
+    'beyond_earth:coal_generator',
+    'beyond_earth:fuel_refinery',
+    'beyond_earth:fuel_bucket',
+    'beyond_earth:oil_bucket',
 )
 
