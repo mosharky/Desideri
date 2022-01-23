@@ -6,6 +6,7 @@ onEvent('recipes', (event) => {
     )
     global.inputReplace.push(
         { condition: {}, toReplace: 'minecraft:ender_eye', replaceWith: 'kubejs:lesser_ender_eye' },
+        { condition: { id: 'immersiveengineering:crafting/empty_casing' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
     )
     global.InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }
