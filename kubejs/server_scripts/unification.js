@@ -56,11 +56,17 @@ global.InputOutputReplace.push(
 
 // Remove by recipe ID
 global.idRemovals.push(
+    // Remove crafting grid ore/ingot/plate recipes
     /immersiveengineering:crafting\/(raw_hammercrushing*.|hammercrushing*.|plate*.)/,
+    // Remove crafting grid rod recipes
     /immersiveengineering:crafting\/stick_*./,
+    // Remove redundant copper recipes from Create
     'create:crafting/materials/copper_ingot',
     'create:crafting/materials/copper_nugget',
-    'beyond_earth:desh_plate' // for some reason this recipe isn't being covered by fullRemovals
+    // for some reason this recipe isn't being covered by fullRemovals
+    'beyond_earth:desh_plate', 
+    // Remove Alloy Kiln brass recipe
+    'immersiveengineering:alloysmelter/brass'
 )
 
 global.typeRemovals.push(
@@ -100,6 +106,7 @@ global.fullRemovals.push(
     /immersiveengineering:.*nickel*./,
     'immersiveengineering:plate_nickel', // remove when .removeAllTagsFrom() accepts regex
     'immersiveengineering:ingot_nickel', // remove when .removeAllTagsFrom() accepts regex
+    'immersiveengineering:dust_electrum',
 )
 
 // ------------------------------ RECIPES ------------------------------
@@ -167,4 +174,6 @@ onEvent('recipes', event => {
 
     // Steel recipe for Create
     event.recipes.createMixing('immersiveengineering:ingot_steel', ['#forge:ingots/iron', 'immersiveengineering:coal_coke']).superheated()
+    // Electrum recipe for Create
+    event.recipes.createMixing('immersiveengineering:ingot_electrum', ['#forge:ingots/gold', '#forge:ingots/silver']).heated()
 })
