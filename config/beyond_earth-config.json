@@ -9,7 +9,7 @@
   "Meteor Structure": true,
   "Venus Bullet Structure": true,
   "Venus Tower Structure": true,
-  "Oil Well Structure": true,
+  "Oil Well Structure": false,
   "Crimson Village Structure": true,
   "Player Oxygen System": true,
   "Entity Oxygen System": true
