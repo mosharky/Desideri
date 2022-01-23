@@ -1,4 +1,4 @@
-// priority: 500
+// priority: 1000
 // Item Tags
 onEvent('tags.items', event => {
 

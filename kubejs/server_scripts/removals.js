@@ -1,4 +1,4 @@
-// priority: 750
+// priority: 500
 
 global.fullRemovals.push(
     'beyond_earth:compressor',

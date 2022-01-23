@@ -1,4 +1,4 @@
-// priority: 1000
+// priority: 750
 onEvent('recipes', (event) => {
     //{ condition: {}, toReplace: '', replaceWith: '' },
     global.outputReplace.push(
@@ -7,6 +7,7 @@ onEvent('recipes', (event) => {
     global.inputReplace.push(
         { condition: {}, toReplace: 'minecraft:ender_eye', replaceWith: 'kubejs:lesser_ender_eye' },
         { condition: { id: 'immersiveengineering:crafting/empty_casing' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
+        { condition: { id: 'immersiveengineering:crafting/empty_shell' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
     )
     global.InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }
