@@ -7,9 +7,9 @@ global.fullRemovals.push(
 onEvent('recipes', (event) => {
 
     // Removes by recipe ID
-    const idRemovals = [
-        ''
-    ]
+    global.idRemovals.push(
+        '',
+    )
 
     // Removes inputs and outputs from global list fullRemoval
     global.fullRemovals.forEach((removal) => {
@@ -17,7 +17,7 @@ onEvent('recipes', (event) => {
         event.remove({ output: removal })
     })
     // Removes by recipe ID
-    idRemovals.forEach((removal) => {
+    global.idRemovals.forEach((removal) => {
         event.remove({ id: removal })
     })
 })
