@@ -12,8 +12,5 @@ onEvent('recipes', event => {
 	event.recipes.createPressing('immersiveengineering:plate_steel', '#forge:ingots/steel')
 	event.recipes.createPressing('beyond_earth:desh_plate', 'beyond_earth:desh_ingot')
 	event.recipes.createMixing('immersiveengineering:ingot_steel', ['#forge:ingots/iron', 'immersiveengineering:coal_coke']).superheated()
-
-	// Steel rod recipe, because it's missing?
-	event.recipes.immersiveengineeringMetalPress('immersiveengineering:stick_steel', '#forge:ingots/steel', 'immersiveengineering:mold_rod')
 })
 
