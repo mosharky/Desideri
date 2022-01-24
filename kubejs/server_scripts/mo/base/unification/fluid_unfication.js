@@ -1,3 +1,4 @@
+// priority: 9999
 onEvent('tags.fluids', event => {
     // Biodiesel > Beyond Earth fuel/oil
     event.add('beyond_earth:vehicle_fuel', 'immersiveengineering:biodiesel')
