@@ -1,4 +1,4 @@
-// priority: 9999
+// priority: 1250
 /*
 This script doesn't just unify, it also attempts to remove useless metals/ores, such as:
 - Lead
@@ -11,11 +11,11 @@ This also sort of creates a parity between Create and Immersive Engineering
 // ------------------------------ REPLACING ------------------------------
 //{ condition: {}, toReplace: '', replaceWith: '' },
 // Replace outputs
-global.outputReplace.push(
+outputReplace.push(
     { condition: {}, toReplace: 'create:copper_nugget', replaceWith: 'immersiveengineering:nugget_copper' },
 )
 // Replace inputs
-global.inputReplace.push(
+inputReplace.push(
     // Beyond Earth "plate" instead of "compressed"
     { condition: {}, toReplace: '#beyond_earth:compresseds/steel', replaceWith: '#forge:plates/steel' },
     { condition: {}, toReplace: '#beyond_earth:compresseds/desh', replaceWith: '#forge:plates/desh' },
@@ -37,7 +37,7 @@ global.inputReplace.push(
     { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' },
 )
 // Replace inputs and outputs
-global.InputOutputReplace.push(
+InputOutputReplace.push(
     // Create & IE overlap in plates
     { condition: {}, toReplace: 'create:iron_sheet', replaceWith: 'immersiveengineering:plate_iron' },
     { condition: {}, toReplace: 'create:golden_sheet', replaceWith: 'immersiveengineering:plate_gold' },
@@ -47,7 +47,7 @@ global.InputOutputReplace.push(
 // ------------------------------ REMOVING ------------------------------
 
 // Remove by recipe ID
-global.idRemovals.push(
+idRemovals.push(
     // Remove crafting grid ore/ingot/plate recipes
     /immersiveengineering:crafting\/(raw_hammercrushing*.|hammercrushing*.|plate*.)/,
     // Remove crafting grid rod recipes
@@ -62,7 +62,7 @@ global.idRemovals.push(
 )
 
 // Remove by recipe type
-global.typeRemovals.push(
+typeRemovals.push(
     // Removes Beyond Earth's compressor recipes
     'beyond_earth:compressing',
     // Removes Beyond Earth's coal generator recipes

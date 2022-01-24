@@ -5,11 +5,11 @@ global.fullRemovals.push(
     '',
 )
 // Removes by recipe ID
-global.idRemovals.push(
+idRemovals.push(
     '',
 )
 // Removes by recipe type
-global.typeRemovals.push(
+typeRemovals.push(
     '',
 )
 
@@ -20,11 +20,11 @@ onEvent('recipes', (event) => {
         event.remove({ output: removal })
     })
     // Removes by recipe ID
-    global.idRemovals.forEach((removal) => {
+    idRemovals.forEach((removal) => {
         event.remove({ id: removal })
     })
     // Removes by recipe type
-    global.typeRemovals.forEach((removal) => {
+    typeRemovals.forEach((removal) => {
         event.remove({ type: removal })
     })
 })

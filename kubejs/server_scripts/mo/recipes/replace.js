@@ -1,15 +1,15 @@
 // priority: 750
 onEvent('recipes', (event) => {
     //{ condition: {}, toReplace: '', replaceWith: '' },
-    global.outputReplace.push(
+    outputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }
     )
-    global.inputReplace.push(
+    inputReplace.push(
         { condition: {}, toReplace: 'minecraft:ender_eye', replaceWith: 'kubejs:lesser_ender_eye' },
         { condition: { id: 'immersiveengineering:crafting/empty_casing' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
         { condition: { id: 'immersiveengineering:crafting/empty_shell' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
     )
-    global.InputOutputReplace.push(
+    InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }
     )
 
@@ -27,15 +27,15 @@ onEvent('recipes', (event) => {
     */
 
     // Replace output
-    global.outputReplace.forEach((recipe) => {
+    outputReplace.forEach((recipe) => {
         event.replaceOutput(recipe.condition, recipe.toReplace, recipe.replaceWith)
     })
     // Replace input
-    global.inputReplace.forEach((recipe) => {
+    inputReplace.forEach((recipe) => {
         event.replaceInput(recipe.condition, recipe.toReplace, recipe.replaceWith)
     })
     // Replace input AND output
-    global.InputOutputReplace.forEach((recipe) => {
+    InputOutputReplace.forEach((recipe) => {
         event.replaceOutput(recipe.condition, recipe.toReplace, recipe.replaceWith)
         event.replaceInput(recipe.condition, recipe.toReplace, recipe.replaceWith)
     })

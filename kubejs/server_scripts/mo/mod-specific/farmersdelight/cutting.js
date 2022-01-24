@@ -1,4 +1,4 @@
-// Credits to the Enigmatica 6 modpack and its incredible development team for this file.
+// Credits to the Enigmatica 6 modpack and its incredible development team for the majority of this file.
 // This is an edited version of their script here: https://github.com/EnigmaticaModpacks/Enigmatica6/blob/master/kubejs/server_scripts/enigmatica/kubejs/base/recipetypes/farmersdelight/cutting.js
 function cuttingRecipe(ingredient, tool, result) {
     return {
@@ -6,21 +6,21 @@ function cuttingRecipe(ingredient, tool, result) {
         ingredients: [ingredient],
         tool: tool,
         result: result
-    };
+    }
 }
 
 function filletRecipe(fish, filletCount) {
     return cuttingRecipe(Ingredient.of(fish), Ingredient.of('#forge:tools/knives'), [
         Item.of('aquaculture:fish_fillet_raw', filletCount),
         Item.of('minecraft:bone_meal', Math.ceil(filletCount / 3))
-    ]);
+    ])
 }
 onEvent('recipes', (event) => {
     const recipes = [
         cuttingRecipe(
             Ingredient.of('#forge:storage_blocks/clay'),
             {
-                type: 'farmersdelight:tool',
+                type: 'farmersdelight:tool_action',
                 tool: 'shovel'
             },
             [Item.of('minecraft:clay_ball', 4)]
@@ -36,7 +36,7 @@ onEvent('recipes', (event) => {
         cuttingRecipe(
             Ingredient.of('aquaculture:goldfish'),
             {
-                type: 'farmersdelight:tool',
+                type: 'farmersdelight:tool_action',
                 tool: 'pickaxe'
             },
             [Item.of('minecraft:raw_gold', 1)]
@@ -76,37 +76,12 @@ onEvent('recipes', (event) => {
         filletRecipe('alexsmobs:blobfish', 6),
         //filletRecipe('betterendforge:end_fish_raw', 2),
         //filletRecipe('upgrade_aquatic:lionfish', 12)
-    ];
+    ]
 
     recipes.forEach((recipe) => {
-        event.custom(recipe);
-    });
-
-    const tillsIntoFarmland = [
-        { type: 'minecraft:farmland', soils: ['minecraft:grass_block', 'minecraft:dirt', 'minecraft:coarse_dirt'] },
-        { type: 'farmersdelight:rich_soil_farmland', soils: ['farmersdelight:rich_soil'] },
-    ];
-
-    tillsIntoFarmland.forEach(function (category) {
-        let farmland = category.type;
-        category.soils.forEach(function (soil) {
-            let tool = {
-                type: 'farmersdelight:tool',
-                tool: 'hoe'
-            };
-            let ingredients = Ingredient.of(soil);
-            let result = [Item.of(farmland)];
-
-            event.custom({
-                type: 'farmersdelight:cutting',
-                ingredients: [ingredients],
-                tool: tool,
-                result: result
-            });
-        });
-    });
-
-    /*
+        event.custom(recipe)
+    })
+    
     buildWoodVariants.forEach((variant) => {
         let woodRecipes = [
             {
@@ -117,25 +92,24 @@ onEvent('recipes', (event) => {
                 input: variant.woodBlock,
                 output: variant.woodBlockStripped
             }
-        ];
+        ]
 
         woodRecipes.forEach((recipe) => {
             let tool = {
-                type: 'farmersdelight:tool',
-                tool: 'axe'
-            };
-            let ingredients = Ingredient.of(recipe.input);
-            let result = [Item.of(recipe.output), Item.of('farmersdelight:tree_bark')];
+                type: 'farmersdelight:tool_action',
+                action: 'axe_strip'
+            }
+            let ingredients = Ingredient.of(recipe.input)
+            let result = [Item.of(recipe.output), Item.of('farmersdelight:tree_bark')]
 
-            event.remove({ mod: 'farmersdelight', output: recipe.output });
+            event.remove({ mod: 'farmersdelight', output: recipe.output })
 
             event.custom({
                 type: 'farmersdelight:cutting',
                 ingredients: [ingredients],
                 tool: tool,
                 result: result
-            });
-        });
-    });
-    */
-});
+            })
+        })
+    })
+})

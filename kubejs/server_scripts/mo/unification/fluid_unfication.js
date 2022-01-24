@@ -1,4 +1,4 @@
-// priority: 9999
+// priority: 1250
 onEvent('tags.fluids', event => {
     // Biodiesel > Beyond Earth fuel/oil
     event.add('beyond_earth:vehicle_fuel', 'immersiveengineering:biodiesel')
@@ -18,7 +18,7 @@ onEvent('tags.fluids', event => {
     })
 })
 
-global.typeRemovals.push(
+typeRemovals.push(
     // Removes Beyond Earth's fuel refinery recipes
     'beyond_earth:fuelrefining',
 )
