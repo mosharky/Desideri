@@ -20,17 +20,17 @@ onEvent('recipes', event => {
     }).id('immersiveengineering:crafting/radiator')
     event.custom({
         type: 'immersiveengineering:turn_and_copy',
-        'group': 'ie_concrete',
+        group: 'ie_concrete',
         pattern: [
             'scs',
             'gbg',
             'scs'
         ],
         key: {
-            's': { tag: 'forge:sand' },
-            'c': { tag: 'forge:clay' },
-            'g': { tag: 'forge:gravel' },
-            'b': { item: 'minecraft:water_bucket' }
+            s: { tag: 'forge:sand' },
+            c: { tag: 'forge:clay' },
+            g: { tag: 'forge:gravel' },
+            b: { item: 'minecraft:water_bucket' }
         },
         result: {
             item: 'immersiveengineering:concrete',
@@ -40,17 +40,17 @@ onEvent('recipes', event => {
     }).id('immersiveengineering:crafting/concrete')
     event.custom({
         type: 'immersiveengineering:turn_and_copy',
-        'group': 'ie_concrete',
+        group: 'ie_concrete',
         pattern: [
             'scs',
             'gbg',
             'scs'
         ],
         key: {
-            's': { item: 'immersiveengineering:slag' },
-            'c': { tag: 'forge:clay' },
-            'g': { tag: 'forge:gravel' },
-            'b': { item: 'minecraft:water_bucket' }
+            s: { item: 'immersiveengineering:slag' },
+            c: { tag: 'forge:clay' },
+            g: { tag: 'forge:gravel' },
+            b: { item: 'minecraft:water_bucket' }
         },
         result: {
             item: 'immersiveengineering:concrete',
@@ -60,7 +60,7 @@ onEvent('recipes', event => {
     }).id('immersiveengineering:crafting/concrete2')
     event.custom({
         type: 'immersiveengineering:shapeless_fluid',
-        'ingredients': [
+        ingredients: [
             { tag: 'forge:dusts/wood' },
             { tag: 'forge:dusts/wood' },
             { tag: 'forge:dusts/wood' },
