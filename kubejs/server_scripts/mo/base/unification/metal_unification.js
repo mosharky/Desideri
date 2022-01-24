@@ -1,20 +1,12 @@
 // priority: 9999
 /*
-Keep in mind that this script attempts to make future work easier with the for loops,
-and that this script doesn't just unify, it also attempts to remove useless metals/ores, such as:
+This script doesn't just unify, it also attempts to remove useless metals/ores, such as:
 - Lead
 - Uranium
 - Silver
-*/
 
-// ------------------------------ TAGS ------------------------------
-onEvent('tags.fluids', event => {
-    event.add('beyond_earth:vehicle_fuel', 'immersiveengineering:biodiesel')
-    event.remove('minecraft:water', 'beyond_earth:fuel')
-    event.remove('beyond_earth:vehicle_fuel', 'beyond_earth:fuel')
-    event.remove('minecraft:water', 'beyond_earth:oil')
-    event.remove('beyond_earth:oil', 'beyond_earth:oil')
-})
+This also sort of creates a parity between Create and Immersive Engineering
+*/
 
 // ------------------------------ REPLACING ------------------------------
 //{ condition: {}, toReplace: '', replaceWith: '' },
@@ -69,16 +61,15 @@ global.idRemovals.push(
     'immersiveengineering:alloysmelter/brass'
 )
 
+// Remove by recipe type
 global.typeRemovals.push(
     // Removes Beyond Earth's compressor recipes
     'beyond_earth:compressing',
     // Removes Beyond Earth's coal generator recipes
     'beyond_earth:generating',
-    // Removes Beyond Earth's fuel refinery recipes
-    'beyond_earth:fuelrefining',
 )
 
-// Add to fullRemovals array
+// Fully remove
 // Regex no worky :(
 global.fullRemovals.push(
     'beyond_earth:iron_stick',
@@ -93,9 +84,6 @@ global.fullRemovals.push(
     'create:copper_sheet',
     'beyond_earth:coal_generator',
     'beyond_earth:compressor',
-    'beyond_earth:fuel_refinery',
-    'beyond_earth:fuel_bucket',
-    'beyond_earth:oil_bucket',
     /immersiveengineering:.*uranium*./,
     'immersiveengineering:plate_uranium', // remove when .removeAllTagsFrom() accepts regex
     'create:copper_nugget',

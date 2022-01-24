@@ -1,11 +1,10 @@
+// Shaped recipes
 onEvent('recipes', event => {
 
+    const id_prefix = 'mo:base/'
     let ring = ['AAA', 'A A', 'AAA']
     let filled_ring = ['AAA', 'ABA', 'AAA']
-    let filled_ring_diverse = ['ABA', 'BCB', 'ABA']
     let stick = ['A', 'A']
-    let longstick = ['A', 'A', 'A']
-
 
     const recipes = [
         // ESSENTIALS
@@ -35,7 +34,7 @@ onEvent('recipes', event => {
             key: {
                 A: '#minecraft:logs'
             },
-            id: 'mo:sticks_from_logs'
+            id: `${id_prefix}sticks_from_logs`
         },
         // Classic ladder recipe
         {
@@ -44,7 +43,7 @@ onEvent('recipes', event => {
             key: {
                 A: '#forge:rods/wooden'
             },
-            id: 'mo:ladders'
+            id: `${id_prefix}ladders`
         },
         // Chest from logs
         {
@@ -53,7 +52,7 @@ onEvent('recipes', event => {
             key: {
                 A: '#minecraft:logs'
             },
-            id: 'mo:chest_from_logs'
+            id: `${id_prefix}:chest_from_logs`
         },
 
 
@@ -98,7 +97,6 @@ onEvent('recipes', event => {
             id: 'beyond_earth:nasa_workbench'
         },
     ]
-
     recipes.forEach((recipe) => {
         event.shaped(recipe.output, recipe.pattern, recipe.key).id(recipe.id);
     });
