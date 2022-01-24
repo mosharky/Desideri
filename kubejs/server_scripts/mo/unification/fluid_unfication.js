@@ -13,7 +13,7 @@ onEvent('tags.fluids', event => {
         'hexerei:blood_fluid',
         'hexerei:tallow_fluid'
     ]
-    fluids.forEach((fluid) =>{
+    fluids.forEach((fluid) => {
         event.remove('minecraft:water', fluid)
     })
 })
