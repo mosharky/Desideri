@@ -24,7 +24,7 @@ onEvent('recipes', (event) => {
             Ingredient.of('aquaculture:goldfish'),
             {
                 type: 'farmersdelight:tool_action',
-                tool: 'pickaxe_dig'
+                action: 'pickaxe_dig'
             },
             [Item.of('minecraft:raw_gold', 1)]
         ),
