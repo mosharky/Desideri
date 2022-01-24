@@ -21,6 +21,9 @@ var woodVariantsToConstruct = [
     'biomesoplenty:palm',
     'biomesoplenty:dead',
     'biomesoplenty:hellbark',
+    'biomesoplenty:willow',
+    'hexerei:willow',
+    'hexerei:mahogany',
     /*
     'betterendforge:mossy_glowshroom',
     'betterendforge:lacugrove',
