@@ -52,7 +52,7 @@ onEvent('recipes', event => {
             key: {
                 A: '#minecraft:logs'
             },
-            id: `${id_prefix}:chest_from_logs`
+            id: `${id_prefix}chest_from_logs`
         },
 
 
