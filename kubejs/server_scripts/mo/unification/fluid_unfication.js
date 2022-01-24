@@ -4,18 +4,6 @@ onEvent('tags.fluids', event => {
     event.add('beyond_earth:vehicle_fuel', 'immersiveengineering:biodiesel')
     event.remove('beyond_earth:vehicle_fuel', 'beyond_earth:fuel')
     event.remove('beyond_earth:oil', 'beyond_earth:oil')
-    // Remove #minecraft:water tag from all fluids
-    let fluids = [
-        'beyond_earth:oil',
-        'beyond_earth:fuel',
-        'create:chocolate',
-        'create:honey',
-        'hexerei:blood_fluid',
-        'hexerei:tallow_fluid'
-    ]
-    fluids.forEach((fluid) => {
-        event.remove('minecraft:water', fluid)
-    })
 })
 
 typeRemovals.push(
