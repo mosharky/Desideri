@@ -17,19 +17,6 @@ function filletRecipe(fish, filletCount) {
 }
 onEvent('recipes', (event) => {
     const recipes = [
-        cuttingRecipe(
-            Ingredient.of('#forge:storage_blocks/clay'),
-            {
-                type: 'farmersdelight:tool_action',
-                tool: 'shovel'
-            },
-            [Item.of('minecraft:clay_ball', 4)]
-        ),
-        cuttingRecipe(Ingredient.of('minecraft:chicken'), Ingredient.of('#forge:tools/knives'), [
-            Item.of('farmersdelight:chicken_cuts', 2),
-            Item.of('simplefarming:raw_chicken_wings'),
-            Item.of('minecraft:bone_meal')
-        ]),
         cuttingRecipe(Ingredient.of('aquaculture:frog'), Ingredient.of('#forge:tools/knives'), [
             Item.of('quark:frog_leg', 2)
         ]),
@@ -37,7 +24,7 @@ onEvent('recipes', (event) => {
             Ingredient.of('aquaculture:goldfish'),
             {
                 type: 'farmersdelight:tool_action',
-                tool: 'pickaxe'
+                tool: 'pickaxe_dig'
             },
             [Item.of('minecraft:raw_gold', 1)]
         ),
