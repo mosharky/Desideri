@@ -13,7 +13,14 @@ var woodVariantsToConstruct = [
     'minecraft:spruce',
     'minecraft:warped',
     'minecraft:crimson',
-
+    'biomesoplenty:fir',
+    'biomesoplenty:redwood',
+    'biomesoplenty:cherry',
+    'biomesoplenty:mahogany',
+    'biomesoplenty:jacaranda',
+    'biomesoplenty:palm',
+    'biomesoplenty:dead',
+    'biomesoplenty:hellbark',
     /*
     'betterendforge:mossy_glowshroom',
     'betterendforge:lacugrove',
