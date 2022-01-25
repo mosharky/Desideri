@@ -33,8 +33,10 @@ const recipes = [
 */
 
 onEvent('recipes', event => {
-	recipes.forEach((recipe) => {
-            event.shapeless(recipe.output, recipe.inputs).id(recipe.id)
+    recipes.forEach((recipe) => {
+        recipe.id
+            ? event.shapeless(recipe.output, recipe.inputs).id(recipe.id)
+            : event.shapeless(recipe.output, recipe.inputs);
     });
 })
 
