@@ -7,11 +7,13 @@ global.fullRemovals.push(
     'supplementaries:flax_block',
     'supplementaries:flax',
     'supplementaries:rope',
-    /quark:.*_rune/
+    /quark:.*_rune/,
+    'farmersdelight:wheat_dough'
 )
 // Removes by recipe ID
 idRemovals.push(
     'supplementaries:strings',
+    'farmersdelight:raw_pasta_from_eggs',
 )
 // Removes by recipe type
 typeRemovals.push(
