@@ -1,16 +1,16 @@
 // Shapeless recipes
 
-const id_prefix = 'hiraeth:shapeless/'
+const shapeless_prefix = 'hiraeth:shapeless/'
 const recipes = [
 	{ 
 		output: '2x kubejs:hemolymph_pustules',
 		inputs: 'alexsmobs:hemolymph_sac',
-		id: `${id_prefix}hemolymph_pustules`
+		id: `${shapeless_prefix}hemolymph_pustules`
 	},
 	{
 		output: 'kubejs:lesser_ender_eye',
 		inputs: ['minecraft:ender_pearl', 'minecraft:blaze_powder', 'minecraft:blaze_powder'],
-		id: `${id_prefix}lesser_ender_eye`
+		id: `${shapeless_prefix}lesser_ender_eye`
 	},
 	{
 		output: 'beyond_earth:blue_iron_plating_block',
@@ -28,7 +28,7 @@ const recipes = [
 {
 	output:
 	inputs:
-	id: `${id_prefix}`
+	id: `${shapeless_prefix}`
 }
 */
 

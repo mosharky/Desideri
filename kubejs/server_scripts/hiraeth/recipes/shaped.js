@@ -1,7 +1,7 @@
 // Shaped recipes
 onEvent('recipes', event => {
 
-    const id_prefix = 'hiraeth:shaped/'
+    const shaped_prefix = 'hiraeth:shaped/'
     let ring = ['AAA', 'A A', 'AAA']
     let filled_ring = ['AAA', 'ABA', 'AAA']
     let stick = ['A', 'A']
@@ -35,7 +35,7 @@ onEvent('recipes', event => {
             key: {
                 A: '#minecraft:logs'
             },
-            id: `${id_prefix}sticks_from_logs`
+            id: `${shaped_prefix}sticks_from_logs`
         },
         // Classic ladder recipe
         {
@@ -44,7 +44,7 @@ onEvent('recipes', event => {
             key: {
                 A: '#forge:rods/wooden'
             },
-            id: `${id_prefix}ladders`
+            id: `${shaped_prefix}ladders`
         },
         // Chest from logs
         {
@@ -53,7 +53,7 @@ onEvent('recipes', event => {
             key: {
                 A: '#minecraft:logs'
             },
-            id: `${id_prefix}chest_from_logs`
+            id: `${shaped_prefix}chest_from_logs`
         },
 
 
