@@ -6,7 +6,8 @@ global.fullRemovals.push(
     'supplementaries:flax_seeds',
     'supplementaries:flax_block',
     'supplementaries:flax',
-    'supplementaries:rope'
+    'supplementaries:rope',
+    /quark:.*_rune/
 )
 // Removes by recipe ID
 idRemovals.push(
