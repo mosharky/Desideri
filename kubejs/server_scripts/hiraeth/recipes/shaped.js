@@ -5,6 +5,7 @@ onEvent('recipes', event => {
     let ring = ['AAA', 'A A', 'AAA']
     let filled_ring = ['AAA', 'ABA', 'AAA']
     let stick = ['A', 'A']
+    let four = ['AA', 'AA']
 
     const recipes = [
         // ESSENTIALS
@@ -96,6 +97,32 @@ onEvent('recipes', event => {
             },
             id: 'beyond_earth:nasa_workbench'
         },
+        
+        // Hexerei Wood fixes
+        {
+            output: '3x hexerei:willow_wood',
+            pattern: four,
+            key: {A: 'hexerei:willow_log'},
+            id: 'hexerei:willow_wood'
+        },
+        {
+            output: '3x hexerei:stripped_willow_wood',
+            pattern: four,
+            key: {A: 'hexerei:stripped_willow_log'},
+            id: 'hexerei:stripped_willow_wood'
+        },
+        {
+            output: '3x hexerei:mahogany_wood',
+            pattern: four,
+            key: {A: 'hexerei:mahogany_log'},
+            id: 'hexerei:mahogany_wood'
+        },
+        {
+            output: '3x hexerei:stripped_mahogany_wood',
+            pattern: four,
+            key: {A: 'hexerei:stripped_mahogany_log'},
+            id: 'hexerei:stripped_mahogany_wood'
+        }
     ]
     recipes.forEach((recipe) => {
         event.shaped(recipe.output, recipe.pattern, recipe.key).id(recipe.id);
