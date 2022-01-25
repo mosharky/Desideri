@@ -1,7 +1,7 @@
 // Shaped recipes
 onEvent('recipes', event => {
 
-    const id_prefix = 'mo:base/'
+    const id_prefix = 'hiraeth:shaped/'
     let ring = ['AAA', 'A A', 'AAA']
     let filled_ring = ['AAA', 'ABA', 'AAA']
     let stick = ['A', 'A']

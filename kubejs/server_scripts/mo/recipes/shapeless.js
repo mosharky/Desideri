@@ -1,6 +1,6 @@
 // Shapeless recipes
 
-const id_prefix = 'mo:base/'
+const id_prefix = 'hiraeth:shapeless/'
 const recipes = [
 	{ 
 		output: '2x kubejs:hemolymph_pustules',
