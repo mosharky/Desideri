@@ -10,14 +10,20 @@ const recipes = [
 	{
 		output: 'kubejs:lesser_ender_eye',
 		inputs: ['minecraft:ender_pearl', 'minecraft:blaze_powder', 'minecraft:blaze_powder'],
-		id: `${id_prefix}:lesser_ender_eye`
+		id: `${id_prefix}lesser_ender_eye`
 	},
 	{
 		output: 'beyond_earth:blue_iron_plating_block',
 		inputs: ['beyond_earth:iron_plating_block', '#forge:dyes/blue'],
 		id: 'beyond_earth:blue_iron_plating_block'
-	}
+	},
+	{
+		output: 'comforts:rope_and_nail',
+		inputs: ['farmersdelight:rope', 'minecraft:iron_ingot'],
+		id: 'comforts:rope_and_nail'
+	},
 ]
+
 /*
 {
 	output:
@@ -28,9 +34,7 @@ const recipes = [
 
 onEvent('recipes', event => {
 	recipes.forEach((recipe) => {
-        recipe.id
-            ? event.shapeless(recipe.output, recipe.inputs).id(recipe.id)
-            : event.shapeless(recipe.output, recipe.inputs);
+            event.shapeless(recipe.output, recipe.inputs).id(recipe.id)
     });
 })
 

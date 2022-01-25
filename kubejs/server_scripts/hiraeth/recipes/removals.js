@@ -2,11 +2,15 @@
 
 // Removes inputs and outputs from global list fullRemoval
 global.fullRemovals.push(
-    '',
+    'quark:rope',
+    'supplementaries:flax_seeds',
+    'supplementaries:flax_block',
+    'supplementaries:flax',
+    'supplementaries:rope'
 )
 // Removes by recipe ID
 idRemovals.push(
-    '',
+    'supplementaries:strings',
 )
 // Removes by recipe type
 typeRemovals.push(
