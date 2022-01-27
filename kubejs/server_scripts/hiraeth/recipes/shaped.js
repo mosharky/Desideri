@@ -94,6 +94,18 @@ const shaped = [
         },
         id: 'beyond_earth:nasa_workbench'
     },
+    {
+        output: 'backpacked:backpack',
+        pattern: ['ABA', 'CDC', 'EBE'],
+        key: {
+            A: 'minecraft:rabbit_hide',
+            B: 'minecraft:shulker_shell',
+            C: '#forge:string',
+            D: '#forge:ingots/iron',
+            E: 'minecraft:leather'
+        },
+        id: 'backpacked:backpack'
+    },
 
     // Hexerei Wood fixes
     {
