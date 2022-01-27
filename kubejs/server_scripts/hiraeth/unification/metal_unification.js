@@ -51,7 +51,7 @@ idRemovals.push(
     // Remove crafting grid ore/ingot/plate recipes
     /immersiveengineering:crafting\/(raw_hammercrushing*.|hammercrushing*.|plate*.)/,
     // Remove crafting grid rod recipes
-    /immersiveengineering:crafting\/stick_*(?!treated)/,
+    /immersiveengineering:crafting\/stick_(iron|steel|aluminum)/,
     // Remove redundant copper recipes from Create
     'create:crafting/materials/copper_ingot',
     'create:crafting/materials/copper_nugget',
