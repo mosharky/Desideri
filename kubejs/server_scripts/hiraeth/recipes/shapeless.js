@@ -1,16 +1,14 @@
 // Shapeless recipes
-
-const shapeless_prefix = 'hiraeth:shapeless/'
-const recipes = [
+const shapeless = [
 	{ 
 		output: '2x kubejs:hemolymph_pustules',
 		inputs: 'alexsmobs:hemolymph_sac',
-		id: `${shapeless_prefix}hemolymph_pustules`
+		id: 'hiraeth:shapeless/hemolymph_pustules'
 	},
 	{
 		output: 'kubejs:lesser_ender_eye',
 		inputs: ['minecraft:ender_pearl', 'minecraft:blaze_powder', 'minecraft:blaze_powder'],
-		id: `${shapeless_prefix}lesser_ender_eye`
+		id: 'hiraeth:shapeless/lesser_ender_eye'
 	},
 	{
 		output: 'beyond_earth:blue_iron_plating_block',
@@ -28,12 +26,12 @@ const recipes = [
 {
 	output:
 	inputs:
-	id: `${shapeless_prefix}`
+	id: 'hiraeth:shapeless/'
 }
 */
 
 onEvent('recipes', event => {
-    recipes.forEach((recipe) => {
+    shapeless.forEach((recipe) => {
         recipe.id
             ? event.shapeless(recipe.output, recipe.inputs).id(recipe.id)
             : event.shapeless(recipe.output, recipe.inputs);

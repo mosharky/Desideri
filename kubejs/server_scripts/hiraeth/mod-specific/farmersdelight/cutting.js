@@ -1,6 +1,5 @@
 // Credits to the Enigmatica 6 modpack and its incredible development team for the majority of this file.
 // This is an edited version of their script here: https://github.com/EnigmaticaModpacks/Enigmatica6/blob/master/kubejs/server_scripts/enigmatica/kubejs/base/recipetypes/farmersdelight/cutting.js
-const farmersdelight_cutting_prefix = 'hiraeth:farmersdelight/cutting/'
 function cuttingRecipe(ingredient, tool, result) {
     return {
         type: 'farmersdelight:cutting',
@@ -97,7 +96,7 @@ onEvent('recipes', (event) => {
                 ingredients: [ingredients],
                 tool: tool,
                 result: result
-            }).id(`${farmersdelight_cutting_prefix}${variant.modId}_${variant.logType}`)
+            })
         })
     })
 })

@@ -8,7 +8,8 @@ global.fullRemovals.push(
     'supplementaries:flax',
     'supplementaries:rope',
     /quark:.*_rune/,
-    'farmersdelight:wheat_dough'
+    'farmersdelight:wheat_dough',
+    'biomesoplenty:spanish_moss',
 )
 // Removes by recipe ID
 idRemovals.push(
