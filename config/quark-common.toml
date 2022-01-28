@@ -101,7 +101,7 @@
 	"Industrial Palette" = true
 	Hedges = true
 	Grate = true
-	"Gold Bars" = false
+	"Gold Bars" = true
 	"Glass Item Frame" = true
 	"Framed Glass" = true
 	"Duskbound Blocks" = true
@@ -1095,7 +1095,7 @@
 	Wraith = true
 	Toretoise = true
 	Stonelings = true
-	Shiba = true
+	Shiba = false
 	Frogs = true
 	Foxhound = true
 	Forgotten = true

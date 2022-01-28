@@ -7,6 +7,7 @@ onEvent('tags.items', event => {
 
     // Add (and create) tag to item
     const addTagToItem = [
+        { tag: 'desideri:disabled', item: global.fullRemovals },
         {
             tag: 'desideri:raw_fish_fillets',
             item: [

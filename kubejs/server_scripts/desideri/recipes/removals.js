@@ -11,7 +11,7 @@ global.fullRemovals.push(
     'farmersdelight:wheat_dough',
     'biomesoplenty:spanish_moss',
     /aquaculture:.*_fillet_knife/,
-    /quark:.*limestone*./
+    /quark:(backpack|potato_crate|carrot_crate|beetroot_crate|chute|gravisand|abacus|dragon_scale|.*limestone*.|.*blossom*.)/,
 )
 // Removes by recipe ID
 idRemovals.push(
