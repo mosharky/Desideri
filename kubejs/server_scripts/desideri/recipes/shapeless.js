@@ -20,6 +20,12 @@ const shapeless = [
 		inputs: ['farmersdelight:rope', 'minecraft:iron_ingot'],
 		id: 'comforts:rope_and_nail'
 	},
+	{
+		output: 'aquaculture:sushi',
+		inputs: ['#desideri:raw_fish_fillets', '#forge:crops/rice', 'minecraft:seagrass'],
+		id: 'aquaculture:sushi'
+
+	},
 ]
 
 /*
