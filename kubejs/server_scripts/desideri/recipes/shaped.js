@@ -32,7 +32,7 @@ const shaped = [
         key: {
             A: '#minecraft:logs'
         },
-        id: 'hiraeth:shaped/stick_from_logs'
+        id: 'desideri:shaped/stick_from_logs'
     },
     // Classic ladder recipe
     {
@@ -41,7 +41,7 @@ const shaped = [
         key: {
             A: '#forge:rods/wooden'
         },
-        id: 'hiraeth:shaped/ladders'
+        id: 'desideri:shaped/ladders'
     },
     // Chest from logs
     {
@@ -50,7 +50,7 @@ const shaped = [
         key: {
             A: '#minecraft:logs'
         },
-        id: 'hiraeth:shaped/chest_from_logs'
+        id: 'desideri:shaped/chest_from_logs'
     },
 
 

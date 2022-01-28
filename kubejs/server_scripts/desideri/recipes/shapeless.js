@@ -3,12 +3,12 @@ const shapeless = [
 	{ 
 		output: '2x kubejs:hemolymph_pustules',
 		inputs: 'alexsmobs:hemolymph_sac',
-		id: 'hiraeth:shapeless/hemolymph_pustules'
+		id: 'desideri:shapeless/hemolymph_pustules'
 	},
 	{
 		output: 'kubejs:lesser_ender_eye',
 		inputs: ['minecraft:ender_pearl', 'minecraft:blaze_powder', 'minecraft:blaze_powder'],
-		id: 'hiraeth:shapeless/lesser_ender_eye'
+		id: 'desideri:shapeless/lesser_ender_eye'
 	},
 	{
 		output: 'beyond_earth:blue_iron_plating_block',
@@ -26,7 +26,7 @@ const shapeless = [
 {
 	output:
 	inputs:
-	id: 'hiraeth:shapeless/'
+	id: 'desideri:shapeless/'
 }
 */
 
