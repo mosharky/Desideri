@@ -1,4 +1,4 @@
-# Hiraeth
+# Desideri
 An in-development minecraft mod pack.
 
 # Credits
