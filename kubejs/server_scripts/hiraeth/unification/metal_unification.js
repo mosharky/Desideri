@@ -72,6 +72,7 @@ typeRemovals.push(
 // Fully remove
 // Regex no worky :(
 global.fullRemovals.push(
+    'beyond_earth:hammer',
     'beyond_earth:iron_stick',
     'beyond_earth:iron_plate',
     'beyond_earth:steel_ingot',
