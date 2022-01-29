@@ -30,4 +30,8 @@ onEvent('lootjs', event => {
         .addLootTableModifier(/supplementaries:blocks\/urn_loot\/(common|uncommon)/)
         .thenReplace('supplementaries:flax_seeds', 'minecraft:string')
         .thenReplace('supplementaries:rope', '8x farmersdelight:rope')
+
+    event
+        .addLootTableModifier('minecraft:loot')
+        .thenReplace('beyond_earth:steel_ingot', 'immersiveengineering:ingot_steel')
 })
