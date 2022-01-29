@@ -106,6 +106,16 @@ const shaped = [
         },
         id: 'backpacked:backpack'
     },
+    {
+        output: 'farmersdelight:chocolate_pie',
+        pattern: ['   ', 'AAA', 'BCB'],
+        key: {
+            A: 'create:bar_of_chocolate',
+            B: 'minecraft:sugar',
+            C: 'farmersdelight:pie_crust'
+        },
+        id: 'farmersdelight:chocolate_pie'
+    },
 
     // Hexerei Wood fixes
     {
