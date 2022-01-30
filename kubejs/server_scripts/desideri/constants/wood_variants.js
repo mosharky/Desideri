@@ -24,6 +24,7 @@ var woodVariantsToConstruct = [
     'biomesoplenty:willow',
     'hexerei:willow',
     'hexerei:mahogany',
+    'ecologics:coconut'
     /*
     'betterendforge:mossy_glowshroom',
     'betterendforge:lacugrove',
