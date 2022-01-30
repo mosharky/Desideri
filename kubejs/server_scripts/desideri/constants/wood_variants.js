@@ -18,7 +18,6 @@ var woodVariantsToConstruct = [
     'biomesoplenty:cherry',
     'biomesoplenty:mahogany',
     'biomesoplenty:jacaranda',
-    'biomesoplenty:palm',
     'biomesoplenty:dead',
     'biomesoplenty:hellbark',
     'biomesoplenty:willow',
