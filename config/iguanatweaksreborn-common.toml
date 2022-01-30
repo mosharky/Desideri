@@ -34,8 +34,7 @@
 	[Hunger."Health Regen"]
 		#Sets the other config options to some default values (actual config is not changed, but custom values are ignored):
 		#NONE: Use custom values
-		#COMBAT_TEST: health regeneration works like the Combat Tests Shapshots,
-		#IGUANA_TWEAKS: health regen is slow (1 hp every 10 secs) and also the player can have Bleeding and Well Fed effects that slow down / speed up the health regen.
+		#COMBAT_TEST: health regeneration works like the Combat Tests Shapshots,IGUANA_TWEAKS: health regen is slow (1 hp every 10 secs) and also the player can have Bleeding and Well Fed effects that slow down / speed up the health regen.
 		#Allowed Values: NONE, COMBAT_TEST, IGUANA_TWEAKS
 		"Health Regen Preset" = "NONE"
 		#Sets how many ticks between the health regeneration happens (vanilla is 80; Combat Test Snapshot is 40; Iguana Tweaks preset is 200).
