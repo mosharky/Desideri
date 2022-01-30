@@ -1,11 +1,13 @@
 // priority: 500
 
 // Removes inputs and outputs from global list fullRemoval
+// me when regex isnt supported by removeAllTagsFrom
 global.fullRemovals.push(
     'quark:rope',
     'supplementaries:flax_seeds',
     'supplementaries:flax_block',
     'supplementaries:flax',
+    'supplementaries:wild_flax',
     'supplementaries:rope',
     /quark:.*_rune/,
     'farmersdelight:wheat_dough',
