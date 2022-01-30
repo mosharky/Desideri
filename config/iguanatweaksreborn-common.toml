@@ -3,7 +3,7 @@
 "Enable Miscellaneous" = true
 "Enable Mining" = true
 "Enable Combat" = false
-"Enable Movement" = true
+"Enable Movement" = false
 "Enable Sleep & Respawn" = true
 "Enable Farming" = true
 "Enable Stack Size" = false
