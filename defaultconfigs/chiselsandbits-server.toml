@@ -12,6 +12,9 @@
 	change-tracker-size = 20
 	#When enabled this deletes excess bits which are created during chisel operations but which don't fit into the players inventory and bit bags.
 	delete-excess-bits = true
+	#balancing.light-factor-multiplier.comment
+	#Range: 0.0 ~ 4096.0
+	light-factor-multiplier = 1.0
 
 [style]
 	#style.bit-size.comment

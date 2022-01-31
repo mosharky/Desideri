@@ -1,10 +1,10 @@
 
 [voice_chat]
 	#The port of the voice chat server
-	#Range: 0 ~ 65535
+	#Range: -1 ~ 65535
 	port = 24454
 	#The IP address to bind the voice chat server on
-	#Use '0.0.0.0' to bind to an IP address chosen by the kernel
+	#Leave empty to bind to an IP address chosen by the kernel
 	bind_address = "0.0.0.0"
 	#The distance to where the voice can be heard
 	#Range: 1.0 ~ 1000000.0
