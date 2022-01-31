@@ -28,4 +28,6 @@
 	"Player Oxygen System" = true
 	#Enable or Disable Entity Oxygen System
 	"Entity Oxygen System" = true
+	#Enable or Disable Pygro Brute to Spawn
+	"Pygro Brute Spawn" = true
 
