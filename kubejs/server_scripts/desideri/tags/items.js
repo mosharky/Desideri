@@ -4,6 +4,10 @@ onEvent('tags.items', event => {
 
     // Remove all tags from fullRemovals items in array
     event.removeAllTagsFrom(global.fullRemovals)
+    event.removeAllTagsFrom([
+        'valhelsia_structures:metal_framed_glass',
+        'valhelsia_structures:metal_framed_glass_pane',
+    ])
 
     // Add (and create) tag to item
     const addTagToItem = [

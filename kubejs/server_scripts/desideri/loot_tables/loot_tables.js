@@ -1,3 +1,4 @@
+// Generic loot tables
 onEvent('generic.loot_tables', event => {
     // Overrides supplementaries:blocks/urn_loot/epic
     event.addGeneric('supplementaries:blocks/urn_loot/epic', table => {
@@ -12,6 +13,13 @@ onEvent('generic.loot_tables', event => {
     })
 })
 
+// Block loot tables
+onEvent('block.loot_tables', event => {
+    event.addSimpleBlock('valhelsia_structures:metal_framed_glass')
+    event.addSimpleBlock('valhelsia_structures:metal_framed_glass_pane')
+})
+
+// Replacing items in loot tables
 onEvent('lootjs', event => {
     // Remove Flax from common/uncommon urn loot tbales
     event
