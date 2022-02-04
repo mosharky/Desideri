@@ -24,6 +24,7 @@ TrashSlotSaveState.json
 usercache.json
 usernamecache.json
 patchouli_data.json
+o_prof
 
 # ide files
 /.vscode/
