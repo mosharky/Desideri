@@ -8,4 +8,6 @@
 	buttonY = -22
 	#The main text color for the GUI
 	textColor = "4210752"
+	#True to add the Diet button to the inventory GUI, false otherwise
+	addButton = true
 

@@ -80,4 +80,6 @@ run_local_server = false
 java_microphone_implementation = false
 #If the microphone workaround hack should be used (MacOS only)
 macos_microphone_workaround = false
+#If fake players should have the disconnected icon above their head
+show_fake_players_disconnected = false
 

@@ -51,8 +51,8 @@
 		"Starve Damage" = 1
 		#Set to true to consume Hunger only (and not saturation) when regenerating health (false for Vanilla and Iguana Tweaks presets; true for Combat Test).
 		"Consume Hunger Only" = false
-		#Vanilla consumes 1 saturation or hunger whenever Exhaustion reaches 4.0. You can change that value with this config option.
-		#Range: 0.0 ~ 1.7976931348623157E308
+		#Vanilla consumes 1 saturation or hunger whenever Exhaustion reaches 4.0. You can change that value with this config option. NOTE that Minecraft caps this value to 40
+		#Range: 0.0 ~ 40.0
 		"Max Exhaustion" = 4.0
 		#Set to true to disable the health regen boost given when max hunger and saturation (false for Vanilla; true for Combat Test and IguanaTweaks Presets).
 		"Disable Saturation Regen Boost" = false
@@ -95,6 +95,9 @@
 		#When breaking block you'll get exhaustion every tick during the breaking.
 		#Range: 0.0 ~ 1024.0
 		"Exhaustion per tick when breaking a block" = 0.005
+		#Every second the player will get this exhaustion.
+		#Range: 0.0 ~ 1024.0
+		"Passive Exhaustion" = 0.005
 
 [Experience]
 	#Decrease / Increase every experience point dropped in the world
@@ -105,6 +108,8 @@
 	"Enable Experience From Spawners' Mobs" = true
 	#Changes the experience lost on death and xp per level required.
 	"Enable Player Experience" = true
+	#Change other experience sources
+	"Enable Other Experience" = true
 
 	#Decrease / Increase every experience point dropped in the world
 	[Experience."Global Experience"]
@@ -117,7 +122,7 @@
 	[Experience."Experience From Blocks"]
 		#Experience dropped by blocks (Ores and Spawners) will be multiplied by this multiplier. Experience dropped by blocks are still affected by 'Global Experience Multiplier'
 		#Can be set to 0 to make blocks drop no experience
-		#Range: 0.0 ~ 1000.0
+		#Range: 0.0 ~ 1024.0
 		"Experience from Blocks Multiplier" = 3.0
 
 	#Decrease / Increase experience dropped mobs spawned by Spawners
@@ -136,6 +141,15 @@
 		#On death, players will drop this percentage of experience instead of max 7 levels. Setting to -1 will disable this.Due to Minecraft limitations this is incompatible with other mods that change the level scaling (e.g. Allurement's 'Remove level Scaling')
 		#Range: -1.0 ~ 1.0
 		"Experience Dropped on Death" = 0.8
+		#Players will pick up experience faster
+		"Pickup XP Faster" = true
+
+	#Change other experience sources
+	[Experience."Other Experience"]
+		#Bottle o' enchanting will drop this more XP. Experience is still affected by 'Global Experience Multiplier'
+		#Can be set to 0 to make Bottle o' enchanting drop no experience
+		#Range: 0 ~ 1024
+		"Bottle o' Enchanting Bonus XP" = 23
 
 [Miscellaneous]
 	#Various changes to explosions from knockback to shielding.
@@ -148,6 +162,8 @@
 	"Enable Temporary Spawners" = false
 	#Small changes to villagers to make them less OP
 	"Enable Villager Nerfs" = true
+	#Various Nerfs
+	"Enable Nerfs" = false
 
 	#Various changes to explosions from knockback to shielding.
 	[Miscellaneous."Explosion Overhaul"]
@@ -218,10 +234,17 @@
 		"Max Discount Percentage" = 0.5
 		#If true, villagers will no longer get the discount when cured from Zombies to prevent over discounting.
 		"Prevent Cure Discount" = true
-		#If true, Iron golems will only drop Iron when killed by the player.
-		"Iron from Golems only when killed by Player" = true
 		#When villagers restock, they update the 'demand'. Demand is a trade modifier that increases the price whenever a trade is done many times, BUT when a trade is not performed, at each restock the 'demand' goes negative, making possible for a trade to never increase it's price due to high negative demand. With this to true, negative demand will be capped at -max_uses of the trade (e.g. Carrot trade from a farmer will have it's minimum demand set to -16).
 		"Clamp Negative Demand" = true
+
+	#Various Nerfs
+	[Miscellaneous.Nerfs]
+		#If true, sheep will no longer drop Wool on death.
+		"No Sheep Death Wool" = true
+		#If true, Iron golems will only drop Iron when killed by the player.
+		"Iron from Golems only when killed by Player" = true
+		#If true, boats will no longer go stupidly fast on ice.
+		"No Ice Boats" = true
 
 [Mining]
 	#Change all the blocks hardness
@@ -310,6 +333,10 @@
 	"Enable No Pillaring" = true
 	#Player's slowed down for a brief moment when hit.
 	"Enable Tagging" = true
+	#Slowdown based off the terrain you're walking on.
+	"Enable Terrain Slowdown" = true
+	#Player's slowed down when walking backwards.
+	"Enable Backwards slowdown" = true
 
 	#Armor slows down the player based off the Armor and Toughness given.
 	[Movement."Weighted Armor"]
@@ -328,6 +355,28 @@
 		#Format is modid:enchantmentid,reductionPerLevel,flatReduction
 		#Where reduction per level is the percentage slowdown reduction per level, while flatReduction (optional) is a flat percentage slowdown reduction. E.g. 'elenaidodge2:lightweight,0.15,0.05' means that you'll get 5% less slowdown on armor plus 15% per level, so at Lightweight II you'll get (5+15*2) = 35% reduction on that piece of armor.
 		"Enchantments Weight Reduction" = ["minecraft:feather_falling,0.10", "elenaidodge2:lightweight,0.15,5"]
+
+	#Player's slowed down for a brief moment when hit.
+	[Movement.Tagging]
+		#Which level of Slowness is applied to the player (level 0 is Slowness I).
+		#Range: 0 ~ 10
+		"Slowness level" = 1
+		#Slowness is applied for damage_taken * this_value ticks.
+		#Range: 0 ~ 100
+		"Duration multiplier" = 6
+
+	#Slowdown based off the terrain you're walking on.
+	[Movement."Terrain Slowdown"]
+		#Slowdown percentage when walking on certain materials. Material names are fixed and cannot be changed. Materials per block list here: https://docs.google.com/spreadsheets/d/1XZ2iTC4nqit_GxvKurRp8NpW3tNaeaZsvfv4EGPoQxw/edit?usp=sharing
+		"Material On Slowdown" = ["amethyst,0.1", "bamboo_sapling,0", "bamboo,0.1", "barrier,0", "buildable_glass,0", "cactus,0", "cake,0", "clay,0.15", "cloth_decoration,0", "decoration,0", "dirt,0.1", "egg,0", "explosive,0", "glass,0", "grass,0.1", "heavy_metal,0", "ice_solid,0.5", "ice,0.35", "leaves,0.15", "metal,0", "moss,0.15", "nether_wood,0", "piston,0", "plant,0", "powder_snow,0", "replaceable_fireproof_plant,0", "replaceable_plant,0", "replaceable_water_plant,0", "sand,0.15", "sculk,0", "shulker_shell,0", "snow,0.2", "sponge,0", "stone,0", "top_snow,0", "vegetable,0", "water_plant,0", "web,0", "wood,0", "wool,0.2"]
+		#Slowdown percentage when walking in certain materials. Material names are fixed and cannot be changed. Materials per block list here: https://docs.google.com/spreadsheets/d/1XZ2iTC4nqit_GxvKurRp8NpW3tNaeaZsvfv4EGPoQxw/edit?usp=sharing
+		"Material In Slowdown" = ["amethyst,0.1", "bamboo_sapling,0.15", "bamboo,0", "barrier,0", "buildable_glass,0", "cactus,0", "cake,0", "clay,0", "cloth_decoration,0", "decoration,0", "dirt,0", "egg,0", "explosive,0", "glass,0", "grass,0", "heavy_metal,0", "ice_solid,0", "ice,0", "leaves,0", "metal,0", "moss,0", "nether_wood,0", "piston,0", "plant,0.15", "powder_snow,0", "replaceable_fireproof_plant,0.1", "replaceable_plant,0.1", "replaceable_water_plant,0.1", "sand,0", "sculk,0", "shulker_shell,0", "snow,0", "sponge,0", "stone,0", "top_snow,0.1", "vegetable,0", "water_plant,0.1", "web,0", "wood,0", "wool,0"]
+
+	#Player's slowed down when walking backwards.
+	[Movement."Backwards slowdown"]
+		#How much slower will the player go when walking backwards.
+		#Range: 0.0 ~ 1.0
+		Slowdown = 0.25
 
 ["Sleep & Respawn"]
 	#Prevents the player from sleeping if has not enough Hunger and gives him effects on wake up
