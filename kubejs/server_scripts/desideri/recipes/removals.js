@@ -15,12 +15,15 @@ global.fullRemovals.push(
     /aquaculture:.*_fillet_knife/,
     /quark:(backpack|potato_crate|carrot_crate|beetroot_crate|chute|gravisand|abacus|dragon_scale|.*limestone*.|.*blossom*.)/,
     /quark:(granite|andesite|diorite|calcite|dripstone|tuff)_pillar/,
-    /biomesoplenty:(.*black_sand*.|.*autumn*.)/
+    /biomesoplenty:(.*black_sand*.|.*autumn*.)/,
+    'createaddition:electric_motor',
 )
 // Removes by recipe ID
 idRemovals.push(
     'supplementaries:strings',
     'farmersdelight:raw_pasta_from_eggs',
+    'corn_delight:integration/create/mixing/raw_tortilla_from_mixing',
+    'corn_delight:integration/create/mixing/raw_tortilla_wheat_from_mixing',
 )
 // Removes by recipe type
 typeRemovals.push(

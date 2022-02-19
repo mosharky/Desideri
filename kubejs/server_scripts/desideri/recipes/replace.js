@@ -11,6 +11,7 @@ onEvent('recipes', (event) => {
         { condition: {}, toReplace: 'supplementaries:flax', replaceWith: 'farmersdelight:straw' },
         { condition: {}, toReplace: '#supplementaries:ropes', replaceWith: 'farmersdelight:rope' },
         { condition: { id: /immersiveengineering:crafting\/(wirecoil*.|hemp_fabric)/ }, toReplace: '#balm:wooden_rods', replaceWith: 'createaddition:spool' },
+        { condition: {}, toReplace: 'minecraft:bread', replaceWith: '#forge:bread' },
     )
     InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }

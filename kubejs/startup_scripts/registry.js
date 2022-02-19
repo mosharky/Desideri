@@ -17,4 +17,20 @@ onEvent('item.registry', event => {
 	event.create('lesser_ender_eye', item => {
 		item.displayName('Lesser Eye of Ender')
 	})
+
+	event.create('lye', item => {
+		item.displayName('Lye')
+	})
+
+	event.create('hominy', item => {
+		item
+			.displayName('Hominy')
+			.maxStackSize(16)
+			.food(food => {
+				food
+					.hunger(3)
+					.saturation(0.1)
+					.fastToEat()
+			})
+	})
 })
