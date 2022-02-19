@@ -56,9 +56,11 @@ idRemovals.push(
     'create:crafting/materials/copper_ingot',
     'create:crafting/materials/copper_nugget',
     // for some reason this recipe isn't being covered by fullRemovals
-    'beyond_earth:desh_plate', 
+    'beyond_earth:desh_plate',
     // Remove Alloy Kiln brass recipe
-    'immersiveengineering:alloysmelter/brass'
+    'immersiveengineering:alloysmelter/brass',
+    // Remove Electrum crafting grid recipe
+    'immersiveengineering:crafting/electrum_mix'
 )
 
 // Remove by recipe type
@@ -95,7 +97,15 @@ global.fullRemovals.push(
     /immersiveengineering:.*nickel*./,
     'immersiveengineering:plate_nickel', // remove when .removeAllTagsFrom() accepts regex
     'immersiveengineering:ingot_nickel', // remove when .removeAllTagsFrom() accepts regex
-    'immersiveengineering:dust_electrum',
+    'alloyed:steel_ingot',
+    'alloyed:steel_block',
+    'alloyed:steel_sheet',
+    /immersiveengineering:(pickaxe|shovel|axe|hoe|sword)_steel/,
+    'createaddition:iron_rod',
+    'createaddition:gold_rod',
+    'createaddition:brass_rod',
+    'createaddition:iron_wire',
+    'createaddition:copper_wire',
 )
 
 // ------------------------------ RECIPES ------------------------------
@@ -147,6 +157,16 @@ onEvent('recipes', event => {
         }
     }).id('immersiveengineering:blueprint/bullet_silver')
 
+    // i hate create additions :rage:
+    event.custom({
+        type: 'createaddition:rolling',
+        input: { tag: 'forge:plates/copper' },
+        result: {
+            item: 'immersiveengineering:wire_copper',
+            count: 2
+        }
+    }).id('createaddition:rolling/copper_plate')
+
     // Pressing recipes for IE Metals
     event.recipes.createPressing('immersiveengineering:plate_steel', '#forge:ingots/steel')
     event.recipes.createPressing('immersiveengineering:plate_silver', '#forge:ingots/silver')
@@ -163,6 +183,6 @@ onEvent('recipes', event => {
 
     // Steel recipe for Create
     event.recipes.createMixing('immersiveengineering:ingot_steel', ['#forge:ingots/iron', 'immersiveengineering:coal_coke']).superheated()
-    // Electrum recipe for Create
-    event.recipes.createMixing('immersiveengineering:ingot_electrum', ['#forge:ingots/gold', '#forge:ingots/silver']).heated()
+    // Electrum recipe for Create (disabled because Create: Crafts and Additions already adds a recipe)
+    //event.recipes.createMixing('2x immersiveengineering:ingot_electrum', ['#forge:ingots/gold', '#forge:ingots/silver']).heated()
 })

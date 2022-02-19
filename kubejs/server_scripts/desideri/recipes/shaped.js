@@ -141,6 +141,15 @@ const shaped = [
         pattern: four,
         key: { A: 'hexerei:stripped_mahogany_log' },
         id: 'hexerei:stripped_mahogany_wood'
+    },
+    {
+        output: '4x createaddition:spool',
+        pattern: ['A', 'B', 'A'],
+        key: {
+            A: 'immersiveengineering:stick_treated',
+            B: '#forge:nuggets/iron'
+        },
+        id: 'createaddition:crafting/spool'
     }
 ]
 onEvent('recipes', event => {

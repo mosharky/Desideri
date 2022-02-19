@@ -4,6 +4,7 @@ onEvent('tags.fluids', event => {
     event.add('beyond_earth:vehicle_fuel', 'immersiveengineering:biodiesel')
     event.remove('beyond_earth:vehicle_fuel', 'beyond_earth:fuel')
     event.remove('beyond_earth:oil', 'beyond_earth:oil')
+    event.remove('forge:plantoil', 'createaddition:seed_oil')
 })
 
 typeRemovals.push(
@@ -15,4 +16,5 @@ global.fullRemovals.push(
     'beyond_earth:fuel_refinery',
     'beyond_earth:fuel_bucket',
     'beyond_earth:oil_bucket',
+    'createaddition:seed_oil_bucket'
 )
