@@ -15,7 +15,7 @@ global.fullRemovals.push(
     /aquaculture:.*_fillet_knife/,
     /quark:(backpack|potato_crate|carrot_crate|beetroot_crate|chute|gravisand|abacus|dragon_scale|.*limestone*.|.*blossom*.)/,
     /quark:(granite|andesite|diorite|calcite|dripstone|tuff)_pillar/,
-    /biomesoplenty:.*black_sand*./
+    /biomesoplenty:(.*black_sand*.|.*autumn*.)/
 )
 // Removes by recipe ID
 idRemovals.push(
