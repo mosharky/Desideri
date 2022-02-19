@@ -11,20 +11,6 @@ onEvent('generic.loot_tables', event => {
             pool.addItem('minecraft:slime_ball')
         })
     })
-
-    // Override all flax loot tables 
-    const injectOverride = [
-        'supplementaries:inject/dungeon_flax',
-        'supplementaries:inject/end_city_stasis',
-        'supplementaries:inject/mineshaft_flax',
-        'supplementaries:inject/pillager_flax',
-        'supplementaries:inject/shipwreck_storage_flax'
-    ]
-    injectOverride.forEach(inject => {
-        event.addGeneric(inject, table => {
-            table.addPool(pool => {})
-        })
-    })
 })
 
 // Replacing items in loot tables

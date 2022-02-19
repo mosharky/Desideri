@@ -10,6 +10,11 @@ const removeJson = [
     'lootr:advancements/100loot',
     'lootr:advancements/root',
     'lootr:advancements/social',
+    'supplementaries:loot_tables/inject/dungeon_flax',
+    'supplementaries:loot_tables/inject/end_city_stasis',
+    'supplementaries:loot_tables/inject/mineshaft_flax',
+    'supplementaries:loot_tables/inject/pillager_flax',
+    'supplementaries:loot_tables/inject/shipwreck_storage_flax'
 ]
 
 onEvent('server.datapack.high_priority', (event) => {
