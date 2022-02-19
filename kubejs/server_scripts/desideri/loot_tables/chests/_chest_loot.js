@@ -11,10 +11,25 @@ onEvent('generic.loot_tables', event => {
             pool.addItem('minecraft:slime_ball')
         })
     })
+
+    // Override all flax loot tables 
+    const injectOverride = [
+        'supplementaries:inject/dungeon_flax',
+        'supplementaries:inject/end_city_stasis',
+        'supplementaries:inject/mineshaft_flax',
+        'supplementaries:inject/pillager_flax',
+        'supplementaries:inject/shipwreck_storage_flax'
+    ]
+    injectOverride.forEach(inject => {
+        event.addGeneric(inject, table => {
+            table.addPool(pool => {})
+        })
+    })
 })
 
 // Replacing items in loot tables
 onEvent('lootjs', event => {
+    event.enableLogging();
     // Remove Flax from common/uncommon urn loot tbales
     event
         .addLootTableModifier(/supplementaries:blocks\/urn_loot\/(common|uncommon)/)
@@ -22,7 +37,7 @@ onEvent('lootjs', event => {
         .thenReplace('supplementaries:rope', '8x farmersdelight:rope')
     // Remove Flax from repurposed structures loot tables
     event
-        .addLootTableModifier(/repurposed_structures:*./)
+        .addLootTableModifier('repurposed_structures:chests/dungeon')
         .thenRemove('supplementaries:flax_seeds')
     // Remove Steel from meteor loot table
     event
