@@ -15,16 +15,11 @@ onEvent('generic.loot_tables', event => {
 
 // Replacing items in loot tables
 onEvent('lootjs', event => {
-    event.enableLogging();
     // Remove Flax from common/uncommon urn loot tbales
     event
         .addLootTableModifier(/supplementaries:blocks\/urn_loot\/(common|uncommon)/)
         .thenReplace('supplementaries:flax_seeds', 'minecraft:string')
         .thenReplace('supplementaries:rope', '8x farmersdelight:rope')
-    // Remove Flax from repurposed structures loot tables
-    event
-        .addLootTableModifier('repurposed_structures:chests/dungeon')
-        .thenRemove('supplementaries:flax_seeds')
     // Remove Steel from meteor loot table
     event
         .addLootTableModifier('minecraft:loot')
