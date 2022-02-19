@@ -20,12 +20,15 @@ onEvent('lootjs', event => {
         .addLootTableModifier(/supplementaries:blocks\/urn_loot\/(common|uncommon)/)
         .thenReplace('supplementaries:flax_seeds', 'minecraft:string')
         .thenReplace('supplementaries:rope', '8x farmersdelight:rope')
-
+    // Remove Flax from repurposed structures loot tables
+    event
+        .addLootTableModifier(/repurposed_structures:*./)
+        .thenRemove('supplementaries:flax_seeds')
     // Remove Steel from meteor loot table
     event
         .addLootTableModifier('minecraft:loot')
         .thenReplace('beyond_earth:steel_ingot', 'immersiveengineering:ingot_steel')
-
+    // Replace Lead & Nickel
     event
         .addLootTableModifier('immersiveengineering:engineers_house')
         .thenReplace('immersiveengineering:nugget_lead', 'immersiveengineering:nugget_copper')
