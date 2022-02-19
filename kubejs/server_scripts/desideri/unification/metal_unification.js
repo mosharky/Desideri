@@ -1,4 +1,3 @@
-// priority: 1250
 /*
 This script doesn't just unify, it also attempts to remove useless metals/ores, such as:
 - Lead
@@ -35,6 +34,7 @@ inputReplace.push(
     // Iron
     { condition: {}, toReplace: '#forge:rods/iron', replaceWith: 'immersiveengineering:stick_iron' },
     { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' },
+    { condition: {}, toReplace: 'refinedstorage:quartz_enriched_iron', replaceWith: '#forge:ingots/brass' },
 )
 // Replace inputs and outputs
 InputOutputReplace.push(
@@ -106,6 +106,7 @@ global.fullRemovals.push(
     'createaddition:brass_rod',
     'createaddition:iron_wire',
     'createaddition:copper_wire',
+    /refinedstorage:quartz_enriched*./
 )
 
 // ------------------------------ RECIPES ------------------------------
@@ -167,6 +168,7 @@ onEvent('recipes', event => {
         }
     }).id('createaddition:rolling/copper_plate')
 
+
     // Pressing recipes for IE Metals
     event.recipes.createPressing('immersiveengineering:plate_steel', '#forge:ingots/steel')
     event.recipes.createPressing('immersiveengineering:plate_silver', '#forge:ingots/silver')
@@ -186,4 +188,22 @@ onEvent('recipes', event => {
 
     // IE Crushing recipes
     event.recipes.immersiveengineeringCrusher('createaddition:diamond_grit', 'minecraft:diamond')
+
+
+    // Shaped crafting
+    const shapedUnificationRecipes = [
+        {
+            output: 'refinedstorage:machine_casing',
+            pattern: ['AAA', 'ABA', 'AAA'],
+            key: {
+                A: '#forge:ingots/bronze',
+                B: '#minecraft:planks'
+            }
+        }
+    ]
+    shapedUnificationRecipes.forEach((recipe) => {
+        recipe.id
+            ? event.shaped(recipe.output, recipe.pattern, recipe.key).id(recipe.id)
+            : event.shaped(recipe.output, recipe.pattern, recipe.key)
+    })
 })
