@@ -7,6 +7,10 @@ onEvent('tags.fluids', event => {
     event.remove('forge:plantoil', 'createaddition:seed_oil')
 })
 
+idRemovals.push(
+    'createaddition:compacting/seed_oil'
+)
+
 typeRemovals.push(
     // Removes Beyond Earth's fuel refinery recipes
     'beyond_earth:fuelrefining',

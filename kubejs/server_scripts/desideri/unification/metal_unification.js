@@ -183,6 +183,7 @@ onEvent('recipes', event => {
 
     // Steel recipe for Create
     event.recipes.createMixing('immersiveengineering:ingot_steel', ['#forge:ingots/iron', 'immersiveengineering:coal_coke']).superheated()
-    // Electrum recipe for Create (disabled because Create: Crafts and Additions already adds a recipe)
-    //event.recipes.createMixing('2x immersiveengineering:ingot_electrum', ['#forge:ingots/gold', '#forge:ingots/silver']).heated()
+
+    // IE Crushing recipes
+    event.recipes.immersiveengineeringCrusher('createaddition:diamond_grit', 'minecraft:diamond')
 })
