@@ -17,6 +17,10 @@ global.fullRemovals.push(
     /quark:(granite|andesite|diorite|calcite|dripstone|tuff)_pillar/,
     /biomesoplenty:(.*black_sand*.|.*autumn*.)/,
     'createaddition:electric_motor',
+
+    // Refined Storage 2
+    /refinedstorage:(1k*.|4k*.|16k*.|64k*.|256*.|1024k*.|4096k*.)/,
+    /refinedstorage:(fortune*.|silk_touch_upgrade|.*disk_manipulator|.*disk_drive)/,
 )
 // Removes by recipe ID
 idRemovals.push(
