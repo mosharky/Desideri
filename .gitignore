@@ -1,7 +1,8 @@
 # config
-/config/jei/world/
-/config/jei/bookmarks.ini
+config/jei/world/
+config/jei/bookmarks.ini
 config/jei-client.toml
+config/sodium-options.json
 
 # kubejs
 /kubejs/exported/*
