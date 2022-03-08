@@ -25,7 +25,7 @@ onEvent('recipes', event => {
 		{
 			output: 'comforts:rope_and_nail',
 			inputs: ['farmersdelight:rope', 'minecraft:iron_ingot'],
-			id: 'comforts:rope_and_nail'
+			id: 'comforts:rope_and_nail_shapeless'
 		},
 		{
 			output: 'aquaculture:sushi',
