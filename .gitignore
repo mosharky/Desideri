@@ -35,3 +35,7 @@ o_prof
 icon.png
 /server-resource-packs/
 /coremods/
+
+# Remove before release
+config/jei/recipe-category-sort-order.ini
+config/jei/ingredient-list-mod-sort-order.ini
