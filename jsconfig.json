@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "lib": ["ES5", "ES2015"],
+        "typeRoots": ["./kubejs/probe/generated", "./kubejs/probe/user"]
+    }
+}
