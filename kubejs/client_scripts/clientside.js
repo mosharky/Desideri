@@ -1,7 +1,7 @@
 // Hide items in JEI item list
-onEvent('jei.hide.items', jei => {
-	// jei.hide(global.fullRemovals)
-	jei.hide([
+onEvent('rei.hide.items', rei => {
+	// rei.hide(global.fullRemovals)
+	rei.hide([
 		// Hides unused BoP wood
 		/(biomesoplenty|compatoplenty|decorative_compat|supplementaries):(.*magic.*|.*umbran.*|.*palm.*)/,
 		// Hides Refined Storage's dyed variants except for red
@@ -9,8 +9,8 @@ onEvent('jei.hide.items', jei => {
 	])
 })
 
-onEvent('jei.information', jei => {
-	jei.add(global.fullRemovals, Text.of('DISABLED').red().bold())
+onEvent('rei.information', rei => {
+	rei.add(global.fullRemovals, Text.of('DISABLED').red().bold())
 })
 
 // Item tooltips
