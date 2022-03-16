@@ -72,8 +72,6 @@ hud_icon_scale = 1.0
 recording_destination = ""
 #If noise cancellation should be enabled
 denoiser = false
-#If sound physics integration should be enabled
-soundphysics = true
 #If voice chat should work in singleplayer/LAN worlds
 run_local_server = false
 #Whether to use the Java implementation of microphone capturing instead of OpenAL
@@ -82,4 +80,6 @@ java_microphone_implementation = false
 macos_microphone_workaround = false
 #If fake players should have the disconnected icon above their head
 show_fake_players_disconnected = false
+#If the volume adjustment GUI should also show offline players
+offline_player_volume_adjustment = false
 

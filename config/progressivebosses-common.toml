@@ -49,7 +49,7 @@
 		"Faster Breaking Blocks" = true
 		#The Wither will break even blocks below him when hit.
 		"Bigger Breaking Blocks" = true
-		#If true the Wither will break even blocks that are witherproof.
+		#If true the Wither will break even blocks that are witherproof. Unbreakable blocks will still be unbreakable, so it's really useful with other mods as in vanilla Wither Proof Blocks are all the unbreakable blocks.
 		"Ignore Witherproof Blocks" = false
 		#The wither can only be spawned in the Nether.
 		#Note that this feature completely disables Wither Skulls from begin placed nearby Soul Sand when not in the Nether or when on the Nether Roof.
@@ -88,7 +88,7 @@
 
 	#Bonus Experience and Drops
 	[Wither.Rewards]
-		#How much more experience (percentage) will Wither drop per Difficulty. The percentage is additive (e.g. with this set to 10%, 7 withers spawned = 70% more experience)
+		#How much more experience (percentage) will Wither drop per Difficulty. The percentage is additive (e.g. with this set to 200%, 7 withers spawned = 1400% more experience)
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Bonus Experience per Difficulty" = 2.0
 		#A list of drops for the Withers. Entry format: item,amount,difficulty_required,chance,difficulty_mode,chance_mode
@@ -102,7 +102,7 @@
 		#chance_mode:
 		#* FLAT: chance is the percentage chance for the item to drop if the difficulty criteria matches
 		#* SCALING: each point of difficulty >= 'difficulty to drop the item' will be multiplied by the chance (e.g. chance 2% and difficulty 10, difficulty required 5, chance to drop the item will be chance * (difficulty - difficulty_required + 1) = 2% * (10 - 5 + 1) = 12%)
-		#By default Withers have 2% chance per difficulty >= 2 to drop 1 shard + 4% chance per difficulty >= 4 to drop 2 shards + 8% chance per difficulty >= 8 to drop 4 shards.
+		#By default Withers have 60% chance per difficulty to drop 1 shard (So at difficulty 20, up to 20 shards can be dropped, 60% chance each).
 		Drops = ["progressivebosses:nether_star_shard,1,1,0.5,PER_DIFFICULTY,FLAT"]
 
 	#Wither will spawn deadly Minions
@@ -232,7 +232,7 @@
 		#How much health will the Ender Dragon regen per difficulty. This is added to the noaml Crystal regeneration.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Bonus Regeneration per Difficulty" = 0.05
-		#How much health will the Ender Dragon regen per difficulty each second whenever she's attached to a Crystal. This is added to the normal Crystal regen.
+		#How much health (when missing 100% health) will the Ender Dragon regen per difficulty each second whenever she's attached to a Crystal. So if she's missing 30% health, this will be 30% effective. This is added to the normal Crystal regen.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Bonus Crystal Regeneration" = 0.05
 
@@ -305,8 +305,11 @@
 		#Percentage chance per difficulty for a Minion to spawn as a Blinding Minion.
 		#Range: 0.0 ~ 1.0
 		"Blinding Chance" = 0.015
-		#Dragon Minions are immune to any damage from the Ender Dragon, either direct or Acid.
-		"Dragon Immune" = true
+		#Time (in ticks) for the bliding effect when hit by a blinding bullet.
+		#Range: 0 ~ 6000
+		"Blinding duration" = 150
+		#If true, Dragon Minions will take only 10% damage from the Ender Dragon.
+		"Reduced Dragon Damage" = true
 
 	#Mini things that are just annoying.
 	[Dragon.Larva]
@@ -325,8 +328,8 @@
 		#Maximum ticks (20 ticks = 1 seconds) after Minions can spwan.
 		#Range: > 0
 		"Maximum Cooldown" = 1400
-		#Dragon Minions are immune to any damage from the Ender Dragon, either direct or Acid.
-		"Dragon Immune" = true
+		#If true, Larvae will take only 10% damage from the Ender Dragon.
+		"Reduced Dragon Damage" = true
 
 	#Handles the Damage Resistances and Vulnerabilities
 	[Dragon."Resistances & Vulnerabilities"]
@@ -351,22 +354,22 @@
 		#Max number of bonus cages that can spawn around the crystals.
 		#Range: 0 ~ 8
 		"Max Bonus Cages" = 4
-		#At this difficulty more crystals will start to appear inside obsidian towers. -1 will disable this feature.
+		#At this difficulty one crystal will start to appear inside obsidian towers. -1 will disable this feature.
 		#Range: > -1
 		"More Crystals at Difficulty" = 8
-		#Max number of bonus crystals that can spawn inside the towers.
-		#Range: 0 ~ 10
-		"Max Bonus Crystals" = 5
-		#Everytime the dragon is hit (when below 20% of health) there's a chance to to trigger a Crystal respawn Phase. The phase can only happen once. The chance is 0% when health >= 20% and 100% when health <= 5%.
+		#Everytime the dragon is hit (when below 50% of health) there's a chance to to trigger a Crystal respawn Phase. The chance is 0% when health >=50% and 100% when health <=30%, the health threshold decreases by 20% every time the dragon respawns crystals.
 		"Enable crystal respawn" = true
-		#Difficulty multiplied by this number will output how many tries will the dragon take to respawn crystals. Tries are capped between 1 and 100.
-		#Range: 0.0 ~ 100.0
-		"Crystal Respawn Multiplier" = 0.6
-		#When respawning Crystals, chance for the crystal to be spawned inside a Tower instead of on top
-		#Range: 0.0 ~ 1.0
-		"Crystal Respawn Inside Tower Chance" = 0.005
 		#Crystals can no longer be destroyed by other explosions.
 		"Explosion Immune" = true
+		#Every how much difficulty one more crystal will be spawned inside towers
+		#Range: > -1
+		"More Crystals Step" = 8
+		#Max number of bonus crystals that can spawn inside the towers.
+		#Range: 0 ~ 10
+		"More Crystals Max" = 3
+		#Difficulty multiplied by this number will output how many crystals will the dragon respawn.
+		#Range: 0.0 ~ 10.0
+		"Crystal Respawn Per Difficulty" = 0.2
 
 ["Elder Guardian"]
 	#Bonus Health and Health regeneration.
@@ -442,6 +445,6 @@
 		#chance_mode:
 		#* FLAT: chance is the percentage chance for the item to drop if the difficulty criteria matches
 		#* SCALING: each point of difficulty >= 'difficulty to drop the item' will be multiplied by the chance (e.g. chance 2% and difficulty 10, difficulty required 5, chance to drop the item will be chance * (difficulty - difficulty_required + 1) = 2% * (10 - 5 + 1) = 12%)
-		#By default Withers have 2% chance per difficulty >= 2 to drop 1 shard + 4% chance per difficulty >= 4 to drop 2 shards + 8% chance per difficulty >= 8 to drop 4 shards.
+		#
 		Drops = ["minecraft:wet_sponge,1,0,1,MINIMUM,FLAT", "minecraft:wet_sponge,2,1,1,MINIMUM,FLAT", "minecraft:wet_sponge,2,2,1,MINIMUM,FLAT", "progressivebosses:elder_guardian_spike,1,0,1,MINIMUM,FLAT"]
 
