@@ -5,6 +5,7 @@ onEvent('rei.hide.items', rei => {
 		/(biomesoplenty|compatoplenty|decorative_compat|supplementaries):(.*magic.*|.*umbran.*|.*palm.*)/, // tables and beehives aren't caught by this?
 		/refinedstorage:(?!red).+_(controller|creative_controller|.*grid.*|network_receiver|network_transmitter|relay|wireless_transmitter|disk_manipulator|crafter|crafter_manager|crafting_monitor|security_manager|detector)/,
 		/biomesoplenty:potted.*/,
+		/lootr:(?!trophy).*/, // ???
 	])
 })
 
