@@ -15,6 +15,7 @@ config/sodium-options.json
 /saves/
 /logs/
 /mods/
+mods
 
 # root files
 knownkeys.txt
@@ -26,9 +27,6 @@ usercache.json
 usernamecache.json
 patchouli_data.json
 o_prof
-
-# ide files
-/.vscode/
 
 # launcher-related
 .curseclient
