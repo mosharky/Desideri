@@ -1,13 +1,13 @@
 /// <reference path="./globals.d.ts" />
 declare function onEvent(name: "recipes", handler: (event: Internal.RecipeEventJS) => void);
+declare function onEvent(name: "rei.information", handler: (event: Internal.InformationREIEventJS) => void);
 declare function onEvent(name: "tags.fluids", handler: (event: Internal.TagEventJS) => void);
 declare function onEvent(name: "server.datapack.high_priority", handler: (event: Internal.DataPackEventJS) => void);
 declare function onEvent(name: "lootjs", handler: (event: Internal.LootModificationEventJS) => void);
 declare function onEvent(name: "block.loot_tables", handler: (event: Internal.BlockLootEventJS) => void);
 declare function onEvent(name: "item.tooltip", handler: (event: Internal.ItemTooltipEventJS) => void);
-declare function onEvent(name: "jei.information", handler: (event: Internal.InformationJEIEventJS) => void);
+declare function onEvent(name: "rei.hide.items", handler: (event: Internal.HideREIEventJS) => void);
 declare function onEvent(name: "entity.loot_tables", handler: (event: Internal.EntityLootEventJS) => void);
 declare function onEvent(name: "item.registry", handler: (event: Internal.ItemRegistryEventJS) => void);
 declare function onEvent(name: "tags.items", handler: (event: Internal.TagEventJS) => void);
 declare function onEvent(name: "generic.loot_tables", handler: (event: Internal.GenericLootEventJS) => void);
-declare function onEvent(name: "jei.hide.items", handler: (event: Internal.HideJEIEventJS) => void);
