@@ -1,7 +1,8 @@
 # config
 /config/jei/world/
 /config/jei/bookmarks.ini
-config/jei-client.toml
+/config/jei-client.toml
+config/sodium-options.json
 
 # kubejs
 /kubejs/exported/*
@@ -34,3 +35,8 @@ o_prof
 icon.png
 /server-resource-packs/
 /coremods/
+
+# remove before release
+config/jei/recipe-category-sort-order.ini
+config/jei/ingredient-list-mod-sort-order.ini
+config/roughlyenoughitems/changelog.txt

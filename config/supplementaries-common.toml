@@ -130,11 +130,6 @@
 		#Enable to draw directly on a blackboard using any dye. Gui still only works in black and white
 		colored_blackboard = false
 
-	[blocks.candle_holder]
-		#Candle holder light level
-		#Range: 1 ~ 15
-		light_level = 12
-
 	[blocks.timber_frame]
 		#Replace a timber frame with wattle and daub block when daub is placed in it
 		replace_daub = true

@@ -28,6 +28,7 @@ idRemovals.push(
     'farmersdelight:raw_pasta_from_eggs',
     'corn_delight:integration/create/mixing/raw_tortilla_from_mixing',
     'corn_delight:integration/create/mixing/raw_tortilla_wheat_from_mixing',
+    'comforts:rope_and_nail',
 )
 // Removes by recipe type
 typeRemovals.push(
