@@ -25,7 +25,6 @@ onEvent('item.registry', event => {
 	event.create('hominy', item => {
 		item
 			.displayName('Hominy')
-			.maxStackSize(16)
 			.food(food => {
 				food
 					.hunger(3)
