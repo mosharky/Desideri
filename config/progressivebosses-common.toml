@@ -45,7 +45,7 @@
 		#At this difficulty the Wither Explosion will cause fire. Set to -1 to disable.
 		#Range: > -1
 		"Explosion Causes Fire at Difficulty" = 16
-		#The Wither will no longer wait 1 full second before breaking blocks when he's hit, instead just 0.5s
+		#The Wither will no longer wait 1.0 seconds before breaking blocks when he's hit, instead just 0.5s
 		"Faster Breaking Blocks" = true
 		#The Wither will break even blocks below him when hit.
 		"Bigger Breaking Blocks" = true
@@ -157,7 +157,7 @@
 	[Wither.Attack]
 		#If the AI changes should be applied to the first wither spawned too.
 		"Apply to Vanilla Wither" = true
-		#Max Chance every time the Wither takes damage to start a charge attack. The actual chance is inversely proportional to Wither's health (100% health = 0% chance, 50% health = 2.5% chance, ...).
+		#Chance every time the Wither takes damage to start a charge attack. Less health = higher chance and more damage taken = more chance. This value is the chance at 0% health and when taking 10 damage.
 		#Range: 0.0 ~ 1.0
 		"Max Charge Attack Chance" = 0.06
 		#Percentage bonus damage dealt by the Wither per difficulty.
@@ -165,13 +165,13 @@
 		"Increased Damage" = 0.04
 
 		[Wither.Attack."Barrage Attack"]
-			#Chance (per difficulty) every time the Wither takes damage to start a barrage attack. The actual chance is inversely proportional to Wither's health and damage taken (more damage and less health = higher chance).
+			#Chance (per difficulty) every time the Wither takes damage to start a barrage attack. Less health = higher chance and more damage taken = more chance. This value is the chance at 0% health and when taking 10 damage.
 			#Range: 0.0 ~ 1.0
 			"Max Barrage Attack Chance Per Difficulty" = 0.0035
-			#Min time (in ticks) for the duration of the barrage attack. The actual duration is inversely proportional to Wither's health and damage taken (more damage and less health = higher chance)
+			#Min time (in ticks) for the duration of the barrage attack. Less health = longer barrage.
 			#Range: > 0
 			"Min Barrage Duration" = 20
-			#Max time (in ticks) for the duration of the barrage attack. The actual duration is inversely proportional to Wither's health (100% health = min duration, 0% health = max duration)
+			#Max time (in ticks) for the duration of the barrage attack. Less health = longer barrage
 			#Range: > 0
 			"Max Barrage Duration" = 150
 
@@ -210,7 +210,7 @@
 		#If false and there's more than 1 player around the Dragon, difficulty will be the average of all the players' difficulty instead of summing them.
 		"Sum Killed Dragons Difficulty" = false
 		#Percentage bonus difficulty added to the Dragon when more than one player is present. Each player past the first one will add this percentage to the difficulty.
-		#Range: 0.0 ~ 24.0
+		#Range: 0.0 ~ 1.0
 		"Bonus Difficulty per Player" = 0.25
 		#The Maximum difficulty (times killed) reachable by Ender Dragon. By default is set to 24 because it's the last spawning end gate.
 		#Range: > 1
@@ -245,12 +245,12 @@
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Bonus Acid Pool Damage" = 0.11
 		#Normally the Ender Dragon attacks only when leaving the center platform. With this active she has a chance when she has finished charging / fireballing or before checking if she should land in the center to charge the player.
-		#This is the chance to start a charge attack when the difficulty is at max (24 by default). Otherwise it scales accordingly.
+		#This is the chance to start a charge attack when the difficulty is at max. Otherwise it scales accordingly.
 		#The actual chance is: (this_value * (difficulty / max difficulty)).
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Charge Player Max Chance" = 0.5
 		#Normally the Ender Dragon spits fireballs when a Crystal is destroyed and rarely during the fight. With this active she has a chance when she has finished charging / fireballing or before checking if she should land in the center to spit a fireball.
-		#This is the chance to start a fireball attack when the difficulty is at max (24 by default). Otherwise it scales accordingly.
+		#This is the chance to start a fireball attack when the difficulty is at max. Otherwise it scales accordingly.
 		#The actual chance is: (this_value * (difficulty / max difficulty)).
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Fireball Max Chance" = 0.4
@@ -285,7 +285,6 @@
 		#chance_mode:
 		#* FLAT: chance is the percentage chance for the item to drop if the difficulty criteria matches
 		#* SCALING: each point of difficulty >= 'difficulty to drop the item' will be multiplied by the chance (e.g. chance 2% and difficulty 10, difficulty required 5, chance to drop the item will be chance * (difficulty - difficulty_required + 1) = 2% * (10 - 5 + 1) = 12%)
-		#By default Withers have 2% chance per difficulty >= 2 to drop 1 shard + 4% chance per difficulty >= 4 to drop 2 shards + 8% chance per difficulty >= 8 to drop 4 shards.
 		Drops = []
 
 	#Shulkers that will make you float around.
@@ -322,10 +321,10 @@
 		#Maximum Larva spawned by the Ender Dragon
 		#Range: > 0
 		"Max Larvae Spawned" = 7
-		#Minimum ticks (20 ticks = 1 seconds) after Minions can spwan.
+		#Minimum ticks (20 ticks = 1 seconds) after Minions can spawn.
 		#Range: > 0
 		"Minimum Cooldown" = 800
-		#Maximum ticks (20 ticks = 1 seconds) after Minions can spwan.
+		#Maximum ticks (20 ticks = 1 seconds) after Minions can spawn.
 		#Range: > 0
 		"Maximum Cooldown" = 1400
 		#If true, Larvae will take only 10% damage from the Ender Dragon.
@@ -333,16 +332,10 @@
 
 	#Handles the Damage Resistances and Vulnerabilities
 	[Dragon."Resistances & Vulnerabilities"]
-		#Percentage of Dragon's current health dealth as Bonus damage when attacked directly (melee) and she's not at the center.
-		#Range: 0.0 ~ 1.7976931348623157E308
-		"Bonus Current Health Direct Damage" = 0.02
-		#Percentage of Dragon's current health dealth as Bonus damage when attacked indirectly (e.g. arrows) and she's not at the center.
-		#Range: 0.0 ~ 1.7976931348623157E308
-		"Bonus Current Health Indirect Damage" = 0.008
 		#Melee Damage reduction per difficulty while the Ender Dragon is at the center.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Melee Damage reduction while at the center" = 0.0125
-		#Damage reduction when hit by explosions.
+		#Damage reduction when hit by explosions (firework rockets excluded).
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Explosion Damage reduction" = 0.5
 

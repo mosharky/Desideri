@@ -34,8 +34,6 @@ speaker = ""
 muted = false
 #If the voice chat is disabled (sound and microphone off)
 disabled = true
-#If the voice chat should use semi 3D stereo sound
-stereo = true
 #If the voice chat icons should be hidden
 hide_icons = false
 #If the group HUD should be visible
@@ -82,4 +80,7 @@ macos_microphone_workaround = false
 show_fake_players_disconnected = false
 #If the volume adjustment GUI should also show offline players
 offline_player_volume_adjustment = false
+#The 3D audio type
+#Allowed Values: NORMAL, REDUCED, OFF
+audio_type = "NORMAL"
 
