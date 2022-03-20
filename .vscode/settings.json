@@ -13,6 +13,8 @@
         "saves/": true,
         "logs/": true,
         "mods/": true,
+        "shaderpacks/": true,
+        "texturepacks/": true,
         "coremods/": true,
         "**/.curseclient": true,
         "**/knownkeys.txt": true,
