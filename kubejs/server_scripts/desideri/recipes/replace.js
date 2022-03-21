@@ -10,7 +10,7 @@ onEvent('recipes', (event) => {
         { condition: { id: 'immersiveengineering:crafting/empty_shell' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
         { condition: {}, toReplace: 'supplementaries:flax', replaceWith: 'farmersdelight:straw' },
         { condition: {}, toReplace: '#supplementaries:ropes', replaceWith: 'farmersdelight:rope' },
-        { condition: { id: /immersiveengineering:crafting\/(wirecoil*.|hemp_fabric)/ }, toReplace: '#balm:wooden_rods', replaceWith: 'createaddition:spool' },
+        { condition: { id: /immersiveengineering:crafting\/(wirecoil.*|hemp_fabric)/ }, toReplace: '#balm:wooden_rods', replaceWith: 'createaddition:spool' },
         { condition: {}, toReplace: 'minecraft:bread', replaceWith: '#forge:bread' },
         { condition: {}, toReplace: 'enigmaticlegacy:angel_blessing', replaceWith: 'minecraft:elytra' },
     )

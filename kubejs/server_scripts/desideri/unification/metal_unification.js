@@ -49,7 +49,7 @@ InputOutputReplace.push(
 // Remove by recipe ID
 idRemovals.push(
     // Remove crafting grid ore/ingot/plate recipes
-    /immersiveengineering:crafting\/(raw_hammercrushing*.|hammercrushing*.|plate*.)/,
+    /immersiveengineering:crafting\/(raw_hammercrushing.*|hammercrushing.*|plate.*)/,
     // Remove crafting grid rod recipes
     /immersiveengineering:crafting\/stick_(iron|steel|aluminum)/,
     // Remove redundant copper recipes from Create
@@ -87,14 +87,14 @@ global.fullRemovals.push(
     'create:copper_sheet',
     'beyond_earth:coal_generator',
     'beyond_earth:compressor',
-    /immersiveengineering:.*uranium*./,
+    /immersiveengineering:.*uranium.*/,
     'immersiveengineering:plate_uranium', // remove when .removeAllTagsFrom() accepts regex
     'create:copper_nugget',
-    /immersiveengineering:.*lead*./,
+    /immersiveengineering:.*lead.*/,
     'immersiveengineering:plate_lead', // remove when .removeAllTagsFrom() accepts regex
-    /immersiveengineering:.*constantan*./,
+    /immersiveengineering:.*constantan.*/,
     'immersiveengineering:plate_constantan', // remove when .removeAllTagsFrom() accepts regex
-    /immersiveengineering:.*nickel*./,
+    /immersiveengineering:.*nickel.*/,
     'immersiveengineering:plate_nickel', // remove when .removeAllTagsFrom() accepts regex
     'immersiveengineering:ingot_nickel', // remove when .removeAllTagsFrom() accepts regex
     'alloyed:steel_ingot',
@@ -106,7 +106,7 @@ global.fullRemovals.push(
     'createaddition:brass_rod',
     'createaddition:iron_wire',
     'createaddition:copper_wire',
-    /refinedstorage:quartz_enriched*./
+    /refinedstorage:quartz_enriched.*/
 )
 
 // ------------------------------ RECIPES ------------------------------
