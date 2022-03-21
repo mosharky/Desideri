@@ -21,6 +21,8 @@ global.fullRemovals.push(
     /refinedstorage:(1k.*|4k.*|16k.*|64k.*|256.*|1024k.*|4096k.*)/,
     /refinedstorage:(fortune.*|silk_touch_upgrade|.*disk_manipulator|.*disk_drive)/,
     /enigmaticlegacy:(enigmatic_item|ocean_stone|magma_heart|eye_of_nebula|enigmatic_amulet|forbidden_axe|etherium.*|astral_breaker|enchantment_transposer|fabulous_scroll|)/,
+    /aquaculture:(neptunium.*|neptunes_bounty)/,
+    'alloyed:steel_fishing_rod'
 )
 // Removes by recipe ID
 idRemovals.push(
