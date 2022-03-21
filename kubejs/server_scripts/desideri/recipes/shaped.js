@@ -150,6 +150,15 @@ const shaped = [
             B: '#forge:nuggets/iron'
         },
         id: 'createaddition:crafting/spool'
+    },
+    // because for some reason it's removed by something?
+    {
+        output: '4x minecraft:stick',
+        pattern: stick,
+        key: {
+            A: '#minecraft:planks'
+        },
+        id: 'minecraft:sticks'
     }
 ]
 onEvent('recipes', event => {
