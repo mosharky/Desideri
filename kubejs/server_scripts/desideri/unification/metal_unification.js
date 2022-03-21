@@ -24,6 +24,7 @@ inputReplace.push(
     { condition: {}, toReplace: '#forge:plates/golden', replaceWith: 'immersiveengineering:plate_golden' },
     { condition: {}, toReplace: '#forge:plates/copper', replaceWith: 'immersiveengineering:plate_copper' },
     { condition: {}, toReplace: '#forge:plates/constantan', replaceWith: '#forge:plates/copper' },
+    { condition: {}, toReplace: '#forge:plates/nickel', replaceWith: '#forge:plates/electrum' },
     { condition: { mod: 'beyond_earth' }, toReplace: '#forge:plates/iron', replaceWith: '#forge:plates/steel' },
     { condition: { id: 'immersiveengineering:crafting/capacitor_lv' }, toReplace: '#forge:plates/lead', replaceWith: '#forge:plates/brass' },
     // Steel
@@ -60,7 +61,9 @@ idRemovals.push(
     // Remove Alloy Kiln brass recipe
     'immersiveengineering:alloysmelter/brass',
     // Remove Electrum crafting grid recipe
-    'immersiveengineering:crafting/electrum_mix'
+    'immersiveengineering:crafting/electrum_mix',
+    // Removes nickel recipes, because they aren't being hidden
+    'immersiveengineering:metalpress/plate_nickel',
 )
 
 // Remove by recipe type
@@ -167,6 +170,21 @@ onEvent('recipes', event => {
             count: 2
         }
     }).id('createaddition:rolling/copper_plate')
+
+    event.custom({
+        type: 'immersiveengineering:blueprint',
+        inputs: [
+            { tag: 'forge:glass' },
+            { tag: 'forge:plates/electrum' },
+            { tag: 'forge:wires/copper' },
+            { tag: 'forge:dusts/redstone'}
+        ],
+        category: 'components',
+        result: {
+            item: 'immersiveengineering:electron_tube',
+            count: 3
+        }
+    }).id('immersiveengineering:blueprint/electron_tube')
 
 
     // Pressing recipes for IE Metals

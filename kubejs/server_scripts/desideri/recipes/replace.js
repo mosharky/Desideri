@@ -13,6 +13,8 @@ onEvent('recipes', (event) => {
         { condition: { id: /immersiveengineering:crafting\/(wirecoil.*|hemp_fabric)/ }, toReplace: '#balm:wooden_rods', replaceWith: 'createaddition:spool' },
         { condition: {}, toReplace: 'minecraft:bread', replaceWith: '#forge:bread' },
         { condition: {}, toReplace: 'enigmaticlegacy:angel_blessing', replaceWith: 'minecraft:elytra' },
+        { condition: {}, toReplace: 'minecraft:stick', replaceWith: '#forge:rods/wooden' },
+        { condition: {}, toReplace: '#forge:crops/flax', replaceWith: 'farmersdelight:straw' },
     )
     InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }
