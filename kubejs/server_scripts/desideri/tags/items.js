@@ -22,6 +22,7 @@ onEvent('tags.items', event => {
         },
         { tag: 'forge:raw_fishes', item: 'aquaculture:fish_fillet_raw' },
         { tag: 'forge:cooked_fishes', item: 'aquaculture:fish_fillet_cooked' },
+        { tag: 'desideri:berries', item: ['#rootsclassic:berries', 'minecraft:sweet_berries', 'minecraft:glow_berries']}
     ]
 
     // ForEach loop that adds tags to an item from constant addTagToItem
