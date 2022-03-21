@@ -15,7 +15,7 @@
 		generate = true
 		#Spawn Chance [default: 0.5]
 		#Range: 0.0 ~ 1.0
-		spawn_chance = 0.5
+		spawn_chance = 0.2
 		#Spacing (in chunks) [default: 40]
 		#Range: 0 ~ 200
 		spacing = 40
@@ -55,7 +55,7 @@
 		generate = true
 		#Spawn Chance [default: 0.7]
 		#Range: 0.0 ~ 1.0
-		spawn_chance = 0.7
+		spawn_chance = 0
 		#Spacing (in chunks) [default: 30]
 		#Range: 0 ~ 200
 		spacing = 30
@@ -72,7 +72,7 @@
 
 	[structures.forge]
 		#Generate? [default: true]
-		generate = true
+		generate = false
 		#Spawn Chance [default: 0.7]
 		#Range: 0.0 ~ 1.0
 		spawn_chance = 0.7
@@ -92,7 +92,7 @@
 
 	[structures.player_house]
 		#Generate? [default: true]
-		generate = true
+		generate = false
 		#Spawn Chance [default: 0.7]
 		#Range: 0.0 ~ 1.0
 		spawn_chance = 0.7
@@ -152,7 +152,7 @@
 
 	[structures.witch_hut]
 		#Generate? [default: true]
-		generate = true
+		generate = false
 		#Spawn Chance [default: 0.85]
 		#Range: 0.0 ~ 1.0
 		spawn_chance = 0.85

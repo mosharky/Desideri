@@ -22,6 +22,28 @@
         "value": 10000000
       }
     },
+    "malum:soul_ward_capacity": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
+    "malum:heart_of_stone_recovery_speed": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
     "forge:entity_gravity": {
       "enabled": false,
       "min": {
@@ -44,7 +66,29 @@
         "value": 10000000
       }
     },
+    "malum:magic_damage": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
     "malum:spirit_spoils": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
+    "malum:soul_ward_strength": {
       "enabled": false,
       "min": {
         "default": 0,
@@ -79,6 +123,17 @@
     },
     "minecraft:generic.attack_damage": {
       "enabled": true,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
+    "malum:heart_of_stone_strength": {
+      "enabled": false,
       "min": {
         "default": 0,
         "value": 0
@@ -154,6 +209,17 @@
         "value": 10000000
       }
     },
+    "malum:soul_ward_recovery_speed": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
     "minecraft:generic.movement_speed": {
       "enabled": true,
       "min": {
@@ -162,6 +228,17 @@
       },
       "max": {
         "default": 1024,
+        "value": 10000000
+      }
+    },
+    "botania:pixie_spawn_chance": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
         "value": 10000000
       }
     },
@@ -209,6 +286,17 @@
         "value": 10000000
       }
     },
+    "malum:soul_ward_damage_penalty": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
     "minecraft:horse.jump_strength": {
       "enabled": true,
       "min": {
@@ -217,6 +305,28 @@
       },
       "max": {
         "default": 2,
+        "value": 10000000
+      }
+    },
+    "malum:heart_of_stone_hunger_cost": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
+    "malum:heart_of_stone_capacity": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
         "value": 10000000
       }
     },
