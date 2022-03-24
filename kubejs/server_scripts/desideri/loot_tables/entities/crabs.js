@@ -3,8 +3,8 @@ onEvent('entity.loot_tables', event => {
     event.modifyEntity('ecologics:coconut_crab', table => {
         table.addPool(pool => {
             // Shell entry
-            pool.rolls = 1
             pool
+                .addItem('quark:crab_shell')
                 .addCondition({
                     condition: 'quark:flag',
                     flag: 'crab_brewing'
@@ -17,11 +17,9 @@ onEvent('entity.loot_tables', event => {
                     chance: 0.25,
                     looting_multiplier: 0.03
                 })
-            pool.addItem('quark:crab_shell')
         })
         table.addPool(pool => {
             // Leg entry
-            pool.rolls = 1
             pool
                 .addItem('quark:crab_leg')
                 .addFunction({
@@ -59,7 +57,6 @@ onEvent('entity.loot_tables', event => {
     // Quark Crabs
     event.modifyEntity('quark:crab', table => {
         table.addPool(pool => {
-            pool.rolls = 1
             pool
                 .addItem('ecologics:crab_claw')
                 .randomChance(0.25)
