@@ -159,7 +159,23 @@ const shaped = [
             A: '#minecraft:planks'
         },
         id: 'minecraft:sticks'
-    }
+    },
+    {
+        output: 'biomesoplenty:rose_quartz_block',
+        patten: ['AAA', 'AAA', 'AAA'],
+        key: {
+            A: 'biomesoplenty:rose_quartz_shard'
+        },
+        id: 'biomesoplenty:rose_quartz_block'
+    },
+    {
+        output: 'create:rose_quartz',
+        patten: four,
+        key: {
+            A: 'biomesoplenty:rose_quartz_shard'
+        },
+        id: 'create:crafting/materials/rose_quartz'
+    },
 ]
 onEvent('recipes', event => {
     shaped.forEach((recipe) => {
