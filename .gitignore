@@ -27,6 +27,7 @@ usercache.json
 usernamecache.json
 patchouli_data.json
 o_prof
+enigmatic_persistence.dat
 
 # launcher-related
 .curseclient
