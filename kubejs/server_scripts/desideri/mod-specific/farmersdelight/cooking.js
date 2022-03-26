@@ -1,35 +1,29 @@
 // No bowl inputs?
 onEvent('recipes', (event) => {
     function cookingRecipe(ingredients, result, experience, container, id) {
+        let ingredientArray = []
+        ingredients.forEach(item => {
+            ingredientArray.push(Ingredient.of(item))
+        })
         return event.custom({
             type: 'farmersdelight:cooking',
-            ingredients: ingredients,
-            result: result,
+            ingredients: ingredientArray,
+            result: Item.of(result),
             experience: experience,
-            container: container,
+            container: Item.of(container),
             cookingtime: 200
         }).id(id) // must give an id!
     }
 
     cookingRecipe([
-        Ingredient.of('corn_delight:corn_seeds'),
-        Ingredient.of('corn_delight:corn_seeds'),
-        Ingredient.of('kubejs:lye')
-    ],
-        Item.of('kubejs:hominy'),
-        0.35,
-        Item.of('air'),
-        'desideri:hominy',
-
-    )
+        'corn_delight:corn_seeds',
+        'corn_delight:corn_seeds',
+        'kubejs:lye'
+    ], 'kubejs:hominy', 0.35, 'air', 'desideri:hominy')
+    
     cookingRecipe([
-        Ingredient.of('rootsclassic:old_root'),
-        Ingredient.of('minecraft:wheat'),
-        Ingredient.of('minecraft:beetroot')
-    ],
-        Item.of('rootsclassic:rooty_stew'),
-        0.2,
-        Item.of('minecraft:bowl'),
-        'rootsclassic:rooty_stew'
-    )
+        'rootsclassic:old_root',
+        'minecraft:wheat',
+        'minecraft:beetroot'
+    ], 'rootsclassic:rooty_stew', 0.2, 'minecraft:bowl', 'rootsclassic:rooty_stew')
 })
