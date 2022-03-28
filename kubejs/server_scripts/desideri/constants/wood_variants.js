@@ -23,32 +23,10 @@ var woodVariantsToConstruct = [
     'biomesoplenty:willow',
     'hexerei:willow',
     'hexerei:mahogany',
-    'ecologics:coconut'
-    /*
-    'betterendforge:mossy_glowshroom',
-    'betterendforge:lacugrove',
-    'betterendforge:end_lotus',
-    'betterendforge:pythadendron',
-    'betterendforge:dragon_tree',
-    'betterendforge:tenanea',
-    'betterendforge:helix_tree',
-    'betterendforge:umbrella_tree',
-    'betterendforge:jellyshroom',
-    'betterendforge:lucernia',
-    'atmospheric:rosewood',
-    'atmospheric:morado',
-    'atmospheric:yucca',
-    'atmospheric:kousa',
-    'atmospheric:aspen',
-    'atmospheric:watchful_aspen',
-    'atmospheric:crustose',
-    'atmospheric:grimwood',
-    'upgrade_aquatic:driftwood',
-    'upgrade_aquatic:river',
-    'environmental:willow',
-    'environmental:cherry',
-    'environmental:wisteria',
-    */
+    'ecologics:coconut',
+    'quark:azalea',
+    'malum:runewood',
+    'malum:soulwood'
 ]
 
 var buildWoodVariants = []
@@ -62,16 +40,16 @@ woodVariantsToConstruct.forEach((variant) => {
     //suffix exceptions
     switch (logType) {
         case 'warped':
-            logSuffix = '_stem';
-            woodSuffix = '_hyphae';
-            break;
+            logSuffix = '_stem'
+            woodSuffix = '_hyphae'
+            break
         case 'crimson':
-            logSuffix = '_stem';
-            woodSuffix = '_hyphae';
-            break;
+            logSuffix = '_stem'
+            woodSuffix = '_hyphae'
+            break
         default:
-            logSuffix = '_log';
-            woodSuffix = '_wood';
+            logSuffix = '_log'
+            woodSuffix = '_wood'
     }
 
     logBlock = modId + ':' + logType + logSuffix
@@ -82,6 +60,11 @@ woodVariantsToConstruct.forEach((variant) => {
     slabBlock = modId + ':' + logType + '_slab'
 
     // Exceptions
+    if (modId == 'malum') {
+        woodBlock = modId + ':' + logType
+        woodBlockStripped = modId + ':stripped_' + logType
+    }
+
     /*
     if (modId == 'betterendforge') {
         logSuffix = '_log'
