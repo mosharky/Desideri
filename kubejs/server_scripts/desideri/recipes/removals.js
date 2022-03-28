@@ -13,14 +13,14 @@ global.fullRemovals.push(
     'farmersdelight:wheat_dough',
     'biomesoplenty:spanish_moss',
     /aquaculture:.*_fillet_knife/,
-    /quark:(backpack|potato_crate|carrot_crate|beetroot_crate|chute|gravisand|abacus|dragon_scale|.*limestone.*|.*blossom.*)/,
+    /quark:(backpack|potato_crate|carrot_crate|beetroot_crate|chute|gravisand|abacus|dragon_scale|.*limestone.*)/,
     /quark:(granite|andesite|diorite|calcite|dripstone|tuff)_pillar/,
-    /biomesoplenty:(.*black_sand.*|.*autumn.*)/,
+    //biomesoplenty:(.*black_sand.*|.*autumn.*)/,
     'createaddition:electric_motor',
     'aquaculture:turtle_soup',
     /refinedstorage:(1k.*|4k.*|16k.*|64k.*|256.*|1024k.*|4096k.*)/,
     /refinedstorage:(fortune.*|silk_touch_upgrade|.*disk_manipulator|.*disk_drive)/,
-    /enigmaticlegacy:(enigmatic_item|ocean_stone|magma_heart|eye_of_nebula|enigmatic_amulet|forbidden_axe|etherium.*|astral_breaker|enchantment_transposer|fabulous_scroll|)/,
+    /enigmaticlegacy:(enigmatic_item|ocean_stone|magma_heart|eye_of_nebula|enigmatic_amulet|forbidden_axe|etherium.*|astral_breaker|enchantment_transposer|fabulous_scroll|void_pearl|golem_heart|angel_blessing|escape_scroll|monster_charm|mining_charm|mega_sponge|ender_rod|infinimeal|unwitnessed_amulet)/,
     /aquaculture:(neptunium.*|neptunes_bounty)/,
     'alloyed:steel_fishing_rod'
 )
