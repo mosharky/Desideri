@@ -124,7 +124,10 @@ onEvent('recipes', (event) => {
     event.recipes.createCrushing(['kubejs:crushed_desh_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_desh')
     event.recipes.createCrushing(['kubejs:crushed_ostrum_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_ostrum')
     event.recipes.createCrushing(['kubejs:crushed_calorite_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_calorite')
+    event.recipes.createCrushing(['9x kubejs:crushed_desh_ore', Item.of('9x create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_desh_block')
+    event.recipes.createCrushing(['9x kubejs:crushed_ostrum_ore', Item.of('9x create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_ostrum_block')
+    event.recipes.createCrushing(['9x kubejs:crushed_calorite_ore', Item.of('9x create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_calorite_block')
 
-    // NONE ORE RECIPES
+    // NON ORE RECIPES
     event.recipes.createCrushing(['3x minecraft:string', Item.of('minecraft:string').withChance(0.25)], '#minecraft:wool').id('create:crushing/wool')
 })
