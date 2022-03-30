@@ -1,5 +1,5 @@
 onEvent('recipes', (event) => {
-    event.recipes.createMilling('4x minecraft:string', '#minecraft:wool').id('create:milling/wool')
+    event.recipes.createMilling(['3x minecraft:string', Item.of('minecraft:string').withChance(0.25)], '#minecraft:wool').id('create:milling/wool')
 
     const rawOresToMill = [
         { modId: 'immersiveengineering', ore: 'aluminum' },
@@ -8,9 +8,9 @@ onEvent('recipes', (event) => {
         { modId: 'minecraft', ore: 'iron' },
         { modId: 'minecraft', ore: 'gold' },
         { modId: 'minecraft', ore: 'copper' },
-        // { modId: 'beyond_earth', ore: 'desh' },
-        // { modId: 'beyond_earth', ore: 'ostrum' },
-        // { modId: 'beyond_earth', ore: 'calorite' },
+        { modId: 'beyond_earth', ore: 'desh' },
+        { modId: 'beyond_earth', ore: 'ostrum' },
+        { modId: 'beyond_earth', ore: 'calorite' },
     ]
     rawOresToMill.forEach(rawOre => {
         if (global.createSupportedOres.includes(rawOre.ore)) {
