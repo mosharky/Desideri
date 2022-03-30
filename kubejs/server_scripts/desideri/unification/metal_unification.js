@@ -153,13 +153,10 @@ onEvent('recipes', event => {
             {
                 base_ingredient: { tag: 'forge:nuggets/silver' },
                 count: 2
-            },
-            { tag: 'forge:nuggets/steel' }
+            }
         ],
         category: 'bullet',
-        result: {
-            item: 'immersiveengineering:silver'
-        }
+        result: { item: 'immersiveengineering:silver' }
     }).id('immersiveengineering:blueprint/bullet_silver')
 
     // i hate create additions :rage:
@@ -178,7 +175,7 @@ onEvent('recipes', event => {
             { tag: 'forge:glass' },
             { tag: 'forge:plates/electrum' },
             { tag: 'forge:wires/copper' },
-            { tag: 'forge:dusts/redstone'}
+            { tag: 'forge:dusts/redstone' }
         ],
         category: 'components',
         result: {
@@ -186,6 +183,24 @@ onEvent('recipes', event => {
             count: 3
         }
     }).id('immersiveengineering:blueprint/electron_tube')
+
+    event.custom({
+        type: 'immersiveengineering:blueprint',
+        inputs: [
+            { item: 'immersiveengineering:empty_casing' },
+            { tag: 'forge:gunpowder' },
+            {
+                base_ingredient: { tag: 'forge:nuggets/steel' },
+                count: 2
+            },
+            {
+                base_ingredient: { tag: 'forge:plates/bronze' },
+                count: 2
+            }
+        ],
+        category: 'bullet',
+        result: { item: 'immersiveengineering:armor_piercing' }
+    }).id('immersiveengineering:blueprint/bullet_armorpiercing')
 
 
     // Pressing recipes for IE Metals
