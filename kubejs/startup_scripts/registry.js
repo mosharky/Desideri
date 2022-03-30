@@ -25,7 +25,7 @@ onEvent('item.registry', event => {
 	})
 
 	event.create('crushed_ostrum_ore', item => {
-		item.displayName('Crushed ostrum Ore')
+		item.displayName('Crushed Ostrum Ore')
 	})
 
 	event.create('crushed_calorite_ore', item => {
