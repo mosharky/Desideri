@@ -15,7 +15,7 @@ onEvent('recipes', (event) => {
         { condition: {}, toReplace: 'enigmaticlegacy:angel_blessing', replaceWith: 'minecraft:elytra' },
         { condition: {}, toReplace: 'minecraft:stick', replaceWith: '#forge:rods/wooden' },
         { condition: {}, toReplace: '#forge:crops/flax', replaceWith: 'farmersdelight:straw' },
-        { condition: { id: 'farmersdelight:fruit_salad' }, toReplace: 'minecraft:sweet_berries', replaceWith: 'desideri:berries' },
+        { condition: { id: 'farmersdelight:fruit_salad' }, toReplace: 'minecraft:sweet_berries', replaceWith: '#desideri:berries' },
     )
     InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }

@@ -118,8 +118,8 @@ onEvent('recipes', (event) => {
     strataGemCrushingRecipe('minecraft:stone', 'minecraft:diamond', 2, undefined, 'create:crushing/diamond_ore')
 
     customOreCrushingRecipe('malum:blazing_quartz_ore', 'malum:blazing_quartz', 'minecraft:netherrack', 2)
-    customOreCrushingRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 'minecraft:stone', 2)
-    customOreCrushingRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 'minecraft:deepslate', 2)
+    customOreCrushingRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 'minecraft:cobblestone', 2)
+    customOreCrushingRecipe('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', 'minecraft:cobbled_deepslate', 2)
 
     event.recipes.createCrushing(['kubejs:crushed_desh_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_desh')
     event.recipes.createCrushing(['kubejs:crushed_ostrum_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_ostrum')
@@ -130,4 +130,13 @@ onEvent('recipes', (event) => {
 
     // NON ORE RECIPES
     event.recipes.createCrushing(['3x minecraft:string', Item.of('minecraft:string').withChance(0.25)], '#minecraft:wool').id('create:crushing/wool')
+    event.recipes.createCrushing('immersiveengineering:dust_electrum', '#forge:ingots/electrum')
+    event.recipes.createCrushing('immersiveengineering:dust_gold', '#forge:ingots/gold')
+    event.recipes.createCrushing('immersiveengineering:dust_iron', '#forge:ingots/iron')
+    event.recipes.createCrushing('immersiveengineering:dust_steel', '#forge:ingots/steel')
+    event.recipes.createCrushing('immersiveengineering:dust_silver', '#forge:ingots/silver')
+    event.recipes.createCrushing('immersiveengineering:dust_aluminum', '#forge:ingots/aluminum')
+    event.recipes.createCrushing('immersiveengineering:dust_copper', '#forge:ingots/copper')
+    event.recipes.createCrushing('immersiveengineering:dust_coke', '#forge:coal_coke')
+    event.recipes.createCrushing('9x immersiveengineering:dust_coke', '#forge:storage_blocks/coal_coke')
 })

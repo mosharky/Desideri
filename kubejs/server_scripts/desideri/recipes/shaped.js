@@ -162,7 +162,7 @@ const shaped = [
     },
     {
         output: 'biomesoplenty:rose_quartz_block',
-        patten: ['AAA', 'AAA', 'AAA'],
+        pattern: ['AAA', 'AAA', 'AAA'],
         key: {
             A: 'biomesoplenty:rose_quartz_shard'
         },
@@ -170,7 +170,7 @@ const shaped = [
     },
     {
         output: 'create:rose_quartz',
-        patten: four,
+        pattern: four,
         key: {
             A: 'biomesoplenty:rose_quartz_shard'
         },
