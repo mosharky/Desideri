@@ -28,6 +28,8 @@ usernamecache.json
 patchouli_data.json
 o_prof
 enigmatic_persistence.dat
+reauth.toml
+
 
 # launcher-related
 .curseclient
