@@ -118,6 +118,8 @@ const shaped = [
     },
 
     // Hexerei Wood fixes
+    /*
+    uncomment when Malum is updated to 1.18.2
     {
         output: '3x hexerei:willow_wood',
         pattern: four,
@@ -142,6 +144,7 @@ const shaped = [
         key: { A: 'hexerei:stripped_mahogany_log' },
         id: 'hexerei:stripped_mahogany_wood'
     },
+    */
     {
         output: '4x createaddition:spool',
         pattern: ['A', 'B', 'A'],

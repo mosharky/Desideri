@@ -22,7 +22,7 @@ global.fullRemovals.push(
     /refinedstorage:(fortune.*|silk_touch_upgrade|.*disk_manipulator|.*disk_drive)/,
     /enigmaticlegacy:(enigmatic_item|ocean_stone|magma_heart|eye_of_nebula|enigmatic_amulet|forbidden_axe|etherium.*|astral_breaker|enchantment_transposer|fabulous_scroll|void_pearl|golem_heart|angel_blessing|escape_scroll|monster_charm|mining_charm|mega_sponge|ender_rod|infinimeal|unwitnessed_amulet)/,
     /aquaculture:(neptunium.*|neptunes_bounty)/,
-    'alloyed:steel_fishing_rod'
+    //'alloyed:steel_fishing_rod' uncomment when Malum is updated to 1.18.2
 )
 // Removes by recipe ID
 idRemovals.push(

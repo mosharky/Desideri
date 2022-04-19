@@ -117,9 +117,10 @@ onEvent('recipes', (event) => {
     strataGemCrushingRecipe('minecraft:stone', 'minecraft:redstone', 12, undefined, 'create:crushing/redstone_ore')
     strataGemCrushingRecipe('minecraft:stone', 'minecraft:diamond', 2, undefined, 'create:crushing/diamond_ore')
 
-    customOreCrushingRecipe('malum:blazing_quartz_ore', 'malum:blazing_quartz', 'minecraft:netherrack', 2)
-    customOreCrushingRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 'minecraft:cobblestone', 2)
-    customOreCrushingRecipe('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', 'minecraft:cobbled_deepslate', 2)
+    // uncomment when Malum is updated to 1.18.2
+    // customOreCrushingRecipe('malum:blazing_quartz_ore', 'malum:blazing_quartz', 'minecraft:netherrack', 2)
+    // customOreCrushingRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 'minecraft:cobblestone', 2)
+    // customOreCrushingRecipe('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', 'minecraft:cobbled_deepslate', 2)
 
     event.recipes.createCrushing(['kubejs:crushed_desh_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_desh')
     event.recipes.createCrushing(['kubejs:crushed_ostrum_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_ostrum')

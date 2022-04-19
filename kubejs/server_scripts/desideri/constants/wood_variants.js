@@ -21,12 +21,12 @@ var woodVariantsToConstruct = [
     'biomesoplenty:dead',
     'biomesoplenty:hellbark',
     'biomesoplenty:willow',
-    'hexerei:willow',
-    'hexerei:mahogany',
+    // 'hexerei:willow', uncomment when Malum is updated to 1.18.2
+    // 'hexerei:mahogany', uncomment when Malum is updated to 1.18.2
     'ecologics:coconut',
     'quark:azalea',
-    'malum:runewood',
-    'malum:soulwood'
+    // 'malum:runewood', uncomment when Malum is updated to 1.18.2
+    // 'malum:soulwood' uncomment when Malum is updated to 1.18.2
 ]
 
 var buildWoodVariants = []
