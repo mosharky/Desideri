@@ -26,4 +26,11 @@ onEvent('recipes', (event) => {
         'minecraft:wheat',
         'minecraft:beetroot'
     ], 'rootsclassic:rooty_stew', 0.2, 'minecraft:bowl', 'rootsclassic:rooty_stew')
+
+    // Greater Eye of Ender
+    cookingRecipe([
+        'kubejs:lesser_ender_eye',
+        'alexsmobs:blood_sac',
+        'kubejs:hemolymph_pustules'
+    ], 'minecraft:ender_eye', 0.2, 'air', 'minecraft:ender_eye')
 })
