@@ -173,7 +173,7 @@ onEvent('recipes', (event) => {
             energy: data.energy
         }
         if (data.slag) {
-            recipe['slag'] = { tag: 'forge:slag' }
+            recipe['slag'] = { item: 'immersiveengineering:slag' }
         }
         if (data.id != undefined) {
             return event.custom(recipe).id(data.id)
