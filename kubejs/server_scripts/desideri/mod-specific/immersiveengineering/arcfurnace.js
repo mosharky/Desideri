@@ -61,6 +61,8 @@ onEvent('recipes', (event) => {
             time: 2,
             id: 'immersiveengineering:arcfurnace/dust_gold'
         },
+        /*
+        uncomment when Create: Alloyed is re-added
         {
             input: '#forge:ingots/copper',
             additionalInput: ['3x #forge:nuggets/zinc', 'create:cinder_flour'],
@@ -68,6 +70,7 @@ onEvent('recipes', (event) => {
             energy: 512,
             time: 5
         },
+        */
         {
             input: '#forge:ores/desh',
             result: { count: 2, item: 'beyond_earth:desh_ingot' },
@@ -137,8 +140,7 @@ onEvent('recipes', (event) => {
             secondaryResult: [{ chance: 0.5, item: 'beyond_earth:calorite_ingot' }],
             energy: 2304,
             time: 45
-        },
-        
+        },      
     ]
     ArcFurnaceRecipes.forEach(data => {
         data.time = data.time * 20
