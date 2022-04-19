@@ -101,9 +101,9 @@ global.fullRemovals.push(
     /immersiveengineering:.*nickel.*/,
     'immersiveengineering:plate_nickel', // remove when .removeAllTagsFrom() accepts regex
     'immersiveengineering:ingot_nickel', // remove when .removeAllTagsFrom() accepts regex
-    // 'alloyed:steel_ingot', uncomment when Malum is updated to 1.18.2
-    // 'alloyed:steel_block', uncomment when Malum is updated to 1.18.2
-    // 'alloyed:steel_sheet', uncomment when Malum is updated to 1.18.2
+    // 'alloyed:steel_ingot', uncomment when Create: Alloyed is updated to 1.18.2
+    // 'alloyed:steel_block', uncomment when Create: Alloyed is updated to 1.18.2
+    // 'alloyed:steel_sheet', uncomment when Create: Alloyed is updated to 1.18.2
     /immersiveengineering:(pickaxe|shovel|axe|hoe|sword)_steel/,
     'createaddition:iron_rod',
     'createaddition:gold_rod',

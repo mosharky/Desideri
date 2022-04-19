@@ -119,7 +119,7 @@ const shaped = [
 
     // Hexerei Wood fixes
     /*
-    uncomment when Malum is updated to 1.18.2
+    uncomment when Hexerei is updated to 1.18.2
     {
         output: '3x hexerei:willow_wood',
         pattern: four,
