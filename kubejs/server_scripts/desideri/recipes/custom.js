@@ -1,20 +1,7 @@
 onEvent('recipes', event => {
-    // Greater Eye of Ender recipe
-    event.custom({
-        type: 'farmersdelight:cooking',
-        ingredients: [
-            {item: 'kubejs:lesser_ender_eye'},
-            {item: 'alexsmobs:blood_sac'},
-            {item: 'kubejs:hemolymph_pustules'},
-        ],
-        result: {item: 'minecraft:ender_eye'},
-        cookingtime: 200
-    }).id('minecraft:ender_eye')
-
-
     // Tier 1 Rocket (Steel Plate instead of Compressed Steel)
     event.custom({
-        type: 'beyond_earth:workbenching',
+        type: 'beyond_earth:nasa_workbench',
         input: {
             parts: {
                 'beyond_earth:nose':[
@@ -49,10 +36,10 @@ onEvent('recipes', event => {
             item: 'beyond_earth:rocket_t1',
             count: 1
         }
-    }).id('beyond_earth:workbenching/tier1')
+    }).id('beyond_earth:nasa_workbenching/tier1')
     // Tier 2 Rocket (Desh Plate instead of Compressed Desh)
     event.custom({
-        type: 'beyond_earth:workbenching',
+        type: 'beyond_earth:nasa_workbench',
         input: {
             parts: {
                 'beyond_earth:nose':[
@@ -87,5 +74,5 @@ onEvent('recipes', event => {
             item: 'beyond_earth:rocket_t2',
             count: 1
         }
-    }).id('beyond_earth:workbenching/tier2')
+    }).id('beyond_earth:nasa_workbenching/tier2')
 })
