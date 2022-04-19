@@ -1,0 +1,44 @@
+
+#Beach Update
+[beach]
+	#How often (in percentage) should Coconut Crabs spawn when a coconut breaks? Set it to 0.0 to disable this.
+	#Range: 0.0 ~ 1.0
+	coconutCrabSpawnChance = 0.2
+	#Generate coconut trees on beaches
+	generateCoconutTrees = true
+	#Generate seashells on beaches
+	generateSeashells = true
+
+#Desert Update
+[desert]
+	#Spawn camels in deserts
+	spawnCamels = true
+	#Generate prickly pears on top of cacti in the desert
+	generatePricklyPears = true
+	#How often (in percentage) should prickly pears grow when a cactus reaches full height? Set it to 0.0 to disable this.
+	#Range: 0.0 ~ 1.0
+	pricklyPearGrowthChance = 1.0
+	#Generate ruins in deserts
+	generateDesertRuins = true
+
+#Snowy Update
+[snowy]
+	#Spawn penguins in snowy biomes
+	spawnPenguins = true
+	#Generate thin ice patches in icy biomes
+	generateThinIcePatches = true
+
+#Plains Update
+[plains]
+	#Spawn squirrels in plains biomes
+	spawnSquirrels = true
+	#Generate walnut trees in plains biomes instead of oak trees
+	generateWalnutTrees = true
+
+#Lush Caves Update
+[lush_caves]
+	#Vanilla Azalea trees will have azalea logs instead of oak logs
+	replaceAzaleaTree = true
+	#Generate surface moss in lush cave biomes
+	generateSurfaceMoss = true
+

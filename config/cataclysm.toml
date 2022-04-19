@@ -23,8 +23,6 @@
 	EnderGuardianDamageCap = 22
 	#Ender guardian's block breaking ignore the MobGriefing
 	EnderguardianBlockBreaking = true
-	#ruined citadel spawn
-	RuinedcitadelSpawn = true
 	#Guardian's Immune to Long distance attack range.
 	#Range: 1.0 ~ 1000000.0
 	"Guardian's prevent attacks from far away Range" = 12.0
@@ -54,8 +52,6 @@
 	#Monstrosity's DamageCap
 	#Range: 0 ~ 1000000
 	MonstrosityDamageCap = 22
-	#soul black smith spawn
-	SoulblacksmithSpawn = true
 	#Monstrosity's bodyBlocking verdict
 	NetheritemonstrosityBodyBloking = true
 	#Monstrosity's Immune to Long distance attack range.

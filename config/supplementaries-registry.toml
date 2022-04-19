@@ -21,7 +21,6 @@
 	notice_board = true
 	crank = true
 	jar = true
-	jar_tinted = false
 	faucet = true
 	turn_table = true
 	spring_launcher = true

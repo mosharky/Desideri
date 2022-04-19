@@ -30,4 +30,9 @@
 		#The maximum size of an emerald stack that can generate in the Wandering Trader backpack
 		#Range: 1 ~ 64
 		maxEmeraldStack = 32
+		#Instead of generating trades as loot in the Wandering Traders backpacks, only generate emeralds.
+		generateEmeraldsOnly = false
+		#The maximum multiplier to apply when generating loot in the Wandering Trader backpack
+		#Range: 1 ~ 64
+		maxLootMultiplier = 12
 

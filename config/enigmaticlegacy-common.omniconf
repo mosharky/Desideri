@@ -66,27 +66,6 @@
     # Whether or not Enigmatic Legacy should purposefully crash client whenever any mod tries to inject unnamed LootPool into any loot table. If false, stacktraces will be printed to log but game will proceed as normal. [default: true, synchronized: no]
     B:CrashOnUnnamedPool=true
 
-    # Whether or not Crying Netherite Armor should be enabled. [default: true, synchronized: yes]
-    B:CryingNetheriteArmorEnabled=true
-
-    # Whether or not Crying Netherite Axe should be enabled. [default: true, synchronized: yes]
-    B:CryingNetheriteAxeEnabled=true
-
-    # Whether or not Crying Netherite Hoe should be enabled. [default: true, synchronized: yes]
-    B:CryingNetheriteHoeEnabled=true
-
-    # Whether or not Crying Netherite Ingot should be enabled. [default: true, synchronized: yes]
-    B:CryingNetheriteIngotEnabled=true
-
-    # Whether or not Crying Netherite Pickaxe should be enabled. [default: true, synchronized: yes]
-    B:CryingNetheritePickaxeEnabled=true
-
-    # Whether or not Crying Netherite Shovel should be enabled. [default: true, synchronized: yes]
-    B:CryingNetheriteShovelEnabled=true
-
-    # Whether or not Crying Netherite Sword should be enabled. [default: true, synchronized: yes]
-    B:CryingNetheriteSwordEnabled=true
-
     # Whether or not Curse of Eternal Binding should be enabled. [default: true, synchronized: yes]
     B:CurseofEternalBindingEnabled=true
 
@@ -98,9 +77,6 @@
 
     # Whether or not this mod should add any custom loot to dungeon chests' loot tables. This options is mainly for modpack developers and enables them to re-add that loot on their own terms, since no other ways of modifying what Enigmatic Legacy adds to loot tables currently exist. [default: true, synchronized: yes]
     B:CustomDungeonLootEnabled=true
-
-    # Whether or not Dark Armor should be enabled. [default: true, synchronized: yes]
-    B:DarkArmorEnabled=true
 
     # Whether or not Darkest Scroll should be enabled. [default: true, synchronized: yes]
     B:DarkestScrollEnabled=true
@@ -162,12 +138,6 @@
     # Whether or not Forbidden Fruit should be enabled. [default: true, synchronized: yes]
     B:ForbiddenFruitEnabled=true
 
-    # Whether or not Fruit of Ascension should be enabled. [default: true, synchronized: yes]
-    B:FruitofAscensionEnabled=true
-
-    # Whether or not Gem of Binding should be enabled. [default: true, synchronized: yes]
-    B:GemofBindingEnabled=true
-
     # Whether or not Gift of the Heaven should be enabled. [default: true, synchronized: yes]
     B:GiftoftheHeavenEnabled=true
 
@@ -215,6 +185,9 @@
 
     # Whether or not Nefarious Essence should be enabled. [default: true, synchronized: yes]
     B:NefariousEssenceEnabled=true
+
+    # Whether or not Non-Euclidean Cube should be enabled. [default: true, synchronized: yes]
+    B:NonEuclideanCubeEnabled=true
 
     # Whether or not Pact of Infinite Avarice should be enabled. [default: true, synchronized: yes]
     B:PactofInfiniteAvariceEnabled=true
@@ -267,6 +240,9 @@
     # Whether or not The Architect's Inkwell should be enabled. [default: true, synchronized: yes]
     B:TheArchitectsInkwellEnabled=true
 
+    # Whether or not The Burden of Desolation should be enabled. [default: true, synchronized: yes]
+    B:TheBurdenofDesolationEnabled=true
+
     # Whether or not The Ender Slayer should be enabled. [default: true, synchronized: yes]
     B:TheEnderSlayerEnabled=true
 
@@ -302,9 +278,6 @@
 
     # Whether or not Withered Tome should be enabled. [default: true, synchronized: yes]
     B:WitheredTomeEnabled=true
-
-    # Whether or not Wormhole Potion should be enabled. [default: true, synchronized: yes]
-    B:WormholePotionEnabled=true
 
     # Whether or not Wrath Enchantment should be enabled. [default: true, synchronized: yes]
     B:WrathEnchantmentEnabled=false
@@ -490,6 +463,11 @@
 
     # Default amount of armor points provided by Heart of the Golem. [range: 0.0 ~ 256.0, default: 4.0, synchronized: yes]
     D:GolemHeartDefaultArmor=4.0
+
+    # List of items that should not be counted as armor by Heart of the Golem, even when equipped in armor slots. [default: [minecraft:elytra], synchronized: no]
+    S:GolemHeartExcludedArmor <
+        minecraft:elytra
+     >
 
     # Resistance to explosion damage provided by Heart of the Golem. Defined as percentage. [range: 0 ~ 100, default: 40, synchronized: yes]
     I:GolemHeartExplosionResistance=40
@@ -681,6 +659,9 @@
 "The Seven Curses" {
     # How much less effective armor will be for those who bear the ring. Measured as percetage. [range: 0 ~ 100, default: 30, synchronized: yes]
     I:CursedRingArmorDebuff=30
+
+    # If true, Ring of the Seven Curses will be equipped into player's ring slot right away when it enters their inventory. This is different from ultra hardcore option as the way through which ring ends up in player's inventory does not matter. [default: false, synchronized: yes]
+    B:CursedRingAutoEquip=false
 
     # Set to false to disable ALL special drops that can be obtained from vanilla mobs when bearing Ring of the Seven Curses. [default: true, synchronized: yes]
     B:CursedRingEnableSpecialDrops=true

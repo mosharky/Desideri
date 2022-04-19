@@ -12,18 +12,6 @@
 	"Mogler Spawn" = true
 	#Enable or Disable Martian Raptor to Spawn
 	"Martian Raptor Spawn" = true
-	#Enable or Disable Oil Well Structure to Spawn
-	"Oil Well Structure" = false
-	#Enable or Disable Meteor Structure to Spawn
-	"Meteor Structure" = true
-	#Enable or Disable Alien Village Structure to Spawn
-	"Alien Village Structure" = true
-	#Enable or Disable Venus Bullet Structure to Spawn
-	"Venus Bullet Structure" = true
-	#Enable or Disable Venus Tower Structure to Spawn
-	"Venus Tower Structure" = true
-	#Enable or Disable Crimson Village Structure to Spawn
-	"Crimson Village Structure" = true
 	#Enable or Disable Player Oxygen System
 	"Player Oxygen System" = true
 	#Enable or Disable Entity Oxygen System
