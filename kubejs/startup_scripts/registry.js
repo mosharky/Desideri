@@ -5,41 +5,33 @@
 // RARITY_RARE
 // RARITY_EPIC
 
-onEvent('item.registry', event => {
+onEvent('item.registry', item => {
 
-	event.create('hemolymph_pustules', item => {
-		item.displayName('Hemolymph Pustules')
-		item.rarity(RARITY_UNCOMMON)
-	})
+	item.create('hemolymph_pustules')
+		.displayName('Hemolymph Pustules')
+		.rarity(RARITY_UNCOMMON)
 
-	event.create('lesser_ender_eye', item => {
-		item.displayName('Lesser Eye of Ender')
-	})
+	item.create('lesser_ender_eye')
+		.displayName('Lesser Eye of Ender')
 
-	event.create('lye', item => {
-		item.displayName('Lye')
-	})
+	item.create('lye')
+		.displayName('Lye')
 
-	event.create('crushed_desh_ore', item => {
-		item.displayName('Crushed Desh Ore')
-	})
+	item.create('crushed_desh_ore')
+		.displayName('Crushed Desh Ore')
 
-	event.create('crushed_ostrum_ore', item => {
-		item.displayName('Crushed Ostrum Ore')
-	})
+	item.create('crushed_ostrum_ore')
+		.displayName('Crushed Ostrum Ore')
 
-	event.create('crushed_calorite_ore', item => {
-		item.displayName('Crushed Calorite Ore')
-	})
+	item.create('crushed_calorite_ore')
+		.displayName('Crushed Calorite Ore')
 
-	event.create('hominy', item => {
-		item
-			.displayName('Hominy')
-			.food(food => {
-				food
-					.hunger(3)
-					.saturation(0.1)
-					.fastToEat()
-			})
-	})
+	item.create('hominy')
+		.displayName('Hominy')
+		.food(foodBuilder => {
+			foodBuilder
+				.hunger(3)
+				.saturation(0.1)
+				.fastToEat()
+		})
 })
