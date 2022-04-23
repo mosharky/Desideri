@@ -61,8 +61,6 @@ const ArcFurnaceRecipes = [
         time: 2,
         id: 'immersiveengineering:arcfurnace/dust_gold'
     },
-    /*
-    uncomment when Create: Alloyed is re-added
     {
         input: '#forge:ingots/copper',
         additionalInput: ['3x #forge:nuggets/zinc', 'create:cinder_flour'],
@@ -70,7 +68,6 @@ const ArcFurnaceRecipes = [
         energy: 512,
         time: 5
     },
-    */
     {
         input: '#forge:ores/desh',
         result: { count: 2, item: 'beyond_earth:desh_ingot' },

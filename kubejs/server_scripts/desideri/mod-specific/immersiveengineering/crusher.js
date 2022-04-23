@@ -26,7 +26,7 @@ onEvent('recipes', (event) => {
     strataOreCrusherRecipe('immersiveengineering:ore_aluminum', 'create:crushed_aluminum_ore', 2, 0.25, 'minecraft:cobblestone', undefined, 'immersiveengineering:crusher/ore_aluminum')
     strataOreCrusherRecipe('create:zinc_ore', 'create:crushed_zinc_ore', 2, 0.25, 'minecraft:cobblestone')
     strataOreCrusherRecipe('minecraft:iron_ore', 'create:crushed_iron_ore', 2, 0.25, 'minecraft:cobblestone')
-    // strataOreCrusherRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 2, 0.25, 'minecraft:cobblestone') uncomment when Malum is updated to 1.18.2
+    strataOreCrusherRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 2, 0.25, 'minecraft:cobblestone')
     // Deepslate
     strataOreCrusherRecipe('minecraft:deepslate_gold_ore', 'create:crushed_gold_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
     strataOreCrusherRecipe('minecraft:deepslate_copper_ore', 'create:crushed_copper_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
@@ -38,7 +38,7 @@ onEvent('recipes', (event) => {
     strataOreCrusherRecipe('create:deepslate_zinc_ore', 'create:crushed_zinc_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
     strataOreCrusherRecipe('immersiveengineering:deepslate_ore_silver', 'create:crushed_silver_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
     strataOreCrusherRecipe('immersiveengineering:deepslate_ore_aluminum', 'create:crushed_aluminum_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
-    // strataOreCrusherRecipe('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', 2, 0.25, 'minecraft:cobbled_deepslate') uncomment when Malum is updated to 1.18.2
+    strataOreCrusherRecipe('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', 2, 0.25, 'minecraft:cobbled_deepslate')
     // Moon
     strataOreCrusherRecipe('beyond_earth:moon_iron_ore', 'create:crushed_iron_ore', 2, 0.25, 'beyond_earth:moon_sand')
     strataOreCrusherRecipe('beyond_earth:moon_desh_ore', 'kubejs:crushed_desh_ore', 2, 0.25, 'beyond_earth:moon_sand')
@@ -61,7 +61,7 @@ onEvent('recipes', (event) => {
     // Nether
     strataOreCrusherRecipe('minecraft:nether_gold_ore', 'minecraft:gold_nugget', 7, 0.50, 'minecraft:netherrack', undefined, 'immersiveengineering:crusher/nether_gold')
     strataOreCrusherRecipe('minecraft:nether_quartz_ore', 'minecraft:quartz', 2, 0.25, 'minecraft:netherrack', undefined, 'immersiveengineering:crusher/ore_quartz')
-    // strataOreCrusherRecipe('malum:blazing_quartz_ore', 'malum:blazing_quartz', 2, 0.25, 'minecraft:netherrack') uncomment when Malum is updated to 1.18.2
+    strataOreCrusherRecipe('malum:blazing_quartz_ore', 'malum:blazing_quartz', 2, 0.25, 'minecraft:netherrack')
 
     // Raw Ore Recipes
     event.recipes.immersiveengineeringCrusher('create:crushed_iron_ore', 'minecraft:raw_iron', Item.of('create:experience_nugget').withChance(0.75)).id('immersiveengineering:crusher/raw_ore_iron')

@@ -25,8 +25,8 @@ var woodVariantsToConstruct = [
     // 'hexerei:mahogany', uncomment when Malum is updated to 1.18.2
     'ecologics:coconut',
     'quark:azalea',
-    // 'malum:runewood', uncomment when Malum is updated to 1.18.2
-    // 'malum:soulwood' uncomment when Malum is updated to 1.18.2
+    'malum:runewood',
+    'malum:soulwood' 
 ]
 
 var buildWoodVariants = []

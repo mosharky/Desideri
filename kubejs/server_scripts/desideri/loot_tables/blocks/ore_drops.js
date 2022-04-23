@@ -56,7 +56,6 @@ oneRawOre('beyond_earth', 'beyond_earth:desh', 'moon')
 oneRawOre('beyond_earth', 'beyond_earth:ostrum', 'mars')
 oneRawOre('beyond_earth', 'beyond_earth:calorite', 'venus')
 // Irregular
-// uncomment when Create: Alloyed is re-added
-// oneRawOre('malum:soulstone_ore', 'malum:soulstone_cluster', undefined, true)
-// oneRawOre('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', undefined, true)
+oneRawOre('malum:soulstone_ore', 'malum:soulstone_cluster', undefined, true)
+oneRawOre('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', undefined, true)
 
