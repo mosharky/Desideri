@@ -1,79 +1,39 @@
-onEvent('entity.loot_tables', event => {
-    // Coconut Crab
-    event.modifyEntity('ecologics:coconut_crab', table => {
-        table.addPool(pool => {
-            // Shell entry
-            pool
-                .addItem('quark:crab_shell')
-                .addCondition({
-                    condition: 'quark:flag',
-                    flag: 'crab_brewing'
-                })
-                .addCondition({
-                    condition: 'killed_by_player'
-                })
-                .addCondition({
-                    condition: 'random_chance_with_looting',
-                    chance: 0.25,
-                    looting_multiplier: 0.03
-                })
+onEvent('lootjs', event => {
+    // Ecologics Coconut Crabs
+    event
+        .addEntityLootModifier('ecologics:coconut_crab')
+        // Shell pool
+        .pool((p) => {
+            p.customCondition({
+                condition: 'quark:flag',
+                flag: 'crab_brewing'
+            })
+            p.killedByPlayer()
+            p.randomChanceWithLooting(0.25, 3)
+            p.addLoot('quark:crab_shell')
         })
-        table.addPool(pool => {
-            // Leg entry
-            pool
-                .addItem('quark:crab_leg')
-                .addFunction({
-                    function: 'set_count',
-                    count: {
-                        type: 'minecraft:uniform',
-                        min: 0,
-                        max: 1,
-                    }
-                })
-                .addFunction({
-                    function: 'minecraft:furnace_smelt',
-                    conditions: [
-                        {
-                            condition: 'minecraft:entity_properties',
-                            predicate: {
-                                flags: {
-                                    is_on_fire: true
-                                }
-                            },
-                            entity: 'this'
-                        }
-                    ]
-                })
-                .addFunction({
-                    function: 'looting_enchant',
-                    count: {
-                        min: 0,
-                        max: 1
-                    }
-                })
+        // Leg pool
+        .pool((p) => {
+            p.addLoot('quark:crab_leg')
+            p.limitCount([0, 2], null)
+            p.applyLootingBonus([0, 1])
+            p.matchEntity((entity) => {
+                entity.isOnFire(true)
+            })
+            p.functions(Item.of('quark:crab_leg'), (f) => {
+                f.smeltLoot()
+            })
         })
-    })
 
     // Quark Crabs
-    event.modifyEntity('quark:crab', table => {
-        table.addPool(pool => {
-            pool
-                .addItem('ecologics:crab_claw')
-                .randomChance(0.25)
-                .addFunction({
-                    function: 'minecraft:furnace_smelt',
-                    conditions: [
-                        {
-                            condition: 'minecraft:entity_properties',
-                            predicate: {
-                                flags: {
-                                    is_on_fire: true
-                                }
-                            },
-                            entity: 'this'
-                        }
-                    ]
-                })
+    event
+        .addEntityLootModifier('quark:crab')
+        .randomChanceWithLooting(0.25, 3)
+        .addLoot('ecologics:crab_claw')
+        .matchEntity((entity) => {
+            entity.isOnFire(true)
         })
-    })
+        .functions(Item.of('quark:crab_leg'), (f) => {
+            f.smeltLoot()
+        })
 })

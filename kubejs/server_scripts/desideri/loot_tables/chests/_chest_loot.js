@@ -1,16 +1,15 @@
 // Generic loot tables
-onEvent('generic.loot_tables', event => {
-    // Overrides supplementaries:blocks/urn_loot/epic
-    event.addGeneric('supplementaries:blocks/urn_loot/epic', table => {
-        table.addPool(pool => {
-            pool.rolls = 1
-            pool.addItem('minecraft:emerald')
-            pool.addItem('minecraft:diamond')
-            pool.addItem('minecraft:ender_pearl')
-            pool.addItem('supplementaries:bomb_blue')
-            pool.addItem('minecraft:slime_ball')
-        })
-    })
+removeLootTable('supplementaries:blocks/urn_loot/epic', 'generic')
+onEvent('lootjs', event => {
+    event
+        .addLootTableModifier('supplementaries:blocks/urn_loot/epic')
+        .addWeightedLoot([
+            'minecraft:emerald',
+            'minecraft:diamond',
+            'minecraft:ender_pearl',
+            'minecraft:slime_ball',
+            'supplementaries:bomb_blue'
+        ])
 })
 
 // Replacing items in loot tables
