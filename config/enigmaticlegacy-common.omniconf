@@ -24,6 +24,9 @@
 ##########################################################################################################
 
 "Accessibility Options" {
+    # Whether or not Amulet of Ascension should be enabled. [default: true, synchronized: yes]
+    B:AmuletofAscensionEnabled=false
+
     # Whether or not Angel's Blessing should be enabled. [default: true, synchronized: yes]
     B:AngelsBlessingEnabled=false
 
@@ -32,6 +35,9 @@
 
     # Whether or not Astral Dust should be enabled. [default: true, synchronized: yes]
     B:AstralDustEnabled=true
+
+    # Whether or not Astral Potato should be enabled. [default: true, synchronized: yes]
+    B:AstralPotatoEnabled=false
 
     # Whether or not Axe of Executioner should be enabled. [default: true, synchronized: yes]
     B:AxeofExecutionerEnabled=true
@@ -111,11 +117,17 @@
     # Whether or not Etherium Ingot should be enabled. [default: true, synchronized: yes]
     B:EtheriumIngotEnabled=false
 
+    # Whether or not Etherium Nugget should be enabled. [default: true, synchronized: yes]
+    B:EtheriumNuggetEnabled=false
+
     # Whether or not Etherium Ore should be enabled. [default: true, synchronized: yes]
     B:EtheriumOreEnabled=false
 
     # Whether or not Etherium Pickaxe should be enabled. [default: true, synchronized: yes]
     B:EtheriumPickaxeEnabled=false
+
+    # Whether or not Etherium Scraps should be enabled. [default: true, synchronized: yes]
+    B:EtheriumScrapsEnabled=false
 
     # Whether or not Etherium Scythe should be enabled. [default: true, synchronized: yes]
     B:EtheriumScytheEnabled=false
@@ -186,6 +198,9 @@
     # Whether or not Nefarious Essence should be enabled. [default: true, synchronized: yes]
     B:NefariousEssenceEnabled=true
 
+    # Whether or not Nefarious Ingot should be enabled. [default: true, synchronized: yes]
+    B:NefariousIngotEnabled=true
+
     # Whether or not Non-Euclidean Cube should be enabled. [default: true, synchronized: yes]
     B:NonEuclideanCubeEnabled=true
 
@@ -249,8 +264,14 @@
     # Whether or not The Infinitum should be enabled. [default: true, synchronized: yes]
     B:TheInfinitumEnabled=true
 
+    # Whether or not The Testament of Contempt should be enabled. [default: true, synchronized: yes]
+    B:TheTestamentofContemptEnabled=true
+
     # Whether or not The Twist should be enabled. [default: true, synchronized: yes]
     B:TheTwistEnabled=true
+
+    # Whether or not Tome of Devoured Malignancy should be enabled. [default: true, synchronized: yes]
+    B:TomeofDevouredMalignancyEnabled=true
 
     # Whether or not Tome of Hungering Knowledge should be enabled. [default: true, synchronized: yes]
     B:TomeofHungeringKnowledgeEnabled=false
@@ -272,6 +293,9 @@
 
     # Whether or not Unholy Stone should be enabled. [default: true, synchronized: yes]
     B:UnholyStoneEnabled=true
+
+    # Whether or not Wayfinder of the Damned should be enabled. [default: true, synchronized: yes]
+    B:WayfinderoftheDamnedEnabled=true
 
     # Whether or not Will of the Ocean should be enabled. [default: true, synchronized: yes]
     B:WilloftheOceanEnabled=false
@@ -516,6 +540,9 @@
 
     # Mining speed boost granted by Charm of Treasure Hunter. Defined as percentage. [range: 0 ~ 1000, default: 30, synchronized: yes]
     I:MiningCharmBreakSpeed=30
+
+    # Whether Night Vision ability of Charm of Treasure Hunter should be enabled. [default: true, synchronized: yes]
+    B:MiningCharmEnableNightVision=true
 
     # Additional block reach granted by Charm of Treasure Hunter. [range: 0.0 ~ 16.0, default: 2.15, synchronized: yes]
     D:MiningCharmReachDistance=2.15

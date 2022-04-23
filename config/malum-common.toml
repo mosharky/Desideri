@@ -1,8 +1,6 @@
 
-#Worldgen Settings
 [worldgen]
 
-	#Runewood Config
 	[worldgen.runewood]
 		#Should runewood trees naturally generate?
 		generateRunewood = true
@@ -13,27 +11,6 @@
 		#Range: 0.0 ~ 1.0
 		runewoodRareChance = 0.01
 
-	#Blaze Quartz Config
-	[worldgen.blaze_quartz]
-		#Should blaze quartz ore generate?
-		generateBlazeQuartz = true
-		#Amount of blaze quartz ore veins.
-		blazeQuartzSize = 16
-
-	#Brilliant Stone Config
-	[worldgen.brilliant_stone]
-		#Should brilliant stone generate?
-		generateBrilliantStone = true
-		#Amount of brilliant stone veins.
-		brilliantStoneSize = 4
-		#Amount of brilliant stone veins.
-		brilliantStoneAmount = 4
-		#Minimum height at which brilliant stone can spawn.
-		brilliantStoneMinY = -80
-		#Maximum height at which brilliant stone can spawn.
-		brilliantStoneMaxY = 40
-
-	#Soulstone Config
 	[worldgen.soulstone]
 		#Should soulstone ore generate underground?
 		generateSoulstone = true
@@ -56,38 +33,54 @@
 		#Maximum height at which surface soulstone ore can spawn.
 		surfaceSoulstoneMaxY = 100
 
-#Item Settings
+	[worldgen.blazing_quartz]
+		#Size of blaze quartz ore veins.
+		blazeQuartzSize = 14
+		#Should blaze quartz ore generate?
+		generateBlazeQuartz = true
+
+	[worldgen.brilliance]
+		#Maximum height at which brilliant stone can spawn.
+		brilliantStoneMaxY = 40
+		#Minimum height at which brilliant stone can spawn.
+		brilliantStoneMinY = -64
+		#Should brilliant stone generate?
+		generateBrilliantStone = true
+		#Size of brilliant stone veins.
+		brilliantStoneSize = 2
+
 [item]
 
-	#Scythe Settings
-	[item.scythe]
+	[item.rebound]
 		#If set to true, you may put rebound on any weapon in the game.
 		enableUltimateRebound = false
 
-#Spirit Settings
 [spirit]
-	#If set to true, mob spawners will create soulless mobs instead.
-	lameSpawners = false
 
-#Spirit Affinity Settings
-[spirit_affinity]
+	[spirit.affinity]
 
-	#Soul Ward
-	[spirit_affinity.soul_ward]
-		#Multiplier for physical damage taken while soul ward is active.
-		#Range: 0.0 ~ 1.0
-		soulWardPhysical = 0.699999988079071
-		#Multiplier for magic damage taken while soul ward is active.
-		#Range: 0.0 ~ 1.0
-		soulWardMagic = 0.10000000149011612
-		#Base time in ticks it takes for one point of soul ward to recover.
-		soulWardRate = 60
+		[spirit.affinity.soul_ward]
+			#Base time in ticks it takes for one point of soul ward to recover.
+			soulWardRate = 60
+			#Multiplier for physical damage taken while soul ward is active.
+			#Range: 0.0 ~ 1.0
+			soulWardPhysical = 0.699999988079071
+			#Multiplier for magic damage taken while soul ward is active.
+			#Range: 0.0 ~ 1.0
+			soulWardMagic = 0.10000000149011612
 
-	#Heart of Stone
-	[spirit_affinity.heart_of_stone]
-		#Amount of hunger consumed when recovering a point of heart of stone. Do note that this will only matter if the player has the earthen affinity.
-		#Range: 0.0 ~ 1.0
-		heartOfStoneCost = 0.2
-		#Base time in ticks it takes for one point of heart of stone to recover.
-		heartOfStoneRate = 40
+		[spirit.affinity.heart_of_stone]
+			#Base time in ticks it takes for one point of heart of stone to recover.
+			heartOfStoneRate = 40
+			#Amount of hunger consumed when recovering a point of heart of stone. Do note that this will only matter if the player has the earthen affinity.
+			#Range: 0.0 ~ 1.0
+			heartOfStoneCost = 0.2
+
+	[spirit.repair]
+		#If set to true, malum will allow you to repair any item using spirit focusing with the default repair data.
+		defaultRepairIfMissing = true
+
+	[spirit.spawner]
+		#If set to true, mob spawners will create soulless mobs instead.
+		lameSpawners = false
 
