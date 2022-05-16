@@ -5,8 +5,8 @@ onEvent('recipes', event => {
 	event.stonecutting('valhelsia_structures:metal_framed_glass', 'quark:framed_glass')
 	event.stonecutting('valhelsia_structures:metal_framed_glass_pane', 'quark:framed_glass_pane')
 
-	event.blasting('malum:processed_soulstone', 'malum:soulstone_cluster').id('malum:processed_soulstone_from_soulstone_cluster_blasting')
-	event.smelting('malum:processed_soulstone', 'malum:soulstone_cluster').id('malum:processed_soulstone_from_soulstone_cluster_smelting')
+	event.blasting('malum:processed_soulstone', 'malum:raw_soulstone').id('malum:processed_soulstone_from_raw_soulstone_blasting')
+	event.smelting('malum:processed_soulstone', 'malum:raw_soulstone').id('malum:processed_soulstone_from_raw_soulstone_smelting')
 
 	// Shapeless crafting table recipes
 	const shapeless = [
