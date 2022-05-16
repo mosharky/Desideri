@@ -3,6 +3,7 @@
 /config/jei/bookmarks.ini
 /config/jei-client.toml
 config/sodium-options.json
+config/oculus.properties
 
 # kubejs
 /kubejs/exported/*
