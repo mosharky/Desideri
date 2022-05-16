@@ -22,7 +22,7 @@ onEvent('recipes', (event) => {
         { modId: 'beyond_earth', ore: 'calorite' },
     ]
     rawOresToMill.forEach(rawOre => {
-        if (global.createSupportedOres.includes(rawOre.ore)) {
+        if (createSupportedOres.includes(rawOre.ore)) {
             event.recipes.createMilling(`create:crushed_${rawOre.ore}_ore`, `${rawOre.modId}:raw_${rawOre.ore}`)
         } else {
             event.recipes.createMilling(`kubejs:crushed_${rawOre.ore}_ore`, `${rawOre.modId}:raw_${rawOre.ore}`)
