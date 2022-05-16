@@ -33,3 +33,16 @@ const colours = [
     'red',
     'black'
 ]
+
+// add more to this array if Create supports more ores
+const createSupportedOres = [
+    'iron',
+    'gold',
+    'copper',
+    'zinc',
+    'silver',
+    'lead',
+    'aluminum',
+    'uranium',
+    'nickel',
+]
