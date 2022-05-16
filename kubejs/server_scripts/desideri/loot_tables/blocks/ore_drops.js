@@ -1,21 +1,103 @@
-function oneRawOre(modId, material, strata, irregular) {
-    let oreBlock = [`${modId}:${material}_ore`, `${modId}:deepslate_${material}_ore`]
-    let rawOre = `${modId}:raw_${material}`
-    if (modId == 'immersiveengineering') {
-        oreBlock = [`${modId}:ore_${material}`, `${modId}:deepslate_ore_${material}`]
-    }
-    if (strata != undefined) {
-        let materialSplit = material.split(':')
-        let materialModId = materialSplit[0]
-        let iregMaterial = materialSplit[1]
-        oreBlock = [`${modId}:${strata}_${iregMaterial}_ore`]
-        rawOre = `${materialModId}:raw_${iregMaterial}`
-    }
+// this script makes raw ores only drop once, regardless of the fortune level too
+const rawOreTypeBlocks = [
+    {
+        material: 'minecraft:iron',
+        strata: [
+            'minecraft:stone',
+            'minecraft:deepslate',
+            'beyond_earth:moon',
+            'beyond_earth:mars',
+            'beyond_earth:mercury',
+            'beyond_earth:glacio'
+        ]
+    },
+    {
+        material: 'minecraft:gold',
+        strata: [
+            'minecraft:stone',
+            'minecraft:deepslate',
+            'beyond_earth:venus'
+        ]
+    },
+    {
+        material: 'minecraft:copper',
+        strata: [
+            'minecraft:stone',
+            'minecraft:deepslate',
+            'beyond_earth:glacio'
+        ]
+    },
+    {
+        material: 'immersiveengineering:silver',
+        strata: [
+            'immersiveengineering:stone',
+            'immersiveengineering:deepslate',
+        ]
+    },
+    {
+        material: 'immersiveengineering:aluminum',
+        strata: [
+            'immersiveengineering:stone',
+            'immersiveengineering:deepslate',
+        ]
+    },
+    {
+        material: 'create:zinc',
+        strata: [
+            'create:stone',
+            'create:deepslate',
+        ]
+    },
+    {
+        material: 'malum:soulstone',
+        strata: [
+            'malum:stone',
+            'malum:deepslate'
+        ]
+    },
+    {
+        material: 'beyond_earth:desh',
+        strata: ['beyond_earth:moon']
+    },
+    {
+        material: 'beyond_earth:ostrum',
+        strata: ['beyond_earth:mars']
+    },
+    {
+        material: 'beyond_earth:calorite',
+        strata: ['beyond_earth:venus']
+    },
+]
+rawOreTypeBlocks.forEach(ore => {
+    let irregular = ore.irregular
+    let oreBlocks = []
+    let rawOre = ''
+    if (!irregular) {
+        let material = ore.material.split(':')
+        let materialModId = material[0]
+        let materialElement = material[1]
+        rawOre = `${materialModId}:raw_${materialElement}`
+        ore.strata.forEach(strata => {
+            let strataOre = strata.split(':')
+            let strataModId = strataOre[0]
+            let strataType = `${strataOre[1]}_`
+            if (strataType == 'stone_') {
+                strataType = ''
+            }
+            let oreBlock = `${strataModId}:${strataType}${materialElement}_ore`
+            if (strataModId == 'immersiveengineering') {
+                oreBlock = `${strataModId}:${strataType}ore_${materialElement}`
+            }
+            oreBlocks.push(oreBlock)
+        })
+    } 
     if (irregular) {
-        oreBlock = [modId]
-        rawOre = material
+        rawOre = ore.rawOre
+        ore.oreBlocks.forEach(block => {
+            oreBlocks.push(block)
+        })
     }
-    return oreBlock.forEach(block => {
+    oreBlocks.forEach(block => {
         removeLootTable(block, 'block')
         onEvent('lootjs', event => {
             event
@@ -32,30 +114,4 @@ function oneRawOre(modId, material, strata, irregular) {
                 .addLoot(block)
         })
     })
-}
-
-
-// Iron
-oneRawOre('minecraft', 'iron')
-oneRawOre('beyond_earth', 'minecraft:iron', 'moon')
-oneRawOre('beyond_earth', 'minecraft:iron', 'mars')
-oneRawOre('beyond_earth', 'minecraft:iron', 'mercury')
-oneRawOre('beyond_earth', 'minecraft:iron', 'glacio')
-// Gold
-oneRawOre('minecraft', 'gold')
-oneRawOre('beyond_earth', 'minecraft:gold', 'venus')
-// Copper
-oneRawOre('minecraft', 'copper')
-oneRawOre('beyond_earth', 'minecraft:copper', 'glacio')
-// Modded
-oneRawOre('immersiveengineering', 'silver')
-oneRawOre('immersiveengineering', 'aluminum')
-oneRawOre('create', 'zinc')
-// Beyond Earth
-oneRawOre('beyond_earth', 'beyond_earth:desh', 'moon')
-oneRawOre('beyond_earth', 'beyond_earth:ostrum', 'mars')
-oneRawOre('beyond_earth', 'beyond_earth:calorite', 'venus')
-// Irregular
-oneRawOre('malum:soulstone_ore', 'malum:soulstone_cluster', undefined, true)
-oneRawOre('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', undefined, true)
-
+})
