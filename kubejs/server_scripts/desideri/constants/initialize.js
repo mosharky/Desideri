@@ -1,18 +1,20 @@
 // priority: 1500
 
 // REMOVING
+// global.fullRemoval regex inputs
+var regexFullRemovals = []
 // Remove by recipe ID
-let idRemovals = []
+var idRemovals = []
 // Remove by recipe type
-let typeRemovals = []
+var typeRemovals = []
 
 // REPLACING
 // Replace output
-let outputReplace = []
+var outputReplace = []
 // Replace input
-let inputReplace = []
+var inputReplace = []
 // Replace input AND output
-let InputOutputReplace = []
+var InputOutputReplace = []
 
 // Constant array of all colours
 const colours = [

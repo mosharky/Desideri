@@ -1,6 +1,6 @@
 onEvent('recipes', (event) => {
     event.remove({type: 'immersiveengineering:sawmill'})
-    buildWoodVariants.forEach((variant) => {
+    constructedWoodTypes.forEach((variant) => {
         // Log blocks
         event.recipes.immersiveengineeringSawmill(
             // Output

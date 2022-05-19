@@ -1,6 +1,6 @@
 onEvent('recipes', (event) => {
     event.remove({ type: 'create:cutting' })
-    buildWoodVariants.forEach((variant) => {
+    constructedWoodTypes.forEach((variant) => {
         // Log blocks
         event.recipes.createCutting(
             // Output

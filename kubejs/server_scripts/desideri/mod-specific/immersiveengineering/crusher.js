@@ -1,3 +1,4 @@
+/*
 onEvent('recipes', (event) => {
     function strataOreCrusherRecipe(oreBlock, resultItem, resultItemCount, resultItemChance, resultBlock, extraOutput, recipeId) {
         let secondaryOutput = [
@@ -26,7 +27,7 @@ onEvent('recipes', (event) => {
     strataOreCrusherRecipe('immersiveengineering:ore_aluminum', 'create:crushed_aluminum_ore', 2, 0.25, 'minecraft:cobblestone', undefined, 'immersiveengineering:crusher/ore_aluminum')
     strataOreCrusherRecipe('create:zinc_ore', 'create:crushed_zinc_ore', 2, 0.25, 'minecraft:cobblestone')
     strataOreCrusherRecipe('minecraft:iron_ore', 'create:crushed_iron_ore', 2, 0.25, 'minecraft:cobblestone')
-    strataOreCrusherRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 2, 0.25, 'minecraft:cobblestone')
+    strataOreCrusherRecipe('malum:soulstone_ore', 'malum:raw_soulstone', 2, 0.25, 'minecraft:cobblestone')
     // Deepslate
     strataOreCrusherRecipe('minecraft:deepslate_gold_ore', 'create:crushed_gold_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
     strataOreCrusherRecipe('minecraft:deepslate_copper_ore', 'create:crushed_copper_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
@@ -38,7 +39,7 @@ onEvent('recipes', (event) => {
     strataOreCrusherRecipe('create:deepslate_zinc_ore', 'create:crushed_zinc_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
     strataOreCrusherRecipe('immersiveengineering:deepslate_ore_silver', 'create:crushed_silver_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
     strataOreCrusherRecipe('immersiveengineering:deepslate_ore_aluminum', 'create:crushed_aluminum_ore', 2, 0.25, 'minecraft:cobbled_deepslate')
-    strataOreCrusherRecipe('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', 2, 0.25, 'minecraft:cobbled_deepslate')
+    strataOreCrusherRecipe('malum:deepslate_soulstone_ore', 'malum:raw_soulstone', 2, 0.25, 'minecraft:cobbled_deepslate')
     // Moon
     strataOreCrusherRecipe('beyond_earth:moon_iron_ore', 'create:crushed_iron_ore', 2, 0.25, 'beyond_earth:moon_sand')
     strataOreCrusherRecipe('beyond_earth:moon_desh_ore', 'kubejs:crushed_desh_ore', 2, 0.25, 'beyond_earth:moon_sand')
@@ -85,3 +86,4 @@ onEvent('recipes', (event) => {
     event.recipes.immersiveengineeringCrusher('9x kubejs:crushed_calorite_ore', 'beyond_earth:raw_calorite_block', Item.of('9x create:experience_nugget').withChance(0.75))
 
 })
+*/

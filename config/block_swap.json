@@ -1,0 +1,12 @@
+{
+  "retroGen": false,
+  "swapper": {
+    "biomesoplenty:cattail": "sprout:cattail",
+    "biomesoplenty:clover": "verdure:clover",
+    "biomesoplenty:sprout": "sprout:sprouts",
+    "biomesoplenty:white_cherry_leaves": "quark:lavender_blossom_leaves",
+    "biomesoplenty:pink_cherry_leaves": "quark:pink_blossom_leaves",
+    "biomesoplenty:cherry_log": "quark:blossom_log"
+  },
+  "state_swapper": []
+}

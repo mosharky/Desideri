@@ -1,10 +1,5 @@
 // priority: 1500
-// Credits to the Enigmatica 6 modpack and its incredible development team for the majority of this file.
-// This is an edited version of their script here: https://github.com/EnigmaticaModpacks/Enigmatica6/blob/master/kubejs/server_scripts/enigmatica/kubejs/constants/wood_variants.js
-
-// Used to populate the buildWoodVariants constant - Add variants here to enable compat with various cutting mechanics.
-// Be aware that you may need to specify exceptions in the loop below for this to work properly.
-var woodVariantsToConstruct = [
+let woodTypesToConstruct = [
     'minecraft:acacia',
     'minecraft:birch',
     'minecraft:dark_oak',
@@ -15,27 +10,33 @@ var woodVariantsToConstruct = [
     'minecraft:crimson',
     'biomesoplenty:fir',
     'biomesoplenty:redwood',
-    'biomesoplenty:cherry',
     'biomesoplenty:mahogany',
     'biomesoplenty:jacaranda',
     'biomesoplenty:dead',
     'biomesoplenty:hellbark',
     'biomesoplenty:willow',
-    // 'hexerei:willow', uncomment when Malum is updated to 1.18.2
-    // 'hexerei:mahogany', uncomment when Malum is updated to 1.18.2
     'ecologics:coconut',
-    'quark:azalea',
+    'ecologics:walnut',
+    'ecologics:azalea',
+    'ecologics:flowering_azalea',
+    'quark:blossom',
     'malum:runewood',
     'malum:soulwood' 
 ]
 
-var buildWoodVariants = []
+// Wood that isn't supported by Immersive Weathering for bark
+let unsupportedForWoodBark = [
+    'minecraft:warped',
+    'minecraft:crimson',
+]
 
-woodVariantsToConstruct.forEach((variant) => {
-    var splitVariant = variant.split(':')
-    var modId = splitVariant[0]
-    var logType = splitVariant[1]
-    var logSuffix, woodSuffix, logBlockStripped, woodBlockStripped, logBlock, woodBlock, plankBlock, slabBlock
+var constructedWoodTypes = []
+
+woodTypesToConstruct.forEach(variant => {
+    let splitVariant = variant.split(':')
+    let modId = splitVariant[0]
+    let logType = splitVariant[1]
+    let logSuffix, woodSuffix, logBlockStripped, woodBlockStripped, logBlock, woodBlock, plankBlock, slabBlock, woodBark
 
     //suffix exceptions
     switch (logType) {
@@ -58,11 +59,25 @@ woodVariantsToConstruct.forEach((variant) => {
     woodBlockStripped = modId + ':stripped_' + logType + woodSuffix
     plankBlock = modId + ':' + logType + '_planks'
     slabBlock = modId + ':' + logType + '_slab'
+    woodBark = 'immersive_weathering:' + modId + '/' + logType + '_bark'
 
     // Exceptions
     if (modId == 'malum') {
         woodBlock = modId + ':' + logType
         woodBlockStripped = modId + ':stripped_' + logType
+    }
+
+    if (modId == 'minecraft') {
+        woodBark = 'immersive_weathering:' + logType + '_bark'
+    }
+
+    if (variant == 'ecologics:flowering_azalea') {
+        logBlockStripped = modId + ':stripped_azalea' + logSuffix
+        woodBlockStripped = modId + ':stripped_azalea' + woodSuffix
+    }
+
+    if (unsupportedForWoodBark.includes(variant)) {
+        woodBark = undefined
     }
 
     /*
@@ -78,7 +93,7 @@ woodVariantsToConstruct.forEach((variant) => {
     }
     */
 
-    var woodVariant = {
+    let woodVariant = {
         modId: modId,
         logType: logType,
         logBlock: logBlock,
@@ -86,8 +101,10 @@ woodVariantsToConstruct.forEach((variant) => {
         logBlockStripped: logBlockStripped,
         woodBlockStripped: woodBlockStripped,
         plankBlock: plankBlock,
-        slabBlock: slabBlock
+        slabBlock: slabBlock,
+        woodBark: woodBark
     }
 
-    buildWoodVariants.push(woodVariant)
+    constructedWoodTypes.push(woodVariant)
 })
+

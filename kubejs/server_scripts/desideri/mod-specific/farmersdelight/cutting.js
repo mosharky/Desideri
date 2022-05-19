@@ -68,9 +68,11 @@ onEvent('recipes', (event) => {
     recipes.forEach((recipe) => {
         event.custom(recipe)
     })
-    
-    buildWoodVariants.forEach((variant) => {
-        let woodRecipes = [
+
+
+
+    constructedWoodTypes.forEach((variant) => {
+        let logCuttingRecipes = [
             {
                 input: variant.logBlock,
                 output: variant.logBlockStripped
@@ -80,21 +82,21 @@ onEvent('recipes', (event) => {
                 output: variant.woodBlockStripped
             }
         ]
+        
+        logCuttingRecipes.forEach((recipe) => {
+            event.remove({ type: 'farmersdelight:cutting', output: recipe.output })
 
-        woodRecipes.forEach((recipe) => {
-            let tool = {
-                type: 'farmersdelight:tool_action',
-                action: 'axe_strip'
+            let result = [Item.of(recipe.output), Item.of(variant.woodBark)]
+            if (variant.woodBark == undefined) {
+                result = Item.of(recipe.output)
             }
-            let ingredients = Ingredient.of(recipe.input)
-            let result = [Item.of(recipe.output), Item.of('farmersdelight:tree_bark')]
-
-            event.remove({ mod: 'farmersdelight', output: recipe.output })
-
             event.custom({
                 type: 'farmersdelight:cutting',
-                ingredients: [ingredients],
-                tool: tool,
+                ingredients: [Ingredient.of(recipe.input)],
+                tool: {
+                    type: 'farmersdelight:tool_action',
+                    action: 'axe_strip'
+                },
                 result: result
             })
         })

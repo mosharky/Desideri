@@ -38,6 +38,8 @@
 		blazeQuartzSize = 14
 		#Should blaze quartz ore generate?
 		generateBlazeQuartz = true
+		#Amount of blaze quartz ore veins.
+		blazeQuartzAmount = 16
 
 	[worldgen.brilliance]
 		#Maximum height at which brilliant stone can spawn.
@@ -48,6 +50,8 @@
 		generateBrilliantStone = true
 		#Size of brilliant stone veins.
 		brilliantStoneSize = 2
+		#Amount of brilliant stone veins.
+		brilliantStoneAmount = 8
 
 [item]
 
@@ -75,10 +79,6 @@
 			#Amount of hunger consumed when recovering a point of heart of stone. Do note that this will only matter if the player has the earthen affinity.
 			#Range: 0.0 ~ 1.0
 			heartOfStoneCost = 0.2
-
-	[spirit.repair]
-		#If set to true, malum will allow you to repair any item using spirit focusing with the default repair data.
-		defaultRepairIfMissing = true
 
 	[spirit.spawner]
 		#If set to true, mob spawners will create soulless mobs instead.

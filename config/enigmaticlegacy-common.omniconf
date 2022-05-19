@@ -249,9 +249,6 @@
     # Whether or not The Acknowledgment should be enabled. [default: true, synchronized: yes]
     B:TheAcknowledgmentEnabled=true
 
-    # Whether or not The Architect's Favor should be enabled. [default: true, synchronized: yes]
-    B:TheArchitectsFavorEnabled=true
-
     # Whether or not The Architect's Inkwell should be enabled. [default: true, synchronized: yes]
     B:TheArchitectsInkwellEnabled=true
 

@@ -1,5 +1,5 @@
-#Allows bark to be dropped after scraping off log blocks
-bark_enabled = true
+#Enable data driven block growths. This is just a global toggle, to have more control over each block growth you can use a datapack to override the existing jsons
+block_growths_enabled = true
 
 [mossy_blocks]
 	#How likely each block face is to propagate its mossy state to its neighbor.Set to 0 to completely disable mossification
@@ -72,8 +72,16 @@ bark_enabled = true
 	from_lightning = true
 	#Allows lava to create vitrified sand
 	from_lava = true
+	#Fulgurite will spawn on top of vitrified sand created by a lightning bolt
+	fulgurite = true
 
 [soil_blocks]
 	#Enables leaf piles patches features to spawn in dark oak forests
 	humus_patches = true
+
+[bark]
+	#Allows bark to be dropped after scraping off log blocks
+	enabled = true
+	#If you dont like having a bark item for each wood type, write here a valid item id and it will be used as a generic bark instead. Note that existing bark items will not be hidden in creative inventory
+	generic_bark_id = ""
 

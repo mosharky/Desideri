@@ -1,5 +1,46 @@
-onEvent('recipes', (event) => {
+/*
+oresToCrush.forEach(ore => {
+    onEvent('recipes', (event) => {
 
+        let recipeData = {
+            type: 'create:crushing',
+            ingredients: [{ item: ore.strataOre.input }],
+            results: [ore.crushedOre],
+            processingTime: 300
+        }
+
+        if (ore.extraOutput1 != undefined) {
+            recipeData.results.push(ore.extraOutput1)
+        }
+        if (ore.extraOutput2 != undefined) {
+            recipeData.results.push(ore.extraOutput2)
+        }
+        recipeData.results.push(
+            {
+                item: 'create:experience_nugget',
+                chance: 0.75
+            },
+            {
+                item: ore.strataOre.result,
+                chance: 0.12
+            }
+        )
+        if (ore.processingTime != undefined) {
+            recipeData['processingTime'] = ore.processingTime
+        }
+
+        if (ore.CreateRecipeId != undefined) {
+            event.custom(recipeData).id(ore.CreateRecipeId)
+        } else {
+            event.custom(recipeData)
+        }
+    })
+})
+*/
+
+
+
+/*
     // nice future-proofing in case i decide to use Unearthed
     function strataOreCrushingRecipe(modId, strata, material, outputNum, extraOutput, recipeId) {
         let oreBlock = `${modId}:${strata}_${material}_ore`
@@ -24,7 +65,7 @@ onEvent('recipes', (event) => {
                 oreBlock = `immersiveengineering:ore_${material}`
             }
         }
-        if (global.createSupportedOres.includes(material)) {
+        if (createSupportedOres.includes(material)) {
             crushedOre = `create:crushed_${material}_ore`
         }
         let output = [
@@ -118,8 +159,8 @@ onEvent('recipes', (event) => {
     strataGemCrushingRecipe('minecraft:stone', 'minecraft:diamond', 2, undefined, 'create:crushing/diamond_ore')
 
     customOreCrushingRecipe('malum:blazing_quartz_ore', 'malum:blazing_quartz', 'minecraft:netherrack', 2)
-    customOreCrushingRecipe('malum:soulstone_ore', 'malum:soulstone_cluster', 'minecraft:cobblestone', 2)
-    customOreCrushingRecipe('malum:deepslate_soulstone_ore', 'malum:soulstone_cluster', 'minecraft:cobbled_deepslate', 2)
+    customOreCrushingRecipe('malum:soulstone_ore', 'malum:raw_soulstone', 'minecraft:cobblestone', 2)
+    customOreCrushingRecipe('malum:deepslate_soulstone_ore', 'malum:raw_soulstone', 'minecraft:cobbled_deepslate', 2)
 
     event.recipes.createCrushing(['kubejs:crushed_desh_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_desh')
     event.recipes.createCrushing(['kubejs:crushed_ostrum_ore', Item.of('create:experience_nugget').withChance(0.75)], 'beyond_earth:raw_ostrum')
@@ -139,4 +180,4 @@ onEvent('recipes', (event) => {
     event.recipes.createCrushing('immersiveengineering:dust_copper', '#forge:ingots/copper')
     event.recipes.createCrushing('immersiveengineering:dust_coke', '#forge:coal_coke')
     event.recipes.createCrushing('9x immersiveengineering:dust_coke', '#forge:storage_blocks/coal_coke')
-})
+    */

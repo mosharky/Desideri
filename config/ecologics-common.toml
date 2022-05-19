@@ -11,8 +11,6 @@
 
 #Desert Update
 [desert]
-	#Spawn camels in deserts
-	spawnCamels = true
 	#Generate prickly pears on top of cacti in the desert
 	generatePricklyPears = true
 	#How often (in percentage) should prickly pears grow when a cactus reaches full height? Set it to 0.0 to disable this.
@@ -20,20 +18,27 @@
 	pricklyPearGrowthChance = 1.0
 	#Generate ruins in deserts
 	generateDesertRuins = true
+	#Camel spawn weight. Set to 0 to disable.
+	#Range: 0 ~ 1000
+	camelSpawnWeight = 1
 
 #Snowy Update
 [snowy]
-	#Spawn penguins in snowy biomes
-	spawnPenguins = true
 	#Generate thin ice patches in icy biomes
-	generateThinIcePatches = true
+	generateThinIcePatches = false
+	#Penguin spawn weight. Set to 0 to disable.
+	#Range: 0 ~ 1000
+	penguinSpawnWeight = 2
 
 #Plains Update
 [plains]
-	#Spawn squirrels in plains biomes
-	spawnSquirrels = true
-	#Generate walnut trees in plains biomes instead of oak trees
+	#Generate walnut trees in plains biomes
 	generateWalnutTrees = true
+	#Squirrel spawn weight. Set to 0 to disable.
+	#Range: 0 ~ 1000
+	squirrelSpawnWeight = 10
+	#Remove the oak trees in plains biomes so only walnut trees generate
+	removePlainsOakTrees = true
 
 #Lush Caves Update
 [lush_caves]

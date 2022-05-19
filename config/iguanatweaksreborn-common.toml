@@ -29,6 +29,8 @@
 		#Multiplier for the time taken to eat. Only applied if 'Eating Speed Based Off Food Config' is active.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Eating Time Multiplier" = 0.13
+		#If true, eating/drinking stops when the player's hit.
+		"Stop consuming on hit" = true
 
 	#Makes Health regen work differently, like in Combat Test snapshots or similar to Hunger Overhaul
 	[Hunger."Health Regen"]
@@ -183,6 +185,18 @@
 		#EXPERIMENTAL! This will make explosion blast blocks away. Blocks that can't land will drop the block as a TNT would have destroyed it.
 		"Enable Flying Blocks" = false
 
+		#A list of mobs (and optionally dimensions) that should take reduced knockback. Non-living entities are blacklisted by default.
+		[Miscellaneous."Explosion Overhaul"."Knockback Blacklist"]
+			Blacklist = ["minecraft:ender_dragon", "minecraft:wither"]
+			#If true the list will be treated as a whitelist instead of blacklist
+			"List as Whitelist" = false
+
+		#A list of entities that should not use the mod's explosion.
+		[Miscellaneous."Explosion Overhaul"."Entity Blacklist"]
+			Blacklist = []
+			#If true the list will be treated as a whitelist instead of blacklist
+			"List as Whitelist" = false
+
 	#Less durable and efficient tools. Changing this config's options requires a Minecraft restart
 	[Miscellaneous."Tool Stats"]
 		#A list of items which should have their durability changed.
@@ -280,11 +294,10 @@
 
 	#Change specific blocks hardness as well as black and whitelist. Zero hardness blocks changes require a Minecraft restart.
 	[Mining."Custom Hardness"]
-		#Define custom blocks hardness, one string = one block/tag. Those blocks ARE AFFECTED by the global block hardness multiplier, unless put in the blacklisst.
+		#Define custom blocks hardness, one string = one block/tag. Those blocks ARE AFFECTED by the global block hardness multiplier, unless put in the blacklist.
 		#The format is modid:blockid,hardness,dimensionid or #modid:tagid,hardness,dimensionid
 		#E.g. 'minecraft:stone,5.0' will make stone have 5 hardness in every dimension (multiplied by Global Hardness).
 		#E.g. '#forge:stone,5.0,minecraft:overworld' will make all the stone types have 5 hardness but only in the overworld.
-		#As of 2.4.0 this now works with blocks that instantly break too (e.g. Torches)
 		"Custom Hardness" = ["minecraft:coal_ore,3", "minecraft:iron_ore,3.5", "minecraft:gold_ore,4.0", "minecraft:diamond_ore,4.5", "minecraft:ancient_debris,10", "minecraft:redstone_ore,3.5", "minecraft:lapis_ore,3.5", "minecraft:emerald_ore,4.5", "minecraft:deepslate_coal_ore,4.5", "minecraft:deepslate_iron_ore,5.25", "minecraft:deepslate_gold_ore,6.0", "minecraft:deepslate_diamond_ore,6.75", "minecraft:deepslate_redstone_ore,5.25", "minecraft:deepslate_lapis_ore,5.25", "minecraft:deepslate_emerald_ore,6.75", "minecraft:nether_quartz_ore,3", "minecraft:nether_gold_ore,3", "#iguanatweaksreborn:obsidians,40"]
 
 [Combat]
