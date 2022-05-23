@@ -115,3 +115,17 @@
 			#Range: -2048 ~ 2048
 			"Max Y" = 64
 
+		[World.Ores.Apatite]
+			#Max number of veins per chunk; set to 0 to disable.
+			#Range: 0 ~ 256
+			"Vein Count" = 4
+			#Max size of the vein.
+			#Range: 1 ~ 256
+			"Vein Size" = 9
+			#Minimum Y spawn.
+			#Range: -2048 ~ 2048
+			"Min Y" = -16
+			#Maximum Y spawn.
+			#Range: -2048 ~ 2048
+			"Max Y" = 96
+

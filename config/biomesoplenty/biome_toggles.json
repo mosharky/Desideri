@@ -4,7 +4,7 @@
   "bog_enabled": false,
   "boreal_forest_enabled": true,
   "cherry_blossom_grove_enabled": true,
-  "clover_patch_enabled": false,
+  "clover_patch_enabled": true,
   "cold_desert_enabled": false,
   "coniferous_forest_enabled": true,
   "crag_enabled": false,

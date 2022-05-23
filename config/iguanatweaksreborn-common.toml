@@ -316,8 +316,6 @@
 		"Disable Arrow Crits" = true
 		#If true, Arrows from Crossbows will no longer deal random damage, but a set amount of damage (about 9 at a medium distance).
 		"Adjust Crossbow Damage" = true
-		#If true, Shields will slowdown the player by 25%.
-		"Shield Slowdown" = true
 		#DISABLE: Disables protection enchantment.
 		#NERF: Sets max protection level to 3 instead of 4
 		#NONE: no changes to protection are done
@@ -340,8 +338,6 @@
 		"No Item No Knockback" = true
 
 [Movement]
-	#Armor slows down the player based off the Armor and Toughness given.
-	"Enable Weighted Armor" = true
 	#Prevents the player from placing blocks below him when in mid air.
 	"Enable No Pillaring" = true
 	#Player's slowed down for a brief moment when hit.
@@ -350,24 +346,8 @@
 	"Enable Terrain Slowdown" = true
 	#Player's slowed down when walking backwards.
 	"Enable Backwards slowdown" = true
-
-	#Armor slows down the player based off the Armor and Toughness given.
-	[Movement."Weighted Armor"]
-		#Percentage slowdown per point of armor the player is wearing.
-		#Range: 0.0 ~ 1.0
-		"Slowdown per Armor" = 0.015
-		#This value times the Armor Toughness worn by the player is a percentage increase of the Slowdown per Armor.
-		#Total percentage slowdown is '(slowness_per_armor * armor_points) * (1 + (toughness * percentage_per_toughness))'
-		#E.g. with 'Slowness per Armor' set to 0.02 and this set to 0.04 and the player wearing Diamond Armor the slowdown is '(0.02 * 20) * (1 + (8 * 0.04))' = '0.4 * 1.32'= '0.528' = -52.8% Speed applied to the player.
-		#Range: 0.0 ~ 1.0
-		"Percentage Increase per Toughness" = 0.03
-		#Define here a list of total slowdown percentage (with full armor) per material. This has priority over 'Slowdown per Armor' and 'Percentage Increase per Toughness'. Material's names are the names in the armor's ids. E.g. Gold Armor is 'golden' as the ids are like 'golden_chestplate'.
-		#Format is material,total_slowdown
-		"Material Weight" = ["leather,0.04", "chainmail,0.12", "golden,0.08", "iron,0.15", "diamond,0.25", "netherite,0.333"]
-		#Define here a list of Enchantments that will reduce the slowdown on the armor piece having the enchantment.
-		#Format is modid:enchantmentid,reductionPerLevel,flatReduction
-		#Where reduction per level is the percentage slowdown reduction per level, while flatReduction (optional) is a flat percentage slowdown reduction. E.g. 'elenaidodge2:lightweight,0.15,0.05' means that you'll get 5% less slowdown on armor plus 15% per level, so at Lightweight II you'll get (5+15*2) = 35% reduction on that piece of armor.
-		"Enchantments Weight Reduction" = ["minecraft:feather_falling,0.10", "elenaidodge2:lightweight,0.15,5"]
+	#Armor and Shield slows down the player.
+	"Enable Weighted Equipment" = true
 
 	#Player's slowed down for a brief moment when hit.
 	[Movement.Tagging]
@@ -390,6 +370,28 @@
 		#How much slower will the player go when walking backwards.
 		#Range: 0.0 ~ 1.0
 		Slowdown = 0.25
+
+	#Armor and Shield slows down the player.
+	[Movement."Weighted Equipment"]
+		#Percentage slowdown per point of armor the player is wearing.
+		#Range: 0.0 ~ 1.0
+		"Slowdown per Armor" = 0.015
+		#This value times the Armor Toughness worn by the player is a percentage increase of the Slowdown per Armor.
+		#Total percentage slowdown is '(slowness_per_armor * armor_points) * (1 + (toughness * percentage_per_toughness))'
+		#E.g. with 'Slowness per Armor' set to 0.02 and this set to 0.04 and the player wearing Diamond Armor the slowdown is '(0.02 * 20) * (1 + (8 * 0.04))' = '0.4 * 1.32'= '0.528' = -52.8% Speed applied to the player.
+		#Range: 0.0 ~ 1.0
+		"Percentage Increase per Toughness" = 0.03
+		#Define here a list of total slowdown percentage (with full armor) per material. This has priority over 'Slowdown per Armor' and 'Percentage Increase per Toughness'. Material's names are the names in the armor's ids. E.g. Gold Armor is 'golden' as the ids are like 'golden_chestplate'.
+		#Format is material,total_slowdown
+		"Material Weight" = ["leather,0.04", "chainmail,0.10", "golden,0.07", "iron,0.13", "diamond,0.18", "netherite,0.25"]
+		#Define here a list of Enchantments that will reduce the slowdown on the armor piece having the enchantment.
+		#Format is modid:enchantmentid,reductionPerLevel,flatReduction
+		#Where reduction per level is the percentage slowdown reduction per level, while flatReduction (optional) is a flat percentage slowdown reduction. E.g. 'elenaidodge2:lightweight,0.15,0.05' means that you'll get 5% less slowdown on armor plus 15% per level, so at Lightweight II you'll get (5+15*2) = 35% reduction on that piece of armor.
+		#Note that the percentage reduction is on the percentage slowdown, and not a flat reduction. E.g. With Feather Falling II on a full chainmail armor you get slowed down by 8% instead of 10%.
+		"Enchantments Weight Reduction" = ["minecraft:feather_falling,0.10", "elenaidodge2:lightweight,0.15,5"]
+		#If true, Shields will slowdown the player by this percentage.
+		#Range: 0.0 ~ 1.0
+		"Shield Slowdown" = 0.18
 
 ["Sleep & Respawn"]
 	#Prevents the player from sleeping if has not enough Hunger and gives him effects on wake up
@@ -418,17 +420,17 @@
 	#Slower breeding, Growing, Egging and Milking
 	"Enable Livestock Slowdown" = true
 	#Bonemeal is no longer so OP
-	"Enable Nerfed Bonemeal" = true
+	"Enable Nerfed Bonemeal" = false
 	#Slower Crops growing based off various factors
 	"Enable Crops Growth" = true
 	#Slower Plants (non-crops) growing
-	"Enable Plants Growth" = true
+	"Enable Plants Growth" = false
 	#Slower Hoes and more fragile
-	"Enable Hoes Nerfs" = true
+	"Enable Hoes Nerfs" = false
 	#Crops are no longer insta-minable. This applies only to blocks that are instances of net.minecraft.world.level.block.CropBlock.
 	#Crops hardness is still affected by the Hardness module.
 	#Changing anything requires a minecraft restart.
-	"Enable Harder Crops" = true
+	"Enable Harder Crops" = false
 
 	#Slower breeding, Growing, Egging and Milking
 	[Farming."Livestock Slowdown"]
@@ -490,7 +492,7 @@
 		#Setting this to 0 will prevent crops from growing naturally.
 		#1.0 will make crops grow like normal.
 		#Range: 0.0 ~ 128.0
-		"Crops Growth Speed Multiplier" = 2.5
+		"Crops Growth Speed Multiplier" = 2.0
 		#Increases the time required for a crop to grow when it's sky light level is below "Min Sunlight", (e.g. at 2.0 when the crop has a skylight below "Min Sunlight" will take twice to grow).
 		#Setting this to 0 will prevent crops from growing when sky light level is below "Min Sunlight".
 		#1.0 will make crops growth not affected by skylight.
@@ -533,40 +535,10 @@
 		"Only fully grown" = true
 
 ["Stack Size"]
-	#Make food, items and blocks less stackable. Changes in this section require a Minecraft restart
-	"Enable Stack Reduction" = true
 	#Change stack sizes as you please
 	"Enable Custom Stack Size Feature" = true
-
-	#Make food, items and blocks less stackable. Changes in this section require a Minecraft restart
-	["Stack Size"."Stack Reduction"]
-		#Food stack sizes will be reduced based off their hunger restored and saturation multiplier. The formula is '(1 - (effective_quality - 1) / Food Quality Divider) * 64' where effective_quality is hunger+saturation restored. E.g. Cooked Porkchops give 8 hunger points and have a 0.8 saturation multiplier so their stack size will be '(1 - (20.8 - 1) / 18.5) * 64' = 24 (Even foods that don't usually stack up to 16 or that don't stack at all will use the same formula, like Honey or Stews).
-		#This is affected by Food Module's feature 'Hunger Restore Multiplier' & 'Saturation Restore multiplier'
-		"Food Stack Reduction" = true
-		#Used in the 'Food Stack Reduction' formula. Increase this if there are foods that are better than vanilla ones, otherwise they will all stack to 1. Set this to 21.8 if you disable 'Hunger Restore Multiplier'
-		#Range: 1.0 ~ 40.0
-		"Food Quality Divider" = 18.5
-		#All the foods max stack sizes will be multiplied by this value to increase / decrease them (after Food Stack Reduction).
-		#Range: 0.01 ~ 64.0
-		"Food Stack Multiplier" = 0.6
-		#If true, soups will stack like normal food.
-		"Stackable Soups" = true
-		#Items max stack sizes (excluding blocks) will be multiplied by this value. Foods will be overridden by 'Food Stack Reduction' or 'Food Stack Multiplier' if are active. Setting to 1 will disable this feature.
-		#Range: 0.01 ~ 1.0
-		"Item Stack Multiplier" = 0.75
-		#Blocks max stack sizes will be reduced based off their material.
-		"Block Stack Reduction" = true
-		#All the blocks max stack sizes will be multiplied by this value to increase / decrease them. This is applied after the reduction from 'Block Stack Reduction'.
-		#Range: 0.01 ~ 64.0
-		"Block Stack Multiplier" = 1.0
-		#When true, block stacks are affected by both their material type and the block stack multiplier. If false, block stacks will be affected by the multiplier only.
-		"Block Stack Affected by Material" = true
-
-		#Items or tags that will ignore the stack changes. This can be inverted via 'Blacklist as Whitelist'. Each entry has an item or tag. E.g. ["#minecraft:fishes", "minecraft:stone"].
-		["Stack Size"."Stack Reduction".Blacklist]
-			Blacklist = ["minecraft:rotten_flesh", "minecraft:potion"]
-			#If true the list will be treated as a whitelist instead of blacklist
-			"List as Whitelist" = false
+	#Make food, items and blocks less stackable. Items and Blocks are disabled by default. Changes in this section require a Minecraft restart
+	"Enable General Stacking" = true
 
 	#Change stack sizes as you please
 	["Stack Size"."Custom Stack Size Feature"]
@@ -576,4 +548,35 @@
 		#E.g. '#forge:stone,16' will make all the stone types stack up to 16.
 		#Values over 64 or lower than 1 will not work.
 		"Custom Stack Sizes" = []
+
+	#Make food, items and blocks less stackable. Items and Blocks are disabled by default. Changes in this section require a Minecraft restart
+	["Stack Size"."General Stacking"]
+		#Food stack sizes will be reduced based off their hunger restored and saturation multiplier. The formula is '(1 - (effective_quality - 1) / Food Quality Divider) * 64' where effective_quality is hunger+saturation restored. E.g. Cooked Porkchops give 8 hunger points and have a 0.8 saturation multiplier so their stack size will be '(1 - (20.8 - 1) / 18.5) * 64' = 24 (Even foods that usually stack up to 16 or that don't stack at all will use the same formula, like Honey or Stews).
+		#This is affected by Food Module's feature 'Hunger Restore Multiplier' & 'Saturation Restore multiplier'
+		"Food Stack Reduction" = true
+		#Used in the 'Food Stack Reduction' formula. Increase this if there are foods that are better than vanilla ones, otherwise they will all stack to 1. Set this to 21.8 if you disable 'Hunger Restore Multiplier'
+		#Range: 1.0 ~ 40.0
+		"Food Quality Divider" = 18.5
+		#All the foods max stack sizes will be multiplied by this value to increase / decrease them (after Food Stack Reduction).
+		#Range: 0.01 ~ 64.0
+		"Food Stack Multiplier" = 0.6
+		#Stews will stack up to this number. It's overridden by 'foodStackReduction' if enabled. Still affected by black/whitelist
+		#Range: 1 ~ 64
+		"Stackable Stews" = 16
+		#Items max stack sizes (excluding blocks) will be multiplied by this value. Foods will be overridden by 'Food Stack Reduction' or 'Food Stack Multiplier' if are active. Setting to 1 will disable this feature.
+		#Range: 0.01 ~ 1.0
+		"Item Stack Multiplier" = 1.0
+		#Blocks max stack sizes will be reduced based off their material.
+		"Block Stack Reduction" = false
+		#All the blocks max stack sizes will be multiplied by this value to increase / decrease them. This is applied after the reduction from 'Block Stack Reduction'.
+		#Range: 0.01 ~ 64.0
+		"Block Stack Multiplier" = 1.0
+		#When true, block stacks are affected by both their material type and the block stack multiplier. If false, block stacks will be affected by the multiplier only.
+		"Block Stack Affected by Material" = true
+
+		#Items or tags that will ignore the stack changes. This can be inverted via 'Blacklist as Whitelist'. Each entry has an item or tag. E.g. ["#minecraft:fishes", "minecraft:stone"].
+		["Stack Size"."General Stacking".Blacklist]
+			Blacklist = ["minecraft:rotten_flesh"]
+			#If true the list will be treated as a whitelist instead of blacklist
+			"List as Whitelist" = false
 

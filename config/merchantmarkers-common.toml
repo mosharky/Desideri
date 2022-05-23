@@ -56,3 +56,7 @@
 			weaponsmith = "minecraft:iron_sword"
 			wandering_trader = "minecraft:emerald"
 
+	[client.compatibility_options]
+		# If enabled, will force fast render on when using shaders with Optifine (due to a bug in Optifine, this is required for markers to render properly with some shaders).
+		optifine_workaround = true
+

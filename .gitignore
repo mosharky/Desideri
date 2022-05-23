@@ -16,7 +16,7 @@ config/oculus.properties
 /saves/
 /logs/
 /mods/
-mods
+/debug/
 
 # root files
 knownkeys.txt
@@ -30,6 +30,7 @@ patchouli_data.json
 o_prof
 enigmatic_persistence.dat
 reauth.toml
+mods
 
 
 # launcher-related
