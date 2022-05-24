@@ -3,6 +3,7 @@ onEvent('jei.hide.items', jei => {
 	// jei.hide(global.fullRemovals)
 	jei.hide([
 		/refinedstorage:(white|light_gray|gray|black|brown|red|orange|yellow|lime|green|cyan|blue|magenta|pink)_/,
+		'biomesoplenty:clover',
 	])
 })
 
