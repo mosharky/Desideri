@@ -16,6 +16,7 @@ onEvent('recipes', (event) => {
         { condition: {}, toReplace: 'minecraft:stick', replaceWith: '#forge:rods/wooden' },
         { condition: {}, toReplace: '#forge:crops/flax', replaceWith: 'farmersdelight:straw' },
         { condition: { id: 'farmersdelight:fruit_salad' }, toReplace: 'minecraft:sweet_berries', replaceWith: '#desideri:berries' },
+        { condition: {}, toReplace: 'farmersdelight:tree_bark', replaceWith: '#immersive_weathering:bark' },
     )
     InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }
