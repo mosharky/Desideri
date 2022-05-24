@@ -79,11 +79,6 @@ typeRemovals.push(
 // Regex no worky :(
 global.fullRemovals.push(
     'beyond_earth:hammer',
-    'beyond_earth:iron_stick',
-    'beyond_earth:iron_plate',
-    'beyond_earth:steel_ingot',
-    'beyond_earth:steel_nugget',
-    'beyond_earth:steel_block',
     'beyond_earth:compressed_desh',
     'beyond_earth:compressed_steel',
     'create:iron_sheet',
@@ -91,26 +86,22 @@ global.fullRemovals.push(
     'create:copper_sheet',
     'beyond_earth:coal_generator',
     'beyond_earth:compressor',
-    /immersiveengineering:.*uranium.*/,
-    'immersiveengineering:plate_uranium', // remove when .removeAllTagsFrom() accepts regex
     'create:copper_nugget',
-    /immersiveengineering:.*lead.*/,
-    'immersiveengineering:plate_lead', // remove when .removeAllTagsFrom() accepts regex
-    /immersiveengineering:.*constantan.*/,
-    'immersiveengineering:plate_constantan', // remove when .removeAllTagsFrom() accepts regex
-    /immersiveengineering:.*nickel.*/,
-    'immersiveengineering:plate_nickel', // remove when .removeAllTagsFrom() accepts regex
-    'immersiveengineering:ingot_nickel', // remove when .removeAllTagsFrom() accepts regex
-    'alloyed:steel_ingot',
-    'alloyed:steel_block',
-    'alloyed:steel_sheet',
-    /immersiveengineering:(pickaxe|shovel|axe|hoe|sword)_steel/,
-    'createaddition:iron_rod',
-    'createaddition:gold_rod',
-    'createaddition:brass_rod',
     'createaddition:iron_wire',
     'createaddition:copper_wire',
-    /refinedstorage:quartz_enriched.*/
+)
+
+regexFullRemovals.push(
+    /immersiveengineering:.*nickel.*/,
+    /immersiveengineering:(pickaxe|shovel|axe|hoe|sword)_steel/,
+    /immersiveengineering:.*constantan.*/,
+    /immersiveengineering:.*uranium.*/,
+    /immersiveengineering:.*lead.*/,
+    /beyond_earth:steel_(ingot|nugget|block)/,
+    /beyond_earth:iron_(stick|plate)/,
+    /alloyed:steel_(ingot|block|sheet)/,
+    /createaddition:(iron|gold|brass)_rod/,
+    /refinedstorage:quartz_enriched.*/,
 )
 
 // ------------------------------ RECIPES ------------------------------
