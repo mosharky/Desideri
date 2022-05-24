@@ -24,7 +24,7 @@ regexFullRemovals.push(
     /quark:(backpack|potato_crate|carrot_crate|beetroot_crate|chute|gravisand|abacus|dragon_scale|.*limestone.*|.*_rune)/,
     /quark:(granite|andesite|diorite|calcite|dripstone|tuff)_pillar/,
     /biomesoplenty:(.*black_sand.*|.*autumn.*)/,
-    /(biomesoplenty|compatoplenty|decorative_compat|supplementaries|snowyspirit|immersive_weathering):(.*magic.*|.*umbran.*|.*palm.*|.*cherry.*)/,
+    /(biomesoplenty|compatoplenty|decorative_compat|supplementaries|snowyspirit|immersive_weathering):(.*magic.*|.*umbran.*|.*palm.*|.*cherry.*|.*origin.*)/,
 )
 regexFullRemovals.forEach(removal => {
     let itemList = []
@@ -55,7 +55,6 @@ onEvent('recipes', (event) => {
         event.remove({ input: removal })
         event.remove({ output: removal })
     })
-    
     // Removes by recipe ID
     idRemovals.forEach((removal) => {
         event.remove({ id: removal })
