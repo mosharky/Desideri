@@ -21,7 +21,10 @@ let woodTypesToConstruct = [
     'ecologics:flowering_azalea',
     'quark:blossom',
     'malum:runewood',
-    'malum:soulwood' 
+    'malum:soulwood',
+    'undergarden:smogstem',
+    'undergarden:wigglewood',
+    'undergarden:grongle',
 ]
 
 // Wood that isn't supported by Immersive Weathering for bark
