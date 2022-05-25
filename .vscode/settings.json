@@ -30,5 +30,8 @@
         "**/o_prof": true,
         "**/icon.png": true,
         "server-resource-packs/": true,
+        "debug/": true,
+        "**/enigmatic_persistence.dat": true,
+        "**/reauth.toml": true,
     }
 }
