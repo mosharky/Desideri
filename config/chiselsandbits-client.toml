@@ -74,7 +74,7 @@
 
 	[performance.model-building]
 		#performance.model-building.thead-count.comment
-		#Range: 1 ~ 16
+		#Range: 1 ~ 8
 		thead-count = 8
 
 [gui]
