@@ -1,3 +1,4 @@
+//priority: 501
 /*
 This script doesn't just unify, it also attempts to remove useless metals/ores, such as:
 - Lead
