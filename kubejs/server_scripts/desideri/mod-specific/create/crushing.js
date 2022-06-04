@@ -1,3 +1,27 @@
+constructedOreRecipes.forEach(oreRecipeData => {
+    onEvent('recipes', event => {
+        let recipeData = {
+            type: 'create:crushing',
+            ingredients: [oreRecipeData.oreBlock],
+            results: [oreRecipeData.crushedOre],
+            processingTime: 300
+        }
+        if (oreRecipeData.extraOutput1 != undefined) {
+            recipeData.results.push(oreRecipeData.extraOutput1)
+        }
+        if (oreRecipeData.extraOutput2 != undefined) {
+            recipeData.results.push(oreRecipeData.extraOutput2)
+        }
+        recipeData.results.push(Item.of('create:experience_nugget').withChance(0.75))
+        if (oreRecipeData.crushedStrata != undefined) {
+            recipeData.results.push(Item.of(oreRecipeData.crushedStrata).withChance(0.12))
+        }
+        if (oreRecipeData?.extraStrataOutput != undefined) {
+            recipeData.results.push(oreRecipeData.extraStrataOutput)
+        }
+        event.custom(recipeData)
+    })
+})
 /*
 oresToCrush.forEach(ore => {
     onEvent('recipes', (event) => {
