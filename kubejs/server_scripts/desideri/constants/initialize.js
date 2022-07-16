@@ -16,6 +16,9 @@ var inputReplace = []
 // Replace input AND output
 var InputOutputReplace = []
 
+// TAGS
+var addTagToItem = []
+
 // Constant array of all colours
 const colours = [
     'white',

@@ -1,4 +1,3 @@
-
 /*
     input: 'ItemId' or 'TagId'
     additionalInput: [ItemId]
@@ -11,6 +10,8 @@
  
     additionalInput, secondaryResult, slag, id are optional fields
 */
+
+/*
 const ArcFurnaceRecipes = [
     {
         input: '#forge:dusts/aluminum',
@@ -170,7 +171,7 @@ ArcFurnaceRecipes.forEach(data => {
         energy: data.energy
     }
     if (data.slag) {
-        recipe['slag'] = { item: 'immersiveengineering:slag' }
+        recipe['slag'] = { item: 'thermal:slag' }
     }
     onEvent('recipes', (event) => {
         if (data.id != undefined) {
@@ -180,3 +181,4 @@ ArcFurnaceRecipes.forEach(data => {
         }
     })
 })
+*/

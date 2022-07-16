@@ -11,7 +11,7 @@
 [Hunger]
 	#Changes to the speed on how food is eaten or how items are consumed.
 	"Enable Food Consuming" = true
-	#Makes Health regen work differently, like in Combat Test snapshots or similar to Hunger Overhaul
+	#Makes Health regen work differently, like in Combat Test snapshots. Can be customized. Also adds Well Fed and Injured effects.
 	"Enable Health Regen" = true
 	#Change food's hunger and saturation given, also makes food heal you by a bit. Changing anything requires a Minecraft restart.
 	"Enable Food Hunger" = true
@@ -32,38 +32,38 @@
 		#If true, eating/drinking stops when the player's hit.
 		"Stop consuming on hit" = true
 
-	#Makes Health regen work differently, like in Combat Test snapshots or similar to Hunger Overhaul
+	#Makes Health regen work differently, like in Combat Test snapshots. Can be customized. Also adds Well Fed and Injured effects.
 	[Hunger."Health Regen"]
 		#Sets the other config options to some default values (actual config is not changed, but custom values are ignored):
 		#NONE: Use custom values
-		#COMBAT_TEST: health regeneration works like the Combat Tests Shapshots,IGUANA_TWEAKS: health regen is slow (1 hp every 10 secs) and also the player can have Bleeding and Well Fed effects that slow down / speed up the health regen.
-		#Allowed Values: NONE, COMBAT_TEST, IGUANA_TWEAKS
+		#COMBAT_TEST: health regeneration works like the Combat Tests Snapshots
+		#Allowed Values: NONE, COMBAT_TEST
 		"Health Regen Preset" = "NONE"
-		#Sets how many ticks between the health regeneration happens (vanilla is 80; Combat Test Snapshot is 40; Iguana Tweaks preset is 200).
+		#Sets how many ticks between the health regeneration happens (vanilla is 80; Combat Test is 40).
 		#Range: > 0
 		"Health Regen Speed" = 200
-		#Sets how much hunger the player must have to regen health (vanilla is >17; Combat Test Snapshot; Iguana Tweaks preset is >3).
+		#Sets how much hunger the player must have to regen health (vanilla is >17; Combat Test is >3).
 		#Range: > 0
 		"Regen when Hunger Above" = 3
-		#Sets how many ticks between starve damage happens (vanilla and Combat Test Snapshot is 80; Iguana Tweaks preset is 40, but you start talking damage when hunger <= 3 and less hunger = faster starve, also in hard is faster and in easy is slower).
+		#Sets how many ticks between starve damage happens (vanilla and Combat Test is 80).
 		#Range: > 0
 		"Starve Speed" = 80
-		#Sets how many ticks between the health regeneration happens (vanilla, Combat Test and IguanaTweaks preset are all 1).
+		#Set how much damage is dealt when starving (vanilla and Combat Test are 1).
 		#Range: > 0
 		"Starve Damage" = 1
-		#Set to true to consume Hunger only (and not saturation) when regenerating health (false for Vanilla and Iguana Tweaks presets; true for Combat Test).
+		#Set to true to consume Hunger only (and not saturation) when regenerating health (false for Vanilla; true for Combat Test).
 		"Consume Hunger Only" = false
 		#Vanilla consumes 1 saturation or hunger whenever Exhaustion reaches 4.0. You can change that value with this config option. NOTE that Minecraft caps this value to 40
 		#Range: 0.0 ~ 40.0
 		"Max Exhaustion" = 4.0
-		#Set to true to disable the health regen boost given when max hunger and saturation (false for Vanilla; true for Combat Test and IguanaTweaks Presets).
+		#Set to true to disable the health regen boost given when max hunger and saturation (false in Vanilla; true for Combat Test).
 		"Disable Saturation Regen Boost" = false
-		#If 'Consume Hunger Only' is true then this is the chance to consume an hunger whenever the player is healed (vanilla and Iguanatweaks ignore this; Combat Test has this set to 0.5).
+		#If 'Consume Hunger Only' is true then this is the chance to consume an hunger whenever the player is healed (vanilla ignores this; Combat Test has this set to 0.5).
 		#Range: 0.0 ~ 1.0
 		"Hunger Consumption Chance" = 0.0
-		#Set to true to enable Well Fed, a new effect that speeds up health regen and is applied whenever the player eats (disabled for Vanilla and Combat Test; enabled for Iguana Tweaks preset).
+		#Set to true to enable Well Fed, a new effect that speeds up health regen and is applied whenever the player eats. The effect speeds up health regen by 25% per level.
 		"Enable Well Fed" = false
-		#Set to true to enable Injured, a new effect that slows down health regen and is applied whenever the player is damaged (disabled for Vanilla and Combat Test; enabled for Iguana Tweaks preset).
+		#Set to true to enable Injured, a new effect that slows down health regen and is applied whenever the player is damaged. The effect slows down health regen by 20% per level.
 		"Enable Injured" = false
 		#When eating you'll get healed by this percentage of (hunger + saturation) restored.
 		#Range: 0.0 ~ 128.0
@@ -91,7 +91,7 @@
 
 	#Make the player consume more hunger with different actions
 	[Hunger."Exhaustion Increase"]
-		#When you break a block you'll get exhaustion equal to the block hardness multiplied by this value. Setting this to 0 will default to the vanilla exhaustion (0.005). (It's not affected by the Mining Hardness Features)
+		#When you break a block you'll get exhaustion equal to the block hardness multiplied by this value. Setting this to 0 will default to the vanilla exhaustion (0.005). (It's not affected by the Global Hardness Features)
 		#Range: 0.0 ~ 1024.0
 		"Block Break Exhaustion Multiplier" = 0.0
 		#When breaking block you'll get exhaustion every tick during the breaking.
@@ -100,6 +100,8 @@
 		#Every second the player will get this exhaustion.
 		#Range: 0.0 ~ 1024.0
 		"Passive Exhaustion" = 0.005
+		#When affected by the hunger effect ANY action will give you 100% more exhaustion per level.
+		"Effective Hunger" = true
 
 [Experience]
 	#Decrease / Increase every experience point dropped in the world
@@ -129,18 +131,20 @@
 
 	#Decrease / Increase experience dropped mobs spawned by Spawners
 	[Experience."Experience From Spawners' Mobs"]
-		#Experience dropped from mobs that come from spawners will be multiplied by this multiplier. Experience dropped by mobs from spawners are still affected by 'Global Experience Multiplier'
+		#Experience dropped from mobs that come from spawners will be multiplied by this multiplier.
+		#Experience dropped by mobs from spawners are still affected by 'Global Experience Multiplier'
 		#Can be set to 0 to disable experience drop from mob that come from spawners.
 		#Range: 0.0 ~ 1000.0
 		"Mobs from Spawners Multiplier" = 0.667
 
 	#Changes the experience lost on death and xp per level required.
 	[Experience."Player Experience"]
-		#The experience required to level up will be linear insteaed of exponential like vanilla.
+		#The experience required to level up will be linear instead of exponential like vanilla.
 		#The formula used to calculate the xp required for next level is (3 * (current_level + 1))
 		#Obviously incompatible with Allurement's 'Remove level Scaling'
 		"Better Scaling XP to next level" = true
-		#On death, players will drop this percentage of experience instead of max 7 levels. Setting to -1 will disable this.Due to Minecraft limitations this is incompatible with other mods that change the level scaling (e.g. Allurement's 'Remove level Scaling')
+		#On death, players will drop this percentage of experience instead of max 7 levels. Setting to -1 will disable this.
+		#Due to Minecraft limitations this is incompatible with other mods that change the level scaling (e.g. Allurement's 'Remove level Scaling').
 		#Range: -1.0 ~ 1.0
 		"Experience Dropped on Death" = 0.8
 		#Players will pick up experience faster
@@ -156,7 +160,7 @@
 [Miscellaneous]
 	#Various changes to explosions from knockback to shielding.
 	"Enable Explosion Overhaul" = false
-	#Less durable and efficient tools. Changing this config's options requires a Minecraft restart
+	#Less durable and efficient tools
 	"Enable Tool Stats" = false
 	#Apply potion effects on certain hunger / health / experience level
 	"Enable DeBuffs" = false
@@ -166,24 +170,29 @@
 	"Enable Villager Nerfs" = true
 	#Various Nerfs
 	"Enable Nerfs" = false
+	#Beacon Range varying based of blocks of the pyramid
+	"Enable Beacon" = true
 
 	#Various changes to explosions from knockback to shielding.
 	[Miscellaneous."Explosion Overhaul"]
 		#Vanilla Explosions use a random number that changes the explosion power. With this enabled the ray strength will be as the explosion size.
 		"Disable Explosion Randomness" = true
 		#Somewhere around 1.15 Mojang (for performance issues) removed the poof particles from Explosions. Keep them disabled if you have a low end PC.
+		#These particles aren't shown when explosion power is <= 1
 		"Enable Poof Particles" = false
-		#How much damage and knockback will the player take when blocking an explosion with a shield. Putting 0 shields will block like Vanilla.
+		#How much damage will the player take when blocking an explosion with a shield. Putting 0 shields will block all the damage like Vanilla, while putting 1 shields will block no damage.
 		#Range: 0.0 ~ 1.0
 		"Blocking Damage Scaling" = 0.5
 		#While enabled knockback is greatly increased by explosion size
 		"Knockback Scales With Size" = true
 		#Explosions will start from the middle of the entity instead of feets.
 		"Explosions at Half Entity" = true
-		#Explosions affect even entities spawned by the explosions, like TnTs or chests content. BE AWARE that containers content will most likely get destroyed.
-		"Explosion Affect Just Spawed Entities" = false
 		#EXPERIMENTAL! This will make explosion blast blocks away. Blocks that can't land will drop the block as a TNT would have destroyed it.
 		"Enable Flying Blocks" = false
+		#Explosions affect even entities spawned by the explosions, like TnTs or chests content. BE AWARE that containers content will get destroyed.
+		"Explosion Affect Just Spawned Entities" = false
+		#If true, creepers explosions will drop no blocks.
+		"Creeper collateral" = false
 
 		#A list of mobs (and optionally dimensions) that should take reduced knockback. Non-living entities are blacklisted by default.
 		[Miscellaneous."Explosion Overhaul"."Knockback Blacklist"]
@@ -197,7 +206,7 @@
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false
 
-	#Less durable and efficient tools. Changing this config's options requires a Minecraft restart
+	#Less durable and efficient tools
 	[Miscellaneous."Tool Stats"]
 		#A list of items which should have their durability changed.
 		#Format is 'modid:itemid,durability'
@@ -231,12 +240,6 @@
 		#Set here an item that can be used on spawners and let you re-enable them.
 		"Reagent Item" = ""
 
-		#A list of mobs (and optionally dimensions) that shouldn't have their spawner disabled. Each entry has an entity or entity tag and optionally a dimension. E.g. ["minecraft:zombie", "minecraft:blaze,minecraft:the_nether"]
-		[Miscellaneous."Temporary Spawners"."Entity Blacklist"]
-			Blacklist = []
-			#If true the list will be treated as a whitelist instead of blacklist
-			"List as Whitelist" = false
-
 	#Small changes to villagers to make them less OP
 	[Miscellaneous."Villager Nerfs"]
 		#If true, villagers will be given 1 trading experience as soon as they choose their job to lock the trades.
@@ -260,13 +263,30 @@
 		#If true, boats will no longer go stupidly fast on ice.
 		"No Ice Boats" = true
 
+	#Beacon Range varying based of blocks of the pyramid
+	[Miscellaneous.Beacon]
+		#Base range of the beacon
+		#Range: 0.0 ~ 256.0
+		"Base Range" = 10.0
+		#A list of blocks and the range increase on the beacon. Each entry represent a block or block tag plus the range increase in blocks of the beacon base.
+		#Each block in the pyramid will increase the range of the beacon. After the blocks have been summed the final value is divided by the number of layers of the beacon.
+		#E.g. a beacon with 1 layer full Iron blocks will give 9 range (+ base range), while with 2 layers (34 range / 2) = 17.
+		#
+		"Blocks Range" = ["minecraft:iron_block,1", "minecraft:emerald_block,1.2", "minecraft:gold_block,1.8", "minecraft:diamond_block,3.0", "minecraft:netherite_block,4.0", "tconstruct:cobalt_block,2.2", "tconstruct:queens_slime_block,3.0", "tconstruct:hepatizon_block,2.7", "tconstruct:manyullyn_block,3.3"]
+
+	#A list of mobs (and optionally dimensions) that shouldn't have their spawner disabled. Each entry has an entity or entity tag and optionally a dimension. E.g. ["minecraft:zombie", "minecraft:blaze,minecraft:the_nether"]
+	[Miscellaneous."Entity Blacklist"]
+		Blacklist = []
+		#If true the list will be treated as a whitelist instead of blacklist
+		"List as Whitelist" = false
+
 [Mining]
 	#Change all the blocks hardness
 	"Enable Global Hardness" = false
-	#Change specific blocks hardness as well as black and whitelist. Zero hardness blocks changes require a Minecraft restart.
+	#Change specific blocks hardness as well as black and whitelist. Requires a Minecraft restart if you remove a block from the list.
 	"Enable Custom Hardness" = false
-	#Makes silverfishes blocks insta-mine like pre-1.17
-	"Enable Insta-mine Silverfish" = true
+	#Various mining changes
+	"Enable Misc" = true
 
 	#Change all the blocks hardness
 	[Mining."Global Hardness"]
@@ -276,7 +296,7 @@
 		#A list of dimensions and their relative block hardness multiplier. Each entry has a a dimension and hardness. This overrides the global multiplier.
 		"Dimension Hardness Multiplier" = ["minecraft:the_nether,4", "minecraft:the_end,4"]
 		#A list of dimensions and their relative block hardness multiplier per blocks below the set Y level. Each entry has a a dimension, a multiplier, a Y Level (where the increased hardness starts applying) and a Y Level cap (where the increase should stop).
-		#E.g. with the default configurations increases the overworld hardness multiplier by 0.03 for each block below the sea level (63); so at Y = 32 you'll get a multiplier of 2.0 (global multiplier) + 0.03 * (63 - 32) = 2.93 hardness multiplier.
+		#E.g. with the default configurations increases the overworld hardness multiplier by 0.025 for each block below the sea level (63); so at Y = 32 you'll get a multiplier of 2.5 (global multiplier) + 0.025 * (63 - 32) = 3.3 hardness multiplier.
 		#NOTE: This multiplier increase applies to blocks in Custom Hardness too.
 		"Depth Multiplier Dimension" = ["minecraft:overworld,0.03,63,-64", "minecraft:overworld,-1.24,5,4"]
 
@@ -292,7 +312,7 @@
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false
 
-	#Change specific blocks hardness as well as black and whitelist. Zero hardness blocks changes require a Minecraft restart.
+	#Change specific blocks hardness as well as black and whitelist. Requires a Minecraft restart if you remove a block from the list.
 	[Mining."Custom Hardness"]
 		#Define custom blocks hardness, one string = one block/tag. Those blocks ARE AFFECTED by the global block hardness multiplier, unless put in the blacklist.
 		#The format is modid:blockid,hardness,dimensionid or #modid:tagid,hardness,dimensionid
@@ -300,15 +320,24 @@
 		#E.g. '#forge:stone,5.0,minecraft:overworld' will make all the stone types have 5 hardness but only in the overworld.
 		"Custom Hardness" = ["minecraft:coal_ore,3", "minecraft:iron_ore,3.5", "minecraft:gold_ore,4.0", "minecraft:diamond_ore,4.5", "minecraft:ancient_debris,10", "minecraft:redstone_ore,3.5", "minecraft:lapis_ore,3.5", "minecraft:emerald_ore,4.5", "minecraft:deepslate_coal_ore,4.5", "minecraft:deepslate_iron_ore,5.25", "minecraft:deepslate_gold_ore,6.0", "minecraft:deepslate_diamond_ore,6.75", "minecraft:deepslate_redstone_ore,5.25", "minecraft:deepslate_lapis_ore,5.25", "minecraft:deepslate_emerald_ore,6.75", "minecraft:nether_quartz_ore,3", "minecraft:nether_gold_ore,3", "#iguanatweaksreborn:obsidians,40"]
 
+	#Various mining changes
+	[Mining.Misc]
+		#Silverfish blocks will insta-mine like pre-1.17
+		"Insta-Mine Silverfish" = true
+		#Heads will insta-break
+		"Insta-Mine Heads" = true
+
 [Combat]
 	#Various changes from weapons damage to armor reduction
 	"Enable Stats" = true
 	#Player will deal no knockback if attacking with a non-weapon or spamming
 	"Enable No Knockback" = true
+	#Various changes to Shields
+	"Enable Shields" = true
 
 	#Various changes from weapons damage to armor reduction
 	[Combat.Stats]
-		#If true, Swords, Axes and Tridents get a -1 damage.
+		#If true, Swords and Tridents get -1 damage and Axes get -1.5 damage.
 		"Reduce Weapon Damage" = true
 		#If true, Power Enchantment will be nerfed to deal half damage.
 		"Nerf Power" = true
@@ -336,6 +365,16 @@
 		"Attack Cooldown No Knockback" = 0.925
 		#If true the player will deal no knockback when not using a tool / weapon
 		"No Item No Knockback" = true
+
+	#Various changes to Shields
+	[Combat.Shields]
+		#In vanilla when you start blocking with a shield, there's a 0.25 seconds window where you are still not blocking. If true this windup time is removed.
+		"Remove Shield Windup" = true
+		#Shields will only block this amount of damage. Setting to 0 will make shield block like vanilla
+		#Range: 0.0 ~ 128.0
+		"Shield Damage Blocked" = 5.0
+		#Makes shields always disable for 1.6 seconds like Combat Test snapshots.
+		"Combat Test shield disabling" = true
 
 [Movement]
 	#Prevents the player from placing blocks below him when in mid air.
@@ -389,7 +428,7 @@
 		#Where reduction per level is the percentage slowdown reduction per level, while flatReduction (optional) is a flat percentage slowdown reduction. E.g. 'elenaidodge2:lightweight,0.15,0.05' means that you'll get 5% less slowdown on armor plus 15% per level, so at Lightweight II you'll get (5+15*2) = 35% reduction on that piece of armor.
 		#Note that the percentage reduction is on the percentage slowdown, and not a flat reduction. E.g. With Feather Falling II on a full chainmail armor you get slowed down by 8% instead of 10%.
 		"Enchantments Weight Reduction" = ["minecraft:feather_falling,0.10", "elenaidodge2:lightweight,0.15,5"]
-		#If true, Shields will slowdown the player by this percentage.
+		#Shields will slowdown the player by this percentage.
 		#Range: 0.0 ~ 1.0
 		"Shield Slowdown" = 0.18
 
@@ -398,11 +437,13 @@
 	"Enable Sleeping Effects" = true
 	#Makes sleeping impossible while begin able to set (or not) the spawn point
 	"Enable Prevent Sleeping" = false
+	#Prevents sleeping if the player is not tired. Tiredness is gained by gaining exhaustion. Allows you to sleep during daytime if too tired
+	"Enable Tiredness" = false
 
 	#Prevents the player from sleeping if has not enough Hunger and gives him effects on wake up
 	["Sleep & Respawn"."Sleeping Effects"]
 		#How much the hunger bar is depleted when you wake up in the morning. Saturation depleted is based off this value times 2. Setting to 0 will disable this feature.
-		#Range: -20 ~ 20
+		#Range: 0 ~ 20
 		"Hunger Depleted on Wake Up" = 11
 		#A list of effects to apply to the player when he wakes up.
 		#The format is modid:potion_id,duration_in_ticks,amplifier
@@ -415,6 +456,23 @@
 	["Sleep & Respawn"."Prevent Sleeping"]
 		#If set to true the player spawn point will not change when the player cannot sleep. Has no effect if the player can sleep.
 		"Disable Bed Spawn" = false
+
+	#Prevents sleeping if the player is not tired. Tiredness is gained by gaining exhaustion. Allows you to sleep during daytime if too tired
+	["Sleep & Respawn".Tiredness]
+		#Multiply the tiredness gained by this value. Normally you gain tiredness equal to the exhaustion gained. 'Effective Hunger' doesn't affect the exhaustion gained.
+		#Range: 0.0 ~ 128.0
+		"Tiredness gained multiplier" = 1.0
+		#If true the player will not set the spawn point if he/she can't sleep.
+		"Prevent Spawn Point" = false
+		#Tiredness required to be able to sleep.
+		#Range: 0.0 ~ 1.7976931348623157E308
+		"Tiredness to sleep" = 320.0
+		#Tiredness required to get the Tired effect.
+		#Range: 0.0 ~ 1.7976931348623157E308
+		"Tiredness for effect" = 400.0
+		#Every this Tiredness above 'Tiredness for effect' will add a new level of Tired.
+		#Range: 0.0 ~ 1.7976931348623157E308
+		"Tiredness per level" = 20.0
 
 [Farming]
 	#Slower breeding, Growing, Egging and Milking

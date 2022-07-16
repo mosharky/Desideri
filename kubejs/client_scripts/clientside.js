@@ -16,5 +16,5 @@ onEvent('jei.information', jei => {
 // Item tooltips
 onEvent('item.tooltip', tooltip => {
 	tooltip.add(global.fullRemovals, Text.of('DISABLED. If found in-game in a recipe or dropped as an item, please contact us on the discord.').red().bold())
-	tooltip.add(/refinedstorage:red_/, Text.of('Can be any color').gray())
+	tooltip.add(/refinedstorage:purple_/, Text.of('Can be any color').gray())
 })

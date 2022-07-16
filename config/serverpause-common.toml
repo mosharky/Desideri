@@ -4,4 +4,6 @@
 	pauseWhenNoPlayers = false
 	#Set to true to send a chat message to all players (and to the server log) when the server pause state changes.
 	sendChatMessageWhenPauseStateChanges = false
+	#Set to true to pause the server when all connected players are paused.
+	pauseWhenAllPlayersPaused = true
 

@@ -1,4 +1,5 @@
 // Fixes weird water tag inputs with Immersive Engineering (i hope it wasn't like this for a reason..)
+/*
 onEvent('recipes', event => {
     event.custom({
         type: 'immersiveengineering:turn_and_copy',
@@ -47,7 +48,7 @@ onEvent('recipes', event => {
             'scs'
         ],
         key: {
-            s: { item: 'immersiveengineering:slag' },
+            s: { tag: 'forge:slag' },
             c: { tag: 'forge:clay' },
             g: { tag: 'forge:gravel' },
             b: { item: 'minecraft:water_bucket' }
@@ -73,3 +74,4 @@ onEvent('recipes', event => {
         }
     }).id('immersiveengineering:crafting/paper_from_sawdust')
 })
+*/

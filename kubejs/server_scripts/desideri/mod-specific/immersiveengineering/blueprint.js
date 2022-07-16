@@ -1,3 +1,4 @@
+/*
 onEvent('recipes', event => {
     event.custom({
         type: 'immersiveengineering:blueprint',
@@ -17,3 +18,4 @@ onEvent('recipes', event => {
         result: { item: 'immersiveengineering:dragons_breath' }
     }).id('immersiveengineering:blueprint/bullet_dragonsbreath')
 })
+*/

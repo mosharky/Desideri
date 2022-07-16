@@ -9,7 +9,7 @@
 	#Generate clover patch
 	generateCloverPatch = true
 	#Generate daisies patch
-	generateDaisiesPatch = true
+	generateDaisiesPatch = false
 	#Generate pebbles
 	generatePebbles = true
 	#Generate rock
@@ -17,11 +17,11 @@
 	#Generate fallen log
 	generateFallenLog = true
 	#Generate daisy-decorated tree
-	generateOakDaisies = true
+	generateOakDaisies = false
 	#Generate hollow log oak tree
 	generateOakHollow = true
 	#Generate fallen log
-	generateFallenLogNether = true
+	generateFallenLogNether = false
 	#Generate mushroom shelf on the surface
 	generateMushroomShelfSurface = true
 	#Generate mushroom shelf underground
@@ -40,5 +40,5 @@
 
 ["Gameplay Settings"]
 	#Mushrooms can be placed and survive regardless of light level.
-	removeMushroomLightLevel = true
+	removeMushroomLightLevel = false
 

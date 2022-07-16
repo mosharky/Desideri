@@ -1,3 +1,4 @@
+/*
 onEvent('recipes', (event) => {
     event.remove({type: 'immersiveengineering:sawmill'})
     constructedWoodTypes.forEach((variant) => {
@@ -8,7 +9,7 @@ onEvent('recipes', (event) => {
             // Input
             variant.logBlock,
             // Secondary Output (optional)
-            [{ stripping: true, output: 'immersiveengineering:dust_wood' }, 'immersiveengineering:dust_wood'],
+            [{ stripping: true, output: 'thermal:sawdust' }, 'thermal:sawdust'],
             // Stripped (optional)
             variant.logBlockStripped,
         )
@@ -19,9 +20,10 @@ onEvent('recipes', (event) => {
             // Input
             variant.woodBlock,
             // Secondary Output (optional)
-            [{ stripping: true, output: 'immersiveengineering:dust_wood' }, 'immersiveengineering:dust_wood'],
+            [{ stripping: true, output: 'thermal:sawdust' }, 'thermal:sawdust'],
             // Stripped (optional)
             variant.woodBlockStripped,
         )
     })
 })
+*/

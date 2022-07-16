@@ -4,6 +4,7 @@
 /config/jei-client.toml
 config/sodium-options.json
 config/oculus.properties
+config/blockswap/known_states/
 
 # kubejs
 /kubejs/exported/*
@@ -44,3 +45,4 @@ config/jei/recipe-category-sort-order.ini
 config/jei/ingredient-list-mod-sort-order.ini
 config/roughlyenoughitems/changelog.txt
 config/roughlyenoughitems/config.json5
+

@@ -11,10 +11,12 @@ const strataData = {
     },
     'beyond_earth:mars': {
         crushedStrata: 'beyond_earth:mars_sand',
+        /*
         extraStrataOutput: {
             item: 'immersiveengineering:dust_saltpeter',
             chance: 0.50
         }
+        */
     },
     'beyond_earth:moon': {
         crushedStrata: 'beyond_earth:moon_sand'
@@ -141,7 +143,7 @@ const oreRecipesToConstruct = [
             chance: 0.75
         },
         extraOutput2: {
-            item: 'immersiveengineering:dust_sulfur',
+            item: 'thermal:sulfur_dust',
             count: 1,
             chance: 0.15
         }

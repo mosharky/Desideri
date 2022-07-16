@@ -4,26 +4,26 @@ onEvent('recipes', (event) => {
         // Log blocks
         event.recipes.createCutting(
             // Output
-            [variant.logBlockStripped, 'immersiveengineering:dust_wood'],
+            [variant.logBlockStripped, 'thermal:sawdust'],
             // Input
             variant.logBlock
         )
         event.recipes.createCutting(
             // Output
-            [`6x ${variant.plankBlock}`, 'immersiveengineering:dust_wood'],
+            [`6x ${variant.plankBlock}`, 'thermal:sawdust'],
             // Input
             variant.logBlockStripped
         )
         // Wood blocks
         event.recipes.createCutting(
             // Output
-            [variant.woodBlockStripped, 'immersiveengineering:dust_wood'],
+            [variant.woodBlockStripped, 'thermal:sawdust'],
             // Input
             variant.woodBlock
         )
         event.recipes.createCutting(
             // Output
-            [`8x ${variant.plankBlock}`, 'immersiveengineering:dust_wood'],
+            [`8x ${variant.plankBlock}`, 'thermal:sawdust'],
             // Input
             variant.woodBlockStripped
         )

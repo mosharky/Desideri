@@ -116,53 +116,6 @@ const shaped = [
         },
         id: 'farmersdelight:chocolate_pie'
     },
-
-    // Hexerei Wood fixes
-    /*
-    uncomment when Hexerei is updated to 1.18.2
-    {
-        output: '3x hexerei:willow_wood',
-        pattern: four,
-        key: { A: 'hexerei:willow_log' },
-        id: 'hexerei:willow_wood'
-    },
-    {
-        output: '3x hexerei:stripped_willow_wood',
-        pattern: four,
-        key: { A: 'hexerei:stripped_willow_log' },
-        id: 'hexerei:stripped_willow_wood'
-    },
-    {
-        output: '3x hexerei:mahogany_wood',
-        pattern: four,
-        key: { A: 'hexerei:mahogany_log' },
-        id: 'hexerei:mahogany_wood'
-    },
-    {
-        output: '3x hexerei:stripped_mahogany_wood',
-        pattern: four,
-        key: { A: 'hexerei:stripped_mahogany_log' },
-        id: 'hexerei:stripped_mahogany_wood'
-    },
-    */
-    {
-        output: '4x createaddition:spool',
-        pattern: ['A', 'B', 'A'],
-        key: {
-            A: 'immersiveengineering:stick_treated',
-            B: '#forge:nuggets/iron'
-        },
-        id: 'createaddition:crafting/spool'
-    },
-    // because for some reason it's removed by something?
-    {
-        output: '4x minecraft:stick',
-        pattern: stick,
-        key: {
-            A: '#minecraft:planks'
-        },
-        id: 'minecraft:sticks'
-    },
     {
         output: 'biomesoplenty:rose_quartz_block',
         pattern: ['AAA', 'AAA', 'AAA'],
@@ -179,6 +132,29 @@ const shaped = [
         },
         id: 'create:crafting/materials/rose_quartz'
     },
+    {
+        output: 'thermal:stuffed_pumpkin',
+        pattern: ['ACA', 'DED', ' B '],
+        key: {
+            A: '#forge:cooked_beef',
+            B: 'minecraft:carved_pumpkin',
+            C: 'thermal:cheese_wedge',
+            D: 'farmersdelight:tomato',
+            E: '#forge:bread'
+        }
+    },
+    {
+        output: 'thermal:potion_cake',
+        pattern: ['ABA', 'CDC', 'EEE'],
+        key: {
+            A: '#forge:milk',
+            B: 'minecraft:potion',
+            C: 'minecraft:sugar',
+            D: '#forge:eggs',
+            E: 'minecraft:wheat'
+        },
+        id: 'thermal:potion_cake'
+    }
 ]
 onEvent('recipes', event => {
     shaped.forEach((recipe) => {

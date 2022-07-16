@@ -27,6 +27,7 @@ const rawOreTypeBlocks = [
             'beyond_earth:glacio'
         ]
     },
+    /*
     {
         material: 'immersiveengineering:silver',
         strata: [
@@ -41,6 +42,7 @@ const rawOreTypeBlocks = [
             'immersiveengineering:deepslate',
         ]
     },
+    */
     {
         material: 'create:zinc',
         strata: [

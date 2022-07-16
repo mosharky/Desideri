@@ -1,0 +1,119 @@
+/*
+This file uses the ".json5" file extension which allows for comments like this in a json file!
+Your text editor may show this file with invalid/no syntax, if so, we recommend you download:
+
+VSCode: https://code.visualstudio.com/
+JSON5 plugin(for VSCode): https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-json5
+
+to make editing this file much easier.
+*/
+{
+	// Generates all block states for all blocks in the registry.
+	"generate_all_known_states": false,
+	// Whether blocks are replaced in existing chunks.
+	"retro_gen": false,
+		/* A map of states that specifies what the "old" block state is and what its "new" block state is.
+	   See "known_states" folder("generate_all_known_states" must be set to true in this config) to see all known block states available for all blocks available in the registry.
+	   Example:
+	    "state_swapper": [
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:birch_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "x"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:oak_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:birch_leaves",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"distance": "7",
+	    				"persistent": "true"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:acacia_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:jungle_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "x"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:birch_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:jungle_planks",
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:acacia_planks",
+	    			}
+	    		}
+	    	}
+	    ]
+	*/
+	"state_swapper": [
+		// CATTAIL REPLACEMENT
+		{
+			"new": {
+				"Name": "sprout:cattail",
+				"Properties": {
+					"half": "upper"
+				},
+			},
+			"old": {
+				"Name": "biomesoplenty:cattail",
+				"Properties": {
+					"half": "upper"
+				}
+			}
+		},
+		// PEANUT REPLACEMENT (not working?)
+		{
+			"new": {
+				"Name": "thermal:peanut",
+				"Properties": {
+					"age": 9
+				}
+			},
+			"old": {
+				"Name": "sprout:peanut_plant"
+			}
+		},
+	],
+	"swapper": {
+		"biomesoplenty:cattail": "sprout:cattail",
+		"biomesoplenty:clover": "verdure:clover",
+		"biomesoplenty:sprout": "sprout:sprouts",
+		"biomesoplenty:white_cherry_leaves": "quark:lavender_blossom_leaves",
+		"biomesoplenty:pink_cherry_leaves": "quark:pink_blossom_leaves",
+		"biomesoplenty:cherry_log": "quark:blossom_log",
+		"biomesoplenty:mud": "wildbackport:mud",
+		"darkerdepths:dry_sprouts": "biomesoplenty:dead_grass",
+		"darkerdepths:dry_sprouts": "sprout:dune_grass",
+	}
+}

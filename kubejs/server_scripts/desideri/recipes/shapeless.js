@@ -30,12 +30,29 @@ onEvent('recipes', event => {
 			inputs: ['farmersdelight:rope', 'minecraft:iron_ingot'],
 			id: 'comforts:rope_and_nail_shapeless'
 		},
+		/*
 		{
 			output: 'aquaculture:sushi',
 			inputs: ['#desideri:raw_fish_fillets', '#forge:crops/rice', 'minecraft:seagrass'],
 			id: 'aquaculture:sushi'
 	
-		}
+		},
+		*/
+		{
+			output: 'sprout:peanut_butter_cookie',
+			inputs: ['thermal:peanut_butter', 'minecraft:wheat', 'minecraft:wheat'],
+			id: 'sprout:peanut_butter_cookie'
+		},
+		{
+			output: 'thermal:jelly',
+			inputs: ['minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sugar', 'thermal:jar'],
+			id: 'thermal:jelly'
+		},
+		{
+			output: 'thermal:peanut_butter',
+			inputs: ['thermal:peanut', 'thermal:peanut', 'thermal:peanut', 'minecraft:sugar', 'thermal:jar'],
+			id: 'thermal:peanut_butter'
+		},
 	]
     shapeless.forEach((recipe) => {
         recipe.id

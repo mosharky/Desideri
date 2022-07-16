@@ -20,12 +20,14 @@ onEvent('lootjs', event => {
         .replaceLoot('supplementaries:flax_seeds', 'minecraft:string')
         .replaceLoot('supplementaries:rope', '8x farmersdelight:rope')
     // Remove Steel from meteor loot table
+    /*
     event
         .addLootTableModifier('minecraft:loot')
         .replaceLoot('beyond_earth:steel_ingot', 'immersiveengineering:ingot_steel')
     // Replace Lead & Nickel
     event
-        .addLootTableModifier('immersiveengineering:engineers_house')
-        .replaceLoot('immersiveengineering:nugget_lead', 'immersiveengineering:nugget_copper')
-        .replaceLoot('immersiveengineering:nugget_nickel', 'minecraft:iron_nugget')
+        .addLootTableModifier('immersiveengineering:chests/engineers_house')
+        .replaceLoot('immersiveengineering:nugget_lead', 'oreganized:lead_nugget')
+        .replaceLoot('immersiveengineering:nugget_nickel', 'thermal:nickel_nugget')
+        */
 })

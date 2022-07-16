@@ -2,15 +2,15 @@
 onEvent('recipes', (event) => {
     //{ condition: {}, toReplace: '', replaceWith: '' },
     outputReplace.push(
-        { condition: {}, toReplace: 'supplementaries:flax_seeds', replaceWith: 'immersiveengineering:seed' }
+        //{ condition: {}, toReplace: 'supplementaries:flax_seeds', replaceWith: 'immersiveengineering:seed' }
     )
     inputReplace.push(
         { condition: {}, toReplace: 'minecraft:ender_eye', replaceWith: 'kubejs:lesser_ender_eye' },
-        { condition: { id: 'immersiveengineering:crafting/empty_casing' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
-        { condition: { id: 'immersiveengineering:crafting/empty_shell' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
+        // { condition: { id: 'immersiveengineering:crafting/empty_casing' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
+        // { condition: { id: 'immersiveengineering:crafting/empty_shell' }, toReplace: '#forge:plates/copper', replaceWith: '#forge:plates/brass' },
         { condition: {}, toReplace: 'supplementaries:flax', replaceWith: 'farmersdelight:straw' },
         { condition: {}, toReplace: '#supplementaries:ropes', replaceWith: 'farmersdelight:rope' },
-        { condition: { id: /immersiveengineering:crafting\/(wirecoil.*|hemp_fabric)/ }, toReplace: '#balm:wooden_rods', replaceWith: 'createaddition:spool' },
+        // { condition: { id: /immersiveengineering:crafting\/(wirecoil.*|hemp_fabric)/ }, toReplace: '#balm:wooden_rods', replaceWith: 'createaddition:spool' },
         { condition: {}, toReplace: 'minecraft:bread', replaceWith: '#forge:bread' },
         { condition: {}, toReplace: 'enigmaticlegacy:angel_blessing', replaceWith: 'minecraft:elytra' },
         { condition: {}, toReplace: 'minecraft:stick', replaceWith: '#forge:rods/wooden' },
