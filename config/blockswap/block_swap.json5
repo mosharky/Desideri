@@ -92,20 +92,9 @@ to make editing this file much easier.
 				}
 			}
 		},
-		// PEANUT REPLACEMENT (not working?)
-		{
-			"new": {
-				"Name": "thermal:peanut",
-				"Properties": {
-					"age": 9
-				}
-			},
-			"old": {
-				"Name": "sprout:peanut_plant"
-			}
-		},
 	],
 	"swapper": {
+		"sprout:peanut_plant": "thermal:peanut", // i wish i could get the thermal one to be fully grown but oh well
 		"biomesoplenty:cattail": "sprout:cattail",
 		"biomesoplenty:clover": "verdure:clover",
 		"biomesoplenty:sprout": "sprout:sprouts",

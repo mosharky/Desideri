@@ -14,7 +14,8 @@ const removeJson = [
     'supplementaries:loot_tables/inject/end_city_stasis',
     'supplementaries:loot_tables/inject/mineshaft_flax',
     'supplementaries:loot_tables/inject/pillager_flax',
-    'supplementaries:loot_tables/inject/shipwreck_storage_flax'
+    'supplementaries:loot_tables/inject/shipwreck_storage_flax',
+    'thermal:loot_modifiers/seeds_from_grass'
 ]
 
 onEvent('server.datapack.high_priority', (event) => {
