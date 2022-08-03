@@ -26,6 +26,9 @@ onEvent('item.registry', item => {
 	item.create('crushed_calorite_ore')
 		.displayName('Crushed Calorite Ore')
 
+	item.create('crushed_cloggrum_ore')
+		.displayName('Crushed Cloggrum Ore')
+
 	item.create('hominy')
 		.displayName('Hominy')
 		.food(foodBuilder => {

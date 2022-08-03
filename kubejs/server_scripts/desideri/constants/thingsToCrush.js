@@ -1,4 +1,4 @@
-// priority: 1500
+// priority: 1400
 const strataData = {
     'minecraft:stone': {
         crushedStrata: 'minecraft:cobblestone'
@@ -34,6 +34,12 @@ const strataData = {
     'beyond_earth:venus': {
         crushedStrata: 'beyond_earth:venus_sand'
     },
+    'darkerdepths:aridrock': {
+        crushedStrata: 'minecraft:sand'
+    },
+    'darkerdepths:limestone': {
+        crushedStrata: 'verdure:rock'
+    },
     'undergarden:depthrock': {
         crushedStrata: 'undergarden:depthrock',
         extraStrataOutput: {
@@ -48,7 +54,7 @@ const strataData = {
             item: 'beyond_earth:ice_shard',
             chance: 0.06
         }
-    },
+    }
 }
 
 const oreRecipesToConstruct = [
@@ -66,13 +72,19 @@ const oreRecipesToConstruct = [
             'beyond_earth:mercury',
             'beyond_earth:glacio',
             'undergarden:depthrock',
-            'undergarden:shiverstone'
+            'undergarden:shiverstone',
+            'darkerdepths:aridrock',
+            'darkerdepths:limestone'
         ],
         extraOutput1: {
             item: 'create:crushed_iron_ore',
             count: 2,
             chance: 0.3,
-        }
+        },
+        overlap: [
+            'create:crushing/iron_ore',
+            'create:crushing/deepslate_iron_ore',
+        ]
     },
     {
         material: 'minecraft:gold',
@@ -84,27 +96,31 @@ const oreRecipesToConstruct = [
             'minecraft:stone',
             'minecraft:deepslate',
             'beyond_earth:venus',
-            'undergarden:depthrock'
+            'undergarden:depthrock',
+            'darkerdepths:aridrock',
+            'darkerdepths:limestone'
         ],
         extraOutput1: {
             item: 'create:crushed_gold_ore',
             count: 2,
             chance: 0.3,
-        }
+        },
+        overlap: [
+            'create:crushing/gold_ore',
+            'create:crushing/deepslate_gold_ore',
+        ]
     },
     {
         custom: true,
         oreBlock: 'minecraft:nether_gold_ore',
         crushedOre: {
             item: 'minecraft:gold_nugget',
-            count: 7
+            count: 18
         },
-        strata: 'minecraft:netherrack',
-        extraOutput1: {
-            item: 'minecraft:gold_nugget',
-            count: 1,
-            chance: 0.5
-        }
+        stratas: 'minecraft:netherrack',
+        overlap: [
+            'create:crushing/nether_gold_ore',
+        ]
     },
     {
         material: 'minecraft:copper',
@@ -121,7 +137,11 @@ const oreRecipesToConstruct = [
             item: 'create:crushed_copper_ore',
             count: 2,
             chance: 0.3,
-        }
+        },
+        overlap: [
+            'create:crushing/copper_ore',
+            'create:crushing/deepslate_copper_ore',
+        ]
     },
     {
         material: 'minecraft:coal',
@@ -135,7 +155,9 @@ const oreRecipesToConstruct = [
             'beyond_earth:venus',
             'beyond_earth:glacio',
             'undergarden:depthrock',
-            'undergarden:shiverstone'
+            'undergarden:shiverstone',
+            'darkerdepths:aridrock',
+            'darkerdepths:limestone'
         ],
         extraOutput1: {
             item: 'minecraft:coal',
@@ -146,7 +168,11 @@ const oreRecipesToConstruct = [
             item: 'thermal:sulfur_dust',
             count: 1,
             chance: 0.15
-        }
+        },
+        overlap: [
+            'create:crushing/coal_ore',
+            'create:crushing/deepslate_coal_ore',
+        ]
     },
     {
         material: 'minecraft:diamond',
@@ -160,13 +186,215 @@ const oreRecipesToConstruct = [
             'beyond_earth:mars',
             'beyond_earth:venus',
             'undergarden:depthrock',
-            'undergarden:shiverstone'
+            'undergarden:shiverstone',
+            'darkerdepths:aridrock',
+            'darkerdepths:limestone'
         ],
         extraOutput1: {
             item: 'minecraft:diamond',
             count: 1,
             chance: 0.25
+        },
+        overlap: [
+            'create:crushing/diamond_ore',
+            'create:crushing/deepslate_diamond_ore',
+        ]
+    },
+    {
+        material: 'minecraft:lapis',
+        crushedOre: {
+            item: 'minecraft:lapis_lazuli',
+            count: 10
+        },
+        stratas: [
+            'minecraft:stone',
+            'minecraft:deepslate',
+            'beyond_earth:glacio',
+            'darkerdepths:aridrock',
+            'darkerdepths:limestone'
+        ],
+        extraOutput1: {
+            item: 'minecraft:lapis_lazuli',
+            count: 2,
+            chance: 0.50
+        },
+        overlap: [
+            'create:crushing/lapis_ore',
+            'create:crushing/deepslate_lapis_ore',
+        ]
+    },
+    {
+        material: 'minecraft:emerald',
+        crushedOre: {
+            item: 'minecraft:emerald',
+            count: 2
+        },
+        stratas: [
+            'minecraft:stone',
+            'minecraft:deepslate'
+        ],
+        extraOutput1: {
+            item: 'minecraft:emerald',
+            count: 1,
+            chance: 0.25
+        },
+        overlap: [
+            'create:crushing/emerald_ore',
+            'create:crushing/deepslate_emerald_ore',
+        ]
+    },
+    {
+        material: 'create:zinc',
+        crushedOre: {
+            item: 'create:crushed_zinc_ore',
+            count: 1
+        },
+        stratas: [
+            'minecraft:stone',
+            'minecraft:deepslate'
+        ],
+        extraOutput1: {
+            item: 'create:crushed_zinc_ore',
+            count: 2,
+            chance: 0.3
+        },
+        overlap: [
+            'create:crushing/zinc_ore',
+            'create:crushing/deepslate_zinc_ore',
+        ]
+    },
+    {
+        material: 'oreganized:silver',
+        crushedOre: {
+            item: 'create:crushed_silver_ore',
+            count: 1
+        },
+        stratas: [
+            'minecraft:stone',
+            'minecraft:deepslate',
+            'darkerdepths:aridrock',
+            'darkerdepths:limestone'
+        ],
+        extraOutput1: {
+            item: 'create:crushed_silver_ore',
+            count: 2,
+            chance: 0.3
+        },
+        overlap: [
+            'create:crushing/silver_ore'
+        ]
+    },
+    {
+        material: 'oreganized:lead',
+        crushedOre: {
+            item: 'create:crushed_lead_ore',
+            count: 1
+        },
+        stratas: [
+            'minecraft:stone',
+            'minecraft:deepslate'
+        ],
+        extraOutput1: {
+            item: 'create:crushed_lead_ore',
+            count: 2,
+            chance: 0.3
+        },
+        overlap: [
+            'create:crushing/lead_ore'
+        ]
+    },
+    {
+        material: 'undergarden:cloggrum',
+        crushedOre: {
+            item: 'kubejs:crushed_cloggrum_ore',
+            count: 1
+        },
+        stratas: [
+            'undergarden:depthrock',
+            'undergarden:shiverstone'
+        ],
+        extraOutput1: {
+            item: 'kubejs:crushed_cloggrum_ore',
+            count: 2,
+            chance: 0.3
         }
+    },
+    {
+        material: 'beyond_earth:desh',
+        crushedOre: {
+            item: 'kubejs:crushed_desh_ore',
+            count: 1
+        },
+        stratas: [
+            'beyond_earth:moon'
+        ],
+        extraOutput1: {
+            item: 'kubejs:crushed_desh_ore',
+            count: 2,
+            chance: 0.3
+        }
+    },
+    {
+        material: 'beyond_earth:ostrum',
+        crushedOre: {
+            item: 'kubejs:crushed_ostrum_ore',
+            count: 1
+        },
+        stratas: [
+            'beyond_earth:mars'
+        ],
+        extraOutput1: {
+            item: 'kubejs:crushed_ostrum_ore',
+            count: 2,
+            chance: 0.3
+        }
+    },
+    {
+        material: 'beyond_earth:calorite',
+        crushedOre: {
+            item: 'kubejs:crushed_calorite_ore',
+            count: 1
+        },
+        stratas: [
+            'beyond_earth:venus'
+        ],
+        extraOutput1: {
+            item: 'kubejs:crushed_calorite_ore',
+            count: 2,
+            chance: 0.3
+        }
+    },
+    {
+        material: 'beyond_earth:ice_shard',
+        crushedOre: {
+            item: 'beyond_earth:ice_shard',
+            count: 6
+        },
+        stratas: [
+            'beyond_earth:moon',
+            'beyond_earth:mars',
+            'beyond_earth:glacio'
+        ],
+        extraOutput1: {
+            item: 'beyond_earth:ice_shard',
+            count: 2,
+            chance: 0.50
+        }
+    },
+    {
+        material: 'malum:soulstone',
+        crushedOre: {
+            item: 'malum:crushed_soulstone',
+            count: 2
+        },
+        stratas: [
+            'minecraft:deepslate',
+            'minecraft:stone'
+        ],
+        overlap: [
+            'malum:create/crushing/crush_soulstone',
+            'malum:create/crushing/crush_deepslate_soulstone'
+        ]
     }
 ]
 
@@ -221,7 +449,7 @@ oreRecipesToConstruct.forEach(oreData => {
         let oreRecipeData = {
             oreBlock: oreData.oreBlock,
             crushedOre: oreData.crushedOre,
-            crushedStrata: strataData[oreData.strata].crushedStrata,
+            crushedStrata: strataData[oreData.stratas].crushedStrata,
         }
 
         if (oreData.extraOutput1 != undefined) {
@@ -235,6 +463,12 @@ oreRecipesToConstruct.forEach(oreData => {
         }
 
         constructedOreRecipes.push(oreRecipeData)
+    }
+
+    if (oreData.overlap != undefined) {
+        oreData.overlap.forEach(overlappingRecipe => {
+            idRemovals.push(overlappingRecipe)
+        })
     }
 })
 

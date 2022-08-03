@@ -8,7 +8,11 @@ const rawOreTypeBlocks = [
             'beyond_earth:moon',
             'beyond_earth:mars',
             'beyond_earth:mercury',
-            'beyond_earth:glacio'
+            'beyond_earth:glacio',
+            'undergarden:depthrock',
+            'undergarden:shiverstone',
+            'darkerdepths:aridrock',
+            'darkerdepths:limestone'
         ]
     },
     {
@@ -16,7 +20,10 @@ const rawOreTypeBlocks = [
         strata: [
             'minecraft:stone',
             'minecraft:deepslate',
-            'beyond_earth:venus'
+            'beyond_earth:venus',
+            'undergarden:depthrock',
+            'darkerdepths:aridrock',
+            'darkerdepths:limestone'
         ]
     },
     {
@@ -27,34 +34,18 @@ const rawOreTypeBlocks = [
             'beyond_earth:glacio'
         ]
     },
-    /*
-    {
-        material: 'immersiveengineering:silver',
-        strata: [
-            'immersiveengineering:stone',
-            'immersiveengineering:deepslate',
-        ]
-    },
-    {
-        material: 'immersiveengineering:aluminum',
-        strata: [
-            'immersiveengineering:stone',
-            'immersiveengineering:deepslate',
-        ]
-    },
-    */
     {
         material: 'create:zinc',
         strata: [
-            'create:stone',
-            'create:deepslate',
+            'minecraft:stone',
+            'minecraft:deepslate'
         ]
     },
     {
         material: 'malum:soulstone',
         strata: [
-            'malum:stone',
-            'malum:deepslate'
+            'minecraft:stone',
+            'minecraft:deepslate'
         ]
     },
     {
@@ -69,36 +60,62 @@ const rawOreTypeBlocks = [
         material: 'beyond_earth:calorite',
         strata: ['beyond_earth:venus']
     },
+    {
+        material: 'oreganized:silver',
+        strata: [
+            'minecraft:stone',
+            'minecraft:deepslate',
+            'darkerdepths:limestone',
+            'darkerdepths:aridrock'
+        ]
+    },
+    {
+        material: 'oreganized:lead',
+        strata: [
+            'minecraft:stone',
+            'minecraft:deepslate'
+        ]
+    },
 ]
-rawOreTypeBlocks.forEach(ore => {
-    let irregular = ore.irregular
+rawOreTypeBlocks.forEach(oreData => {
+    let irregular = oreData.irregular
     let oreBlocks = []
     let rawOre = ''
+
     if (!irregular) {
-        let material = ore.material.split(':')
-        let materialModId = material[0]
-        let materialElement = material[1]
-        rawOre = `${materialModId}:raw_${materialElement}`
-        ore.strata.forEach(strata => {
+        let materialSplit = oreData.material.split(':')
+        let materialModId = materialSplit[0]
+        let materialPrefix = materialSplit[1]
+        rawOre = `${materialModId}:raw_${materialPrefix}`
+
+        oreData.strata.forEach(strata => {
             let strataOre = strata.split(':')
             let strataModId = strataOre[0]
-            let strataType = `${strataOre[1]}_`
-            if (strataType == 'stone_') {
-                strataType = ''
+            let strataPrefix = strataOre[1] + '_'
+
+            if (strata == 'minecraft:stone' || strata == 'minecraft:netherrack') {
+                strataPrefix = ''
             }
-            let oreBlock = `${strataModId}:${strataType}${materialElement}_ore`
-            if (strataModId == 'immersiveengineering') {
-                oreBlock = `${strataModId}:${strataType}ore_${materialElement}`
+
+            let oreBlock = `${strataModId}:${strataPrefix}${materialPrefix}_ore`
+            if (strata == 'minecraft:deepslate' || strata == 'minecraft:stone' || strata == 'minecraft:netherrack') {
+                oreBlock = `${materialModId}:${strataPrefix}${materialPrefix}_ore`
+                if (materialModId == 'immersiveengineering') {
+                    oreBlock = `${materialModId}:ore_${strataPrefix}${materialPrefix}`
+                }
             }
             oreBlocks.push(oreBlock)
         })
     } 
+
     if (irregular) {
-        rawOre = ore.rawOre
-        ore.oreBlocks.forEach(block => {
+        rawOre = oreData.rawOre
+        oreData.oreBlocks.forEach(block => {
             oreBlocks.push(block)
         })
     }
+    
+    // loot table
     oreBlocks.forEach(block => {
         removeLootTable(block, 'block')
         onEvent('lootjs', event => {
