@@ -3,20 +3,6 @@
 
 	[World.Ores]
 
-		[World.Ores."Oil Sand"]
-			#Max number of veins per chunk; set to 0 to disable.
-			#Range: 0 ~ 64
-			"Vein Count" = 2
-			#Max size of the vein.
-			#Range: 1 ~ 64
-			"Vein Size" = 24
-			#Minimum Y spawn.
-			#Range: -2032 ~ 2031
-			"Min Y" = 40
-			#Maximum Y spawn.
-			#Range: -2032 ~ 2031
-			"Max Y" = 80
-
 		[World.Ores.Silver]
 			#Max number of veins per chunk; set to 0 to disable.
 			#Range: 0 ~ 64
@@ -58,20 +44,6 @@
 			#Maximum Y spawn.
 			#Range: -2032 ~ 2031
 			"Max Y" = 120
-
-		[World.Ores.Cinnabar]
-			#Max number of veins per chunk; set to 0 to disable.
-			#Range: 0 ~ 64
-			"Vein Count" = 1
-			#Max size of the vein.
-			#Range: 1 ~ 64
-			"Vein Size" = 5
-			#Minimum Y spawn.
-			#Range: -2032 ~ 2031
-			"Min Y" = -16
-			#Maximum Y spawn.
-			#Range: -2032 ~ 2031
-			"Max Y" = 48
 
 		[World.Ores.Sulfur]
 			#Max number of veins per chunk; set to 0 to disable.

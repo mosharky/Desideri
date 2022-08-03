@@ -42,11 +42,6 @@
 		wigglewood = true
 		grongle = true
 
-	[wood_type.nourished_end]
-		seldge = true
-		cerulean = true
-		verdant = true
-
 	[wood_type.malum]
 		runewood = true
 		soulwood = true
