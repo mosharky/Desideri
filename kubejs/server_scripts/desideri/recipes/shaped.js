@@ -154,6 +154,16 @@ const shaped = [
             E: 'minecraft:wheat'
         },
         id: 'thermal:potion_cake'
+    },
+    {
+        output: 'thermal:phytosoil',
+        pattern: ['ABA', 'BCB', 'ABA'],
+        key: {
+            A: 'minecraft:charcoal',
+            B: 'thermal:phytogro',
+            C: 'farmersdelight:rich_soil',
+        },
+        id: 'thermal:phytosoil'
     }
 ]
 onEvent('recipes', event => {

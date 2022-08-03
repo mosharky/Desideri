@@ -51,3 +51,16 @@ const createSupportedOres = [
     'uranium',
     'nickel',
 ]
+
+
+function multiSmelt(output, input, experience) {
+    onEvent('recipes', event => {
+        if (experience != undefined) {
+            event.smelting(output, input).xp(experience)
+            event.blasting(output, input).xp(experience)
+        } else {
+            event.smelting(output, input)
+            event.blasting(output, input)
+        }
+    })
+}
