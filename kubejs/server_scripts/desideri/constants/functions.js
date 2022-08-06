@@ -1,5 +1,17 @@
-// priority: 1
-// for removing loot tables so I can use LootJS :)
+// priority: 1500
+
+function multiSmelt(output, input, experience) {
+    onEvent('recipes', event => {
+        if (experience != undefined) {
+            event.smelting(output, input).xp(experience)
+            event.blasting(output, input).xp(experience)
+        } else {
+            event.smelting(output, input)
+            event.blasting(output, input)
+        }
+    })
+}
+
 function removeLootTable(lootTable, lootType) {
     // console.log(`Removed the "${lootTable}" loot-table`)
     if (lootType == 'block') {
