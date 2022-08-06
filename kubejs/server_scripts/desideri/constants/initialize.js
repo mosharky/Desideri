@@ -3,23 +3,24 @@
 // REMOVING
 // global.fullRemoval regex inputs
 var regexFullRemovals = []
-// Remove by recipe ID
+// remove by recipe ID
 var idRemovals = []
-// Remove by recipe type
+// remove by recipe type
 var typeRemovals = []
 
 // REPLACING
-// Replace output
+// replace output
 var outputReplace = []
-// Replace input
+// replace input
 var inputReplace = []
-// Replace input AND output
+// replace input AND output
 var InputOutputReplace = []
 
 // TAGS
+// add a tag to an item
 var addTagToItem = []
 
-// Constant array of all colours
+// all dye colours
 const colours = [
     'white',
     'orange',
@@ -51,16 +52,3 @@ const createSupportedOres = [
     'uranium',
     'nickel',
 ]
-
-
-function multiSmelt(output, input, experience) {
-    onEvent('recipes', event => {
-        if (experience != undefined) {
-            event.smelting(output, input).xp(experience)
-            event.blasting(output, input).xp(experience)
-        } else {
-            event.smelting(output, input)
-            event.blasting(output, input)
-        }
-    })
-}
