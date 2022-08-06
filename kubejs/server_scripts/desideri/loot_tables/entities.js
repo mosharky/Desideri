@@ -1,10 +1,11 @@
 onEvent('lootjs', event => {
+
     // Ecologics Coconut Crabs
     event
         .addEntityLootModifier('ecologics:coconut_crab')
         // Shell pool
         .pool((p) => {
-            p.customCondition({
+            p.customCondition({ // no idea if this is important
                 condition: 'quark:flag',
                 flag: 'crab_brewing'
             })

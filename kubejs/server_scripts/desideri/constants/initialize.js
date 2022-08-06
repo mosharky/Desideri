@@ -40,7 +40,7 @@ const colours = [
     'black'
 ]
 
-// add more to this array if Create supports more ores
+// add more to this array if Create supports more ores. for Crushed Ore integration stuffs
 const createSupportedOres = [
     'iron',
     'gold',
@@ -51,4 +51,5 @@ const createSupportedOres = [
     'aluminum',
     'uranium',
     'nickel',
+    'tin'
 ]

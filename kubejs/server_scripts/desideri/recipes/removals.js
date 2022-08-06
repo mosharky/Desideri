@@ -1,6 +1,6 @@
 // priority: 500
 
-// Removes inputs and outputs from global list fullRemoval
+// Removes inputs and outputs & hides from JEI, basically completely removing completely from the game
 global.fullRemovals.push(
     'quark:rope',
     'supplementaries:rope',
@@ -16,9 +16,10 @@ global.fullRemovals.push(
     'thermal:spice_cake',
     'sprout:sweet_berry_pie',
     'sprout:apple_pie',
-    //'biomesoplenty:clover',
     'thermal:compost',
-    'farmersdelight:tree_bark'
+    'farmersdelight:tree_bark',
+    'biomesoplenty:clover',
+    'biomesoplenty:sprout',
 )
 
 // fullRemovals but for regex inputs
@@ -34,13 +35,12 @@ regexFullRemovals.push(
     /thermal:(.*tomato.*|.*rice.*|.*corn.*|.*flax.*|.*onion.*|.*coffee.*|.*tea.*|.*amaranth.*|.*hops.*|.*barley.*|.*radish.*|.*sadiroot.*|.*spinach.*|.*bell_pepper.*|.*eggplant.*|.*green_bean.*|.*strawberry.*)/,
     /thermal:(beetroot|apple|carrot|potato)_block/,
 )
+
 regexFullRemovals.forEach(removal => {
     let itemList = []
-    itemList.push(Ingredient.of(removal).itemIds) // pushes another list to itemList for each RegEx
+    itemList.push(Ingredient.of(removal).itemIds) // Ingredient.of(removal).itemIds is a list of items matching the given regex, "removal"
     itemList.forEach(nestedItemList => { // because fullRemovals cant interpret a nested list, only itemId strings
-        nestedItemList.forEach(item => {
-            global.fullRemovals.push(item)
-        })
+        nestedItemList.forEach(item => global.fullRemovals.push(item))
     })
 })
 
@@ -56,7 +56,6 @@ idRemovals.push(
 )
 // Removes by recipe type
 typeRemovals.push(
-    // 'immersiveengineering:cloche',
 )
 
 onEvent('recipes', (event) => {

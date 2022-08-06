@@ -1,6 +1,6 @@
 // priority: 1500
 
-function multiSmelt(output, input, experience) {
+let multiSmelt = (output, input, experience) => {
     onEvent('recipes', event => {
         if (experience != undefined) {
             event.smelting(output, input).xp(experience)
@@ -12,7 +12,7 @@ function multiSmelt(output, input, experience) {
     })
 }
 
-function removeLootTable(lootTable, lootType) {
+let removeLootTable = (lootTable, lootType) => {
     // console.log(`Removed the "${lootTable}" loot-table`)
     if (lootType == 'block') {
         return onEvent(`${lootType}.loot_tables`, event => {

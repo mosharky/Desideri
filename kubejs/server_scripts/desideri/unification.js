@@ -92,7 +92,7 @@ regexFullRemovals.push(
     /thermal:.*lead(?!_gear|_coin|_dust).*/,
     //thermal:.*copper(?!_gear|_coin).*/,
     /thermal:.*steel(?!_gear|_dust).*/,
-    /thermal:(.*apatite.*|.*sulfur.*|.*niter.*|.*cinnabar.*|.*electrum(?!_dust).*|.*diamond.*|.*emerald.*|.*lapis.*|.*netherite.*|.*invar.*)/,
+    /thermal:(.*apatite.*|.*sulfur.*|.*niter.*|.*cinnabar.*|.*electrum(?!_dust).*|.*diamond.*|.*emerald.*|.*lapis.*|.*netherite.*|.*invar.*|.*nickel.*)/,
     /thermal:.*_plate.*/,
     /oreganized:electrum_(?!block|ingot|nugget).*/,
     /beyond_earth:steel_(ingot|block)/,
@@ -108,6 +108,9 @@ addTagToItem.push(
     { tag: 'forge:storage_blocks/lead', item: 'oreganized:lead_block' },
     { tag: 'forge:ores/silver', item: ['darkerdepths:aridrock_silver_ore', 'darkerdepths:limestone_silver_ore'] },
     { tag: 'forge:ores', item: ['darkerdepths:aridrock_silver_ore', 'darkerdepths:limestone_silver_ore'] },
+    { tag: 'forge:raw_materials', item: ['oreganized:raw_silver', 'oreganized:raw_lead'] },
+    { tag: 'forge:raw_materials/lead', item: 'oreganized:raw_lead' },
+    { tag: 'forge:raw_materials/silver', item: 'oreganized:raw_silver' },
 )
 
 // ------------------------------ RECIPES ------------------------------

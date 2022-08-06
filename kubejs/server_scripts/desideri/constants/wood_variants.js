@@ -1,4 +1,5 @@
 // priority: 1500
+// this file builds up a list of every id related to every type of wood 
 let woodTypesToConstruct = [
     'minecraft:acacia',
     'minecraft:birch',
@@ -27,7 +28,7 @@ let woodTypesToConstruct = [
     'undergarden:grongle',
 ]
 
-// Wood that isn't supported by Immersive Weathering for bark
+// wood that isn't supported by Immersive Weathering for bark
 let unsupportedForWoodBark = [
     'minecraft:warped',
     'minecraft:crimson',
@@ -41,7 +42,7 @@ woodTypesToConstruct.forEach(variant => {
     let logType = splitVariant[1]
     let logSuffix, woodSuffix, logBlockStripped, woodBlockStripped, logBlock, woodBlock, plankBlock, slabBlock, woodBark
 
-    //suffix exceptions
+    // suffix exceptions
     switch (logType) {
         case 'warped':
             logSuffix = '_stem'

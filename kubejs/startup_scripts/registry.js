@@ -29,6 +29,9 @@ onEvent('item.registry', item => {
 	item.create('crushed_cloggrum_ore')
 		.displayName('Crushed Cloggrum Ore')
 
+	item.create('crushed_froststeel_ore')
+		.displayName('Crushed Froststeel Ore')
+
 	item.create('hominy')
 		.displayName('Hominy')
 		.food(foodBuilder => {

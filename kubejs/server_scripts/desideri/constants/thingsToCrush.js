@@ -1,4 +1,5 @@
 // priority: 1400
+// this file builds a comprehensive list of recipes for ore crushing processing and maybe other things in the future. god please help me
 const strataData = {
     'minecraft:stone': {
         crushedStrata: 'minecraft:cobblestone'
@@ -471,10 +472,9 @@ oreRecipesToConstruct.forEach(oreData => {
         constructedOreRecipes.push(oreRecipeData)
     }
 
+    // delete overlapping recipes
     if (oreData.overlap != undefined) {
-        oreData.overlap.forEach(overlappingRecipe => {
-            idRemovals.push(overlappingRecipe)
-        })
+        oreData.overlap.forEach(overlappingRecipe => idRemovals.push(overlappingRecipe))
     }
 })
 

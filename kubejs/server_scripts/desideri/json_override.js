@@ -1,4 +1,4 @@
-// Overrides json files with empty json data
+// overrides json files with empty json data
 const removeJson = [
     'lootr:advancements/1barrel',
     'lootr:advancements/1cart',
@@ -19,8 +19,5 @@ const removeJson = [
 ]
 
 onEvent('server.datapack.high_priority', (event) => {
-    // because regex is unsupported :(
-    removeJson.forEach(removal => {
-        event.addJson(`${removal}.json`, {})
-    })
+    removeJson.forEach(removal => event.addJson(`${removal}.json`, {} ))
 })

@@ -30,14 +30,6 @@ onEvent('recipes', event => {
 			inputs: ['farmersdelight:rope', 'minecraft:iron_ingot'],
 			id: 'comforts:rope_and_nail_shapeless'
 		},
-		/*
-		{
-			output: 'aquaculture:sushi',
-			inputs: ['#desideri:raw_fish_fillets', '#forge:crops/rice', 'minecraft:seagrass'],
-			id: 'aquaculture:sushi'
-	
-		},
-		*/
 		{
 			output: 'sprout:peanut_butter_cookie',
 			inputs: ['thermal:peanut_butter', 'minecraft:wheat', 'minecraft:wheat'],

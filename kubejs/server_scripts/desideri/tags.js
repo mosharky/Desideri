@@ -13,11 +13,8 @@ onEvent('tags.items', event => {
     addTagToItem.push(
         { tag: 'desideri:disabled', item: global.fullRemovals },
         { tag: 'desideri:berries', item: ['minecraft:sweet_berries', 'minecraft:glow_berries', 'windswept:wild_berries']},
-        { tag: 'sprout:peanuts', item: 'thermal:peanut' }
+        { tag: 'sprout:peanuts', item: 'thermal:peanut' },
     )
 
-    // ForEach loop that adds tags to an item from constant addTagToItem
-    addTagToItem.forEach((instance) => {
-        event.add(instance.tag, instance.item)
-    })
+    addTagToItem.forEach((instance) => event.add(instance.tag, instance.item))
 })
