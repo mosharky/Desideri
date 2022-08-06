@@ -10,11 +10,11 @@ onEvent('jei.hide.items', jei => {
 
 // JEI Information pages
 onEvent('jei.information', jei => {
-	jei.add(global.fullRemovals, Text.of('DISABLED. If found in-game in a recipe or dropped as an item, please contact us on the discord.').red().bold())
+	jei.add(global.fullRemovals, Text.of('DISABLED. If found in-game in a recipe or dropped as an item, please contact us on the discord.').red())
 })
 
 // Item tooltips
 onEvent('item.tooltip', tooltip => {
-	tooltip.add(global.fullRemovals, Text.of('DISABLED. If found in-game in a recipe or dropped as an item, please contact us on the discord.').red().bold())
+	tooltip.add(global.fullRemovals, Text.of('DISABLED').red())
 	tooltip.add(/refinedstorage:purple_/, Text.of('Can be any color').gray())
 })
