@@ -401,7 +401,7 @@ const oreRecipesToConstruct = [
 var constructedOreRecipes = [] // use this to access ore recipes!
 
 oreRecipesToConstruct.forEach(oreData => {
-    // if custom is false, then automate:
+    // if custom is false, then build:
     if (!oreData.custom) {
         let materialSplit = oreData.material.split(':')
         let materialModId = materialSplit[0]
@@ -460,6 +460,12 @@ oreRecipesToConstruct.forEach(oreData => {
         }
         if (strataData[oreData.strata]?.extraStrataOutput != undefined) {
             oreRecipeData['extraStrataOutput'] = strataData[oreData.strata].extraStrataOutput
+        }
+        if (oreData.dust) {
+            //
+            if (oreData.dust.customId != undefined) {
+                //
+            }
         }
 
         constructedOreRecipes.push(oreRecipeData)
