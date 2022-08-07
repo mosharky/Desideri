@@ -53,3 +53,15 @@ const createSupportedOres = [
     'nickel',
     'tin'
 ]
+
+const thermalSupportedOres = [
+    'iron',
+    'gold',
+    'copper',
+    'tin',
+    'lead',
+    'silver'
+]
+
+const gems = []
+

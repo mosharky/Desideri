@@ -2,6 +2,8 @@ onEvent('recipes', event => {
 
     // CRUSHING
     constructedOreRecipes.forEach(oreRecipeData => {
+        event.remove({output: oreRecipeData.crushedOre, type: 'create:crushing'})
+
         let recipeData = {
             type: 'create:crushing',
             ingredients: [oreRecipeData.oreBlock],
@@ -23,6 +25,9 @@ onEvent('recipes', event => {
         }
         event.custom(recipeData)
     })
+
+    event.recipes.createCrushing([Item.of('3x minecraft:prismarine_shard').withChance(0.75), Item.of('minecraft:prismarine_shard').withChance(0.5)], 'minecraft:prismarine').processingTime(200)
+    event.recipes.createCrushing([Item.of('3x immersive_weathering:prismarine_brick').withChance(0.75), Item.of('immersive_weathering:prismarine_brick').withChance(0.5)], 'minecraft:prismarine').processingTime(200).id('immersive_weathering:prismarine_bricks_from_brick')
 
 
     // MILLING

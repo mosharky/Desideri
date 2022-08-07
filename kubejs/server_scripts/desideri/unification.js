@@ -23,27 +23,18 @@ inputReplace.push(
     { condition: {}, toReplace: '#beyond_earth:compresseds/steel', replaceWith: '#forge:plates/steel' },
     { condition: {}, toReplace: '#beyond_earth:compresseds/desh', replaceWith: '#forge:plates/desh' },
     // Plates
-    // { condition: {}, toReplace: '#forge:plates/steel', replaceWith: 'immersiveengineering:plate_steel' },
-    // { condition: {}, toReplace: '#forge:plates/iron', replaceWith: 'immersiveengineering:plate_iron' },
-    // { condition: {}, toReplace: '#forge:plates/golden', replaceWith: 'immersiveengineering:plate_golden' },
-    // { condition: {}, toReplace: '#forge:plates/copper', replaceWith: 'immersiveengineering:plate_copper' },
     { condition: {}, toReplace: '#forge:plates/constantan', replaceWith: '#forge:plates/copper' },
     { condition: { mod: 'beyond_earth' }, toReplace: '#forge:plates/iron', replaceWith: '#forge:plates/steel' },
     // Steel
-    // { condition: {}, toReplace: '#forge:ingots/steel', replaceWith: 'immersiveengineering:ingot_steel' },
-    // { condition: {}, toReplace: '#forge:nuggets/steel', replaceWith: 'immersiveengineering:nugget_steel' },
-    // { condition: {}, toReplace: '#forge:storage_blocks/steel', replaceWith: 'immersiveengineering:storage_steel' },
     { condition: { mod: 'beyond_earth' }, toReplace: '#forge:nuggets/iron', replaceWith: '#forge:nuggets/steel' },
     // Iron
-    // { condition: {}, toReplace: '#forge:rods/iron', replaceWith: 'immersiveengineering:stick_iron' },
     { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' },
-    { condition: {}, toReplace: 'refinedstorage:quartz_enriched_iron', replaceWith: '#forge:ingots/bronze' },
-    // Gears
-    //{ condition: {}, toReplace: '#forge:gears/signalum', replaceWith: '#forge:gears/bronze'},
-    //{ condition: {}, toReplace: '#forge:ingots/signalum', replaceWith: '#forge:ingots/bronze'},
+    //{ condition: {}, toReplace: 'refinedstorage:quartz_enriched_iron', replaceWith: '#forge:ingots/bronze' },
     // Other
     { condition: {}, toReplace: 'minecraft:milk_bucket', replaceWith: '#forge:milk' },
-    { condition: {}, toReplace: 'thermal:invar_ingot', replaceWith: '#forge:ingots/steel' },
+    { condition: {}, toReplace: '#forge:ingots/invar', replaceWith: '#forge:ingots/steel' },
+    { condition: {}, toReplace: '#forge:gears/constantan', replaceWith: '#forge:gears/bronze' },
+    //{ condition: {}, toReplace: '#thermal:glass/hardened', replaceWith: 'minecraft:tinted_glass' },
 )
 // Replace inputs and outputs
 // InputOutputReplace.push()
@@ -60,6 +51,10 @@ idRemovals.push(
     'oreganized:electrum_ingot',
     'thermal:fire_charge/lumium_ingot_4',
     'thermal:fire_charge/enderium_ingot_2',
+    'thermal:bronze_dust_4',
+    'thermal:gunpowder_4',
+    'thermal:cyan_dye_from_apatite',
+    'thermal:fire_charge/signalum_ingot_4'
 )
 
 // Remove by recipe type
@@ -78,10 +73,7 @@ global.fullRemovals.push(
     'beyond_earth:compressed_steel',
     'beyond_earth:coal_generator',
     'beyond_earth:compressor',
-    'createaddition:iron_wire',
-    'createaddition:copper_wire',
     'malum:copper_nugget',
-    'thermal:netherite_nugget',
     'galosphere:raw_silver',
     'thermal:charcoal_block',
     'beyond_earth:iron_plate',
@@ -90,10 +82,11 @@ global.fullRemovals.push(
 regexFullRemovals.push(
     /thermal:.*silver(?!_dust|_gear|_plate|_coin).*/,
     /thermal:.*lead(?!_gear|_coin|_dust).*/,
-    //thermal:.*copper(?!_gear|_coin).*/,
-    /thermal:.*steel(?!_gear|_dust).*/,
-    /thermal:(.*apatite.*|.*sulfur.*|.*niter.*|.*cinnabar.*|.*electrum(?!_dust).*|.*diamond.*|.*emerald.*|.*lapis.*|.*netherite.*|.*invar.*|.*nickel.*)/,
-    /thermal:.*_plate.*/,
+    /thermal:.*bronze(?!_gear|_coin|_dust).*/,
+    /thermal:.*steel(?!_gear|_dust|_coin).*/,
+    /thermal:(.*apatite.*|.*sulfur.*|.*niter.*|.*cinnabar.*|.*electrum(?!_dust).*|.*diamond.*|.*emerald.*|.*lapis.*|.*netherite.*|.*invar.*|.*nickel.*|.*constantan.*)/,
+    /thermal:.*plate.*/,
+    /thermal:.*glass.*/,
     /oreganized:electrum_(?!block|ingot|nugget).*/,
     /beyond_earth:steel_(ingot|block)/,
     /createaddition:(?!copper).*_rod/,
@@ -103,28 +96,30 @@ regexFullRemovals.push(
 )
 
 addTagToItem.push(
-    { tag: 'forge:storage_blocks/raw_lead', item: 'oreganized:raw_lead_block' },
     { tag: 'forge:storage_blocks', item: ['oreganized:raw_lead_block', 'oreganized:lead_block'] },
+    { tag: 'forge:storage_blocks/raw_lead', item: 'oreganized:raw_lead_block' },
     { tag: 'forge:storage_blocks/lead', item: 'oreganized:lead_block' },
-    { tag: 'forge:ores/silver', item: ['darkerdepths:aridrock_silver_ore', 'darkerdepths:limestone_silver_ore'] },
     { tag: 'forge:ores', item: ['darkerdepths:aridrock_silver_ore', 'darkerdepths:limestone_silver_ore'] },
-    { tag: 'forge:raw_materials', item: ['oreganized:raw_silver', 'oreganized:raw_lead'] },
+    { tag: 'forge:ores/silver', item: ['darkerdepths:aridrock_silver_ore', 'darkerdepths:limestone_silver_ore'] },
     { tag: 'forge:raw_materials/lead', item: 'oreganized:raw_lead' },
     { tag: 'forge:raw_materials/silver', item: 'oreganized:raw_silver' },
+    { tag: 'forge:raw_materials/soulstone', item: 'malum:raw_soulstone' },
+    { tag: 'forge:raw_materials/brilliance', item: 'malum:cluster_of_brilliance' },
+    {
+        tag: 'forge:raw_materials',
+        item: [
+            'oreganized:raw_silver',
+            'oreganized:raw_lead',
+            'malum:raw_soulstone',
+            'malum:cluster_of_brilliance'
+        ]
+    },
 )
 
 // ------------------------------ RECIPES ------------------------------
 onEvent('recipes', event => {
     // Shaped crafting
     const shapedUnificationRecipes = [
-        {
-            output: 'refinedstorage:machine_casing',
-            pattern: ['AAA', 'ABA', 'AAA'],
-            key: {
-                A: '#forge:ingots/bronze',
-                B: '#minecraft:planks'
-            }
-        },
         {
             output: 'alloyed:steel_ingot',
             pattern: ['AAA', 'AAA', 'AAA'],
@@ -145,7 +140,7 @@ onEvent('recipes', event => {
     })
 
     event.custom({
-        type:'createaddition:rolling',
+        type: 'createaddition:rolling',
         input: { tag: 'forge:ingots/iron' },
         result: {
             item: 'beyond_earth:iron_stick',
@@ -157,17 +152,35 @@ onEvent('recipes', event => {
     event.recipes.createMixing('2x thermal:enderium_dust', ['3x #forge:dusts/lead', '2x thermal:ender_pearl_dust', '#forge:dusts/diamond']).id('thermal:enderium_dust_2').superheated()
     event.recipes.createMixing('2x thermal:lumium_dust', ['3x #forge:dusts/silver', '2x #forge:dusts/glowstone', '9x #forge:nuggets/brass']).id('thermal:lumium_dust_4').superheated()
     event.recipes.createMixing('2x thermal:electrum_dust', ['#forge:dusts/gold', '#forge:dusts/silver']).id('thermal:electrum_dust_2')
-    event.recipes.createMixing('3x alloyed:bronze_ingot', ['3x #forge:ingots/copper', '#forge:ingots/tin', '3x create:cinder_flour']).id('alloyed:mixing/bronze_ingot_x3')
-    event.recipes.createMixing('alloyed:bronze_ingot', ['#forge:ingots/copper', '3x #forge:nuggets/tin', 'create:cinder_flour']).id('alloyed:mixing/bronze_ingot')
+    event.recipes.createMixing('3x thermal:bronze_dust', ['3x #forge:dusts/copper', '#forge:dusts/tin', '3x create:cinder_flour']).id('alloyed:mixing/bronze_ingot_x3').heated()
+    event.recipes.createMixing('thermal:bronze_dust', ['#forge:dusts/copper', '3x #forge:nuggets/tin', 'create:cinder_flour']).id('alloyed:mixing/bronze_ingot').heated()
+    event.recipes.createMixing('thermal:steel_dust', ['2x #forge:dusts/iron', 'minecraft:charcoal']).id('alloyed:mixing/steel_ingot')
 
-    // unified smelting ore recipes for cleanliness
-    multiSmelt('oreganized:silver_ingot', '#forge:ores/silver', 0.7)
-    idRemovals.push(
-        'oreganized:blast_deepslate_silver_ore',
-        'oreganized:blast_silver_ore',
-        'oreganized:smelt_deepslate_silver_ore',
-        'oreganized:smelt_silver_ore',
-    )
+    constructedOreInfo.forEach(ore => {
+        if (ore.smelted != undefined) {
+            let output = ore.smelted
+            ore.oreBlocks.forEach(block => {
+                event.remove({ input: block, type: 'minecraft:smelting' })
+                event.remove({ input: block, type: 'minecraft:blasting' })
+            })
+            multiSmelt(output, ore.oreTag, 0.25)
+
+            if (ore.crushedOre.count == 1) { // because if its any higher, it means its a gem/not an actual crushed ore item
+                // in case it already exists:
+                event.remove({ input: ore.crushedOre.item, type: 'minecraft:smelting' })
+                event.remove({ input: ore.crushedOre.item, type: 'minecraft:blasting' })
+                multiSmelt(output, ore.crushedOre.item, 0.2)
+            }
+
+            if (ore.dust != undefined) {
+                // in case it already exists:
+                event.remove({ input: ore.dust, type: 'minecraft:smelting' })
+                event.remove({ input: ore.dust, type: 'minecraft:blasting' })
+                multiSmelt(output, ore.dust)
+            }
+        }
+    })
+
 
     // crushing & milling ingots to dust
     const dustMultiCrushing = [
@@ -207,15 +220,18 @@ onEvent('recipes', event => {
         },
         {
             ingot: 'alloyed:steel_ingot',
-            dust: 'thermal:steel_dust'
+            dust: 'thermal:steel_dust',
+            smeltingRecipe: true
         },
         {
             ingot: 'alloyed:bronze_ingot',
-            dust: 'thermal:bronze_dust'
+            dust: 'thermal:bronze_dust',
+            smeltingRecipe: true
         },
         {
             ingot: 'oreganized:electrum_ingot',
-            dust: 'thermal:electrum_dust'
+            dust: 'thermal:electrum_dust',
+            smeltingRecipe: true
         },
         {
             ingot: 'thermal:lumium_ingot',
@@ -231,7 +247,7 @@ onEvent('recipes', event => {
         event.recipes.createCrushing(recipe.dust, recipe.ingot).processingTime(100)
         event.recipes.createMilling(recipe.dust, recipe.ingot).processingTime(100)
         if (recipe.smeltingRecipe) {
-            multiSmelt(recipe.ingot, recipe.dust) // because for some reason they're missing this?
+            multiSmelt(recipe.ingot, recipe.dust)
         }
     })
 

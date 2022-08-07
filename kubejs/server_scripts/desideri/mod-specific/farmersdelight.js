@@ -91,35 +91,39 @@
 // tools: axe_dig, axe_strip, and any tool tag
 
 let cuttingRecipes = [
-    /*
     {
-        ingredients: ['verdure:clover'],
+        ingredients: ['minecraft:dirt'],
         tool: 'forge:tools/knives',
-        result: ['2x delightful:chopped_clover'],
-        id: 'delightful:chopped_clover'
+        result: ['2x minecraft:diamond'],
+        id: 'kubejs:test',
+    },
+    {
+        ingredients: ['minecraft:oak_log'],
+        tool: 'axe_strip',
+        result: ['minecraft:stripped_oak_log']
     }
-    */
 ]
 
 // for every type of wood
-constructedWoodTypes.forEach((variant) => {
+// TODO: furniture refund recipes too? idk
+constructedWoodTypes.forEach(type => {
     [ // log blocks & wood block recipe
         {
-            input: variant.log,
-            output: variant.logBlockStripped
+            input: type.logBlock,
+            output: type.logBlockStripped
         },
         {
-            input: variant.woodBlock,
-            output: variant.woodBlockStripped
+            input: type.woodBlock,
+            output: type.woodBlockStripped
         }
-    ].forEach((logRecipe) => {
-        let result = Item.of(logRecipe.output)
-        if (!unsupportedForWoodBark.includes(variant)) {
-            result = [Item.of(logRecipe.output), Item.of(variant.woodBark)]
+    ].forEach(logRecipe => {
+        let result = logRecipe.output
+        if (!unsupportedForWoodBark.includes(type)) {
+            result = [logRecipe.output, type.woodBark]
         }
 
         cuttingRecipes.push({
-            ingredients: logRecipe.input,
+            ingredients: [logRecipe.input],
             tool: 'axe_strip',
             result: result
         })
@@ -150,14 +154,14 @@ cuttingRecipes.forEach(recipe => {
         resultArray = [Item.of(output).toResultJson()]
     }
 
-    if (given_tool != 'axe_dig' || given_tool != 'axe_strip') {
-        tool = {
-            tag: given_tool
-        }
-    } else {
+    if (given_tool == 'axe_dig' || given_tool == 'axe_strip') {
         tool = {
             type: 'farmersdelight:tool_action',
             action: given_tool
+        }
+    } else {
+        tool = {
+            tag: given_tool
         }
     }
 
