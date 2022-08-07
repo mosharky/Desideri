@@ -117,10 +117,12 @@ const oreRecipesToConstruct = [
             item: 'minecraft:gold_nugget',
             count: 18
         },
-        stratas: {
-            oreBlock: 'minecraft:nether_gold_ore',
-            strata: 'minecraft:netherrack'
-        }
+        stratas: [
+            {
+                oreBlock: 'minecraft:nether_gold_ore',
+                strata: 'minecraft:netherrack'
+            }
+        ]
     },
     {
         material: 'minecraft:copper',
@@ -453,10 +455,11 @@ const oreRecipesToConstruct = [
         },
         extraInfo: {
             rawOre: 'malum:cluster_of_brilliance',
-            smelted: 'malum:chunk_of_brilliance',
+            smelted: '4x malum:chunk_of_brilliance',
+            xp: 1.0,
             oreTag: '#forge:ores/brilliant'
         }
-    },
+    }
 ]
 
 var constructedOreRecipes = [] // use this to access ore recipes!
@@ -477,9 +480,7 @@ oreRecipesToConstruct.forEach(oreData => {
             let strataPrefix = strataSplit[1] + '_'
             let oreBlock = strataModId + ':' + strataPrefix + materialPrefix + '_ore'
 
-            if (strata == 'minecraft:stone' || strata == 'minecraft:netherrack') {
-                strataPrefix = ''
-            }
+            if (strata == 'minecraft:stone' || strata == 'minecraft:netherrack') { strataPrefix = '' }
 
             if (strata == 'minecraft:deepslate' || strata == 'minecraft:stone' || strata == 'minecraft:netherrack') {
                 oreBlock = materialModId + ':' + strataPrefix + materialPrefix + '_ore'
@@ -506,6 +507,10 @@ oreRecipesToConstruct.forEach(oreData => {
                 if (oreData.extraInfo.smelted != undefined) {
                     oreRecipeData['smelted'] = oreData.extraInfo.smelted
                 }
+                if (oreData.extraInfo.xp != undefined) {
+                    oreRecipeData['xp'] = oreData.extraInfo.xp
+                }
+
             }
             if (strataData[strata]?.extraStrataOutput != undefined) {
                 oreRecipeData['extraStrataOutput'] = strataData[strata].extraStrataOutput
@@ -531,6 +536,9 @@ oreRecipesToConstruct.forEach(oreData => {
             if (oreData.extraInfo.smelted != undefined) {
                 oreInfoData['smelted'] = oreData.extraInfo.smelted
             }
+            if (oreData.extraInfo.xp != undefined) {
+                oreInfoData['xp'] = oreData.extraInfo.xp
+            }
         }
 
         if (thermalSupportedOres.includes(materialPrefix)) {
@@ -543,13 +551,11 @@ oreRecipesToConstruct.forEach(oreData => {
     // if custom is true, then take manual inputs:
     if (oreData.custom) {
         let oreBlocks = []
-        let stratas = oreData.stratas
-        stratas.forEach(ore => {
+        oreData.stratas.forEach(ore => {
             let oreRecipeData = {
                 oreBlock: ore.oreBlock,
                 crushedOre: oreData.crushedOre,
                 crushedStrata: strataData[ore.strata].crushedStrata,
-                oreTag: `#forge:ores/${materialPrefix}`
             }
 
             if (oreData.extraOutput1 != undefined) {
@@ -569,7 +575,10 @@ oreRecipesToConstruct.forEach(oreData => {
                     oreRecipeData['smelted'] = oreData.extraInfo.smelted
                 }
                 if (oreData.extraInfo.oreTag != undefined) {
-                    oreInfoData['oreTag'] = oreData.extraInfo.oreTag
+                    oreRecipeData['oreTag'] = oreData.extraInfo.oreTag
+                }
+                if (oreData.extraInfo.xp != undefined) {
+                    oreRecipeData['xp'] = oreData.extraInfo.xp
                 }
             }
 
@@ -585,13 +594,16 @@ oreRecipesToConstruct.forEach(oreData => {
 
         if (oreData.extraInfo != undefined) {
             if (oreData.extraInfo.rawOre != undefined) {
-                oreInfoData['rawOre'] = materialModId + ':' + 'raw_' + materialPrefix
+                oreInfoData['rawOre'] = oreData.extraInfo.rawOre
             }
             if (oreData.extraInfo.smelted != undefined) {
                 oreInfoData['smelted'] = oreData.extraInfo.smelted
             }
             if (oreData.extraInfo.oreTag != undefined) {
                 oreInfoData['oreTag'] = oreData.extraInfo.oreTag
+            }
+            if (oreData.extraInfo.xp != undefined) {
+                oreInfoData['xp'] = oreData.extraInfo.xp
             }
         }
 
