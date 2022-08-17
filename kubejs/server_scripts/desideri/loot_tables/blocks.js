@@ -39,24 +39,27 @@ const glassShardBlocks = [
 
 // RAW METAL ORE DROPS
 // makes raw ores only drop once, regardless of the fortune level too
-constructedOreRecipes.forEach(oreData => {
-    if (oreData.rawOre != undefined) {
-        let oreBlock = oreData.oreBlock
-        let rawOre = oreData.rawOre
-        removeLootTable(oreBlock, 'block')
-        onEvent('lootjs', event => {
-            event
-                .addBlockLootModifier(oreBlock)
-                .not((not) => {
-                    not.matchMainHand(ItemFilter.hasEnchantment('minecraft:silk_touch'))
-                })
-                .addLoot(rawOre)
-                .survivesExplosion()
-
-            event
-                .addBlockLootModifier(oreBlock)
-                .matchMainHand(ItemFilter.hasEnchantment('minecraft:silk_touch'))
-                .addLoot(oreBlock)
+// TODO: check if this still works
+constructedOreData.forEach(oreData => {
+    if (oreData?.rawOre != undefined) {
+        oreData.oreBlocks.forEach(entry => {
+            let oreBlock = entry.oreBlock
+            let rawOre = oreData.rawOre
+            removeLootTable(oreBlock, 'block')
+            onEvent('lootjs', event => {
+                event
+                    .addBlockLootModifier(oreBlock)
+                    .not((not) => {
+                        not.matchMainHand(ItemFilter.hasEnchantment('minecraft:silk_touch'))
+                    })
+                    .addLoot(rawOre)
+                    .survivesExplosion()
+    
+                event
+                    .addBlockLootModifier(oreBlock)
+                    .matchMainHand(ItemFilter.hasEnchantment('minecraft:silk_touch'))
+                    .addLoot(oreBlock)
+            })
         })
     }
 })

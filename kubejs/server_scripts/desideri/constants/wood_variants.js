@@ -26,6 +26,8 @@ let woodTypesToConstruct = [
     'undergarden:smogstem',
     'undergarden:wigglewood',
     'undergarden:grongle',
+    'darkerdepths:petrified',
+    'wildbackport:mangrove'
 ]
 
 // wood that isn't supported by Immersive Weathering for bark

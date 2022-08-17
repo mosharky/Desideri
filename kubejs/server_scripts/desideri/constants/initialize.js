@@ -1,5 +1,10 @@
 // priority: 1500
 
+settings.logAddedRecipes = false
+settings.logRemovedRecipes = false
+settings.logSkippedRecipes = false
+settings.logErroringRecipes = true
+
 // REMOVING
 // global.fullRemoval regex inputs
 var regexFullRemovals = []

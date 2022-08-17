@@ -91,34 +91,23 @@
 // tools: axe_dig, axe_strip, and any tool tag
 
 let cuttingRecipes = [
+    /*
     {
         ingredients: ['minecraft:dirt'],
         tool: 'forge:tools/knives',
         result: ['2x minecraft:diamond'],
         id: 'kubejs:test',
-    },
-    {
-        ingredients: ['minecraft:oak_log'],
-        tool: 'axe_strip',
-        result: ['minecraft:stripped_oak_log']
-    }
+    },*/
 ]
 
 // for every type of wood
-// TODO: furniture refund recipes too? idk
 constructedWoodTypes.forEach(type => {
     [ // log blocks & wood block recipe
-        {
-            input: type.logBlock,
-            output: type.logBlockStripped
-        },
-        {
-            input: type.woodBlock,
-            output: type.woodBlockStripped
-        }
+        { input: type.logBlock, output: type.logBlockStripped },
+        { input: type.woodBlock, output: type.woodBlockStripped }
     ].forEach(logRecipe => {
         let result = logRecipe.output
-        if (!unsupportedForWoodBark.includes(type)) {
+        if (unsupportedForWoodBark.includes(type)) {
             result = [logRecipe.output, type.woodBark]
         }
 
@@ -155,14 +144,11 @@ cuttingRecipes.forEach(recipe => {
     }
 
     if (given_tool == 'axe_dig' || given_tool == 'axe_strip') {
-        tool = {
-            type: 'farmersdelight:tool_action',
-            action: given_tool
-        }
+        tool.type = 'farmersdelight:tool_action',
+        tool.action = given_tool
+        
     } else {
-        tool = {
-            tag: given_tool
-        }
+        tool.tag = given_tool
     }
 
     let recipeDict = {
@@ -171,12 +157,9 @@ cuttingRecipes.forEach(recipe => {
         tool: tool,
         result: resultArray
     }
-    if (recipe.sound != undefined) {
-        recipeDict['sound'] = recipe.sound
-    }
-    if (given_tool = 'axe_strip') {
-        recipeDict['sound'] = 'minecraft:item.axe.strip'
-    }
+    if (recipe.sound != undefined) recipeDict.sound = recipe.sound
+    if (given_tool = 'axe_strip') recipeDict.sound = 'minecraft:item.axe.strip'
+
 
     onEvent('recipes', (event) => {
         recipe.id

@@ -1,29 +1,32 @@
 onEvent('recipes', event => {
 
     // CRUSHING
-    constructedOreRecipes.forEach(oreRecipeData => {
-        event.remove({output: oreRecipeData.crushedOre, type: 'create:crushing'})
+    constructedOreData.forEach(oreData => {
+        event.remove({output: oreData.crushedOre.item, type: 'create:crushing'})
+        oreData.oreBlocks.forEach(entry => {
+            let recipeData = {
+                type: 'create:crushing',
+                ingredients: [entry.oreBlock],
+                results: [oreData.crushedOre],
+                processingTime: 300
+            }
+            if (oreData.extraOutput1 != undefined) {
+                recipeData.results.push(oreData.extraOutput1)
+            }
+            if (oreData.extraOutput2 != undefined) {
+                recipeData.results.push(oreData.extraOutput2)
+            }
+            recipeData.results.push(Item.of('create:experience_nugget').withChance(0.75))
+            if (oreData.crushedStrata != undefined) {
+                recipeData.results.push(Item.of(oreData.crushedStrata).withChance(0.12))
+            }
+            if (oreData.extraStrataOutput != undefined) {
+                recipeData.results.push(oreData.extraStrataOutput)
+            }
 
-        let recipeData = {
-            type: 'create:crushing',
-            ingredients: [oreRecipeData.oreBlock],
-            results: [oreRecipeData.crushedOre],
-            processingTime: 300
-        }
-        if (oreRecipeData.extraOutput1 != undefined) {
-            recipeData.results.push(oreRecipeData.extraOutput1)
-        }
-        if (oreRecipeData.extraOutput2 != undefined) {
-            recipeData.results.push(oreRecipeData.extraOutput2)
-        }
-        recipeData.results.push(Item.of('create:experience_nugget').withChance(0.75))
-        if (oreRecipeData.crushedStrata != undefined) {
-            recipeData.results.push(Item.of(oreRecipeData.crushedStrata).withChance(0.12))
-        }
-        if (oreRecipeData?.extraStrataOutput != undefined) {
-            recipeData.results.push(oreRecipeData.extraStrataOutput)
-        }
-        event.custom(recipeData)
+            let strata = entry.strata.split(':')[1]
+            event.custom(recipeData).id(`desideri:create/crushing/${strata}_${oreData.material}_ore`) // TODO: check if this works
+        })
     })
 
     event.recipes.createCrushing([Item.of('3x minecraft:prismarine_shard').withChance(0.75), Item.of('minecraft:prismarine_shard').withChance(0.5)], 'minecraft:prismarine').processingTime(200)
@@ -33,29 +36,14 @@ onEvent('recipes', event => {
     // MILLING
     event.recipes.createMilling(['3x minecraft:string', Item.of('minecraft:string').withChance(0.25)], '#minecraft:wool').id('create:milling/wool')
 
-    const rawToCrushed = [ // a list of all raw ores (TODO: integrate this to thingsToCrush later?)
-        'create:zinc',
-        'minecraft:iron',
-        'minecraft:gold',
-        'minecraft:copper',
-        'beyond_earth:desh',
-        'beyond_earth:ostrum',
-        'beyond_earth:calorite',
-        'undergarden:cloggrum',
-        'undergarden:froststeel',
-        'thermal:tin',
-        'oreganized:silver',
-        'oreganized:lead'
-    ].forEach(rawOre => {
-        let rawOreSplit = rawOre.split(':')
-        let modId = rawOreSplit[0]
-        let ore = rawOreSplit[1]
-        if (createSupportedOres.includes(ore)) {
-            event.recipes.createMilling(`create:crushed_${ore}_ore`, `${modId}:raw_${ore}`)
-        } else {
-            event.recipes.createMilling(`kubejs:crushed_${ore}_ore`, `${modId}:raw_${ore}`)
+    /*
+    // raw ore to crushed ore
+    constructedOreData.forEach(oreData => {
+        if (oreData?.rawOre != undefined) {
+            event.recipes.createMilling(oreData.crushedOre.item, oreData.rawOre)
         }
     })
+    */
 
 
     // CUTTING

@@ -50,12 +50,6 @@
 		azalea = true
 		blossom = true
 
-	[wood_type.ecologics]
-		coconut = true
-		walnut = true
-		azalea = true
-		flowering_azalea = true
-
 	[wood_type.valhelsia_structures]
 		lapidified_jungle = true
 
@@ -65,6 +59,12 @@
 
 	[wood_type.darkerdepths]
 		petrified = true
+
+	[wood_type.ecologics]
+		flowering_azalea = true
+		coconut = true
+		walnut = true
+		azalea = true
 
 [leaves_type]
 
@@ -118,11 +118,11 @@
 		yellow_blossom = true
 		red_blossom = true
 
-	[leaves_type.ecologics]
-		coconut = true
-		walnut = true
-
 	[leaves_type.windswept]
 		holly = true
 		chestnut = true
+
+	[leaves_type.ecologics]
+		coconut = true
+		walnut = true
 

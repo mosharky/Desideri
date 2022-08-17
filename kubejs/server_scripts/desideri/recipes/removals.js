@@ -20,6 +20,7 @@ global.fullRemovals.push(
     'farmersdelight:tree_bark',
     'biomesoplenty:clover',
     'biomesoplenty:sprout',
+    'everycomp:msw/valhelsia_structures/fallen_lapidified_jungle_log',
 )
 
 // fullRemovals but for regex inputs

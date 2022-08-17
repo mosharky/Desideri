@@ -85,8 +85,7 @@ regexFullRemovals.push(
     /thermal:.*bronze(?!_gear|_coin|_dust).*/,
     /thermal:.*steel(?!_gear|_dust|_coin).*/,
     /thermal:(.*apatite.*|.*sulfur.*|.*niter.*|.*cinnabar.*|.*electrum(?!_dust).*|.*diamond.*|.*emerald.*|.*lapis.*|.*netherite.*|.*invar.*|.*nickel.*|.*constantan.*)/,
-    /thermal:.*plate.*/,
-    /thermal:.*glass.*/,
+    /thermal:(.*plate.*|.*glass.*|earth_charge)/,
     /oreganized:electrum_(?!block|ingot|nugget).*/,
     /beyond_earth:steel_(ingot|block)/,
     /createaddition:(?!copper).*_rod/,
@@ -95,7 +94,7 @@ regexFullRemovals.push(
     /darkerdepths:(raw_silver|silver_ore|.*silver_(ingot|nugget|block))/,
 )
 
-addTagToItem.push(
+addTagToItem.push( // TODO: add brilliant stuff to this pls
     { tag: 'forge:storage_blocks', item: ['oreganized:raw_lead_block', 'oreganized:lead_block'] },
     { tag: 'forge:storage_blocks/raw_lead', item: 'oreganized:raw_lead_block' },
     { tag: 'forge:storage_blocks/lead', item: 'oreganized:lead_block' },
@@ -118,8 +117,7 @@ addTagToItem.push(
 
 // ------------------------------ RECIPES ------------------------------
 onEvent('recipes', event => {
-    // Shaped crafting
-    const shapedUnificationRecipes = [
+    [ // shaped crafting
         {
             output: 'alloyed:steel_ingot',
             pattern: ['AAA', 'AAA', 'AAA'],
@@ -132,8 +130,7 @@ onEvent('recipes', event => {
             pattern: ['A'],
             key: { A: '#forge:ingots/steel' }
         },
-    ]
-    shapedUnificationRecipes.forEach((recipe) => {
+    ].forEach((recipe) => {
         recipe.id
             ? event.shaped(recipe.output, recipe.pattern, recipe.key).id(recipe.id)
             : event.shaped(recipe.output, recipe.pattern, recipe.key)
@@ -154,36 +151,39 @@ onEvent('recipes', event => {
     event.recipes.createMixing('2x thermal:electrum_dust', ['#forge:dusts/gold', '#forge:dusts/silver']).id('thermal:electrum_dust_2')
     event.recipes.createMixing('3x thermal:bronze_dust', ['3x #forge:dusts/copper', '#forge:dusts/tin', '3x create:cinder_flour']).id('alloyed:mixing/bronze_ingot_x3').heated()
     event.recipes.createMixing('thermal:bronze_dust', ['#forge:dusts/copper', '3x #forge:nuggets/tin', 'create:cinder_flour']).id('alloyed:mixing/bronze_ingot').heated()
-    event.recipes.createMixing('thermal:steel_dust', ['2x #forge:dusts/iron', 'minecraft:charcoal']).id('alloyed:mixing/steel_ingot')
+    event.recipes.createMixing('thermal:steel_dust', ['2x #forge:dusts/iron', 'minecraft:charcoal']).id('alloyed:mixing/steel_ingot').heated()
 
-    constructedOreInfo.forEach(ore => {
-        if (ore.smelted != undefined) {
-            let output = ore.smelted
-            ore.oreBlocks.forEach(block => {
-                event.remove({ input: block, type: 'minecraft:smelting' })
-                event.remove({ input: block, type: 'minecraft:blasting' })
-            })
-            multiSmelt(output, ore.oreTag, 0.25)
-
-            if (ore.crushedOre.count == 1) { // because if its any higher, it means its a gem/not an actual crushed ore item
-                // in case it already exists:
-                event.remove({ input: ore.crushedOre.item, type: 'minecraft:smelting' })
-                event.remove({ input: ore.crushedOre.item, type: 'minecraft:blasting' })
-                multiSmelt(output, ore.crushedOre.item, 0.2)
+    constructedOreData.forEach(oreData => {
+        if (oreData?.smelted != undefined) {
+            let smelted = oreData.smelted
+            let xp = 0.5
+            if (oreData?.xp != undefined) {
+                xp = oreData?.xp
             }
 
-            if (ore.dust != undefined) {
+            oreData.oreBlocks.forEach(entry => {
+                event.remove({ input: entry.oreBlock, type: 'minecraft:smelting' })
+                event.remove({ input: entry.oreBlock, type: 'minecraft:blasting' })
+            })
+            multiSmelt(smelted, oreData.oreTag, xp)
+
+            if (oreData.crushedOre.count == 1) { // TODO: check if gem by checking Gem list instead of checking the count
                 // in case it already exists:
-                event.remove({ input: ore.dust, type: 'minecraft:smelting' })
-                event.remove({ input: ore.dust, type: 'minecraft:blasting' })
-                multiSmelt(output, ore.dust)
+                event.remove({ input: oreData.crushedOre.item, type: 'minecraft:smelting' })
+                event.remove({ input: oreData.crushedOre.item, type: 'minecraft:blasting' })
+                multiSmelt(smelted, oreData.crushedOre.item, xp / 2) // TODO: see if this division works lol
+            }
+
+            if (oreData.dust != undefined) {
+                // in case it already exists:
+                event.remove({ input: oreData.dust, type: 'minecraft:smelting' })
+                event.remove({ input: oreData.dust, type: 'minecraft:blasting' })
+                multiSmelt(smelted, oreData.dust)
             }
         }
     })
 
-
-    // crushing & milling ingots to dust
-    const dustMultiCrushing = [
+    const ingotToDust = [ // crushing & milling ingots to dust
         {
             ingot: 'minecraft:ender_pearl',
             dust: 'thermal:ender_pearl_dust'
@@ -241,16 +241,11 @@ onEvent('recipes', event => {
             ingot: 'thermal:enderium_ingot',
             dust: 'thermal:enderium_dust'
         }
-    ]
-
-    dustMultiCrushing.forEach(recipe => {
+    ].forEach(recipe => {
         event.recipes.createCrushing(recipe.dust, recipe.ingot).processingTime(100)
         event.recipes.createMilling(recipe.dust, recipe.ingot).processingTime(100)
-        if (recipe.smeltingRecipe) {
-            multiSmelt(recipe.ingot, recipe.dust)
-        }
+        if (recipe.smeltingRecipe) multiSmelt(recipe.ingot, recipe.dust)
     })
-
 })
 
 

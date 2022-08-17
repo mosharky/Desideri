@@ -58,7 +58,7 @@ const strataData = {
     }
 }
 
-const oreRecipesToConstruct = [
+const oreDataToConstruct = [
     {
         material: 'minecraft:iron',
         crushedOre: {
@@ -82,10 +82,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3,
         },
-        extraInfo: {
-            rawOre: 'minecraft:raw_iron',
-            smelted: 'minecraft:iron_ingot'
-        }
+        rawOre: 'minecraft:raw_iron',
+        smelted: 'minecraft:iron_ingot'
     },
     {
         material: 'minecraft:gold',
@@ -106,13 +104,12 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3,
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'minecraft:gold_ingot'
-        }
+        rawOre: true,
+        smelted: 'minecraft:gold_ingot'
     },
     {
         custom: true,
+        material: 'minecraft:gold',
         crushedOre: {
             item: 'minecraft:gold_nugget',
             count: 18
@@ -140,10 +137,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3,
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'minecraft:copper_ingot'
-        }
+        rawOre: true,
+        smelted: 'minecraft:copper_ingot'
     },
     {
         material: 'minecraft:coal',
@@ -173,9 +168,7 @@ const oreRecipesToConstruct = [
             chance: 0.15
         },
         */
-        extraInfo: {
-            smelted: 'minecraft:coal'
-        }
+        smelted: 'minecraft:coal'
     },
     {
         material: 'minecraft:diamond',
@@ -198,9 +191,7 @@ const oreRecipesToConstruct = [
             count: 1,
             chance: 0.25
         },
-        extraInfo: {
-            smelted: 'minecraft:diamond'
-        }
+        smelted: 'minecraft:diamond'
     },
     {
         material: 'minecraft:lapis',
@@ -220,9 +211,7 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.50
         },
-        extraInfo: {
-            smelted: 'minecraft:lapis_lazuli'
-        }
+        smelted: 'minecraft:lapis_lazuli'
     },
     {
         material: 'minecraft:emerald',
@@ -239,9 +228,7 @@ const oreRecipesToConstruct = [
             count: 1,
             chance: 0.25
         },
-        extraInfo: {
-            smelted: 'minecraft:emerald'
-        }
+        smelted: 'minecraft:emerald'
     },
     {
         material: 'create:zinc',
@@ -258,10 +245,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'create:zinc_ingot'
-        }
+        rawOre: true,
+        smelted: 'create:zinc_ingot'
     },
     {
         material: 'oreganized:silver',
@@ -280,10 +265,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'oreganized:silver_ingot'
-        }
+        rawOre: true,
+        smelted: 'oreganized:silver_ingot'
     },
     {
         material: 'oreganized:lead',
@@ -300,10 +283,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'oreganized:lead_ingot'
-        }
+        rawOre: true,
+        smelted: 'oreganized:lead_ingot'
     },
     {
         material: 'undergarden:cloggrum',
@@ -320,10 +301,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'undergarden:cloggrum_ingot'
-        }
+        rawOre: true,
+        smelted: 'undergarden:cloggrum_ingot'
     },
     {
         material: 'undergarden:froststeel',
@@ -339,10 +318,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'undergarden:froststeel_ingot'
-        }
+        rawOre: true,
+        smelted: 'undergarden:froststeel_ingot'
     },
     {
         material: 'beyond_earth:desh',
@@ -358,10 +335,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'beyond_earth:desh_ingot'
-        }
+        rawOre: true,
+        smelted: 'beyond_earth:desh_ingot'
     },
     {
         material: 'beyond_earth:ostrum',
@@ -377,10 +352,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'beyond_earth:ostrum_ingot'
-        }
+        rawOre: true,
+        smelted: 'beyond_earth:ostrum_ingot'
     },
     {
         material: 'beyond_earth:calorite',
@@ -396,10 +369,8 @@ const oreRecipesToConstruct = [
             count: 2,
             chance: 0.3
         },
-        extraInfo: {
-            rawOre: true,
-            smelted: 'beyond_earth:calorite_ingot'
-        }
+        rawOre: true,
+        smelted: 'beyond_earth:calorite_ingot'
     },
     {
         material: 'beyond_earth:ice_shard',
@@ -428,13 +399,12 @@ const oreRecipesToConstruct = [
             'minecraft:deepslate',
             'minecraft:stone'
         ],
-        extraInfo: {
-            rawOre: true,
-            smelted: 'malum:processed_soulstone'
-        }
+        rawOre: true,
+        smelted: 'malum:processed_soulstone'
     },
     {
         custom: true,
+        material: 'malum:brilliant',
         crushedOre: {
             item: 'malum:chunk_of_brilliance',
             count: 6
@@ -453,162 +423,115 @@ const oreRecipesToConstruct = [
             item: 'create:experience_nugget',
             count: 3
         },
-        extraInfo: {
-            rawOre: 'malum:cluster_of_brilliance',
-            smelted: '4x malum:chunk_of_brilliance',
-            xp: 1.0,
-            oreTag: '#forge:ores/brilliant'
-        }
+        //rawOre: 'malum:cluster_of_brilliance', TODO: i want this gone from milling recipes
+        smelted: '4x malum:chunk_of_brilliance',
+        xp: 1.0
     }
 ]
 
-var constructedOreRecipes = [] // use this to access ore recipes!
-var constructedOreInfo = [] // use this to access ores/ingots/dust/crushed_ore and a list of ore blocks
+var constructedOreData = [] // use this to access ore recipes!
+//var constructedOreInfo = [] // use this to access ores/ingots/dust/crushed_ore and a list of ore blocks
 
-oreRecipesToConstruct.forEach(oreData => {
-    // if custom is false, then build:
+/* example of iron entry/object (not fully):
+{
+    material: 'iron',
+    oreBlocks: [
+        {
+            oreBlock: 'minecraft:stone',
+            strata: 'minecraft:iron_ore',
+            crushedStrata: 'minecraft:cobblestone',
+        },
+        {
+            oreBlock: 'minecraft:deepslate_iron_ore',
+            strata: 'minecraft:deepslate',
+            crushedStrata: 'minecraft:cobbled_deepslate',
+        },
+        {
+            oreBlock: 'beyond_earth:glacio_iron_ore',
+            strata: 'beyond_earth:glacio',
+            crushedStrata: 'beyond_earth:glacio_stone',
+            extraStrataOutput: {
+                item: 'beyond_earth:ice_shard',
+                chance: 0.06
+            }
+        }
+        etc..
+    ],
+    crushedOre: {
+        item: 'create:crushed_iron_ore',
+        count: 1
+    },
+    extraOutput1: {
+        item: 'create:crushed_iron_ore',
+        count: 2,
+        chance: 0.3,
+    },
+    rawOre: 'minecraft:raw_iron',
+    smelted: 'minecraft:iron_ingot'
+    oreTag: '#forge:ores/iron',
+    dust: 'thermal:iron_dust'
+}
+*/
+
+
+oreDataToConstruct.forEach(oreData => {
+    let materialSplit = ''
+    let materialModId = ''
+    let material = ''
+    let rawOre = undefined
+    let oreBlocks = []
     if (!oreData.custom) {
-        let materialSplit = oreData.material.split(':')
-        let materialModId = materialSplit[0]
-        let materialPrefix = materialSplit[1]
-
-        let oreBlocks = []
-
-        oreData.stratas.forEach(strata => {
-            let strataSplit = strata.split(':')
-            let strataModId = strataSplit[0]
-            let strataPrefix = strataSplit[1] + '_'
-            let oreBlock = strataModId + ':' + strataPrefix + materialPrefix + '_ore'
-
-            if (strata == 'minecraft:stone' || strata == 'minecraft:netherrack') { strataPrefix = '' }
-
-            if (strata == 'minecraft:deepslate' || strata == 'minecraft:stone' || strata == 'minecraft:netherrack') {
-                oreBlock = materialModId + ':' + strataPrefix + materialPrefix + '_ore'
-            }
-            if (oreData.extraInfo != undefined) { oreBlocks.push(oreBlock) }
-
-            let oreRecipeData = {
-                oreBlock: oreBlock,
-                crushedOre: oreData.crushedOre,
-                crushedStrata: strataData[strata].crushedStrata,
-                oreTag: `#forge:ores/${materialPrefix}`
-            }
-
-            if (oreData.extraOutput1 != undefined) {
-                oreRecipeData['extraOutput1'] = oreData.extraOutput1
-            }
-            if (oreData.extraOutput2 != undefined) {
-                oreRecipeData['extraOutput2'] = oreData.extraOutput2
-            }
-            if (oreData.extraInfo != undefined) {
-                if (oreData.extraInfo.rawOre != undefined) {
-                    oreRecipeData['rawOre'] = materialModId + ':' + 'raw_' + materialPrefix
-                }
-                if (oreData.extraInfo.smelted != undefined) {
-                    oreRecipeData['smelted'] = oreData.extraInfo.smelted
-                }
-                if (oreData.extraInfo.xp != undefined) {
-                    oreRecipeData['xp'] = oreData.extraInfo.xp
-                }
-
-            }
-            if (strataData[strata]?.extraStrataOutput != undefined) {
-                oreRecipeData['extraStrataOutput'] = strataData[strata].extraStrataOutput
-            }
-            if (thermalSupportedOres.includes(materialPrefix)) {
-                oreRecipeData['dust'] = `thermal:${materialPrefix}_dust`
-            }
-
-            constructedOreRecipes.push(oreRecipeData)
-        })
-
-        // for other stuff that isnt crushing
-        let oreInfoData = {
-            oreBlocks: oreBlocks,
-            crushedOre: oreData.crushedOre,
-            oreTag: `#forge:ores/${materialPrefix}`
-        }
-
-        if (oreData.extraInfo != undefined) {
-            if (oreData.extraInfo.rawOre != undefined) {
-                oreInfoData['rawOre'] = materialModId + ':' + 'raw_' + materialPrefix
-            }
-            if (oreData.extraInfo.smelted != undefined) {
-                oreInfoData['smelted'] = oreData.extraInfo.smelted
-            }
-            if (oreData.extraInfo.xp != undefined) {
-                oreInfoData['xp'] = oreData.extraInfo.xp
-            }
-        }
-
-        if (thermalSupportedOres.includes(materialPrefix)) {
-            oreInfoData['dust'] = `thermal:${materialPrefix}_dust`
-        }
-
-        constructedOreInfo.push(oreInfoData)
-
+        materialSplit = oreData.material.split(':')
+        materialModId = materialSplit[0]
+        material = materialSplit[1]
+        if (oreData?.rawOre) rawOre = `${materialModId}:raw_${material}`
+    } else {
+        material = oreData.material.split(':')[1]
+        rawOre = oreData?.rawOre
     }
-    // if custom is true, then take manual inputs:
-    if (oreData.custom) {
-        let oreBlocks = []
-        oreData.stratas.forEach(ore => {
-            let oreRecipeData = {
-                oreBlock: ore.oreBlock,
-                crushedOre: oreData.crushedOre,
-                crushedStrata: strataData[ore.strata].crushedStrata,
-            }
 
-            if (oreData.extraOutput1 != undefined) {
-                oreRecipeData['extraOutput1'] = oreData.extraOutput1
-            }
-            if (oreData.extraOutput2 != undefined) {
-                oreRecipeData['extraOutput2'] = oreData.extraOutput2
-            }
-            if (strataData[oreData.stratas]?.extraStrataOutput != undefined) {
-                oreRecipeData['extraStrataOutput'] = strataData[oreData.stratas].extraStrataOutput
-            }
-            if (oreData.extraInfo != undefined) {
-                if (oreData.extraInfo.rawOre != undefined) {
-                    oreRecipeData['rawOre'] = oreData.extraInfo.rawOre
-                }
-                if (oreData.extraInfo.smelted != undefined) {
-                    oreRecipeData['smelted'] = oreData.extraInfo.smelted
-                }
-                if (oreData.extraInfo.oreTag != undefined) {
-                    oreRecipeData['oreTag'] = oreData.extraInfo.oreTag
-                }
-                if (oreData.extraInfo.xp != undefined) {
-                    oreRecipeData['xp'] = oreData.extraInfo.xp
-                }
-            }
+    oreData.stratas.forEach(stratum => {
+        let fullStrata = stratum
+        let strataSplit = ''
+        let strataModId = ''
+        let strata = ''
+        let oreBlock = ''
 
-            oreBlocks.push(ore.oreBlock)
-            constructedOreRecipes.push(oreRecipeData)
+        if (!oreData.custom) {
+            strataSplit = fullStrata.split(':')
+            strataModId = strataSplit[0]
+            strata = strataSplit[1] + '_'
+            oreBlock = `${strataModId}:${strata}${material}_ore`
+
+            if (fullStrata == 'minecraft:stone' || fullStrata == 'minecraft:netherrack') strata = ''
+            if (fullStrata == 'minecraft:deepslate' || fullStrata == 'minecraft:stone' || fullStrata == 'minecraft:netherrack') {
+                oreBlock = `${materialModId}:${strata}${material}_ore`
+            }
+        } else {
+            fullStrata = stratum.strata
+            oreBlock = stratum.oreBlock
+        }
+        oreBlocks.push({
+            oreBlock: oreBlock,
+            strata: fullStrata,
+            crushedStrata: strataData[fullStrata].crushedStrata,
+            extraStrataOutput: strataData[fullStrata]?.extraStrataOutput
         })
+    })
 
-        // for other stuff that isnt crushing
-        let oreInfoData = {
-            oreBlocks: oreBlocks,
-            crushedOre: oreData.crushedOre,
-        }
-
-        if (oreData.extraInfo != undefined) {
-            if (oreData.extraInfo.rawOre != undefined) {
-                oreInfoData['rawOre'] = oreData.extraInfo.rawOre
-            }
-            if (oreData.extraInfo.smelted != undefined) {
-                oreInfoData['smelted'] = oreData.extraInfo.smelted
-            }
-            if (oreData.extraInfo.oreTag != undefined) {
-                oreInfoData['oreTag'] = oreData.extraInfo.oreTag
-            }
-            if (oreData.extraInfo.xp != undefined) {
-                oreInfoData['xp'] = oreData.extraInfo.xp
-            }
-        }
-
-        constructedOreInfo.push(oreInfoData)
+    let oreDataToPush = {
+        material: material,
+        oreBlocks: oreBlocks,
+        crushedOre: oreData.crushedOre,
+        extraOutput1: oreData?.extraOutput1,
+        extraOutput2: oreData?.extraOutput2,
+        oreTag: `#forge:ores/${material}`,
+        smelted: oreData?.smelted,
+        rawOre: rawOre,
+        xp: oreData?.xp
     }
+    if (thermalSupportedOres.includes(material)) oreDataToPush.dust = `thermal:${material}_dust`
+
+    constructedOreData.push(oreDataToPush)
+
 })
-
-//console.log(constructedOreRecipes)

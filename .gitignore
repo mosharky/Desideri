@@ -45,4 +45,5 @@ config/jei/recipe-category-sort-order.ini
 config/jei/ingredient-list-mod-sort-order.ini
 config/roughlyenoughitems/changelog.txt
 config/roughlyenoughitems/config.json5
-
+config/illuminations.properties
+rhino.local.properties
