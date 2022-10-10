@@ -1,0 +1,7 @@
+{
+    "parent": "verdure:block/big_mushroom_shelf1",
+    "textures": {
+        "mushroom_texture": "verdure:block/brown_mushroom_shelf",
+        "particle": "minecraft:brown_mushroom_block"
+    }
+}

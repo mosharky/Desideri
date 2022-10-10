@@ -1,48 +1,149 @@
 // priority: 1500
 // this file builds up a list of every id related to every type of wood 
-let woodTypesToConstruct = [
-    'minecraft:acacia',
-    'minecraft:birch',
-    'minecraft:dark_oak',
-    'minecraft:jungle',
-    'minecraft:oak',
-    'minecraft:spruce',
-    'minecraft:warped',
-    'minecraft:crimson',
-    'biomesoplenty:fir',
-    'biomesoplenty:redwood',
-    'biomesoplenty:mahogany',
-    'biomesoplenty:jacaranda',
-    'biomesoplenty:dead',
-    'biomesoplenty:hellbark',
-    'biomesoplenty:willow',
-    'ecologics:coconut',
-    'ecologics:walnut',
-    'ecologics:azalea',
-    'ecologics:flowering_azalea',
-    'quark:blossom',
-    'malum:runewood',
-    'malum:soulwood',
-    'undergarden:smogstem',
-    'undergarden:wigglewood',
-    'undergarden:grongle',
-    'darkerdepths:petrified',
-    'wildbackport:mangrove'
-]
+/*
+ALLOWED ENTRIES:
+type: modId:logType
+leaves: leavesBlock
+extraLeaves: [list of leaf blocks]
+fluid: Fluid.of('fluid', amount)
 
-// wood that isn't supported by Immersive Weathering for bark
-let unsupportedForWoodBark = [
-    'minecraft:warped',
-    'minecraft:crimson',
+*/
+let woodTypesToConstruct = [
+    {
+        type: 'minecraft:acacia',
+        fluid: false
+    },
+    {
+        type: 'minecraft:birch',
+    },
+    {
+        type: 'minecraft:oak',
+        extraLeaves: [
+            'biomesoplenty:flowering_oak_leaves'
+        ]
+    },
+    {
+        type: 'minecraft:dark_oak',
+    },
+    {
+        type: 'minecraft:jungle',
+        fluid: Fluid.of('thermal:latex', 25)
+    },
+    {
+        type: 'minecraft:spruce',
+    },
+    {
+        type: 'minecraft:warped',
+        bark: false,
+        leaves: false,
+        fluid: false,
+    },
+    {
+        type: 'minecraft:crimson',
+        bark: false,
+        leaves: false,
+        fluid: false,
+    },
+    {
+        type: 'biomesoplenty:fir',
+        fluid: Fluid.of('thermal:resin', 25)
+    },
+    {
+        type: 'biomesoplenty:redwood',
+        fluid: false
+    },
+    {
+        type: 'biomesoplenty:mahogany',
+        fluid: Fluid.of('thermal:resin', 50)
+    },
+    {
+        type: 'biomesoplenty:jacaranda',
+        fluid: false
+    },
+    {
+        type: 'biomesoplenty:dead',
+        fluid: false,
+    },
+    {
+        type: 'biomesoplenty:hellbark',
+        fluid: false,
+    },
+    {
+        type: 'biomesoplenty:willow',
+    },
+    {
+        type: 'ecologics:coconut',
+        fluid: false
+    },
+    {
+        type: 'ecologics:walnut',
+    },
+    {
+        type: 'ecologics:azalea',
+        leaves: 'minecraft:azalea_leaves',
+    },
+    {
+        type: 'ecologics:flowering_azalea',
+        leaves: 'minecraft:flowering_azalea_leaves',
+    },
+    {
+        type: 'quark:blossom',
+        leaves: 'quark:lavender_blossom_leaves',
+        extraLeaves: [
+            'quark:blue_blossom_leaves',
+            'quark:orange_blossom_leaves',
+            'quark:pink_blossom_leaves',
+            'quark:yellow_blossom_leaves',
+            'quark:red_blossom_leaves',
+        ]
+    },
+    {
+        type: 'malum:runewood',
+        fluid: false,
+    },
+    {
+        type: 'malum:soulwood',
+        fluid: false
+    },
+    {
+        type: 'undergarden:smogstem',
+        fluid: false,
+    },
+    {
+        type: 'undergarden:wigglewood',
+        fluid: false,
+    },
+    {
+        type: 'undergarden:grongle',
+        fluid: false,
+    },
+    {
+        type: 'wildbackport:mangrove',
+        fluid: false
+    },
+    {
+        type: 'darkerdepths:petrified',
+        fluid: false,
+        leaves: false
+    },
+    {
+        type: 'autumnity:maple',
+        extraLeaves: [
+            'autumnity:yellow_maple_leaves',
+            'autumnity:orange_maple_leaves',
+            'autumnity:red_maple_leaves'
+        ],
+        fluid: Fluid.of('thermal:sap', 75)
+    }
 ]
 
 var constructedWoodTypes = []
 
-woodTypesToConstruct.forEach(variant => {
-    let splitVariant = variant.split(':')
+woodTypesToConstruct.forEach(entry => {
+    let splitVariant = entry.type.split(':')
     let modId = splitVariant[0]
     let logType = splitVariant[1]
-    let logSuffix, woodSuffix, logBlockStripped, woodBlockStripped, logBlock, woodBlock, plankBlock, slabBlock, woodBark
+    let logSuffix, woodSuffix, logBlockStripped, woodBlockStripped, logBlock, woodBlock, plankBlock, slabBlock, woodBark, leavesBlock, fluid // TODO: implement variable declaration like this in thingsToCrush
 
     // suffix exceptions
     switch (logType) {
@@ -65,7 +166,8 @@ woodTypesToConstruct.forEach(variant => {
     woodBlockStripped = modId + ':stripped_' + logType + woodSuffix
     plankBlock = modId + ':' + logType + '_planks'
     slabBlock = modId + ':' + logType + '_slab'
-    woodBark = 'immersive_weathering:' + modId + '/' + logType + '_bark'
+    leavesBlock = modId + ':' + logType + '_leaves'
+    fluid = entry?.fluid
 
     // Exceptions
     if (modId == 'malum') {
@@ -73,17 +175,28 @@ woodTypesToConstruct.forEach(variant => {
         woodBlockStripped = modId + ':stripped_' + logType
     }
 
-    if (modId == 'minecraft') {
-        woodBark = 'immersive_weathering:' + logType + '_bark'
-    }
-
-    if (variant == 'ecologics:flowering_azalea') {
+    if (entry.type == 'ecologics:flowering_azalea') {
         logBlockStripped = modId + ':stripped_azalea' + logSuffix
         woodBlockStripped = modId + ':stripped_azalea' + woodSuffix
     }
 
-    if (unsupportedForWoodBark.includes(variant)) {
+    if (entry.bark) {
+        woodBark = 'immersive_weathering:' + modId + '/' + logType + '_bark'
+        if (modId == 'minecraft') {
+            woodBark = 'immersive_weathering:' + logType + '_bark'
+        }
+    } else { 
         woodBark = undefined
+    }
+
+    if (entry.leaves == false) {
+        leavesBlock = undefined
+    } else if (typeof entry.leaves == 'string') {
+        leavesBlock = entry.leaves
+    }
+
+    if (fluid == undefined) {
+        fluid = Fluid.of('thermal:sap', 25)
     }
 
     /*
@@ -108,7 +221,10 @@ woodTypesToConstruct.forEach(variant => {
         woodBlockStripped: woodBlockStripped,
         plankBlock: plankBlock,
         slabBlock: slabBlock,
-        woodBark: woodBark
+        woodBark: woodBark,
+        leavesBlock: leavesBlock,
+        extraLeaves: entry?.extraLeaves,
+        fluid: fluid
     }
 
     constructedWoodTypes.push(woodVariant)

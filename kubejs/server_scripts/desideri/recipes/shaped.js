@@ -4,7 +4,7 @@ let filled_ring = ['AAA', 'ABA', 'AAA']
 let stick = ['A', 'A']
 let four = ['AA', 'AA']
 
-const shaped = [
+const shapedRecipes = [
     // ESSENTIALS
     // Chest from any plank
     {
@@ -32,7 +32,7 @@ const shaped = [
         key: {
             A: '#minecraft:logs'
         },
-        id: 'desideri:shaped/stick_from_logs'
+        id: 'desideri:shaped/sticks_from_logs'
     },
     // Classic ladder recipe
     {
@@ -55,45 +55,6 @@ const shaped = [
 
 
     // MISC RECIPES
-    {
-        output: 'beyond_earth:rusted_iron_plating_block',
-        pattern: filled_ring,
-        key: {
-            A: 'beyond_earth:iron_plating_block',
-            B: 'minecraft:water_bucket'
-        },
-        id: 'beyond_earth:rusted_iron_plating_block'
-    },
-    {
-        output: '2x beyond_earth:rusted_iron_pillar_block',
-        pattern: stick,
-        key: {
-            A: 'beyond_earth:rusted_iron_plating_block',
-        },
-        id: 'beyond_earth:rusted_iron_pillar_block'
-    },
-    {
-        output: '4x beyond_earth:iron_mark_block',
-        pattern: ['ABA', 'ACA'],
-        key: {
-            A: 'beyond_earth:iron_plating_block',
-            B: '#forge:dyes/yellow',
-            C: '#forge:dyes/black'
-        },
-        id: 'beyond_earth:iron_mark_block'
-    },
-    {
-        output: 'beyond_earth:nasa_workbench',
-        pattern: ['ABA', 'CDC', 'AEA'],
-        key: {
-            A: '#forge:plates/steel',
-            B: 'minecraft:crafting_table',
-            C: '#forge:ingots/brass',
-            D: '#forge:ingots/steel',
-            E: 'minecraft:redstone_block'
-        },
-        id: 'beyond_earth:nasa_workbench'
-    },
     {
         output: 'backpacked:backpack',
         pattern: ['ABA', 'CDC', 'EBE'],
@@ -164,10 +125,63 @@ const shaped = [
             C: 'farmersdelight:rich_soil',
         },
         id: 'thermal:phytosoil'
+    },
+    {
+        output: 'create:diving_boots',
+        pattern: ['A A', 'B B', 'C C'],
+        key: {
+            A: '#forge:ingots/copper',
+            B: 'thermal:cured_rubber',
+            C: 'alloyed:steel_ingot'
+        },
+        id: 'create:crafting/appliances/diving_boots'
+    },
+    {
+        output: 'create:diving_helmet',
+        pattern: [' A ', 'ABA', 'ACA'],
+        key: {
+            A: '#forge:ingots/copper',
+            B: 'thermal:cured_rubber',
+            C: 'minecraft:tinted_glass'
+        },
+        id: 'create:crafting/appliances/diving_helmet'
+    },
+    {
+        output: 'create:super_glue',
+        pattern: ['AB', 'CD'],
+        key: {
+            A: 'thermal:rosin',
+            B: '#forge:plates/iron',
+            C: '#forge:nuggets/iron',
+            D: '#forge:slimeballs'
+        },
+        id: 'create:crafting/kinetics/super_glue'
+    },
+    {
+        output: 'enigmaticlegacy:end_anchor',
+        pattern: [' A ', 'BCB', 'DED'],
+        key: {
+            A: 'minecraft:respawn_anchor',
+            B: 'enigmaticlegacy:astral_dust',
+            C: 'alexsmobs:void_worm_eye',
+            D: 'minecraft:end_stone',
+            E: 'minecraft:obsidian'
+        }
+    },
+    {
+        output: 'thermal:satchel',
+        pattern: ['ACA', 'BDB', 'ABA'],
+        key: {
+            A: '#forge:leather',
+            B: '#minecraft:wool',
+            C: '#forge:ingots/tin',
+            D: 'supplementaries:sack'
+        },
+        id: 'thermal:tools/satchel'
     }
 ]
 onEvent('recipes', event => {
-    shaped.forEach((recipe) => {
+    shapedRecipes.forEach(recipe => {
         recipe.id
             ? event.shaped(recipe.output, recipe.pattern, recipe.key).id(recipe.id)
             : event.shaped(recipe.output, recipe.pattern, recipe.key)

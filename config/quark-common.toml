@@ -82,17 +82,17 @@
 [building]
 	"Wooden Posts" = true
 	"Vertical Slabs" = true
-	"Variant Ladders" = true
-	"Variant Furnaces" = true
-	"Variant Chests" = true
-	"Variant Bookshelves" = true
-	Thatch = true
+	"Variant Ladders" = false
+	"Variant Furnaces" = false
+	"Variant Chests" = false
+	"Variant Bookshelves" = false
+	Thatch = false
 	"Sturdy Stone" = true
 	Stools = true
 	"Soul Sandstone" = true
 	Shingles = true
 	"Shear Vines" = true
-	Rope = true
+	Rope = false
 	"Oriental Palette" = true
 	"Nether Brick Fence Gate" = true
 	"More Stone Variants" = true
@@ -560,7 +560,7 @@
 	"Fairy Rings" = true
 	Corundum = false
 	"Chorus Vegetation" = true
-	"Blossom Trees" = false
+	"Blossom Trees" = true
 	"Big Stone Clusters" = true
 	"Big Dungeon" = true
 	"Glimmering Weald" = true
@@ -858,7 +858,7 @@
 					# plateau, modified, ocean, river, water, mesa, forest,
 					# plains, mountain, hills, swamp, sandy, snowy, wasteland,
 					# beach, void, overworld, nether, end, underground]
-					"Biome Types" = ["snowy"]
+					"Biome Types" = []
 					"Is Blacklist" = false
 
 				[world.blossom_trees.blue.biome_config.biomes]
@@ -880,7 +880,7 @@
 					# plateau, modified, ocean, river, water, mesa, forest,
 					# plains, mountain, hills, swamp, sandy, snowy, wasteland,
 					# beach, void, overworld, nether, end, underground]
-					"Biome Types" = ["swamp"]
+					"Biome Types" = []
 					"Is Blacklist" = false
 
 				[world.blossom_trees.lavender.biome_config.biomes]
@@ -902,7 +902,7 @@
 					# plateau, modified, ocean, river, water, mesa, forest,
 					# plains, mountain, hills, swamp, sandy, snowy, wasteland,
 					# beach, void, overworld, nether, end, underground]
-					"Biome Types" = ["savanna"]
+					"Biome Types" = []
 					"Is Blacklist" = false
 
 				[world.blossom_trees.orange.biome_config.biomes]
@@ -924,7 +924,7 @@
 					# plateau, modified, ocean, river, water, mesa, forest,
 					# plains, mountain, hills, swamp, sandy, snowy, wasteland,
 					# beach, void, overworld, nether, end, underground]
-					"Biome Types" = ["mountain"]
+					"Biome Types" = []
 					"Is Blacklist" = false
 
 				[world.blossom_trees.pink.biome_config.biomes]
@@ -946,7 +946,7 @@
 					# plateau, modified, ocean, river, water, mesa, forest,
 					# plains, mountain, hills, swamp, sandy, snowy, wasteland,
 					# beach, void, overworld, nether, end, underground]
-					"Biome Types" = ["plains"]
+					"Biome Types" = []
 					"Is Blacklist" = false
 
 				[world.blossom_trees.yellow.biome_config.biomes]
@@ -968,7 +968,7 @@
 					# plateau, modified, ocean, river, water, mesa, forest,
 					# plains, mountain, hills, swamp, sandy, snowy, wasteland,
 					# beach, void, overworld, nether, end, underground]
-					"Biome Types" = ["mesa"]
+					"Biome Types" = []
 					"Is Blacklist" = false
 
 				[world.blossom_trees.red.biome_config.biomes]
@@ -1524,7 +1524,7 @@
 [experimental]
 	"Overlay Shader" = false
 	"Narrator Readout" = false
-	"Game Nerfs" = false
+	"Game Nerfs" = true
 	"Adjustable Chat" = false
 	"Spawner Replacer" = false
 	"Zombie Villagers On Normal" = false
@@ -1539,7 +1539,7 @@
 	[experimental.game_nerfs]
 		#Makes Mending act like the Unmending mod
 		#https://www.curseforge.com/minecraft/mc-mods/unmending
-		"Nerf Mending" = true
+		"Nerf Mending" = false
 		#Resets all villager discounts when zombified to prevent reducing prices to ridiculous levels
 		"Nerf Villager Discount" = true
 		#Makes Iron Golems not drop Iron Ingots
@@ -1547,7 +1547,7 @@
 		#Makes Boats not glide on ice
 		"Disable Ice Roads" = true
 		#Makes Sheep not drop Wool when killed
-		"Disable Wool Drops" = true
+		"Disable Wool Drops" = false
 
 	[experimental.adjustable_chat]
 		"Horizontal Shift" = 0
@@ -1572,9 +1572,9 @@
 
 	[oddities.totem_of_holding]
 		#Set this to false to remove the behaviour where totems destroy themselves if the player dies again.
-		"Dark Souls Mode" = true
+		"Dark Souls Mode" = false
 		#Totem will always spawn if the player killer is himself.
-		"Spawn Totem on PVP Kill" = false
+		"Spawn Totem on PVP Kill" = true
 		#Set this to true to make it so that if a totem is destroyed, the items it holds are destroyed alongside it rather than dropped
 		"Destroy Lost Items" = false
 		#Set this to false to only allow the owner of a totem to collect its items rather than any player

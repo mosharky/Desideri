@@ -1,0 +1,51 @@
+{
+    "variants": {
+        "facing=north": [
+            { "model": "verdure:block/red_dense_mushroom_shelf" },
+            { "model": "verdure:block/red_big_mushroom_shelf1" },
+            { "model": "verdure:block/red_big_mushroom_shelf2" }
+        ],
+        "facing=east": [
+            {
+                "model": "verdure:block/red_dense_mushroom_shelf",
+                "y": 90
+            },
+            {
+                "model": "verdure:block/red_big_mushroom_shelf1",
+                "y": 90
+            },
+            {
+                "model": "verdure:block/red_big_mushroom_shelf2",
+                "y": 90
+            }
+        ],
+        "facing=south": [
+            {
+                "model": "verdure:block/red_dense_mushroom_shelf",
+                "y": 180
+            },
+            {
+                "model": "verdure:block/red_big_mushroom_shelf1",
+                "y": 180
+            },
+            {
+                "model": "verdure:block/red_big_mushroom_shelf2",
+                "y": 180
+            }
+        ],
+        "facing=west": [
+            {
+                "model": "verdure:block/red_dense_mushroom_shelf",
+                "y": 270
+            },
+            {
+                "model": "verdure:block/red_big_mushroom_shelf1",
+                "y": 270
+            },
+            {
+                "model": "verdure:block/red_big_mushroom_shelf2",
+                "y": 270
+            }
+        ]
+    }
+}

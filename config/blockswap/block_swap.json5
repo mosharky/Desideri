@@ -97,12 +97,16 @@ to make editing this file much easier.
 		"sprout:peanut_plant": "thermal:peanut", // i wish i could get the thermal one to be fully grown but oh well
 		"biomesoplenty:cattail": "sprout:cattail",
 		"biomesoplenty:clover": "verdure:clover",
-		"biomesoplenty:sprout": "sprout:sprouts",
+		"sprout:sprouts": "biomesoplenty:sprout",
 		"biomesoplenty:white_cherry_leaves": "quark:lavender_blossom_leaves",
 		"biomesoplenty:pink_cherry_leaves": "quark:pink_blossom_leaves",
 		"biomesoplenty:cherry_log": "quark:blossom_log",
 		"biomesoplenty:mud": "wildbackport:mud",
 		"darkerdepths:dry_sprouts": "biomesoplenty:dead_grass",
 		"darkerdepths:dry_sprouts": "sprout:dune_grass",
+		"autumnity:maple_leaf_pile": "immersive_weathering:autumnity/maple_leaf_pile"
+		"autumnity:yellow_maple_leaf_pile": "immersive_weathering:autumnity/yellow_maple_leaf_pile"
+		"autumnity:orange_maple_leaf_pile": "immersive_weathering:autumnity/orange_maple_leaf_pile"
+		"autumnity:red_maple_leaf_pile": "immersive_weathering:autumnity/red_maple_leaf_pile"
 	}
 }

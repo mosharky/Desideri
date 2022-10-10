@@ -4,12 +4,13 @@
 global.fullRemovals.push(
     'quark:rope',
     'supplementaries:rope',
+    'supplementaries:rope_arrow',
+    'darkerdepths:rope',
     'farmersdelight:wheat_dough',
     'biomesoplenty:spanish_moss',
-    'createaddition:electric_motor',
+    //'createaddition:electric_motor',
     'alloyed:steel_fishing_rod',
     'sprout:sweet_berry_jam',
-    'sprout:peanut_butter',
     'sprout:pbj',
     'thermal:stuffed_pepper',
     'thermal:chocolate_cake',
@@ -19,8 +20,11 @@ global.fullRemovals.push(
     'thermal:compost',
     'farmersdelight:tree_bark',
     'biomesoplenty:clover',
-    'biomesoplenty:sprout',
+    'sprout:sprouts',
     'everycomp:msw/valhelsia_structures/fallen_lapidified_jungle_log',
+    'immersive_weathering:biomesoplenty/maple_leaf_pile',
+    'farmersdelight:milk_bottle',
+    'darkerdepths:resin'
 )
 
 // fullRemovals but for regex inputs
@@ -31,10 +35,13 @@ regexFullRemovals.push(
     /enigmaticlegacy:(enigmatic_item|ocean_stone|magma_heart|eye_of_nebula|enigmatic_amulet|forbidden_axe|etherium.*|astral_breaker|enchantment_transposer|fabulous_scroll|void_pearl|golem_heart|angel_blessing|escape_scroll|monster_charm|mining_charm|mega_sponge|ender_rod|infinimeal|unwitnessed_amulet|ascension_amulet)/,
     /quark:(backpack|potato_crate|carrot_crate|beetroot_crate|chute|gravisand|abacus|dragon_scale|.*limestone.*|.*_rune|.*corundum.*)/,
     /quark:(granite|andesite|diorite|calcite|dripstone|tuff)_pillar/,
-    /biomesoplenty:(.*black_sand.*|.*autumn.*|.*mud.*)/,
-    /(biomesoplenty|everycomp|supplementaries|snowyspirit|immersive_weathering):(.*magic.*|.*umbran.*|.*palm.*|.*cherry.*|.*origin.*)/,
+    /biomesoplenty:(.*black_sand.*|.*autumn.*|.*mud.*|.*maple.*)/,
+    /(biomesoplenty|everycomp|supplementaries|snowyspirit|immersive_weathering):(.*magic.*|.*umbran.*|.*palm.*|.*cherry.*|.*origin.*|.*quark.*azalea.*)/,
     /thermal:(.*tomato.*|.*rice.*|.*corn.*|.*flax.*|.*onion.*|.*coffee.*|.*tea.*|.*amaranth.*|.*hops.*|.*barley.*|.*radish.*|.*sadiroot.*|.*spinach.*|.*bell_pepper.*|.*eggplant.*|.*green_bean.*|.*strawberry.*)/,
     /thermal:(beetroot|apple|carrot|potato)_block/,
+    /thermal:.*rockwool/,
+    /sprout:.*peanut.*/,
+    /verdure:(.*daises|wildflowers|.*_leaves)/
 )
 
 regexFullRemovals.forEach(removal => {
@@ -53,7 +60,9 @@ idRemovals.push(
     'corn_delight:integration/create/mixing/raw_tortilla_wheat_from_mixing',
     'comforts:rope_and_nail',
     'windswept:snow_boots',
-    'farmersdelight:paper_from_tree_bark'
+    'farmersdelight:paper_from_tree_bark',
+    /(minecraft|biomesoplenty|ecologics):.*rabbit_stew.*/,
+    'abnormals_delight:neapolitan/adzuki_curry'
 )
 // Removes by recipe type
 typeRemovals.push(

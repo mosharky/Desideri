@@ -5,7 +5,7 @@
 		#Enable camera roll
 		doCameraRoll = true
 		#Camera Roll Scale
-		cameraRollScale = 1.0
+		cameraRollScale = 0.5
 		#Camera Roll Speed
 		cameraRollSpeed = 0.1
 

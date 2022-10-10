@@ -20,11 +20,13 @@ onEvent('recipes', event => {
 			inputs: ['minecraft:ender_pearl', 'minecraft:blaze_powder', 'minecraft:blaze_powder'],
 			id: 'desideri:shapeless/lesser_ender_eye'
 		},
+		/*
 		{
 			output: 'beyond_earth:blue_iron_plating_block',
 			inputs: ['beyond_earth:iron_plating_block', '#forge:dyes/blue'],
 			id: 'beyond_earth:blue_iron_plating_block'
 		},
+		*/
 		{
 			output: 'comforts:rope_and_nail',
 			inputs: ['farmersdelight:rope', 'minecraft:iron_ingot'],
@@ -45,6 +47,10 @@ onEvent('recipes', event => {
 			inputs: ['thermal:peanut', 'thermal:peanut', 'thermal:peanut', 'minecraft:sugar', 'thermal:jar'],
 			id: 'thermal:peanut_butter'
 		},
+		{
+			output: 'thermal:peanut_seeds',
+			inputs: 'thermal:peanut'
+		}
 	]
     shapeless.forEach((recipe) => {
         recipe.id

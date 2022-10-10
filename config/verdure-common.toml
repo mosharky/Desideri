@@ -3,7 +3,7 @@
 	#Generate boulder
 	generateBoulder = true
 	#Generate smooth dirt patch
-	generateSmoothDirtPatch = true
+	generateSmoothDirtPatch = false
 	#Generate humus patch in the jungle
 	generateHumusPatch = false
 	#Generate clover patch

@@ -20,7 +20,9 @@ onEvent('lootjs', event => {
         .replaceLoot('supplementaries:flax_seeds', 'minecraft:string')
         .replaceLoot('supplementaries:rope', '8x farmersdelight:rope')
     // replace steel from meteor loot table
+    /*
     event
         .addLootTableModifier('minecraft:loot')
         .replaceLoot('beyond_earth:steel_ingot', 'alloyed:steel_ingot')
+        */
 })

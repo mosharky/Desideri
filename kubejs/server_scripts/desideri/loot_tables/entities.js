@@ -16,7 +16,7 @@ onEvent('lootjs', event => {
         // Leg pool
         .pool((p) => {
             p.addLoot('quark:crab_leg')
-            p.limitCount([0, 2], null)
+            p.limitCount([0, 2])
             p.applyLootingBonus([0, 1])
             p.matchEntity((entity) => {
                 entity.isOnFire(true)
@@ -34,7 +34,7 @@ onEvent('lootjs', event => {
         .matchEntity((entity) => {
             entity.isOnFire(true)
         })
-        .functions(Item.of('quark:crab_leg'), (f) => {
+        .functions(Item.of('ecologics:crab_claw'), (f) => {
             f.smeltLoot()
         })
 })

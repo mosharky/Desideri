@@ -18,7 +18,7 @@
         "crash-reports/": true,
         "debug/": true,
         "downloads/": true,
-        "kubejs/assets/": true,
+        "kubejs/assets/": false,
         "kubejs/exported/": true,
         "kubejs/exported/*": true,
         "logs/": true,
@@ -31,6 +31,7 @@
         "screenshots/": true,
         "server-resource-packs/": true,
         "shaderpacks/": true,
-        "texturepacks/": true
+        "texturepacks/": true,
+        "config/": true
     }
 }

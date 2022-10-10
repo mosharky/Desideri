@@ -15,9 +15,10 @@ const removeJson = [
     'supplementaries:loot_tables/inject/mineshaft_flax',
     'supplementaries:loot_tables/inject/pillager_flax',
     'supplementaries:loot_tables/inject/shipwreck_storage_flax',
-    'thermal:loot_modifiers/seeds_from_grass'
+    'thermal:loot_modifiers/seeds_from_grass',
+    'alexsmobs:loot_modifiers/banana_drop'
 ]
 
-onEvent('server.datapack.high_priority', (event) => {
+onEvent('server.datapack.high_priority', event => {
     removeJson.forEach(removal => event.addJson(`${removal}.json`, {} ))
 })

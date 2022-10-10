@@ -14,9 +14,7 @@ onEvent('item.registry', item => {
 	item.create('lesser_ender_eye')
 		.displayName('Lesser Eye of Ender')
 
-	item.create('lye')
-		.displayName('Lye')
-
+	/*
 	item.create('crushed_desh_ore')
 		.displayName('Crushed Desh Ore')
 
@@ -25,6 +23,7 @@ onEvent('item.registry', item => {
 
 	item.create('crushed_calorite_ore')
 		.displayName('Crushed Calorite Ore')
+	*/
 
 	item.create('crushed_cloggrum_ore')
 		.displayName('Crushed Cloggrum Ore')
@@ -32,12 +31,29 @@ onEvent('item.registry', item => {
 	item.create('crushed_froststeel_ore')
 		.displayName('Crushed Froststeel Ore')
 
-	item.create('hominy')
-		.displayName('Hominy')
-		.food(foodBuilder => {
-			foodBuilder
-				.hunger(3)
-				.saturation(0.1)
-				.fastToEat()
+})
+
+onEvent('item.modification', event => {
+	let modifyFoodValue = (foodItem, hunger, saturation) => {
+		event.modify(foodItem, item => {
+			item.setFoodProperties(food => {
+				food.hunger(hunger)
+				food.saturation(saturation)
+			})
 		})
+	}
+
+	modifyFoodValue('minecraft:cooked_beef', 6, 1.0)
+	modifyFoodValue('minecraft:cooked_porkchop', 6, 1.0)
+	modifyFoodValue('corn_delight:taco', 9, 1.2)
+	modifyFoodValue('corn_delight:cornbread_stuffing', 7, 1.2)
+	modifyFoodValue('corn_delight:nachos_bowl', 6, 1)
+	modifyFoodValue('corn_delight:grilled_corn', 5, 1.1)
+	modifyFoodValue('corn_delight:boiled_corn', 5, 1.1)
+	modifyFoodValue('corn_delight:popcorn', 3, 1)
+	modifyFoodValue('corn_delight:caramel_popcorn', 5, 1.1)
+	modifyFoodValue('corn_delight:creamed_corn', 7, 1.0)
+	modifyFoodValue('corn_delight:corn_dog', 8, 1.1)
+	modifyFoodValue('corn_delight:classic_corn_dog', 9, 1.2)
+	modifyFoodValue('autumnity:cooked_turkey_piece', 5, 1.1)
 })

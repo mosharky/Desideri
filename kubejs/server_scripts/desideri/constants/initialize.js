@@ -24,6 +24,8 @@ var InputOutputReplace = []
 // TAGS
 // add a tag to an item
 var addTagToItem = []
+// remove tag from item
+var removeTagFromItem = []
 
 // all dye colours
 const colours = [

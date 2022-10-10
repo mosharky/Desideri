@@ -13,28 +13,21 @@ This also sort of creates a parity between Create and Immersive Engineering
 //{ condition: {}, toReplace: '', replaceWith: '' },
 // Replace outputs
 outputReplace.push(
-    // { condition: {}, toReplace: 'create:copper_nugget', replaceWith: 'immersiveengineering:nugget_copper' },
-    { condition: {}, toReplace: 'beyond_earth:cheese', replaceWith: 'thermal:cheese_wedge' },
-    { condition: {}, toReplace: 'createaddition:iron_rod', replaceWith: 'beyond_earth:iron_stick' },
 )
 // Replace inputs
 inputReplace.push(
-    // Beyond Earth 'plate' instead of 'compressed'
-    { condition: {}, toReplace: '#beyond_earth:compresseds/steel', replaceWith: '#forge:plates/steel' },
-    { condition: {}, toReplace: '#beyond_earth:compresseds/desh', replaceWith: '#forge:plates/desh' },
     // Plates
     { condition: {}, toReplace: '#forge:plates/constantan', replaceWith: '#forge:plates/copper' },
-    { condition: { mod: 'beyond_earth' }, toReplace: '#forge:plates/iron', replaceWith: '#forge:plates/steel' },
-    // Steel
-    { condition: { mod: 'beyond_earth' }, toReplace: '#forge:nuggets/iron', replaceWith: '#forge:nuggets/steel' },
     // Iron
-    { condition: { id: 'beyond_earth:oxygen_tank' }, toReplace: '#forge:ingots/iron', replaceWith: '#forge:ingots/brass' },
     //{ condition: {}, toReplace: 'refinedstorage:quartz_enriched_iron', replaceWith: '#forge:ingots/bronze' },
     // Other
     { condition: {}, toReplace: 'minecraft:milk_bucket', replaceWith: '#forge:milk' },
     { condition: {}, toReplace: '#forge:ingots/invar', replaceWith: '#forge:ingots/steel' },
     { condition: {}, toReplace: '#forge:gears/constantan', replaceWith: '#forge:gears/bronze' },
-    //{ condition: {}, toReplace: '#thermal:glass/hardened', replaceWith: 'minecraft:tinted_glass' },
+    { condition: {}, toReplace: '#thermal:glass/hardened', replaceWith: 'minecraft:tinted_glass' },
+    { condition: {}, toReplace: 'minecraft:slime_ball', replaceWith: '#forge:slimeballs' },
+    { condition: {}, toReplace: 'minecraft:quartz', replaceWith: '#forge:gems/quartz' },
+    { condition: {}, toReplace: 'autumnity:syrup_bottle', replaceWith: 'thermal:syrup_bottle' },
 )
 // Replace inputs and outputs
 // InputOutputReplace.push()
@@ -43,7 +36,6 @@ inputReplace.push(
 
 // Remove by recipe ID
 idRemovals.push(
-    'beyond_earth:desh_plate',
     'thermal:phytogro_8',
     'thermal:phytogro_2',
     'thermal:phytogro_4',
@@ -54,56 +46,61 @@ idRemovals.push(
     'thermal:bronze_dust_4',
     'thermal:gunpowder_4',
     'thermal:cyan_dye_from_apatite',
-    'thermal:fire_charge/signalum_ingot_4'
+    'thermal:fire_charge/signalum_ingot_4',
+    /thermal:rubber_(3|from_vine|from_dandelion)/
 )
 
 // Remove by recipe type
 typeRemovals.push(
-    // Removes Beyond Earth's compressor recipes
-    'beyond_earth:compressing',
-    // Removes Beyond Earth's coal generator recipes
-    'beyond_earth:generating',
 )
 
 // Fully remove
 // Regex no worky :(
 global.fullRemovals.push(
-    'beyond_earth:hammer',
-    'beyond_earth:compressed_desh',
-    'beyond_earth:compressed_steel',
-    'beyond_earth:coal_generator',
-    'beyond_earth:compressor',
     'malum:copper_nugget',
     'galosphere:raw_silver',
     'thermal:charcoal_block',
-    'beyond_earth:iron_plate',
+    'autumnity:syrup_bottle',
+    'supplementaries:pancake'
 )
 
 regexFullRemovals.push(
     /thermal:.*silver(?!_dust|_gear|_plate|_coin).*/,
     /thermal:.*lead(?!_gear|_coin|_dust).*/,
     /thermal:.*bronze(?!_gear|_coin|_dust).*/,
-    /thermal:.*steel(?!_gear|_dust|_coin).*/,
+    /thermal:.*steel(_ingot|_block).*/,
     /thermal:(.*apatite.*|.*sulfur.*|.*niter.*|.*cinnabar.*|.*electrum(?!_dust).*|.*diamond.*|.*emerald.*|.*lapis.*|.*netherite.*|.*invar.*|.*nickel.*|.*constantan.*)/,
-    /thermal:(.*plate.*|.*glass.*|earth_charge)/,
+    /thermal:(.*_plate.*|.*glass.*|earth_charge|.*diving.*)/,
     /oreganized:electrum_(?!block|ingot|nugget).*/,
-    /beyond_earth:steel_(ingot|block)/,
-    /createaddition:(?!copper).*_rod/,
+    /createaddition:(?!copper|iron).*_rod/,
     /refinedstorage:quartz_enriched.*/,
     /galosphere:.*silver_(block|ingot|nugget|ore)/,
     /darkerdepths:(raw_silver|silver_ore|.*silver_(ingot|nugget|block))/,
+    /alexsmobs:banana.*/
 )
 
-addTagToItem.push( // TODO: add brilliant stuff to this pls
+
+// ------------------------------ TAGS ------------------------------
+addTagToItem.push(
     { tag: 'forge:storage_blocks', item: ['oreganized:raw_lead_block', 'oreganized:lead_block'] },
     { tag: 'forge:storage_blocks/raw_lead', item: 'oreganized:raw_lead_block' },
     { tag: 'forge:storage_blocks/lead', item: 'oreganized:lead_block' },
-    { tag: 'forge:ores', item: ['darkerdepths:aridrock_silver_ore', 'darkerdepths:limestone_silver_ore'] },
+    {
+        tag: 'forge:ores', 
+        item: [
+            'darkerdepths:aridrock_silver_ore',
+            'darkerdepths:limestone_silver_ore',
+            'malum:brilliant_stone',
+            'malum:brilliant_deepslate'
+        ]
+    },
+    { tag: 'forge:ores/brilliant', item: ['malum:brilliant_stone', 'malum:brilliant_deepslate'] },
+    { tag: 'forge:ores/natural_quartz', item: ['malum:natural_quartz_ore', 'malum:deepslate_quartz_ore'] },
     { tag: 'forge:ores/silver', item: ['darkerdepths:aridrock_silver_ore', 'darkerdepths:limestone_silver_ore'] },
     { tag: 'forge:raw_materials/lead', item: 'oreganized:raw_lead' },
     { tag: 'forge:raw_materials/silver', item: 'oreganized:raw_silver' },
     { tag: 'forge:raw_materials/soulstone', item: 'malum:raw_soulstone' },
-    { tag: 'forge:raw_materials/brilliance', item: 'malum:cluster_of_brilliance' },
+    { tag: 'forge:raw_materials/brilliant', item: 'malum:cluster_of_brilliance' },
     {
         tag: 'forge:raw_materials',
         item: [
@@ -112,7 +109,7 @@ addTagToItem.push( // TODO: add brilliant stuff to this pls
             'malum:raw_soulstone',
             'malum:cluster_of_brilliance'
         ]
-    },
+    }
 )
 
 // ------------------------------ RECIPES ------------------------------
@@ -124,34 +121,28 @@ onEvent('recipes', event => {
             key: {
                 A: '#forge:nuggets/steel'
             }
-        },
-        {
-            output: '9x beyond_earth:steel_nugget',
-            pattern: ['A'],
-            key: { A: '#forge:ingots/steel' }
-        },
-    ].forEach((recipe) => {
+        }
+    ].forEach(recipe => {
         recipe.id
             ? event.shaped(recipe.output, recipe.pattern, recipe.key).id(recipe.id)
             : event.shaped(recipe.output, recipe.pattern, recipe.key)
     })
 
-    event.custom({
-        type: 'createaddition:rolling',
-        input: { tag: 'forge:ingots/iron' },
-        result: {
-            item: 'beyond_earth:iron_stick',
-            count: 2
-        }
-    }).id('beyond_earth:iron_stick')
+    event.shapeless('9x thermal:steel_nugget', 'alloyed:steel_ingot')
 
-    event.recipes.createMixing('4x thermal:phytogro', ['farmersdelight:organic_compost', 'createaddition:biomass'])
-    event.recipes.createMixing('2x thermal:enderium_dust', ['3x #forge:dusts/lead', '2x thermal:ender_pearl_dust', '#forge:dusts/diamond']).id('thermal:enderium_dust_2').superheated()
-    event.recipes.createMixing('2x thermal:lumium_dust', ['3x #forge:dusts/silver', '2x #forge:dusts/glowstone', '9x #forge:nuggets/brass']).id('thermal:lumium_dust_4').superheated()
-    event.recipes.createMixing('2x thermal:electrum_dust', ['#forge:dusts/gold', '#forge:dusts/silver']).id('thermal:electrum_dust_2')
-    event.recipes.createMixing('3x thermal:bronze_dust', ['3x #forge:dusts/copper', '#forge:dusts/tin', '3x create:cinder_flour']).id('alloyed:mixing/bronze_ingot_x3').heated()
-    event.recipes.createMixing('thermal:bronze_dust', ['#forge:dusts/copper', '3x #forge:nuggets/tin', 'create:cinder_flour']).id('alloyed:mixing/bronze_ingot').heated()
-    event.recipes.createMixing('thermal:steel_dust', ['2x #forge:dusts/iron', 'minecraft:charcoal']).id('alloyed:mixing/steel_ingot').heated()
+    event.recipes.create.mixing('4x thermal:phytogro', ['farmersdelight:organic_compost', 'createaddition:biomass'])
+    event.recipes.create.mixing('2x thermal:enderium_dust', ['3x #forge:dusts/lead', '2x thermal:ender_pearl_dust', '#forge:dusts/diamond']).superheated().id('thermal:enderium_dust_2')
+    event.recipes.create.mixing('2x thermal:lumium_dust', ['3x #forge:dusts/silver', '2x #forge:dusts/glowstone', '9x #forge:nuggets/brass']).superheated().id('thermal:lumium_dust_4')
+    event.recipes.create.mixing('2x thermal:electrum_dust', ['#forge:dusts/gold', '#forge:dusts/silver']).id('thermal:electrum_dust_2')
+    event.recipes.create.mixing('3x thermal:bronze_dust', ['3x #forge:dusts/copper', '#forge:dusts/tin', '3x create:cinder_flour']).id('alloyed:mixing/bronze_ingot_x3').heated()
+    event.recipes.create.mixing('thermal:bronze_dust', ['#forge:dusts/copper', '3x #forge:nuggets/tin', 'create:cinder_flour']).id('alloyed:mixing/bronze_ingot').heated()
+    event.recipes.create.mixing('thermal:steel_dust', ['2x #forge:dusts/iron', 'minecraft:charcoal']).id('alloyed:mixing/steel_ingot').heated()
+    event.recipes.create.mixing('3x thermal:rubber', Fluid.of('thermal:latex', 1000)).heated()
+
+    event.recipes.create.filling('thermal:syrup_bottle', Fluid.of('thermal:syrup', 250))
+    event.recipes.create.filling('autumnity:sap_bottle', Fluid.of('thermal:sap', 250))
+    event.recipes.create.emptying(Fluid.of('thermal:syrup', 250), 'thermal:syrup_bottle')
+    event.recipes.create.emptying(Fluid.of('thermal:sap', 250), 'autumnity:sap_bottle')
 
     constructedOreData.forEach(oreData => {
         if (oreData?.smelted != undefined) {
@@ -247,29 +238,3 @@ onEvent('recipes', event => {
         if (recipe.smeltingRecipe) multiSmelt(recipe.ingot, recipe.dust)
     })
 })
-
-
-// ------------------------------ FLUIDS ------------------------------
-onEvent('tags.fluids', event => {
-    // Biodiesel > Beyond Earth fuel/oil
-    // event.add('beyond_earth:vehicle_fuel', 'immersiveengineering:biodiesel')
-    event.remove('beyond_earth:vehicle_fuel', 'beyond_earth:fuel')
-    event.remove('beyond_earth:oil', 'beyond_earth:oil')
-    // event.remove('forge:plantoil', 'createaddition:seed_oil')
-})
-
-idRemovals.push(
-    // 'createaddition:compacting/seed_oil'
-)
-
-typeRemovals.push(
-    // Removes Beyond Earth's fuel refinery recipes
-    'beyond_earth:fuelrefining',
-)
-
-global.fullRemovals.push(
-    'beyond_earth:fuel_refinery',
-    'beyond_earth:fuel_bucket',
-    'beyond_earth:oil_bucket',
-    // 'createaddition:seed_oil_bucket'
-)

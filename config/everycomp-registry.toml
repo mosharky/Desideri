@@ -24,19 +24,6 @@
 	[wood_type.wildbackport]
 		mangrove = true
 
-	[wood_type.biomesoplenty]
-		fir = true
-		redwood = true
-		cherry = true
-		mahogany = true
-		jacaranda = true
-		palm = true
-		willow = true
-		dead = true
-		magic = true
-		umbran = true
-		hellbark = true
-
 	[wood_type.undergarden]
 		smogstem = true
 		wigglewood = true
@@ -66,6 +53,26 @@
 		walnut = true
 		azalea = true
 
+	[wood_type.biomesoplenty]
+		fir = true
+		redwood = true
+		cherry = true
+		mahogany = true
+		jacaranda = true
+		palm = true
+		willow = true
+		dead = true
+		magic = true
+		umbran = true
+		hellbark = true
+
+	[wood_type.upgrade_aquatic]
+		driftwood = true
+		river = true
+
+	[wood_type.autumnity]
+		maple = true
+
 [leaves_type]
 
 	[leaves_type.minecraft]
@@ -80,26 +87,6 @@
 
 	[leaves_type.wildbackport]
 		mangrove = true
-
-	[leaves_type.biomesoplenty]
-		fir = true
-		redwood = true
-		mahogany = true
-		jacaranda = true
-		palm = true
-		willow = true
-		dead = true
-		magic = true
-		umbran = true
-		hellbark = true
-		origin = true
-		flowering_oak = true
-		rainbow_birch = true
-		yellow_autumn = true
-		orange_autumn = true
-		maple = true
-		white_cherry = true
-		pink_cherry = true
 
 	[leaves_type.undergarden]
 		smogstem = true
@@ -125,4 +112,33 @@
 	[leaves_type.ecologics]
 		coconut = true
 		walnut = true
+
+	[leaves_type.biomesoplenty]
+		fir = true
+		redwood = true
+		mahogany = true
+		jacaranda = true
+		palm = true
+		willow = true
+		dead = true
+		magic = true
+		umbran = true
+		hellbark = true
+		origin = true
+		flowering_oak = true
+		rainbow_birch = true
+		yellow_autumn = true
+		orange_autumn = true
+		maple = true
+		white_cherry = true
+		pink_cherry = true
+
+	[leaves_type.upgrade_aquatic]
+		river = true
+
+	[leaves_type.autumnity]
+		maple = true
+		yellow_maple = true
+		orange_maple = true
+		red_maple = true
 

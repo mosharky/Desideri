@@ -8,7 +8,7 @@ noMicrosoftTelemetry = true
 
 [debug]
 	#Show item tags in advanced tooltips
-	tagsTooltip = true
+	tagsTooltip = false
 	#Show item nbt in advanced tooltips while holding shift
 	nbtTooltip = true
 	#Allowed values: vanilla, kiwi

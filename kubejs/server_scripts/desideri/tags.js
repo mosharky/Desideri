@@ -13,9 +13,19 @@ onEvent('tags.items', event => {
     addTagToItem.push(
         { tag: 'desideri:disabled', item: global.fullRemovals },
         { tag: 'desideri:berries', item: ['minecraft:sweet_berries', 'minecraft:glow_berries', 'windswept:wild_berries']},
-        { tag: 'sprout:peanuts', item: 'thermal:peanut' },
-        { tag: 'immersive_weathering:soot', item: 'immersive_weathering:soot_block' },
+        { tag: 'sprout:peanuts', item: ['thermal:peanut', 'alexsmobs:acacia_blossom'] },
+        { tag: 'desideri:bowls', item: ['minecraft:bowl', 'ecologics:coconut_husk'] },
+        { tag: 'alexsmobs:bananas', item: 'neapolitan:banana_bunch' },
+        { tag: 'alexsmobs:elephant_foodstuffs', item: 'neapolitan:banana_bunch' },
+        { tag: 'alexsmobs:gorilla_foodstuffs', item: 'neapolitan:banana_bunch' },
+        { tag: 'desideri:brown_mushrooms', item: ['minecraft:brown_mushroom', 'biomesoplenty:toadstool'] },
+        { tag: 'forge:slimeballs', item: 'autumnity:snail_goo' },
     )
 
-    addTagToItem.forEach((instance) => event.add(instance.tag, instance.item))
+    removeTagFromItem.push(
+        { tag: 'forge:ores/quartz', item: ['malum:natural_quartz_ore', 'malum:deepslate_quartz_ore'] }
+    )
+
+    addTagToItem.forEach(instance => event.add(instance.tag, instance.item))
+    removeTagFromItem.forEach(instance => event.remove(instance.tag, instance.item))
 })

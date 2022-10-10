@@ -4,7 +4,7 @@
 	#Animals (wolfs and from other mods), zombies and spiders may inflict bleeding.
 	[GameModifiers.BiteBleeding]
 		#Specifies whether this game modifier is enabled.
-		is_enabled = true
+		is_enabled = false
 		#Chance of this to happen.
 		#Range: 0.0 ~ 1.0
 		chance = 0.5
@@ -41,7 +41,7 @@
 	#Cactus damage may inflict bleeding.
 	[GameModifiers.CactusBleeding]
 		#Specifies whether this game modifier is enabled.
-		is_enabled = true
+		is_enabled = false
 		#Chance of this to happen.
 		#Range: 0.0 ~ 1.0
 		chance = 0.5
@@ -86,7 +86,7 @@
 	#Creeper explodes when the player is behind the wall.
 	[GameModifiers.CreeperExplodeBehindWall]
 		#Specifies whether this game modifier is enabled.
-		is_enabled = true
+		is_enabled = false
 		#Chance of this to happen.
 		#Range: 0.0 ~ 1.0
 		chance = 1.0
@@ -172,7 +172,7 @@
 	#When the Creeper explode it may spawn a few Creeperlings.
 	[GameModifiers.CreeperSplitIntoCreeperlings]
 		#Specifies whether this game modifier is enabled.
-		is_enabled = true
+		is_enabled = false
 		#Chance of this to happen.
 		#Range: 0.0 ~ 1.0
 		chance = 0.666

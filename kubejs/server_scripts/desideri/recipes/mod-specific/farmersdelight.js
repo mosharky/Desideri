@@ -3,14 +3,6 @@
 [ // cooking recipes
     {
         ingredients: [
-            'corn_delight:corn_seeds',
-            'corn_delight:corn_seeds',
-            'kubejs:lye'
-        ],
-        result: 'kubejs:hominy',
-    },
-    {
-        ingredients: [
             'kubejs:lesser_ender_eye',
             'alexsmobs:blood_sac',
             'kubejs:hemolymph_pustules'
@@ -54,6 +46,26 @@
         ],
         result: 'thermal:hearty_stew',
         container: 'minecraft:bowl'
+    },
+    {
+        ingredients: [
+            'windswept:goat',
+            'minecraft:potato',
+            'minecraft:carrot',
+            'minecraft:brown_mushroom'
+        ],
+        result: 'windswept:goat_stew',
+        container: 'minecraft:bowl',
+        id: 'windswept:goat_stew'
+    },
+    {
+        ingredients: [
+            '#desideri:brown_mushrooms',
+            'minecraft:red_mushroom'
+        ],
+        result: 'minecraft:mushroom_stew',
+        container: 'minecraft:bowl',
+        id: 'farmersdelight:cooking/mushroom_stew'
     }
 ].forEach(recipe => {
     // because ingredients must be in json format
@@ -61,7 +73,7 @@
     recipe.ingredients.forEach(item => {
         ingredientArray.push(Ingredient.of(item))
     })
-    let recipeDict = {
+    let recipeObj = {
         type: 'farmersdelight:cooking',
         ingredients: ingredientArray,
         result: Item.of(recipe.result),
@@ -69,20 +81,14 @@
         time: 200,
     }
 
-    if (recipe.xp != undefined) {
-        recipeDict['experience'] = recipe.xp
-    }
-    if (recipe.container != undefined) {
-        recipeDict['container'] = Item.of(recipe.container)
-    }
-    if (recipe.time != undefined) {
-        recipeDict['time'] = recipe.time
-    }
+    if (recipe.xp != undefined) recipeObj.experience = recipe.xp
+    if (recipe.container != undefined) recipeObj.container = Item.of(recipe.container)
+    if (recipe.time != undefined) recipeObj.time = recipe.time
 
     onEvent('recipes', event => {
         recipe.id
-            ? event.custom(recipeDict).id(recipe.id)
-            : event.custom(recipeDict)
+            ? event.custom(recipeObj).id(recipe.id)
+            : event.custom(recipeObj)
     })
 })
 
@@ -107,10 +113,7 @@ constructedWoodTypes.forEach(type => {
         { input: type.woodBlock, output: type.woodBlockStripped }
     ].forEach(logRecipe => {
         let result = logRecipe.output
-        if (unsupportedForWoodBark.includes(type)) {
-            result = [logRecipe.output, type.woodBark]
-        }
-
+        if (type?.bark == undefined) result = [logRecipe.output, type.woodBark]
         cuttingRecipes.push({
             ingredients: [logRecipe.input],
             tool: 'axe_strip',
@@ -151,19 +154,19 @@ cuttingRecipes.forEach(recipe => {
         tool.tag = given_tool
     }
 
-    let recipeDict = {
+    let recipeObj = {
         type: 'farmersdelight:cutting',
         ingredients: ingredientArray,
         tool: tool,
         result: resultArray
     }
-    if (recipe.sound != undefined) recipeDict.sound = recipe.sound
-    if (given_tool = 'axe_strip') recipeDict.sound = 'minecraft:item.axe.strip'
+    if (recipe.sound != undefined) recipeObj.sound = recipe.sound
+    if (given_tool == 'axe_strip') recipeObj.sound = 'minecraft:item.axe.strip'
 
 
     onEvent('recipes', (event) => {
         recipe.id
-            ? event.custom(recipeDict).id(recipe.id)
-            : event.custom(recipeDict)
+            ? event.custom(recipeObj).id(recipe.id)
+            : event.custom(recipeObj)
     })
 })

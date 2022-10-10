@@ -4,6 +4,15 @@ onEvent('block.loot_tables', event => {
 })
 
 
+removeLootTable('darkerdepths:porous_petrified_log', 'block')
+onEvent('lootjs', event => {
+    event
+        .addBlockLootModifier('darkerdepths:porous_petrified_log')
+        .addLoot('thermal:rosin')
+        .addLoot('darkerdepths:petrified_log')
+})
+
+
 // GLASS SHARD DROPS
 const glassShardBlocks = [
     'create:tiled_glass',
@@ -29,8 +38,8 @@ const glassShardBlocks = [
                     not.matchMainHand(ItemFilter.hasEnchantment('minecraft:silk_touch'))
                 })
                 p.addLoot('quark:clear_shard')
-                p.applyBonus('minecraft:fortune', 2) // TODO: not respecting limitCount? idk if this is valid still lol
-                p.limitCount([2, 4], 4)
+                p.applyBonus('minecraft:fortune', 2) // TODO: i dont think the fortune works
+                p.limitCount([2, 4])
                 p.simulateExplosionDecay()
             })
     })
@@ -39,7 +48,6 @@ const glassShardBlocks = [
 
 // RAW METAL ORE DROPS
 // makes raw ores only drop once, regardless of the fortune level too
-// TODO: check if this still works
 constructedOreData.forEach(oreData => {
     if (oreData?.rawOre != undefined) {
         oreData.oreBlocks.forEach(entry => {

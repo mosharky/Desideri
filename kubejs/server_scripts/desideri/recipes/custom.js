@@ -1,3 +1,4 @@
+/*
 onEvent('recipes', event => {
     // Tier 1 Rocket (Steel Plate instead of Compressed Steel)
     event.custom({
@@ -76,3 +77,4 @@ onEvent('recipes', event => {
         }
     }).id('beyond_earth:nasa_workbenching/tier2')
 })
+*/

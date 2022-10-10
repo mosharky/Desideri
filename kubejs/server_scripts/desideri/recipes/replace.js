@@ -2,7 +2,7 @@
 onEvent('recipes', (event) => {
     //{ condition: {}, toReplace: '', replaceWith: '' },
     outputReplace.push(
-        //{ condition: {}, toReplace: 'supplementaries:flax_seeds', replaceWith: 'immersiveengineering:seed' }
+         { condition: {}, toReplace: 'darkerdepths:resin', replaceWith: 'thermal:rosin' }
     )
     inputReplace.push(
         { condition: {}, toReplace: 'minecraft:ender_eye', replaceWith: 'kubejs:lesser_ender_eye' },
@@ -16,7 +16,9 @@ onEvent('recipes', (event) => {
         { condition: {}, toReplace: 'minecraft:stick', replaceWith: '#forge:rods/wooden' },
         { condition: {}, toReplace: '#forge:crops/flax', replaceWith: 'farmersdelight:straw' },
         { condition: { id: 'farmersdelight:fruit_salad' }, toReplace: 'minecraft:sweet_berries', replaceWith: '#desideri:berries' },
-        { condition: {}, toReplace: 'farmersdelight:tree_bark', replaceWith: '#immersive_weathering:bark' }
+        { condition: {}, toReplace: 'farmersdelight:tree_bark', replaceWith: '#immersive_weathering:bark' },
+        { condition: { id: 'create:crafting/kinetics/belt_connector' }, toReplace: 'minecraft:dried_kelp', replaceWith: 'thermal:cured_rubber' },
+        { condition: {}, toReplace: 'minecraft:brown_mushroom', replaceWith: '#desideri:brown_mushrooms' },
     )
     InputOutputReplace.push(
         { condition: {}, toReplace: '', replaceWith: '' }
