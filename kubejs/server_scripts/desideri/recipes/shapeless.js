@@ -49,7 +49,28 @@ onEvent('recipes', event => {
 		},
 		{
 			output: 'thermal:peanut_seeds',
-			inputs: 'thermal:peanut'
+			inputs: 'thermal:peanut',
+			id: 'desideri:shapeless/peanut_seeds'
+		},
+		{
+			output: 'minecraft:bookshelf',
+			inputs: '#forge:bookshelves',
+			id: 'desideri:shapeless/bookshelf_revert'
+		},
+		{
+			output: 'minecraft:chest',
+			inputs: '#forge:chests/wooden',
+			id: 'quark:building/crafting/chests/chest_revert'
+		},
+		{
+			output: 'upgrade_aquatic:bedroll',
+			inputs: ['#upgrade_aquatic:bedrolls', 'supplementaries:soap'],
+			id: 'desideri:shapeless/bedroll_revert'
+		},
+		{
+			output: 'create:brown_toolbox',
+			inputs: ['create:toolboxes', 'supplementaries:soap'],
+			id: 'desideri:shapeless/toolbox_revert'
 		}
 	]
     shapeless.forEach((recipe) => {

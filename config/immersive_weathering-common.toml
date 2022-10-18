@@ -64,11 +64,11 @@
 	flammable_cobweb = true
 
 [generation]
-	cryosol_feature = true
+	cryosol_feature = false
 	humus_feature = true
-	fluvisol_feature = true
+	fluvisol_feature = false
 	silt_feature = true
-	vertisol_feature = true
+	vertisol_feature = false
 	lakebed_feature = true
 	icicle_feature = true
 	roots_feature = true

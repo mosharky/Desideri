@@ -5,7 +5,7 @@
 	"Wooden ladders" = true
 	"Wooden beehives" = true
 	"Wooden chests" = true
-	"Leaf piles" = true
+	"Leaf piles" = false
 
 [generation]
 	#If variant bookshelves replace bookshelves in certain structures

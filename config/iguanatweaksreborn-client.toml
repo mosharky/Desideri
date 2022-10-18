@@ -2,7 +2,7 @@
 
 [Client]
 	#Makes fog less invasive in some contexts
-	"Enable Fog" = true
+	"Enable Fog" = false
 	#Changes to light
 	"Enable Light" = true
 	#Changes to sounds

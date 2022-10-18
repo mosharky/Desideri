@@ -19,10 +19,8 @@ onEvent('lootjs', event => {
         .addLootTableModifier(/supplementaries:blocks\/urn_loot\/(common|uncommon)/)
         .replaceLoot('supplementaries:flax_seeds', 'minecraft:string')
         .replaceLoot('supplementaries:rope', '8x farmersdelight:rope')
-    // replace steel from meteor loot table
-    /*
+
     event
-        .addLootTableModifier('minecraft:loot')
-        .replaceLoot('beyond_earth:steel_ingot', 'alloyed:steel_ingot')
-        */
+        .addLootTableModifier('alexsmobs:gameplay/trader_elephant_chest')
+        .replaceLoot('alexsmobs:banana', 'neapolitan:banana')
 })

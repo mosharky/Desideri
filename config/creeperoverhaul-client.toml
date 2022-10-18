@@ -2,5 +2,5 @@
 ["General Options"]
 	#
 	#Change the Vanilla Creeper to a new and improved texture with better animations.
-	replaceDefaultCreeper = true
+	replaceDefaultCreeper = false
 

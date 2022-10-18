@@ -70,5 +70,9 @@ const thermalSupportedOres = [
     'silver'
 ]
 
-const gems = []
-
+const modsWithOwnWoodChests = [
+    'quark', 
+    'windswept', 
+    'upgrade_aquatic', 
+    'autumnity'
+]

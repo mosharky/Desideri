@@ -134,6 +134,13 @@ let woodTypesToConstruct = [
             'autumnity:red_maple_leaves'
         ],
         fluid: Fluid.of('thermal:sap', 75)
+    },
+    {
+        type: 'windswept:holly',
+        fluid: false
+    },
+    {
+        type: 'windswept:chestnut'
     }
 ]
 
@@ -143,7 +150,10 @@ woodTypesToConstruct.forEach(entry => {
     let splitVariant = entry.type.split(':')
     let modId = splitVariant[0]
     let logType = splitVariant[1]
-    let logSuffix, woodSuffix, logBlockStripped, woodBlockStripped, logBlock, woodBlock, plankBlock, slabBlock, woodBark, leavesBlock, fluid // TODO: implement variable declaration like this in thingsToCrush
+    // TODO: implement variable declaration like this in thingsToCrush
+    let logSuffix, woodSuffix, logBlockStripped, woodBlockStripped, logBlock, 
+        woodBlock, plankBlock, slabBlock, woodBark, leavesBlock, fluid,
+        chest, trappedChest 
 
     // suffix exceptions
     switch (logType) {
@@ -167,6 +177,8 @@ woodTypesToConstruct.forEach(entry => {
     plankBlock = modId + ':' + logType + '_planks'
     slabBlock = modId + ':' + logType + '_slab'
     leavesBlock = modId + ':' + logType + '_leaves'
+    chest = modId + ':' + logType + '_chest'
+    trappedChest = modId + ':' + logType + '_trapped_chest'
     fluid = entry?.fluid
 
     // Exceptions
@@ -199,6 +211,20 @@ woodTypesToConstruct.forEach(entry => {
         fluid = Fluid.of('thermal:sap', 25)
     }
 
+    // if mod doesnt have its own wooden chests
+    if (!modsWithOwnWoodChests.includes(modId)) {
+        if (modId == 'minecraft') {
+            chest = 'woodworks:' + logType + '_chest'
+            trappedChest = 'woodworks:' + logType + '_trapped_chest'
+        } else if (logType == 'azalea') { // a bug in everycompat, maybe it'll be fixed in the future?
+            chest = undefined
+            trappedChest = undefined
+        } else {
+            chest = `everycomp:q/${modId}/${logType}_chest`
+            trappedChest = `everycomp:q/${modId}/${logType}_trapped_chest`
+        }
+    }
+
     /*
     if (modId == 'betterendforge') {
         logSuffix = '_log'
@@ -212,9 +238,11 @@ woodTypesToConstruct.forEach(entry => {
     }
     */
 
-    let woodVariant = {
+    let woodType = {
         modId: modId,
         logType: logType,
+        logSuffix: logSuffix,
+        woodSuffix: woodSuffix,
         logBlock: logBlock,
         woodBlock: woodBlock,
         logBlockStripped: logBlockStripped,
@@ -224,9 +252,11 @@ woodTypesToConstruct.forEach(entry => {
         woodBark: woodBark,
         leavesBlock: leavesBlock,
         extraLeaves: entry?.extraLeaves,
+        chest: chest,
+        trappedChest: trappedChest,
         fluid: fluid
     }
 
-    constructedWoodTypes.push(woodVariant)
+    constructedWoodTypes.push(woodType)
 })
 

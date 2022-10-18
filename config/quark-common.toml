@@ -82,10 +82,10 @@
 [building]
 	"Wooden Posts" = true
 	"Vertical Slabs" = true
-	"Variant Ladders" = false
-	"Variant Furnaces" = false
-	"Variant Chests" = false
-	"Variant Bookshelves" = false
+	"Variant Ladders" = true
+	"Variant Furnaces" = true
+	"Variant Chests" = true
+	"Variant Bookshelves" = true
 	Thatch = false
 	"Sturdy Stone" = true
 	Stools = true
@@ -117,7 +117,7 @@
 		# - woodworks
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
-		"Ignore Anti Overlap" = false
+		"Ignore Anti Overlap" = true
 
 	[building.variant_chests]
 		"Replace Worldgen Chests" = true
@@ -128,7 +128,7 @@
 		# - woodworks
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
-		"Ignore Anti Overlap" = false
+		"Ignore Anti Overlap" = true
 
 	[building.variant_bookshelves]
 		"Change Names" = true
@@ -136,7 +136,7 @@
 		# - woodworks
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
-		"Ignore Anti Overlap" = false
+		"Ignore Anti Overlap" = true
 
 	[building.thatch]
 		#Allowed values: [0,1]
@@ -1197,7 +1197,7 @@
 	Toretoise = true
 	Stonelings = true
 	Shiba = false
-	Frogs = true
+	Frogs = false
 	Foxhound = true
 	Forgotten = true
 	Crabs = true
@@ -1475,7 +1475,7 @@
 		"Enable Armor" = true
 
 	[client.improved_tooltips]
-		"Attribute Tooltips" = false
+		"Attribute Tooltips" = true
 		"Food Tooltips" = false
 		"Shulker Tooltips" = true
 		"Map Tooltips" = true

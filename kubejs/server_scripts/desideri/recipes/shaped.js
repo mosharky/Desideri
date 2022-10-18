@@ -5,27 +5,30 @@ let stick = ['A', 'A']
 let four = ['AA', 'AA']
 
 const shapedRecipes = [
-    // ESSENTIALS
-    // Chest from any plank
+    {
+        output: '3x minecraft:ladder',
+        pattern: ['A A', 'AAA', 'A A'],
+        key: {
+            A: '#forge:rods/wooden'
+        },
+        id: 'desideri:shaped/universal_ladder'
+    },
     {
         output: 'minecraft:chest',
         pattern: ring,
         key: {
             A: '#minecraft:planks'
         },
-        id: 'quark:building/crafting/chests/chest_revert'
+        id: 'desideri:shaped/universal_chest'
     },
-    // Bookshelf unification
     {
-        output: 'minecraft:bookshelf',
-        pattern: ['AAA', 'BBB', 'AAA'],
+        output: '4x minecraft:chest',
+        pattern: ring,
         key: {
-            A: '#minecraft:planks',
-            B: 'minecraft:book'
+            A: '#minecraft:logs'
         },
-        id: 'quark:building/crafting/oak_bookshelf'
+        id: 'desideri:shaped/universal_chest_from_log'
     },
-    // Stick from log
     {
         output: '16x minecraft:stick',
         pattern: stick,
@@ -34,27 +37,6 @@ const shapedRecipes = [
         },
         id: 'desideri:shaped/sticks_from_logs'
     },
-    // Classic ladder recipe
-    {
-        output: '3x minecraft:ladder',
-        pattern: ['A A', 'AAA', 'A A'],
-        key: {
-            A: '#forge:rods/wooden'
-        },
-        id: 'desideri:shaped/ladders'
-    },
-    // Chest from logs
-    {
-        output: '4x minecraft:chest',
-        pattern: ring,
-        key: {
-            A: '#minecraft:logs'
-        },
-        id: 'desideri:shaped/chest_from_logs'
-    },
-
-
-    // MISC RECIPES
     {
         output: 'backpacked:backpack',
         pattern: ['ABA', 'CDC', 'EBE'],
@@ -161,12 +143,13 @@ const shapedRecipes = [
         output: 'enigmaticlegacy:end_anchor',
         pattern: [' A ', 'BCB', 'DED'],
         key: {
-            A: 'minecraft:respawn_anchor',
+            A: 'alexsmobs:void_worm_eye',
             B: 'enigmaticlegacy:astral_dust',
-            C: 'alexsmobs:void_worm_eye',
+            C: 'minecraft:respawn_anchor',
             D: 'minecraft:end_stone',
             E: 'minecraft:obsidian'
-        }
+        },
+        id: 'desideri:shaped/end_anchor'
     },
     {
         output: 'thermal:satchel',
@@ -178,7 +161,7 @@ const shapedRecipes = [
             D: 'supplementaries:sack'
         },
         id: 'thermal:tools/satchel'
-    }
+    },
 ]
 onEvent('recipes', event => {
     shapedRecipes.forEach(recipe => {
@@ -186,4 +169,13 @@ onEvent('recipes', event => {
             ? event.shaped(recipe.output, recipe.pattern, recipe.key).id(recipe.id)
             : event.shaped(recipe.output, recipe.pattern, recipe.key)
     })
+
+    // woodTyperecipes
+    constructedWoodTypes.forEach(woodType => {
+        if (woodType.chest != undefined) {
+            event.shaped(`4x ${woodType.chest}`, ring, {A: `#${woodType.modId}:${woodType.logType}${woodType.logSuffix}s`})
+                 .id(`desideri:shaped/${woodType.logType}_chest_from_log`)
+        }
+    })
 })
+

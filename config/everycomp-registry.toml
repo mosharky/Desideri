@@ -34,7 +34,7 @@
 		soulwood = true
 
 	[wood_type.quark]
-		azalea = true
+		azalea = false
 		blossom = true
 
 	[wood_type.valhelsia_structures]

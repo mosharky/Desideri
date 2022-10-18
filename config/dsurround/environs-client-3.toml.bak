@@ -49,7 +49,7 @@
 	#Enable/disable fog processing
 	"Enable Fog Processing" = true
 	#Enable biome specific fog density and color
-	"Biome Fog" = false
+	"Biome Fog" = true
 	#Higher the player elevation the more haze that is experienced
 	"Elevation Haze" = true
 	#Show morning fog that eventually burns off

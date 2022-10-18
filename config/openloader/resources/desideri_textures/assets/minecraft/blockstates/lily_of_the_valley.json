@@ -1,7 +1,7 @@
 {
     "variants": {
         "": [
-			{ "model": "block/lily_of_the_valley" },
+			{ "model": "block/lily_of_the_valley", "weight": 4 },
 			{ "model": "block/lily_of_the_valley1" }
 		]
     }

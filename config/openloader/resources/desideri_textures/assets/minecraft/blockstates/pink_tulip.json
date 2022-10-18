@@ -1,7 +1,7 @@
 {
     "variants": {
         "": [
-			{ "model": "block/pink_tulip" },
+			{ "model": "block/pink_tulip", "weight": 4 },
 			{ "model": "block/pink_tulip1" }
 		]
     }

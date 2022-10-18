@@ -396,7 +396,7 @@
 
 	[items.rope_arrow]
 		#If you don't like my ropes you can specify here the block id ofa rope from another mod which will get deployed by rope arrows instead of mine
-		rope_arrow_override = "supplementaries:rope"
+		rope_arrow_override = "farmersdelight:rope"
 		#Max number of robe items allowed to be stored inside a rope arrow
 		#Range: 1 ~ 256
 		capacity = 32

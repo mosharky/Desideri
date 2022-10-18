@@ -67,7 +67,7 @@ global.fullRemovals.push(
 regexFullRemovals.push(
     /thermal:.*silver(?!_dust|_gear|_plate|_coin).*/,
     /thermal:.*lead(?!_gear|_coin|_dust).*/,
-    /thermal:.*bronze(?!_gear|_coin|_dust).*/,
+    /thermal:.*bronze(?!_gear|_coin|_dust|_nugget).*/,
     /thermal:.*steel(_ingot|_block).*/,
     /thermal:(.*apatite.*|.*sulfur.*|.*niter.*|.*cinnabar.*|.*electrum(?!_dust).*|.*diamond.*|.*emerald.*|.*lapis.*|.*netherite.*|.*invar.*|.*nickel.*|.*constantan.*)/,
     /thermal:(.*_plate.*|.*glass.*|earth_charge|.*diving.*)/,
@@ -91,12 +91,14 @@ addTagToItem.push(
             'darkerdepths:aridrock_silver_ore',
             'darkerdepths:limestone_silver_ore',
             'malum:brilliant_stone',
-            'malum:brilliant_deepslate'
+            'malum:brilliant_deepslate',
+            /malum:.*soulstone_ore/
         ]
     },
+    { tag: 'forge:ores/soulstone', item: /malum:.*soulstone_ore/ },
     { tag: 'forge:ores/brilliant', item: ['malum:brilliant_stone', 'malum:brilliant_deepslate'] },
-    { tag: 'forge:ores/natural_quartz', item: ['malum:natural_quartz_ore', 'malum:deepslate_quartz_ore'] },
-    { tag: 'forge:ores/silver', item: ['darkerdepths:aridrock_silver_ore', 'darkerdepths:limestone_silver_ore'] },
+    { tag: 'forge:ores/natural_quartz', item: /malum:.*quartz_ore/ },
+    { tag: 'forge:ores/silver', item: /darkerdepths:.*silver_ore/ },
     { tag: 'forge:raw_materials/lead', item: 'oreganized:raw_lead' },
     { tag: 'forge:raw_materials/silver', item: 'oreganized:raw_silver' },
     { tag: 'forge:raw_materials/soulstone', item: 'malum:raw_soulstone' },

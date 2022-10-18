@@ -4,7 +4,6 @@
 global.fullRemovals.push(
     'quark:rope',
     'supplementaries:rope',
-    'supplementaries:rope_arrow',
     'darkerdepths:rope',
     'farmersdelight:wheat_dough',
     'biomesoplenty:spanish_moss',
@@ -32,7 +31,7 @@ regexFullRemovals.push(
     /supplementaries:(flax|flax_seeds|flax_block|wild_flax)/,
     /refinedstorage:(1k.*|4k.*|16k.*|64k.*|256.*|1024k.*|4096k.*)/,
     /refinedstorage:(fortune.*|silk_touch_upgrade|.*disk_manipulator|.*disk_drive)/,
-    /enigmaticlegacy:(enigmatic_item|ocean_stone|magma_heart|eye_of_nebula|enigmatic_amulet|forbidden_axe|etherium.*|astral_breaker|enchantment_transposer|fabulous_scroll|void_pearl|golem_heart|angel_blessing|escape_scroll|monster_charm|mining_charm|mega_sponge|ender_rod|infinimeal|unwitnessed_amulet|ascension_amulet)/,
+    /enigmaticlegacy:(enigmatic_item|ocean_stone|magma_heart|eye_of_nebula|enigmatic_amulet|forbidden_axe|etherium.*|astral_breaker|enchantment_transposer|fabulous_scroll|void_pearl|golem_heart|angel_blessing|escape_scroll|monster_charm|mining_charm|mega_sponge|ender_rod|infinimeal|unwitnessed_amulet|ascension_amulet|soul_compass|enigmatic_elytra|architect_eye|magnet_ring|super_magnet_ring)/,
     /quark:(backpack|potato_crate|carrot_crate|beetroot_crate|chute|gravisand|abacus|dragon_scale|.*limestone.*|.*_rune|.*corundum.*)/,
     /quark:(granite|andesite|diorite|calcite|dripstone|tuff)_pillar/,
     /biomesoplenty:(.*black_sand.*|.*autumn.*|.*mud.*|.*maple.*)/,
@@ -41,7 +40,9 @@ regexFullRemovals.push(
     /thermal:(beetroot|apple|carrot|potato)_block/,
     /thermal:.*rockwool/,
     /sprout:.*peanut.*/,
-    /verdure:(.*daises|wildflowers|.*_leaves)/
+    /verdure:(.*daises|wildflowers|.*_leaves)/,
+    /quark:(?!purpur|nether_brick|prismarine|blossom|iron).*_(chest|trapped_chest|bookshelf|ladder)/,
+    /(autumnity|woodworks|upgrade_aquatic|windswept):.(.*leaf_pile|.*leaf_carpet)/
 )
 
 regexFullRemovals.forEach(removal => {
@@ -62,7 +63,9 @@ idRemovals.push(
     'windswept:snow_boots',
     'farmersdelight:paper_from_tree_bark',
     /(minecraft|biomesoplenty|ecologics):.*rabbit_stew.*/,
-    'abnormals_delight:neapolitan/adzuki_curry'
+    'abnormals_delight:neapolitan/adzuki_curry',
+    'quark:building/crafting/oak_bookshelf',
+    'quark:building/crafting/oak_ladder'
 )
 // Removes by recipe type
 typeRemovals.push(

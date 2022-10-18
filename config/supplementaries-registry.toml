@@ -52,8 +52,8 @@
 	netherite_door = true
 	netherite_trapdoor = true
 	lock_block = true
-	flax = true
-	rope = true
+	flax = false
+	rope = false
 	pulley_block = true
 	fodder = true
 	crimson_lantern = true

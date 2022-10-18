@@ -2,8 +2,8 @@
     "variants": {
         "facing=north": [
             { "model": "verdure:block/red_dense_mushroom_shelf" },
-            { "model": "verdure:block/red_big_mushroom_shelf1" },
-            { "model": "verdure:block/red_big_mushroom_shelf2" }
+            { "model": "verdure:block/red_big_mushroom_shelf_1" },
+            { "model": "verdure:block/red_big_mushroom_shelf_2" }
         ],
         "facing=east": [
             {
@@ -11,11 +11,11 @@
                 "y": 90
             },
             {
-                "model": "verdure:block/red_big_mushroom_shelf1",
+                "model": "verdure:block/red_big_mushroom_shelf_1",
                 "y": 90
             },
             {
-                "model": "verdure:block/red_big_mushroom_shelf2",
+                "model": "verdure:block/red_big_mushroom_shelf_2",
                 "y": 90
             }
         ],
@@ -25,11 +25,11 @@
                 "y": 180
             },
             {
-                "model": "verdure:block/red_big_mushroom_shelf1",
+                "model": "verdure:block/red_big_mushroom_shelf_1",
                 "y": 180
             },
             {
-                "model": "verdure:block/red_big_mushroom_shelf2",
+                "model": "verdure:block/red_big_mushroom_shelf_2",
                 "y": 180
             }
         ],
@@ -39,11 +39,11 @@
                 "y": 270
             },
             {
-                "model": "verdure:block/red_big_mushroom_shelf1",
+                "model": "verdure:block/red_big_mushroom_shelf_1",
                 "y": 270
             },
             {
-                "model": "verdure:block/red_big_mushroom_shelf2",
+                "model": "verdure:block/red_big_mushroom_shelf_2",
                 "y": 270
             }
         ]

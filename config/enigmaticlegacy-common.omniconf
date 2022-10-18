@@ -187,7 +187,7 @@
     B:HeartoftheGuardianEnabled=true
 
     # Whether or not Inscrutable Eye should be enabled. [default: true, synchronized: yes]
-    B:InscrutableEyeEnabled=true
+    B:InscrutableEyeEnabled=false
 
     # Whether or not Iron Ring should be enabled. [default: true, synchronized: yes]
     B:IronRingEnabled=true
@@ -199,10 +199,10 @@
     B:LoreFragmentEnabled=true
 
     # Whether or not Magnet Ring should be enabled. [default: true, synchronized: yes]
-    B:MagnetRingEnabled=true
+    B:MagnetRingEnabled=false
 
     # Whether or not Majestic Elytra should be enabled. [default: true, synchronized: yes]
-    B:MajesticElytraEnabled=true
+    B:MajesticElytraEnabled=false
 
     # Whether or not Megasponge should be enabled. [default: true, synchronized: yes]
     B:MegaspongeEnabled=true
@@ -235,7 +235,7 @@
     B:RetriggerRecipeUnlocks=true
 
     # Whether or not Ring of Dislocation should be enabled. [default: true, synchronized: yes]
-    B:RingofDislocationEnabled=true
+    B:RingofDislocationEnabled=false
 
     # Whether or not Ring of Ender should be enabled. [default: true, synchronized: yes]
     B:RingofEnderEnabled=true
@@ -307,7 +307,7 @@
     B:UnholyStoneEnabled=true
 
     # Whether or not Wayfinder of the Damned should be enabled. [default: true, synchronized: yes]
-    B:WayfinderoftheDamnedEnabled=true
+    B:WayfinderoftheDamnedEnabled=false
 
     # Whether or not Will of the Ocean should be enabled. [default: true, synchronized: yes]
     B:WilloftheOceanEnabled=false

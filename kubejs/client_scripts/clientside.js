@@ -2,7 +2,7 @@
 onEvent('jei.hide.items', jei => {
 	//jei.hide(global.fullRemovals)
 	jei.hide([
-		/refinedstorage:(white|light_gray|gray|black|brown|red|orange|yellow|lime|green|cyan|blue|magenta|pink)_/,
+		/refinedstorage:(white|light_gray|gray|black|brown|red|orange|yellow|lime|green|cyan|blue|magenta|pink)_/, // all but purple
 	])
 })
 
@@ -15,4 +15,5 @@ onEvent('jei.information', jei => {
 onEvent('item.tooltip', tooltip => {
 	tooltip.add(global.fullRemovals, Text.of('DISABLED').red())
 	tooltip.add(/refinedstorage:purple_/, Text.of('Can be any color').gray())
+	tooltip.add('minecraft:bone', Text.of('Placeable').darkGray().italic())
 })
