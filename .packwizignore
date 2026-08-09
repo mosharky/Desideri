@@ -1,0 +1,159 @@
+# config 
+config/*.bak
+config/jei/world/
+config/blockswap/known_states/
+config/voicechat/username-cache.json
+config/voicechat/
+config/voicechat-client.toml
+config/Obscuria/Data/
+config/indium-renderer.properties
+config/fabric/indigo-renderer.properties
+config/spark/activity.json
+config/embeddium-fingerprint.json
+config/mc2discord.toml
+config/cpm.json
+config/everycomp-hazardous.properties
+config/asyncparticles/asyncparticles-mixin.properties
+config/packetfixer.properties
+config/structurify/*backup*
+config/oculus.properties
+config/ftbqoptimizer.snbt
+config/ftbxmodcompat.snbt
+config/xaerominimap_entities.json
+config/ironchests/defaults.properties
+config/iris.properties
+config/minecraft-cursor.json
+config/flywheel-client.toml
+config/c2me.toml
+config/minecraft-cursor.json
+config/flywheel-client.toml
+config/axiom/*
+config/sodium-options.json
+config/sodium-fingerprint.json
+config/fml.toml
+config/emi-accelerator/stack-cache.emic
+config/emi-accelerator/reload-timings.json
+config/catalogue_favourites.txt
+/config/spark/
+config/almostunified/debug.json
+
+# mods
+mods/.connector/
+mods/.index/
+mods/*.jar
+!mods/special-*
+mods/*.disabled
+
+# resourcepacks
+# resourcepacks/*.zip
+# !resourcepacks/special-*
+
+# shaderpacks
+# shaderpacks/*.zip
+# !shaderpacks/special-*
+# shaderpacks/*EuphoriaPatches*
+
+# root folders
+/not-enough-crashes/
+/crash-reports/
+/screenshots/
+/saves/
+/logs/
+/data/
+/local/
+/patchouli_books/
+/schematics/
+/XaeroWorldMap/
+/XaeroWaypoints*/
+/modernfix/
+/worldicons/
+/.lazyyyyy/
+/cache/
+/.cache/
+# /mod_data/
+/.mixin.out/
+/xaero/
+/ESM/
+/backups/
+/Distant_Horizons_server_data/
+/emojiful/
+/dynamic-data-pack-cache/
+/dynamic-resource-pack-cache/
+/moddata/
+/moonlight-global-datapacks/
+/downloads/
+/mapwright_maps/
+/notepad/
+/fieldguide_cache/
+/.sable/
+/debug/
+/blueprint-online-image-cache/
+/villagerpacks/
+/showdown/
+
+# root files
+knownkeys.txt
+options.txt
+resourcepacks/Quark Programmer Art.zip
+resourcepacks/Goety Old Textures.zip
+realms_persistence.json
+TrashSlotSaveState.json
+usercache.json
+usernamecache.json
+patchouli_data.json
+o_prof
+enigmatic_persistence.dat
+reauth.toml
+servers.dat
+rhino.local.properties
+seamless.txt
+fabricloader.log
+emi.json
+irisUpdateInfo.json
+.qmenu_opened.marker
+snr_favorite_styles.nbt
+servers.dat_old
+caxton_impl.dll
+observable_announce
+command_history.txt
+imgui.ini
+ponders_watched.json
+ponders_watched_azimuth.json
+
+# dev environment stuff
+/.probe/
+/.vscode/probejs.code-snippets
+/.vscode/key.code-snippets
+/kubejs/config/web_server.json
+/.github/agents/
+/py_scripts/__pycache__/
+/py_scripts/py_scripts.log
+/py_scripts/generated/
+mod_data/__pycache__/
+mod_data/mod_data.log
+mod_data/generated/
+
+# launcher-related
+.curseclient
+icon.png
+server-resource-packs/
+coremods/
+texturepacks/
+minecraftinstance.json
+.unsup-state.json
+.unsup-tmp/
+
+# kubejs loading
+# kubejs/assets/*.zip
+# !kubejs/assets/special-*.zip
+# kubejs/data/*.zip
+# !kubejs/data/special-*.zip
+
+# for packwiz
+/.vscode/
+/mod_data/
+/kubejs/wip_data/
+/kubejs/config/probe-settings.json
+/kubejs/startup_scripts/_core/dev.js
+/globalresources/excavated_variants/
+/CODEX.md

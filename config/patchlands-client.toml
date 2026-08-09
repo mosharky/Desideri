@@ -1,0 +1,4 @@
+#How intense the portal transition should be
+# Default: 100
+# Range: 0 ~ 200
+portalTransitionIntensity = 100

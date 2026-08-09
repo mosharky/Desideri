@@ -1,0 +1,21 @@
+{
+    "parent": "minecraft:item/handheld",
+    "loader": "neoforge:separate_transforms",
+    "textures": {
+        "layer0": "embers:item/grandhammer_gui"
+    },
+    "base": {
+        "parent": "embers:item/grandhammer_handheld"
+    },
+    "perspectives": {
+        "gui": {
+            "parent": "embers:item/grandhammer_gui"
+        },
+        "ground": {
+            "parent": "embers:item/grandhammer_gui"
+        },
+        "fixed": {
+            "parent": "embers:item/grandhammer_gui"
+        }
+    }
+}

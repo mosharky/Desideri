@@ -1,0 +1,29 @@
+filename = 'manual_labour-1.21.1-1.1.0.jar'
+name = 'Manual Labour'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.1.0-1.21.1'
+
+[download]
+hash = '4d8bd42bd1f0d7d587b6a8f92f9aa5ba2c80097d13e59418bdf019b644f09379a941435f8bda0ecfd8a0c0d3be6dd97233fd6341edafe979dbab22ed12359285'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/kCbtgaek/versions/a3matl2D/manual_labour-1.21.1-1.1.0.jar'
+
+[update.modrinth]
+mod-id = 'kCbtgaek'
+version = 'a3matl2D'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'u6dRKJwZ'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'LNytGWDc'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1eAoo2KR'
+type = 'REQUIRED'

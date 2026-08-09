@@ -1,0 +1,21 @@
+filename = 'windswept-1.21.1-4.0.0.jar'
+name = 'Windswept'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '4.0.0'
+
+[download]
+hash = '72d7e44f464deeee49332426f6de58695cee5f955e997bd347435e630f88c3f2784a5dca72cb2121d2ed33572ddbed61cfc2d02e44ca66f8d3275a4e9520747a'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/l0h5MtkA/versions/dowXvnvu/windswept-1.21.1-4.0.0.jar'
+
+[update.modrinth]
+mod-id = 'l0h5MtkA'
+version = 'dowXvnvu'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'VsM5EDoI'
+type = 'REQUIRED'

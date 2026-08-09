@@ -1,0 +1,21 @@
+filename = 'incision-1.0.11-neoforge-1.21.1.jar'
+name = 'Incision'
+side = ''
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'incision-1.0.11- BETA-neoforge-1.21.1.jar'
+
+[download]
+hash = 'fc05d58534e5a71df9bf92abef1a396a8ee2eeca'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8222828
+project-id = 1501949
+
+[[x-prismlauncher-dependencies]]
+addonId = '388172'
+type = 'REQUIRED'

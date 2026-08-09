@@ -1,0 +1,21 @@
+filename = 'environmental-1.21.1-5.0.1.jar'
+name = 'Environmental'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '5.0.1'
+
+[download]
+hash = '49916902409b58fd2866d5a142259a2e49b2d6199292e8c91df3f7b8aeaf51326a731a04c1e7330295409f32a1410d917ff6c34dc1d759e40a78ca8d05dfcfa3'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/OqtiAZcV/versions/NdDV1AM8/environmental-1.21.1-5.0.1.jar'
+
+[update.modrinth]
+mod-id = 'OqtiAZcV'
+version = 'NdDV1AM8'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'VsM5EDoI'
+type = 'REQUIRED'

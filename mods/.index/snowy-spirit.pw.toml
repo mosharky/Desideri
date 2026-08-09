@@ -1,0 +1,21 @@
+filename = 'snowyspirit-1.21.1-3.1.13-neoforge.jar'
+name = 'Snowy Spirit'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.21.1-3.1.13'
+
+[download]
+hash = '35848066f4f85501be15f02478f9d348bc57f417f23105552395ce6bc37b559bf76ae82658500ee94087f6efc98cc652a54173e96f4e6d106b51f1f79c6ae067'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/UiFDlI7w/versions/zhkD32y9/snowyspirit-1.21.1-3.1.13-neoforge.jar'
+
+[update.modrinth]
+mod-id = 'UiFDlI7w'
+version = 'zhkD32y9'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'twkfQtEc'
+type = 'REQUIRED'

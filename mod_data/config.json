@@ -1,0 +1,13 @@
+{
+    "must_match": [
+        "data/.*/worldgen/biome/",
+        "data/.*/worldgen/configured_feature/",
+        "data/.*/worldgen/placed_feature/",
+        "data/.*/forge/biome_modifier/",
+        "data/.*/tags/worldgen/biome/",
+        "data/.*/tags/items/",
+        "data/.*/tags/blocks/",
+        "assets/.*/lang/en_us.json",
+        "resourcepacks/modified_.*/"
+    ]
+}
