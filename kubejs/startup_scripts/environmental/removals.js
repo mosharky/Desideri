@@ -3,6 +3,7 @@ function removals_Environmental() {
         // /environmental:.*pine.*/,
         /environmental:.*willow.*/,
         // /environmental:.*wisteria.*/,
+        /environmental:.*pine.*/,
         'environmental:cattail',
         'environmental:cattail_fluff',
         'environmental:cattail_fluff_block',
@@ -23,6 +24,7 @@ function removals_Environmental() {
         'environmental:duck',
         'environmental:reindeer',
         'environmental:deer',
+        'environmental:pinecone_golem',
     )
 
     // structureSwapChest('environmental:log_cabin', 'windswept:pine')

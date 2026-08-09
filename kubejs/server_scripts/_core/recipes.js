@@ -1,5 +1,8 @@
 /** @param {$RecipesKubeEvent} e */
 function recipes_Core(e) {
+    // removing recipe types that will be added to later
+    e.remove({ type: 'manual_labour:workstone' })
+
     e.replaceInput({ not: { id: 'woodworks:trapped_chest' } }, 'minecraft:chest', '#c:chests/wooden')
 
     // e.shapeless(AKASHIC_TOME, ['minecraft:book', 'minecraft:dirt'])
@@ -14,11 +17,7 @@ function recipes_Core(e) {
     e.replaceInput({}, '#c:buckets/milk', '#c:milk')
 
     // duplicates
-    // e.remove({ id: 'minecraft:lodestone' })
-    // e.remove({ id: 'vanillabackport:pumpkin_pie' })
-    // e.remove({ id: 'minecraft:cake' })
-    // e.remove({ id: 'neapolitan:cake' })
-    // e.remove({ id: 'vanillabackport:cake' })
+    e.remove({ id: 'minecraft:lodestone' })
 
     // cooking overhaul
     e.remove({ id: 'minecraft:bread' })

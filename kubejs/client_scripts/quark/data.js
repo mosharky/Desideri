@@ -252,8 +252,7 @@ function clientData_Quark(e) {
             texture: 'quark:attribute/slowness',
             compare: 'higher_better'
         },
-        /*
-        'caverns_and_chasms:weakness_aura': {
+        'caverns_and_chasms:slowness_retribution': {
             display: {
                 mainhand: 'flat',
                 offhand: 'flat',
@@ -266,7 +265,6 @@ function clientData_Quark(e) {
             texture: 'quark:attribute/aoe_effect',
             compare: 'higher_better'
         },
-        */
         'malum:soul_ward_capacity': {
             display: {
                 mainhand: 'flat',

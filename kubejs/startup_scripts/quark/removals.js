@@ -41,6 +41,17 @@ function removals_Quark() {
         'quark:paper_lantern',
         'quark:bamboo_mat',
         'quark:bamboo_mat_carpet',
+        'quark:ancient_fruit',
+        'quark:blaze_lantern',
+        'quark:encased_pipe',
+        'quark:chorus_weeds',
+        'quark:chorus_twist',
+        'quark:smithing_template_rune',
+        'quark:ancient_tome',
+        'quark:backpack',
+        'quark:iron_button',
+        'quark:gold_button',
+        'quark:moss_paste',
     ])
 
     global.ITEM_SWAPPER.set('quark:crab_leg', 'spawn:coastal_crab_claw')

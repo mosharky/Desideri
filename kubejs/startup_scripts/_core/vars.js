@@ -217,7 +217,7 @@ const woodTypesToConstruct = {
     },
     upgrade_aquatic: {
         driftwood: true,
-        river: true,
+        river: false,
     },
     windswept: {
         holly: true,

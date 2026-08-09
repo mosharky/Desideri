@@ -1,6 +1,6 @@
 // priority: -1
 
-Platform.setModName('kubejs', 'Remix')
+Platform.setModName('kubejs', 'Desideri')
 Platform.setModName('eidolon_repraised', 'Eidolon')
 Platform.setModName('embers', 'Embers')
 // Platform.setModName('incision', 'Incision')
@@ -45,7 +45,7 @@ function postInit() {
     // removals_Railways()
     // removals_Relics()
     // removals_ScGuns()
-    // removals_SnowySpirit()
+    removals_SnowySpirit()
     // removals_UnusualPrehistory()
     removals_UpgradeAquatic()
     removals_Windswept()
@@ -64,6 +64,7 @@ function postInit() {
     // removals_ArchitectsPalette()
     removals_AnotherFurniture()
     // removals_Twigs()
+    removals_BitsNBobs()
     
     removals_Core_Final()
 

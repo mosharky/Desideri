@@ -116,6 +116,17 @@ function constructWoodTypes() {
                     noMansLandCompatId = mod + ':'
                     farmersDelightCompatId = mod + ':'
                     bountifulFaresCompatId = mod + ':'
+                    break
+                }
+                case 'bountifulfares': {
+                    farmersDelightCompatId = 'farmersdelight:'
+                    bountifulFaresCompatId = mod + ':'
+                    break
+                }
+                case 'abundant_atmosphere': {
+                    noMansLandCompatId = mod + ':'
+                    farmersDelightCompatId = mod + ':'
+                    break
                 }
             }
 
@@ -170,9 +181,9 @@ function constructWoodTypes() {
                 // immersive_weathering: {
                     // bark:                   immersiveWeatheringCompatId + woodType + barkSuffix
                 // },
-                // snowy_spirit: {
-                    // sled:                   snowySpiritCompatId + 'sled_' + woodType
-                // },
+                snowy_spirit: {
+                    sled:                   snowySpiritCompatId + 'sled_' + woodType
+                },
                 another_furniture: {
                     // flower_box:             anotherFurnitureCompatId + woodType + '_flower_box',
                     shelf:                  anotherFurnitureCompatId + woodType + '_shelf',
@@ -225,6 +236,7 @@ function constructWoodTypes() {
                     woodTypeObj.woodworks.bookshelf             = 'minecraft:bookshelf'
                     woodTypeObj.woodworks.chiseled_bookshelf    = 'minecraft:chiseled_bookshelf'
                     woodTypeObj.supplementaries.item_shelf      = 'supplementaries:item_shelf'
+                    woodTypeObj.bountifulfares.trellis          = 'bountifulfares:trellis'
                     break
                 }
                 case 'bamboo': {
@@ -263,8 +275,9 @@ function constructWoodTypes() {
                     woodTypeObj.woodworks.bookshelf     = mod + ':' + woodType + '_bookshelf'
                     break
                 }
-                case 'nomansland': {
+                case 'nomansland': case 'abundant_atmosphere': {
                     woodTypeObj.woodworks.bookshelf     = mod + ':' + woodType + '_bookshelf'
+                    break
                 }
             }
 
