@@ -206,7 +206,7 @@
 		# Default: 0.01
 		# Range: 0.0 ~ 1.0
 		critter_spawn_chance = 0.01
-		cave_urns = true
+		cave_urns = false
 
 	[functional.soap]
 		enabled = true

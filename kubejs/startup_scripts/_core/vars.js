@@ -164,7 +164,7 @@ const woodTypesToConstruct = {
         morado: true,
         yucca: true,
         aspen: true,
-        laurel: true,
+        laurel: false,
         kousa: true,
         grimwood: true,
     },

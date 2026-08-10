@@ -74,7 +74,7 @@
 			morado = true
 			yucca = true
 			aspen = true
-			laurel = true
+			laurel = false
 			kousa = true
 			grimwood = true
 
@@ -169,25 +169,25 @@
 			yucca = true
 			aspen = true
 			green_aspen = true
-			laurel = true
-			dry_laurel = true
+			laurel = false
+			dry_laurel = false
 			kousa = true
 			currant = true
 			grimwood = true
 
 		[types.leaves_type.bountifulfares]
-			apple = true
-			flowering_apple = true
-			orange = true
-			flowering_orange = true
-			lemon = true
-			flowering_lemon = true
-			plum = true
-			flowering_plum = true
-			hoary = true
-			walnut = true
-			golden_apple = true
-			flowering_golden_apple = true
+			apple = false
+			flowering_apple = false
+			orange = false
+			flowering_orange = false
+			lemon = false
+			flowering_lemon = false
+			plum = false
+			flowering_plum = false
+			hoary = false
+			walnut = false
+			golden_apple = false
+			flowering_golden_apple = false
 
 		[types.leaves_type.environmental]
 			pink_wisteria = true
@@ -195,8 +195,8 @@
 			purple_wisteria = true
 			white_wisteria = true
 			hibiscus = true
-			willow = true
-			pine = true
+			willow = false
+			pine = false
 			plum = true
 			cheerful_plum = true
 			moody_plum = true
@@ -215,27 +215,27 @@
 			frosted = true
 			pale_cherry = true
 			red_maple = true
-			yellow_birch = true
+			yellow_birch = false
 			pine = true
 			maple = true
 			walnut = true
 			willow = true
-			apple_fruit = true
-			pear_fruit = true
+			apple_fruit = false
+			pear_fruit = false
 
 		[types.leaves_type.quark]
-			ancient = true
-			blue_blossom = true
-			lavender_blossom = true
-			orange_blossom = true
-			yellow_blossom = true
-			red_blossom = true
+			ancient = false
+			blue_blossom = false
+			lavender_blossom = false
+			orange_blossom = false
+			yellow_blossom = false
+			red_blossom = false
 
 		[types.leaves_type.spawn]
-			date = true
+			date = false
 
 		[types.leaves_type.upgrade_aquatic]
-			river = true
+			river = false
 
 		[types.leaves_type.windswept]
 			holly = true

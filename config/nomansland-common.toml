@@ -10,47 +10,47 @@
 	#If torches can be extinguished through interactions like campfires.
 	torchExtinguishing = true
 	#If snow and grass can combine to form snowlogged frosted grass.
-	allowGrassFrosting = true
+	allowGrassFrosting = false
 
 [biomes]
 	#If any custom biomes are enabled
-	biomes = false
+	biomes = true
 	#If the generic caves biomes are enabled
-	genericCavesBiomes = false
+	genericCavesBiomes = true
 	#If the maple biomes are enabled
-	mapleBiomes = false
+	mapleBiomes = true
 	#If the old growth forest is enabled
-	oldGrowthForest = false
+	oldGrowthForest = true
 	#If the autumnal forest is enabled
-	autumnal = false
+	autumnal = true
 	#If the boreal forest is enabled
-	borealForest = false
+	borealForest = true
 	#If the dark taiga is enabled
-	darkTaiga = false
+	darkTaiga = true
 	#If the dark swamp is enabled
-	darkSwamp = false
+	darkSwamp = true
 	#If the frozen woods is enabled
-	frozenWoods = false
+	frozenWoods = true
 	#If the bayou is enabled
-	bayou = false
+	bayou = true
 	#If the bog is enabled
-	bog = false
+	bog = true
 	#If the prairie is enabled
 	prairie = false
 	#If the lavender field is enabled
 	lavenderField = false
 	#If the blackwater river sub-biome is enabled
-	blackwaterRiver = false
+	blackwaterRiver = true
 	#If the lush river sub-biome is enabled
-	lushRiver = false
+	lushRiver = true
 	#If the desert river sub-biome is enabled
-	desertRiver = false
+	desertRiver = true
 	#If the frozen shore sub-biome is enabled
-	frozenShore = false
+	frozenShore = true
 	#If the mud beach sub-biome is enabled
-	mudBeach = false
+	mudBeach = true
 	#If the tropical beach sub-biome is enabled
-	tropicalBeach = false
+	tropicalBeach = true
 
 [tap]
 	#Time is calculated in ticks. 20 ticks make 1 second.

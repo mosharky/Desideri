@@ -13,7 +13,8 @@
         "environmental:willow",
         "environmental:pine",
         "twilightforest:.*",
-        "bountifulfares:walnut"
+        "bountifulfares:walnut",
+        "atmospheric:laurel",
     ]
 
 [leavestype]
@@ -22,12 +23,15 @@
 	blacklist = [
         "quark:.*",
         "autumnity:maple",
-        "bountifulfares:walnut",
         "environmental:willow",
         "environmental:pine",
         "twilightforest:.*",
         "spawn:date",
-        "bountifulfares:walnut"
+        "atmospheric:laurel",
+        "atmospheric:dry_laurel",
+        "bountifulfares:.*",
+        "nomansland:apple_fruit",
+        "nomansland:pear_fruit",
     ]
 
 [block]

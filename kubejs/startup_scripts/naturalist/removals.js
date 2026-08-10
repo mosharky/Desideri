@@ -20,6 +20,7 @@ function removals_Naturalist() {
         'naturalist:ant',
         'naturalist:queen_ant',
         'naturalist:ant_hill',
+        // 'naturalist:dragonfly',
     ])
 
     global.ITEM_SWAPPER.set('naturalist:snail_shell', 'spawn:snail_shell')
@@ -42,5 +43,6 @@ function removals_Naturalist() {
         // bugs
         'naturalist:snail',
         'naturalist:ant',
+        'naturalist:dragonfly',
     )
 }

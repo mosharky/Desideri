@@ -50,7 +50,7 @@
 		ant_removed = true
 		butterfly_removed = false
 		desert_scorpion_removed = false
-		dragonfly_removed = false
+		dragonfly_removed = true
 		firefly_removed = false
 		jungle_scorpion_removed = false
 		snail_removed = true

@@ -1,9 +1,10 @@
 function removals_SnowySpirit() {
     global.REMOVALS.add([
-        /snowyspirit:.*gingerbread.*/,
+        /snowyspirit:.*ginger.*/,
         /snowyspirit:gumdrop.*/,
         'snowyspirit:candy_cane',
         'snowyspirit:candy_cane_block',
+        'snowyspirit:wreath',
     ])
 
     global.ENTITY_REMOVALS.push(

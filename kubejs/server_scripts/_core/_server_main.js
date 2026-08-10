@@ -34,20 +34,18 @@ ServerEvents.tags('entity_type', e => {
 })
 
 ServerEvents.tags('worldgen/biome', e => {
-    /*
     biomeTags_Atmospheric(e)
     // biomeTags_Autumnity(e)
     biomeTags_CavernsAndChasms(e)
     biomeTags_Environmental(e)
     biomeTags_Galosphere(e)
     biomeTags_Neapolitan(e)
-    // biomeTags_UpgradeAquatic(e)
-    // biomeTags_Windswept(e)
-    // biomeTags_BountifulFares(e)
+    biomeTags_UpgradeAquatic(e)
+    biomeTags_Windswept(e)
+    biomeTags_BountifulFares(e)
     biomeTags_Oreganized(e)
     biomeTags_Malum(e)
     biomeTags_Incision(e)
-    */
     biomeTags_Spawn(e)
 
     // these changes need to load way later

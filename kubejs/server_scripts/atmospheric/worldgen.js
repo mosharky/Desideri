@@ -2,12 +2,12 @@
 function worldgen_Atmospheric(e) {
 
     // Disable all biomes
-    disableBlueprintBiome(e, 'atmospheric:aspen')
-    disableBlueprintBiome(e, 'atmospheric:dunes_and_scrubland')
-    disableBlueprintBiome(e, 'atmospheric:kousa')
+    // disableBlueprintBiome(e, 'atmospheric:aspen')
+    // disableBlueprintBiome(e, 'atmospheric:dunes_and_scrubland')
+    // disableBlueprintBiome(e, 'atmospheric:kousa')
     disableBlueprintBiome(e, 'atmospheric:laurel')
-    disableBlueprintBiome(e, 'atmospheric:rainforest')
-    disableBlueprintBiome(e, 'atmospheric:spiny_thicket')
+    // disableBlueprintBiome(e, 'atmospheric:rainforest')
+    // disableBlueprintBiome(e, 'atmospheric:spiny_thicket')
 
     /*
     removeFeatures(e, [

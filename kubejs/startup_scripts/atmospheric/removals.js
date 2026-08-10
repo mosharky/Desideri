@@ -1,6 +1,5 @@
 function removals_Atmospheric() {
     global.REMOVALS.add([
-        // TODO: Remove woods from compat stuff (Supplementaries, everycomp, etc)
         // /atmospheric:.*aspen.*/,
         // /atmospheric:.*leaf_pile.*/,
         // /atmospheric:.*travertine.*/,
@@ -12,8 +11,9 @@ function removals_Atmospheric() {
         'atmospheric:passion_vine_bundle',
         'atmospheric:passion_vine_coil',
         // 'atmospheric:shimmering_passion_fruit',
+        /atmospheric:.*laurel.*/,
     ])
 
-    structureSwapChest('atmospheric:arid_garden', 'atmospheric:laurel')
+    structureSwapChest('atmospheric:arid_garden', 'atmospheric:yucca')
     structureSwapChest('atmospheric:kousa_sanctum', 'atmospheric:kousa')
 }
