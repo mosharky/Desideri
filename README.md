@@ -1,6 +1,6 @@
 # Desideri
 
-**Minecraft 1.21.1 · neoforge 21.1.248**, 169 mods (1 dependency)
+**Minecraft 1.21.1 · neoforge 21.1.248**, 168 mods (2 dependencies)
 
 ## Contents
 
@@ -77,7 +77,6 @@
 - [Fzzy Config](https://modrinth.com/project/fzzy-config) `0.7.6+1.21+neoforge`
 - [Gallery](https://modrinth.com/project/gallery) `2.0.1`
 - [Galosphere](https://modrinth.com/project/galosphere) `1.21.1-1.5.5`
-- [Geckolib](https://modrinth.com/project/geckolib) `4.9.2`
 - [Get It Together, Drops!](https://modrinth.com/project/get-it-together-drops) `v1.4`
 - [Horseman](https://modrinth.com/project/horseman) `1.5.12`
 - [ImmediatelyFast](https://modrinth.com/project/immediatelyfast) `1.6.11+1.21.1-neoforge`
