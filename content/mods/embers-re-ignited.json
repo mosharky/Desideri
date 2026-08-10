@@ -1,0 +1,23 @@
+{
+  "name": "Embers Re-Ignited",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "8znVCTxA",
+      "slug": "embers-re-ignited",
+      "versionId": "q6utqdvw",
+      "versionNumber": "1.21.1-1.5.7",
+      "filename": "embers-reignited-1.21.1-1.5.7.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/8znVCTxA/versions/q6utqdvw/embers-reignited-1.21.1-1.5.7.jar",
+      "sha1": "e290ba54df279b1b323b34651cd4370c8cf2c14f",
+      "sha512": "db0d21ec624b205208c33d95c39cf72cf1bb44b81732eaabcd2fdd64af7816b7173e65a9d6c7101905277a55d586624d46acb6ef91ba147a781e843384133176",
+      "fileSize": 15879472
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

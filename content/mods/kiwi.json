@@ -1,0 +1,25 @@
+{
+  "name": "Kiwi 🥝",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "ufdDoWPd",
+      "slug": "kiwi",
+      "versionId": "tfwJWC8g",
+      "versionNumber": "15.8.7+neoforge",
+      "filename": "Kiwi-1.21.1-NeoForge-15.8.7.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/ufdDoWPd/versions/tfwJWC8g/Kiwi-1.21.1-NeoForge-15.8.7.jar",
+      "sha1": "d5c1d9f814bf146459f6e5e169c744c3e5bc184e",
+      "sha512": "d01c347febcb3d77bbfd2f44f38a80afbf4cf0b72a2aaa5d1875a38cbcd78be5a263fae4f63685256ea29c5f5f5d0f1c46892e2c78c4c1204863415dec9f4151",
+      "fileSize": 1539578
+    }
+  },
+  "dependents": [
+    "iJNje1E8"
+  ],
+  "clientSide": "optional",
+  "serverSide": "optional"
+}

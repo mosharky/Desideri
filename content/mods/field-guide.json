@@ -1,0 +1,23 @@
+{
+  "name": "Field Guide",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "72RRCWM6",
+      "slug": "field-guide",
+      "versionId": "8jdVbcd0",
+      "versionNumber": "1.14.0-1.21.1-neoforge",
+      "filename": "fieldguide-neoforge-1.21.1-1.14.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/72RRCWM6/versions/8jdVbcd0/fieldguide-neoforge-1.21.1-1.14.0.jar",
+      "sha1": "935924b6ecab0aeb394ea9a71c039644191872fa",
+      "sha512": "ab19c62f0cb0ff94f1990bf32420717884ade26bbd2cb503b68c9e1cf987292db24e604524da7b1746a879c1a9571eeff846bd45c44838e3b453a0bcc12cc80d",
+      "fileSize": 1200470
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

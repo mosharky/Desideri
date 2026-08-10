@@ -1,0 +1,23 @@
+{
+  "name": "Too Fast",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "w6JSkKSH",
+      "slug": "too-fast",
+      "versionId": "pDkjMI8q",
+      "versionNumber": "0.4.3.5",
+      "filename": "toofast-1.21.0-0.4.3.5.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/w6JSkKSH/versions/pDkjMI8q/toofast-1.21.0-0.4.3.5.jar",
+      "sha1": "7940d2516a492ff687696dfc0f8b66a6c628baad",
+      "sha512": "4108ff7d3ca21c4392f99df510bdcc5ca968def79ed0a855c8e77be91b583b4f435ee643b952a8238369db3bdcda3725c2efc84ca105fd0978b76c803ea250ec",
+      "fileSize": 3352
+    }
+  },
+  "dependents": [],
+  "clientSide": "unsupported",
+  "serverSide": "required"
+}

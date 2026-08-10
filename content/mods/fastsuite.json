@@ -1,0 +1,23 @@
+{
+  "name": "FastSuite",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "roccmqou",
+      "slug": "fastsuite",
+      "versionId": "OQZRQcDM",
+      "versionNumber": "1.21.1-6.0.7",
+      "filename": "FastSuite-1.21.1-6.0.7.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/roccmqou/versions/OQZRQcDM/FastSuite-1.21.1-6.0.7.jar",
+      "sha1": "9dd867fe29642d9e3f2f9059f1abf372936fbabc",
+      "sha512": "16356d513a7569d3b6815c4697b916098e0fdfbe2f2d0189c19099e95569a363d1442607b32666c7028a2c702040bdaf18b4224bcc5a39fe32dc38b00947534f",
+      "fileSize": 28192
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

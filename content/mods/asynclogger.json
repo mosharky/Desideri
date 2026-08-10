@@ -1,0 +1,23 @@
+{
+  "name": "Async Logger",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "zvNzKfGF",
+      "slug": "asynclogger",
+      "versionId": "i5z8ZG27",
+      "versionNumber": "2.2.1+1.21.1-neoforge",
+      "filename": "asynclogger-2.2.1+1.21.1-neoforge.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/zvNzKfGF/versions/i5z8ZG27/asynclogger-2.2.1%2B1.21.1-neoforge.jar",
+      "sha1": "9ec66494590b97c9e16c7b0a2af5a18ed49e80e2",
+      "sha512": "0ae31f57eee67dbc828fe045658e47195e70f971d09cd786b89320cb27eb0c81a9da56be8539392d948bbc32ebc9c838bc04c3736115e45aa0118b189bce086f",
+      "fileSize": 589379
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "unsupported"
+}

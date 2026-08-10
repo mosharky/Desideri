@@ -1,0 +1,23 @@
+{
+  "name": "Screenshot to Clipboard",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "1KiJRrTg",
+      "slug": "screenshot-to-clipboard",
+      "versionId": "tnP4eg1K",
+      "versionNumber": "1.0.10+neoforge",
+      "filename": "screenshot-to-clipboard-neoforge-1.0.10.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/1KiJRrTg/versions/tnP4eg1K/screenshot-to-clipboard-neoforge-1.0.10.jar",
+      "sha1": "0ead4d47c48afc4525efd9bf7c949eb7d1e15f0e",
+      "sha512": "70621a29e84be664eabac05f5fc08f3960726e1311dd29de9bb88c104dea3f49f481f02cef24cae0d44608b4b3b6c4102fea8b2093b4f0cf97611316866ae547",
+      "fileSize": 14146
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "unsupported"
+}

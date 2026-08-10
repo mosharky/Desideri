@@ -1,0 +1,23 @@
+{
+  "name": "Allurement",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "eIO12l2t",
+      "slug": "allurement!",
+      "versionId": "LPWZjZvj",
+      "versionNumber": "5.0.2",
+      "filename": "allurement-1.21.1-5.0.2.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/eIO12l2t/versions/LPWZjZvj/allurement-1.21.1-5.0.2.jar",
+      "sha1": "c3157fd5fbcc1bffec33fd068e06c706801b809d",
+      "sha512": "0419dae4a80dcb62549ce46fa3610d68e31ab2a65c11896c8c3509918287761020a3d1bc1006cc396f1db5af1a583c794ce92f3d7e0c9f91a267a791936f2ed9",
+      "fileSize": 642289
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

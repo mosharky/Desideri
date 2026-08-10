@@ -1,0 +1,23 @@
+{
+  "name": "Environmental",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "OqtiAZcV",
+      "slug": "environmental",
+      "versionId": "NdDV1AM8",
+      "versionNumber": "5.0.1",
+      "filename": "environmental-1.21.1-5.0.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/OqtiAZcV/versions/NdDV1AM8/environmental-1.21.1-5.0.1.jar",
+      "sha1": "f3b62861584a306ff50fbdaa9401728db64f7a35",
+      "sha512": "49916902409b58fd2866d5a142259a2e49b2d6199292e8c91df3f7b8aeaf51326a731a04c1e7330295409f32a1410d917ff6c34dc1d759e40a78ca8d05dfcfa3",
+      "fileSize": 7834244
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

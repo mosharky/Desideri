@@ -1,0 +1,23 @@
+{
+  "name": "Spawn",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "rex9wwpz",
+      "slug": "spawn-mod",
+      "versionId": "gMPsUePI",
+      "versionNumber": "4.0.7",
+      "filename": "spawn-4.0.7-1.21.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/rex9wwpz/versions/gMPsUePI/spawn-4.0.7-1.21.1.jar",
+      "sha1": "2deea6d639e5d197414f0903b4beb89c56466ae0",
+      "sha512": "dd5b43c613e44e1e387e665e75e505439c082dcf959bc7b0ad3ce45818a9e8597bcbb86d6d0fbdc481f2614a935ef04d2144841c983e1ab17dec1bac12f7f529",
+      "fileSize": 73638060
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

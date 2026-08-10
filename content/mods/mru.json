@@ -1,0 +1,25 @@
+{
+  "name": "MRU",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "SNVQ2c0g",
+      "slug": "mru",
+      "versionId": "W0PkvNtT",
+      "versionNumber": "1.0.31+1.21.1-neoforge",
+      "filename": "mru-1.0.31+1.21.1-neoforge.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/SNVQ2c0g/versions/W0PkvNtT/mru-1.0.31%2B1.21.1-neoforge.jar",
+      "sha1": "13985bd441089ef114f98eaf76403c8cda0fc295",
+      "sha512": "bf0020381a31b63bb1be64d824ce239552be3bf0a75fe0cc53b5146cec948e794055c3b4cb259f0201f10459d7ff434bfd3bf883541e721cb726e2902829da8e",
+      "fileSize": 119143
+    }
+  },
+  "dependents": [
+    "ZouiUX7t"
+  ],
+  "clientSide": "optional",
+  "serverSide": "optional"
+}

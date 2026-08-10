@@ -1,0 +1,22 @@
+{
+  "name": "Lucis",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "curseforge",
+  "sources": {
+    "curseforge": {
+      "id": "1604252",
+      "slug": "lucis",
+      "versionId": "8431192",
+      "versionNumber": "[NeoForge 1.21.1] Lucis v1.0.2",
+      "filename": "lucis-1.21.1-1.0.2.jar",
+      "downloadUrl": "https://edge.forgecdn.net/files/8431/192/lucis-1.21.1-1.0.2.jar",
+      "sha1": "22f7f04d5094a41226659979a9daf5f66455803a",
+      "fileSize": 153579
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

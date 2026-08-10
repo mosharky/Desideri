@@ -1,0 +1,23 @@
+{
+  "name": "Mule Armor",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "NVx2i4Q8",
+      "slug": "mule-armor",
+      "versionId": "Fo3HVfbg",
+      "versionNumber": "1.0.1",
+      "filename": "mulearmor-1.0.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/NVx2i4Q8/versions/Fo3HVfbg/mulearmor-1.0.0.jar",
+      "sha1": "2163c6b35e52e4797f60dcd2e9cbdede603dcff5",
+      "sha512": "f9c4a4cb960e1b31151f97ad958ef8fc889969d8ddb32682bc45b79d0cdf1e16b9ff0456971b138454f7f11541371276be8cd5757884d884c6f97b6733ade52a",
+      "fileSize": 47087
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

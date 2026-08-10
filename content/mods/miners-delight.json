@@ -1,0 +1,23 @@
+{
+  "name": "Miner's Delight",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "qMxbM4BQ",
+      "slug": "miners-delight",
+      "versionId": "YUHbwbgQ",
+      "versionNumber": "1.4.5",
+      "filename": "minersdelight-1.21.1-1.4.5.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/qMxbM4BQ/versions/YUHbwbgQ/minersdelight-1.21.1-1.4.5.jar",
+      "sha1": "9361a43c3b2cfeda977d34a28e25a6e089465dcc",
+      "sha512": "98db53ab135281ab11e9abacbce846bfb42fdee6e0a85ae38802a5809fddc24af2e3fb5ba6ed53aa2244ce45f3a5ff93970dd1bc1b55d599560f99019a7fcac1",
+      "fileSize": 390203
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

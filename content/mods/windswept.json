@@ -1,0 +1,25 @@
+{
+  "name": "Windswept",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "l0h5MtkA",
+      "slug": "windswept",
+      "versionId": "dowXvnvu",
+      "versionNumber": "4.0.0",
+      "filename": "windswept-1.21.1-4.0.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/l0h5MtkA/versions/dowXvnvu/windswept-1.21.1-4.0.0.jar",
+      "sha1": "aaf08772a2895b9f08e5d0019c41306674c60344",
+      "sha512": "72d7e44f464deeee49332426f6de58695cee5f955e997bd347435e630f88c3f2784a5dca72cb2121d2ed33572ddbed61cfc2d02e44ca66f8d3275a4e9520747a",
+      "fileSize": 10348573
+    }
+  },
+  "dependents": [
+    "IXcelib9"
+  ],
+  "clientSide": "required",
+  "serverSide": "required"
+}

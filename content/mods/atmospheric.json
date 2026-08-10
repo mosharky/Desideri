@@ -1,0 +1,23 @@
+{
+  "name": "Atmospheric",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "U9sJOFmJ",
+      "slug": "atmospheric",
+      "versionId": "XIvPRE4O",
+      "versionNumber": "7.0.1",
+      "filename": "atmospheric-1.21.1-7.0.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/U9sJOFmJ/versions/XIvPRE4O/atmospheric-1.21.1-7.0.1.jar",
+      "sha1": "522bbf4f8e0dcb1754c464e66ab301d8235ea315",
+      "sha512": "137a56f031a303116dd9245cde3b20047a523fa3215df3e8ab51590249a469a60b1e57536fdb578b6feafc89f4075f85ccd76af52dcf181b6b2df032dec7aafb",
+      "fileSize": 5268454
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

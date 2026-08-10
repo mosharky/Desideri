@@ -1,0 +1,23 @@
+{
+  "name": "Manual Labour",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "kCbtgaek",
+      "slug": "manual-labour",
+      "versionId": "a3matl2D",
+      "versionNumber": "1.1.0-1.21.1",
+      "filename": "manual_labour-1.21.1-1.1.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/kCbtgaek/versions/a3matl2D/manual_labour-1.21.1-1.1.0.jar",
+      "sha1": "47c1b2e19bbf3126fe2ad8ea13efc3bf2bdc8c9d",
+      "sha512": "4d8bd42bd1f0d7d587b6a8f92f9aa5ba2c80097d13e59418bdf019b644f09379a941435f8bda0ecfd8a0c0d3be6dd97233fd6341edafe979dbab22ed12359285",
+      "fileSize": 588273
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

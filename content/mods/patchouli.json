@@ -1,0 +1,23 @@
+{
+  "name": "Patchouli",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "nU0bVIaL",
+      "slug": "patchouli",
+      "versionId": "BIogJv2D",
+      "versionNumber": "1.21.1-93-neoforge",
+      "filename": "Patchouli-1.21.1-93-NEOFORGE.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/nU0bVIaL/versions/BIogJv2D/Patchouli-1.21.1-93-NEOFORGE.jar",
+      "sha1": "5413bb9b8fc35ebe46b06b48bf9afafbd8471140",
+      "sha512": "0b5c172db9a6eeecb5ca44b359a83548c3a60be7ff313959acdfc1e5b8039736c18e57e947d435b52d06da31159d2d02ea36e5742668dbc826308a4c99e4039f",
+      "fileSize": 646777
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

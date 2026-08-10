@@ -1,0 +1,23 @@
+{
+  "name": "Max Health Fix",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "mH8wdmqr",
+      "slug": "max-health-fix",
+      "versionId": "Oh3tUtEX",
+      "versionNumber": "21.1.4",
+      "filename": "maxhealthfix-neoforge-1.21.1-21.1.4.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/mH8wdmqr/versions/Oh3tUtEX/maxhealthfix-neoforge-1.21.1-21.1.4.jar",
+      "sha1": "56243df705c150933642f7108b0d882322147d63",
+      "sha512": "c4ce1c648b5babfc3578abb88b0b78f7d1338b8cb0375bfb43026c20435564e72ca615e5cc0a5fac024e5f4b657b0173aa10ef33b5a83f9072406d4ad618a3f8",
+      "fileSize": 20034
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

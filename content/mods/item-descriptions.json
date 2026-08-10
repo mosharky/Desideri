@@ -1,0 +1,25 @@
+{
+  "name": "Item Descriptions",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "UaizcMKP",
+      "slug": "item-descriptions",
+      "versionId": "OrkSfQ0u",
+      "versionNumber": "2.8.0+1.21.1-neoforge",
+      "filename": "item_descriptions-2.8.0+1.21.1-neoforge.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/UaizcMKP/versions/OrkSfQ0u/item_descriptions-2.8.0%2B1.21.1-neoforge.jar",
+      "sha1": "fd8df1a7398539d66ecbcf406d22b8408d2d4808",
+      "sha512": "395b5b1fdde9b0c2b02322118aae01f901dca624014db64c093e7d6fcada351a73d8c5039af202db3baf3e334a7d997991dad5acede8f30c26c8533aa68461b9",
+      "fileSize": 579297
+    }
+  },
+  "dependents": [
+    "72RRCWM6"
+  ],
+  "clientSide": "required",
+  "serverSide": "unsupported"
+}

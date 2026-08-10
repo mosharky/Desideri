@@ -1,0 +1,23 @@
+{
+  "name": "Every Compat (Stone Zone)",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "uYwn8IP5",
+      "slug": "stone-zone",
+      "versionId": "kWBnBoqd",
+      "versionNumber": "1.21-2.11.17-neoforge",
+      "filename": "stonezone-1.21-2.11.17-neoforge.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/uYwn8IP5/versions/kWBnBoqd/stonezone-1.21-2.11.17-neoforge.jar",
+      "sha1": "9732e34175971bd7097826899b436f4de22e8b2a",
+      "sha512": "b92922f7f34fbbfa5e8276b331cf651b2b7a5ff0072a9c6ef0da8eeb2448c8377862fbccd709a2a1ac21782bb9d57427c9f7e182ddd653dd5c0b139a30861743",
+      "fileSize": 810089
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

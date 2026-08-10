@@ -1,0 +1,25 @@
+{
+  "name": "Every Compat (Wood Good)",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "eiktJyw1",
+      "slug": "every-compat",
+      "versionId": "K7B7ybsQ",
+      "versionNumber": "1.21-2.11.48",
+      "filename": "everycomp-1.21-2.11.48-neoforge.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/eiktJyw1/versions/K7B7ybsQ/everycomp-1.21-2.11.48-neoforge.jar",
+      "sha1": "9baaea246eba12641024915d5b263b2e49ea2626",
+      "sha512": "6e0d1430eda20bbff2b1d42a57ded77e4de558248486f6c031e160cb94b6b217eb2f0259e1a673bfd7957bdcdcb4e97921fbc75245687ff7f4a3b893740d27b2",
+      "fileSize": 2585530
+    }
+  },
+  "dependents": [
+    "uYwn8IP5"
+  ],
+  "clientSide": "required",
+  "serverSide": "required"
+}

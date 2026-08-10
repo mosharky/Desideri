@@ -1,0 +1,23 @@
+{
+  "name": "Music and Melody",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "dpNZjlVi",
+      "slug": "music-and-melody",
+      "versionId": "sdBrfBU0",
+      "versionNumber": "21.1-r4.0-neoforge",
+      "filename": "music-and-melody-21.1-r4.0-neoforge.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/dpNZjlVi/versions/sdBrfBU0/music-and-melody-21.1-r4.0-neoforge.jar",
+      "sha1": "6a1a1e360c1fca37a8a9bf1658b3970f0dc939e0",
+      "sha512": "b45959b20911225be47f00978f4b3f62672e6b2c2594a2a9cab44aa4f75a677dbebd171b985f26ece87ed9387cbe49f134aa5888b9f28068a31ed2fd5949dbcf",
+      "fileSize": 246286596
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "optional"
+}

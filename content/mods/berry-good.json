@@ -1,0 +1,23 @@
+{
+  "name": "Berry Good",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "2WZWaKCl",
+      "slug": "berry-good",
+      "versionId": "C8Scxj1h",
+      "versionNumber": "8.0.1",
+      "filename": "berry_good-1.21.1-8.0.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/2WZWaKCl/versions/C8Scxj1h/berry_good-1.21.1-8.0.1.jar",
+      "sha1": "28d454937ca6df70bc5f2f732d50f60f24b30f54",
+      "sha512": "56d68dfd41ddbf67ff731c35dc09573d9829bac3a87465e821a47a9ad0433dbc2b19f8a7e69da244504353def01400787a39f628c5a15a299feaaaeebf2b1105",
+      "fileSize": 3067412
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

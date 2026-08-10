@@ -1,0 +1,23 @@
+{
+  "name": "Better ModList",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "sbpqhzIG",
+      "slug": "better-modlist",
+      "versionId": "ecClLUKT",
+      "versionNumber": "21.1.0",
+      "filename": "better_modlist-21.1.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/sbpqhzIG/versions/ecClLUKT/better_modlist-21.1.0.jar",
+      "sha1": "d3a1899f3976f04d7ce567f6e450ec1548a8b187",
+      "sha512": "ca0d3c9529dc2da108c6fdfe63f0f7f7261b71bfc132a5e8b2745e9e324c254a0ecd5f7140b8b44c50ca516185470c6dab778b9259122aa4ea32440f22bad04b",
+      "fileSize": 818709
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "unsupported"
+}

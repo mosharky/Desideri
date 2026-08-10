@@ -1,0 +1,23 @@
+{
+  "name": "XP Stream",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "QZqv3OuH",
+      "slug": "xp-stream",
+      "versionId": "xMgTcITM",
+      "versionNumber": "1.1.4",
+      "filename": "xp_stream-neoforge-1.21.1-1.1.4.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/QZqv3OuH/versions/xMgTcITM/xp_stream-neoforge-1.21.1-1.1.4.jar",
+      "sha1": "78fc06c4ebc671d8e1027d66a89bcacd45614210",
+      "sha512": "38878b51363d50d9dad3146cd5e0d94dbda64f209c84881c3aad6d1e0f2dde1e9968acfef5e44c76590bd8185a63395be8cdb8e91a168589456912460fa4e7b9",
+      "fileSize": 10457
+    }
+  },
+  "dependents": [],
+  "clientSide": "unsupported",
+  "serverSide": "required"
+}

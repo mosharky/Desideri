@@ -1,0 +1,23 @@
+{
+  "name": "ProbeJS",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "JJNYRb4B",
+      "slug": "probejs",
+      "versionId": "xC9KUA7R",
+      "versionNumber": "8.0.3",
+      "filename": "ProbeJS-8.0.3.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/JJNYRb4B/versions/xC9KUA7R/ProbeJS-8.0.3.jar",
+      "sha1": "f0529482eff9596fa01de8a34abdce50529bdf55",
+      "sha512": "342be675356044e7328841eb13116e66e476a6176dea8c634d3ca096b98cf818b314d190e42f2be859c9c9d2c53087fd471b0052e50872c3fc3f5090c813f5f3",
+      "fileSize": 3405057
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

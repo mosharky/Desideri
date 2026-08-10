@@ -1,0 +1,25 @@
+{
+  "name": "NexusLib",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "bgDhVmqz",
+      "slug": "nexuslib",
+      "versionId": "6oD2aKnX",
+      "versionNumber": "1.1.5",
+      "filename": "nexuslib-neoforge-1.21.1-1.1.5.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/bgDhVmqz/versions/6oD2aKnX/nexuslib-neoforge-1.21.1-1.1.5.jar",
+      "sha1": "2ed0a61174c541cc51cb087783d5f19d4cbb1a0e",
+      "sha512": "4d0fe1029367e1210083c5e70b9cfd761586a803a94be4d163b28898f5ba2937f2b55e796de431427460a0c9e9da5fe91c76c40bebeb048cb0d6199ea58fb3dd",
+      "fileSize": 97376
+    }
+  },
+  "dependents": [
+    "YgrSDjlb"
+  ],
+  "clientSide": "required",
+  "serverSide": "required"
+}

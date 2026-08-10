@@ -1,0 +1,23 @@
+{
+  "name": "Modulation",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "ItRzabx0",
+      "slug": "modulation",
+      "versionId": "XCgXV7u4",
+      "versionNumber": "2.2.2-1.21.1-neoforge",
+      "filename": "modulation-neoforge-1.21.1-2.2.2.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/ItRzabx0/versions/XCgXV7u4/modulation-neoforge-1.21.1-2.2.2.jar",
+      "sha1": "35692196fef4ec0aafb336ca13552cbdcb9857ca",
+      "sha512": "6b5b0214ab7b805e29b6544b6aeafe82b60f695cd72c753a2b13855030ffe81e1e2f30f68302de3e8ae69652c0c1e89012d70b05773a6e5dee16b2e8a4a9912e",
+      "fileSize": 220460
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

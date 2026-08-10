@@ -1,0 +1,23 @@
+{
+  "name": "Modern Minecarts",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "5k6mdRU9",
+      "slug": "modern-minecarts",
+      "versionId": "Mq9JGPnM",
+      "versionNumber": "1.2.1_Neoforge_1.21-1.21.1",
+      "filename": "ModernMinecarts_1.2.1_Neoforge_1.21-1.21.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/5k6mdRU9/versions/Mq9JGPnM/ModernMinecarts_1.2.1_Neoforge_1.21-1.21.1.jar",
+      "sha1": "0f8982f66330e350df3d36ddbbe5ff8caf741bd9",
+      "sha512": "b6db78b2e10273b7096c5e60eb90cca05b500b90dfad9a89b8a5902b59090f15268b823337f93f359dcc0a0908e1a990fb0a6e8b67ffd4cb6107b09571f7bc3d",
+      "fileSize": 184676
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

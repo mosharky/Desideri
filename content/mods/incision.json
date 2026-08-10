@@ -1,0 +1,22 @@
+{
+  "name": "Incision",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "curseforge",
+  "sources": {
+    "curseforge": {
+      "id": "1501949",
+      "slug": "incision",
+      "versionId": "8222828",
+      "versionNumber": "incision-1.0.11- BETA-neoforge-1.21.1.jar",
+      "filename": "incision-1.0.11-neoforge-1.21.1.jar",
+      "downloadUrl": "https://edge.forgecdn.net/files/8222/828/incision-1.0.11-neoforge-1.21.1.jar",
+      "sha1": "fc05d58534e5a71df9bf92abef1a396a8ee2eeca",
+      "fileSize": 3525175
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

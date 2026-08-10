@@ -1,0 +1,23 @@
+{
+  "name": "Caverns & Chasms",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "tfjmPSbI",
+      "slug": "caverns-and-chasms",
+      "versionId": "xDwRcEoZ",
+      "versionNumber": "3.0.0",
+      "filename": "caverns_and_chasms-1.21.1-3.0.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/tfjmPSbI/versions/xDwRcEoZ/caverns_and_chasms-1.21.1-3.0.0.jar",
+      "sha1": "a20e72a96c1db7d948c9a972fdcdd900c469e8f5",
+      "sha512": "d360d7823f8a0bb283b67d09138f29b179810b8aac5d763a6d2c40ea7984de55e381dd4a8376cb81f8d796123f127cec3b2038b5504591326a130e466e124ae8",
+      "fileSize": 40522367
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

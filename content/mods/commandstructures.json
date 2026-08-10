@@ -1,0 +1,23 @@
+{
+  "name": "Command Structures",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "WEfvvlnl",
+      "slug": "commandstructures",
+      "versionId": "rTiLoxgs",
+      "versionNumber": "4.4.2+1.21.1",
+      "filename": "command_structures-4.4.2+1.21.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/WEfvvlnl/versions/rTiLoxgs/command_structures-4.4.2%2B1.21.1.jar",
+      "sha1": "944104112971023d3867982df063d7082df9c83a",
+      "sha512": "558ab643254a59a7b2837cf47212947dd9f31d7aac00350f476d1c0f2110b150000be4afa15f4f7d4bcbf9469f045eadac568397b4a83f87af2a0d11d91784b9",
+      "fileSize": 41671
+    }
+  },
+  "dependents": [],
+  "clientSide": "unsupported",
+  "serverSide": "required"
+}

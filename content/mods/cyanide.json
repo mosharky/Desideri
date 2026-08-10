@@ -1,0 +1,23 @@
+{
+  "name": "Cyanide",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "fXbvd6mf",
+      "slug": "cyanide",
+      "versionId": "v4LiMGGH",
+      "versionNumber": "5.0.0",
+      "filename": "cyanide-neoforge-1.21.1-5.0.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/fXbvd6mf/versions/v4LiMGGH/cyanide-neoforge-1.21.1-5.0.0.jar",
+      "sha1": "d224ea5adcf1002a07bca4e19f461a9b470b2bb6",
+      "sha512": "5c28d68909ea2dd0db50d8cb25a2151c78b04dfc12023a25a9c2df2bc63dc2545f5dc417f3fdb3c2d7e74f553772e2b3c36002b4fd8ca3ffe86d8ecac373dcd0",
+      "fileSize": 49610
+    }
+  },
+  "dependents": [],
+  "clientSide": "optional",
+  "serverSide": "optional"
+}

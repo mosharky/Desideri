@@ -1,0 +1,23 @@
+{
+  "name": "Clayworks",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "1iicrEO3",
+      "slug": "clayworks",
+      "versionId": "SpFNxWZa",
+      "versionNumber": "4.0.3",
+      "filename": "clayworks-1.21.1-4.0.3.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/1iicrEO3/versions/SpFNxWZa/clayworks-1.21.1-4.0.3.jar",
+      "sha1": "e57792898117777a09b04cb29bbceb2d88fbc7f6",
+      "sha512": "e98006b95823377ec409ef352242b6d814f2a7cd7cfb42bfbb555aeb2d2a16b6d3bf3cdeaa14e9f7a32b3d1d3b59b1f2035ee2505aaf5d187c144124a3460074",
+      "fileSize": 1436093
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

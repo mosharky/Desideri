@@ -1,0 +1,23 @@
+{
+  "name": "Copy Block ID",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "NHmOsazH",
+      "slug": "copy-block-id",
+      "versionId": "RhKc1Ozt",
+      "versionNumber": "1.1.0",
+      "filename": "copyblockid-1.1.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/NHmOsazH/versions/RhKc1Ozt/copyblockid-1.1.0.jar",
+      "sha1": "cd96966f9893f521ea214d2a3fcdf6412bcf7eee",
+      "sha512": "07671ac83c1c20956234e15d984383a70f9517fc648447eab567707a7b0d36291acd185b72fa411fb000e4cbb20d782f827fb43eb3f1cb26cac9a18533fbf128",
+      "fileSize": 156455
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "unsupported"
+}

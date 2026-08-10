@@ -1,0 +1,23 @@
+{
+  "name": "WorldJS",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "3Y7FeCuI",
+      "slug": "worldjs",
+      "versionId": "HpEG57A0",
+      "versionNumber": "1.0.1",
+      "filename": "worldjs-1.21.1-1.0.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/3Y7FeCuI/versions/HpEG57A0/worldjs-1.21.1-1.0.1.jar",
+      "sha1": "e4f8870754bce34598d292f4e9b84e6f69b5483e",
+      "sha512": "0dccd99bdcbdd8a4232c7f2fbe4e2532ccb6b6681028c25ae2b8e4bd4c5618b9f3cab4917ba9d299fd6c6a6f0dd7a817372d9667caab766f8a17abc50ee04cbd",
+      "fileSize": 177655
+    }
+  },
+  "dependents": [],
+  "clientSide": "unsupported",
+  "serverSide": "required"
+}

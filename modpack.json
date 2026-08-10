@@ -1,0 +1,8 @@
+{
+  "name": "Desideri",
+  "version": "1.0.0",
+  "minecraft": "1.21.1",
+  "loader": "neoforge",
+  "loaderVersion": "21.1.248",
+  "channel": "release"
+}

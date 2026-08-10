@@ -1,0 +1,23 @@
+{
+  "name": "Neo Bee Fix",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "DzSY371i",
+      "slug": "neo-bee-fix",
+      "versionId": "MUOGH4UT",
+      "versionNumber": "2.0.1",
+      "filename": "neobeefix-1.21.1-2.0.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/DzSY371i/versions/MUOGH4UT/neobeefix-1.21.1-2.0.1.jar",
+      "sha1": "76e263df40ebdd039e7754eda73e2fedcea1947c",
+      "sha512": "eb788217d3aa8a94fbb12c0cd6b258a7b3f59fa53d1227a890a6650251a03dc55fd0ce6ec1cd2c0200459a70c4dfa8f097c141bea59166dc9ea53839fa5f4f49",
+      "fileSize": 34003
+    }
+  },
+  "dependents": [],
+  "clientSide": "optional",
+  "serverSide": "optional"
+}

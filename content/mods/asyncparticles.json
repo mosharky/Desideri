@@ -1,0 +1,23 @@
+{
+  "name": "AsyncParticles",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "c3onkd5k",
+      "slug": "asyncparticles",
+      "versionId": "vzqR5Mv4",
+      "versionNumber": "21.1.4.0-alpha.3",
+      "filename": "AsyncParticles-21.1.4.0-alpha.3+1.21.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/c3onkd5k/versions/vzqR5Mv4/AsyncParticles-21.1.4.0-alpha.3%2B1.21.1.jar",
+      "sha1": "c22757cd75d372c8903055f4b207f6ec84101e16",
+      "sha512": "f204515afcfb08189545f0dd548effaea2c78696edc1956375c626035b6442e81c5f37b0104c3f77d38fc8bca3acaed7d9fcc5692f9ec044bc32c256f3eea1b2",
+      "fileSize": 1213352
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "unsupported"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Get It Together, Drops!",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "T0OUgf8P",
+      "slug": "get-it-together-drops",
+      "versionId": "K4TUzlwa",
+      "versionNumber": "v1.4",
+      "filename": "getittogetherdrops-neoforge-1.21.5-1.4.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/T0OUgf8P/versions/K4TUzlwa/getittogetherdrops-neoforge-1.21.5-1.4.jar",
+      "sha1": "ead940a50f69313802960c497e252acd3956334f",
+      "sha512": "fc0f01061d2785d205d5e1e0d49b40408d3fa597b65b7b74036beefc47f4d3577f4a8ec7ad6c26cae3a70e36f1205afb1e9a0afa77cfece49f69344ed69fc9fa",
+      "fileSize": 8825
+    }
+  },
+  "dependents": [],
+  "clientSide": "unsupported",
+  "serverSide": "required"
+}

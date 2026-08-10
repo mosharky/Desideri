@@ -1,0 +1,23 @@
+{
+  "name": "Fadeless",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "ncKjyGm3",
+      "slug": "fadeless",
+      "versionId": "gvsQ5qrH",
+      "versionNumber": "1.1.0",
+      "filename": "fadeless-neoforge-1.1.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/ncKjyGm3/versions/gvsQ5qrH/fadeless-neoforge-1.1.0.jar",
+      "sha1": "76cb5746d6e93af2c74a06251100aad27363637f",
+      "sha512": "e9c22fd1b0ccbd3a66a1e43ee119daed52e22585d37282f6169e057c9da359e0da13caabebfea1d2ee44d5a100c5f3761fa3589ada785e9587909e9ead8b8e03",
+      "fileSize": 8701
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "unsupported"
+}

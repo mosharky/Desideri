@@ -1,0 +1,23 @@
+{
+  "name": "Custom Portal API Reforged",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "VepYPOdy",
+      "slug": "custom-portal-api-reforged",
+      "versionId": "lowfyLfO",
+      "versionNumber": "1.2.2",
+      "filename": "cpapireforged-neo-1.21.1-1.2.2.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/VepYPOdy/versions/lowfyLfO/cpapireforged-neo-1.21.1-1.2.2.jar",
+      "sha1": "9535f872717c530b9638fe49a8fcac9b58b3cc54",
+      "sha512": "c7ec668bb6b67e3855eaf1175caa0eac77101412af10747b8a118134adf86f43d849b7a1523768b5c540debaad2d97b6009db14e280dd35370d420f289b3f9c0",
+      "fileSize": 94146
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

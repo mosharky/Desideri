@@ -1,0 +1,23 @@
+{
+  "name": "Accessories Compatibility Layer",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "ySnjMzLg",
+      "slug": "accessories-compat-layer",
+      "versionId": "JMgVNypu",
+      "versionNumber": "0.1.12",
+      "filename": "accessories_compat_layer-neoforge-0.1.12+1.21.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/ySnjMzLg/versions/JMgVNypu/accessories_compat_layer-neoforge-0.1.12%2B1.21.1.jar",
+      "sha1": "59dd35650925d72f5158816caf895f3d9fa0edf4",
+      "sha512": "f729c4e1c069182aac89805551a056b937e17fd6d9c031b14a6003b5c4fac609563f2c3d6786fe56ecfb62a1094124e68b2e4fb6e2612818d899d3bac181c215",
+      "fileSize": 405416
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "No Man's Delight",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "8ffHF0Dn",
+      "slug": "no-mans-delight",
+      "versionId": "SenUsdj1",
+      "versionNumber": "2.2.0",
+      "filename": "nomansdelight-2.2.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/8ffHF0Dn/versions/SenUsdj1/nomansdelight-2.2.0.jar",
+      "sha1": "28aa89d854ab2b70f0649ceb92c44ff74e8411c3",
+      "sha512": "319306f8a1782cb26c8c803eb26c993f33da31fb229383d0b2db2f459174bbd65b1e5f27130a44b03defc485992213431b6e319c52129570aab1375bde00d1d1",
+      "fileSize": 147661
+    }
+  },
+  "dependents": [],
+  "clientSide": "unsupported",
+  "serverSide": "required"
+}

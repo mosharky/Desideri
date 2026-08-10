@@ -1,0 +1,23 @@
+{
+  "name": "Galosphere",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "Kn7xyQ1v",
+      "slug": "galosphere",
+      "versionId": "IgULrnXA",
+      "versionNumber": "1.21.1-1.5.5",
+      "filename": "Galosphere-1.21.1-1.5.5-NeoForge.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/Kn7xyQ1v/versions/IgULrnXA/Galosphere-1.21.1-1.5.5-NeoForge.jar",
+      "sha1": "f2c3b139c16ba81cdd6f0df2c51313f4fde32950",
+      "sha512": "2ac38a71cae2adbad3f9891c2ec038b626c384e750f83c535810f1b234e3b78f80863b6089de9fbb92e3ba479a130d9e3d7f64cf6a4f11bd9cb4e01ce5d7e97d",
+      "fileSize": 35545869
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

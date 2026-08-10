@@ -1,0 +1,23 @@
+{
+  "name": "Async Locator Refined",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "LUIHK4LD",
+      "slug": "async-locator-refined",
+      "versionId": "zHBIpxJZ",
+      "versionNumber": "1.21.1-1.6.0",
+      "filename": "async-locator-refined-neoforge-1.21.1-1.6.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/LUIHK4LD/versions/zHBIpxJZ/async-locator-refined-neoforge-1.21.1-1.6.0.jar",
+      "sha1": "287ec5c76bf9f7f8493e789f70759ab993784f5e",
+      "sha512": "5fca80e53239f8eb54943d790e20cbf64fc43dbf495fc227d2dda2cd65981e2df2dfea5ec5800aaa0a0d84f91915a635d2a6e492861c47aab020f74f64fb0b44",
+      "fileSize": 299325
+    }
+  },
+  "dependents": [],
+  "clientSide": "unsupported",
+  "serverSide": "required"
+}

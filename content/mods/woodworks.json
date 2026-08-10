@@ -1,0 +1,23 @@
+{
+  "name": "Woodworks",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "rv1sovni",
+      "slug": "woodworks",
+      "versionId": "aJd8UVN0",
+      "versionNumber": "4.0.2",
+      "filename": "woodworks-1.21.1-4.0.2.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/rv1sovni/versions/aJd8UVN0/woodworks-1.21.1-4.0.2.jar",
+      "sha1": "002a9aef3c65a6a2a35d7ee09d05c98b5e5ba760",
+      "sha512": "527f4749ebbb8713940b2a3d6555427a5912c6bee06211e7772e7d34686157bfe59aa9a667856da1b413903bcd847af294e8e2e65979ca83d644572d65c0a6ce",
+      "fileSize": 1411040
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Windswept Delights",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "IXcelib9",
+      "slug": "windswept-delights",
+      "versionId": "EgrZiO89",
+      "versionNumber": "2.0.1",
+      "filename": "windswept_delights-1.21.1-2.0.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/IXcelib9/versions/EgrZiO89/windswept_delights-1.21.1-2.0.1.jar",
+      "sha1": "139a32e205ce89c579afe3c9c10ddacb4ad47003",
+      "sha512": "873b3a5f1636d47c130bfb5f0c83725ffbafe2e6f0ddfc0712f282ffd4dac51ca92dd89bc22eb760043c4983c6d74498acdb08677c14407480336750d382f63a",
+      "fileSize": 101146
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

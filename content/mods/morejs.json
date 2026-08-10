@@ -1,0 +1,23 @@
+{
+  "name": "MoreJS: KubeJS Addon",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "mo64mR1W",
+      "slug": "morejs",
+      "versionId": "kyNrtsUY",
+      "versionNumber": "1.21.1-0.16.0+neoforge",
+      "filename": "morejs-neoforge-1.21.1-0.16.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/mo64mR1W/versions/kyNrtsUY/morejs-neoforge-1.21.1-0.16.0.jar",
+      "sha1": "7e8aea4f03b18076cab5555f6d30e35ff919b342",
+      "sha512": "3fbbe82b5b827e03518f7e515978af4e9fc0736b5385f80b5b86ef562a51e53fe32e815d416a6a0fe1ba752f835fbf641b42b59b5ffd5bb6469abb8b74ab29a2",
+      "fileSize": 157690
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

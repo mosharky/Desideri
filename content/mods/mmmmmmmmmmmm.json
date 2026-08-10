@@ -1,0 +1,23 @@
+{
+  "name": "MmmMmmMmmMmm",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "Adega8YN",
+      "slug": "mmmmmmmmmmmm",
+      "versionId": "PQzuABde",
+      "versionNumber": "1.21-2.1.0",
+      "filename": "dummmmmmy-neoforge-1.21-2.1.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/Adega8YN/versions/PQzuABde/dummmmmmy-neoforge-1.21-2.1.0.jar",
+      "sha1": "05825b9457466f7f25f929663cbd768aaf5ac308",
+      "sha512": "c29956bc87851cdfda7990fd43b024b5a2c7491964a654e701ec58277dcc62935865fe980ffc6730698208d5a84552c747a458572cdfaa729972f5ee00ea4513",
+      "fileSize": 214030
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}
