@@ -1,0 +1,26 @@
+{
+  "name": "Sable",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "T9PomCSv",
+      "slug": "sable",
+      "versionId": "U678xqle",
+      "versionNumber": "2.0.5+mc1.21.1",
+      "filename": "sable-neoforge-1.21.1-2.0.5.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/T9PomCSv/versions/U678xqle/sable-neoforge-1.21.1-2.0.5.jar",
+      "sha1": "05f666e973d32baaaf405acb9bbed6615b909971",
+      "sha512": "bf3d8c87bcc5efb99afffd50305fc978086ed48a63e106816e3a8a3901f8052f4480ea527dbd7d4003f7775ed4d020529098034f4e307aefac9cc42df2b4c19a",
+      "fileSize": 12986136
+    }
+  },
+  "dependents": [
+    "AlVH5pr8",
+    "oWaK0Q19"
+  ],
+  "clientSide": "required",
+  "serverSide": "required"
+}

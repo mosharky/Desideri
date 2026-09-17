@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "3Y7FeCuI",
       "slug": "worldjs",
-      "versionId": "HpEG57A0",
-      "versionNumber": "1.0.1",
-      "filename": "worldjs-1.21.1-1.0.1.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/3Y7FeCuI/versions/HpEG57A0/worldjs-1.21.1-1.0.1.jar",
-      "sha1": "e4f8870754bce34598d292f4e9b84e6f69b5483e",
-      "sha512": "0dccd99bdcbdd8a4232c7f2fbe4e2532ccb6b6681028c25ae2b8e4bd4c5618b9f3cab4917ba9d299fd6c6a6f0dd7a817372d9667caab766f8a17abc50ee04cbd",
-      "fileSize": 177655
+      "versionId": "XIbBNFyg",
+      "versionNumber": "1.1.0",
+      "filename": "worldjs-1.21.1-1.1.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/3Y7FeCuI/versions/XIbBNFyg/worldjs-1.21.1-1.1.0.jar",
+      "sha1": "4f026fd6490277ca8ac0888b7687d00cdc3b9c06",
+      "sha512": "d39536a94f53be22631a96f4224cf2bf32996a23382efb2ba21154d10d2fe4a1ffcc80e121ed4d048ec493772ec6c0f78ccdc0a1535b8932c834e7713b36dab0",
+      "fileSize": 245166
     }
   },
   "dependents": [],

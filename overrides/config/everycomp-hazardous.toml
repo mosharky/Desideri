@@ -6,33 +6,12 @@
 	#        "biomesoplenty:redwood"		COMMENT: exclude redwood from Wood Mod for any module
 	#    ]
 	#
-	blacklist = [
-        "quark:.*",
-        "autumnity:maple",
-        "bountifulfares:walnut",
-        "environmental:willow",
-        "environmental:pine",
-        "twilightforest:.*",
-        "bountifulfares:walnut",
-        "atmospheric:laurel",
-    ]
+	blacklist = ["quark:.*", "autumnity:maple", "bountifulfares:walnut", "environmental:willow", "environmental:pine", "twilightforest:.*", "bountifulfares:walnut", "atmospheric:laurel", "upgrade_aquatic:river"]
 
 [leavestype]
 	#Exclude LeavesType from all of Modules
 	#	The example is same as WoodType's
-	blacklist = [
-        "quark:.*",
-        "autumnity:maple",
-        "environmental:willow",
-        "environmental:pine",
-        "twilightforest:.*",
-        "spawn:date",
-        "atmospheric:laurel",
-        "atmospheric:dry_laurel",
-        "bountifulfares:.*",
-        "nomansland:apple_fruit",
-        "nomansland:pear_fruit",
-    ]
+	blacklist = ["quark:.*", "autumnity:maple", "environmental:willow", "environmental:pine", "twilightforest:.*", "spawn:date", "atmospheric:laurel", "atmospheric:dry_laurel", "bountifulfares:.*", "nomansland:apple_fruit", "nomansland:pear_fruit", "upgrade_aquatic:river"]
 
 [block]
 	#Exclude a specific WoodType/LeavesType block
@@ -57,18 +36,7 @@
 	#    ]
 	#    NOTE: This excluded one entryset from all WoodTypes/LeavesTypes
 	#
-	blacklist = [
-        "another_furniture:flower_box",
-        "nomansland:bookshelf",
-        "quark:vertical_planks",
-        "quark:trapped_chest",
-        "quark:bookshelf",
-        "quark:chest",
-        "quark:ladder",
-        "quark:vertical_slab",
-        "quark:leaf_carpet",
-        "twigs:table",
-    ]
+	blacklist = ["another_furniture:flower_box", "nomansland:bookshelf", "quark:vertical_planks", "quark:trapped_chest", "quark:bookshelf", "quark:chest", "quark:ladder", "quark:vertical_slab", "quark:leaf_carpet", "twigs:table"]
 
 [module]
 	#Exclude Module From Wood-Good, Stone-Zone & Gems-Realm
@@ -83,7 +51,3 @@
 	#Disable all of Supported Mods on EveryCompat's side. This feature is same as Library-Section which do not have any Wood Modules.
 	#WARNING: If the config between CLIENT & SERVER are not the same, then you won't able to join a server
 	include_all_wood_modules = true
-	#Blacklist all of EveryCompat's supported blocks that may have similar block to Framed Blocks.
-	#This will be applied to all mods, EveryCompat, StoneZone, & GemsRealm.
-	#WARNING: If the config between CLIENT & SERVER are not the same, then you won't able to join a server
-	enable_framed_blocks_blacklist = false

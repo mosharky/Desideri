@@ -1,0 +1,23 @@
+{
+  "name": "CursorCentered Fix",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "3Vf97jLY",
+      "slug": "cursorcentered-fix",
+      "versionId": "jc4NAqWi",
+      "versionNumber": "1.4.0",
+      "filename": "cursorcenteredfix-1.4.0-neoforge-1.20.5+.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/3Vf97jLY/versions/jc4NAqWi/cursorcenteredfix-1.4.0-neoforge-1.20.5%2B.jar",
+      "sha1": "d7751a39790c9603507850261c1f8ed94953fc72",
+      "sha512": "d173b32e5bd5df3809d266eba5b164def76922826fdafdd760957cd8deebf2e83ffeb49048643f426fc0ffc28db2fb05f3df9b15bff1a29774fb1dd2b31846c5",
+      "fileSize": 10682
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "unsupported"
+}

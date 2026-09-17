@@ -52,9 +52,6 @@
 			myalite = true
 			permafrost = true
 
-		[types.stone_type.supplementaries]
-			brittlestone = true
-
 		[types.stone_type.windswept]
 			shale = true
 			arkose = true
@@ -115,7 +112,7 @@
 
 		[types.wood_type.upgrade_aquatic]
 			driftwood = true
-			river = true
+			river = false
 
 		[types.wood_type.windswept]
 			holly = true
@@ -137,6 +134,9 @@
 
 		[types.cake.nomansland]
 			fruit_cake = true
+
+		[types.cake.farmersrespite]
+			coffee_cake = true
 
 		[types.lantern.bountifulfares]
 			feldspar_lantern = true
@@ -316,6 +316,12 @@
 			bookshelf = true
 			chiseled_bookshelf = true
 			ladder = true
+
+		[entries.wood_type.envelope]
+			pigeonhole = true
+
+		[entries.wood_type.backpacked]
+			backpack_shelf = true
 
 		[entries.leaves_type.quark]
 			hedge = true

@@ -150,8 +150,8 @@ function removeBiomeModifier(event, modifier) {
  * @param {String | Array.<String>} biomes - A biome ID, or biome tag, or an array of biomes
  * @param {Optional | String} id - Modifier ID
  */
-function removeSpawns(event, mobs, biomes) {
-    let obj = {
+function removeSpawns(event, mobs, biomes, id) {
+    const obj = {
         type: 'lithostitched:remove_biome_spawns',
         biomes: biomes,
         mobs: mobs
@@ -159,6 +159,25 @@ function removeSpawns(event, mobs, biomes) {
     id == undefined
         ? event.json(`kubejs:lithostitched/worldgen_modifier/remove_spawn/${nameProcess(mobs)}`, obj)
         : event.json(`kubejs:lithostitched/worldgen_modifier/remove_spawn/${id}`, obj)
+}
+
+
+/**
+ * Replace biomes' colours
+ * @param {$KubeDataGenerator} event - generateData event
+ * @param {String | Array.<String>} biomes - A biome ID or an array of biomes
+ * @param {Object} effects - Object with the following optional fields: `sky_color`, `fog_color`, `water_color`, `water_fog_color`, `foliage_color`, `grass_color`, `mood_sound`
+ * @param {Optional | String} id - Modifier ID
+ */
+function replaceEffects(event, biomes, effects, id) {
+    const obj = {
+        type: 'lithostitched:replace_effects',
+        biomes: biomes,
+        effects: effects
+    }
+    id == undefined
+        ? event.json(`kubejs:lithostitched/worldgen_modifier/replace_effects/${nameProcess(biomes)}`, obj)
+        : event.json(`kubejs:lithostitched/worldgen_modifier/replace_effects/${id}`, obj)
 }
 
 /**
@@ -409,4 +428,110 @@ function disableBlueprintBiome(e, biomeSlice) {
             only_map_from_areas: true
         }
     })
+}
+
+const BIOLITH = {
+    BIOME_PLACEMENT: {
+        // additions: [],
+        // removals: [],
+        replacements: [],
+        sub_biomes: [],
+    },
+    SURFACE_GENERATION: {},
+    // Helpers from NML
+    transitionalBiome: function (firstBiome, secondBiome, transitionalBiome) {
+        const addTransition = (target, adjacency) => {
+            this.BIOME_PLACEMENT.sub_biomes.push({
+                dimension: 'minecraft:overworld',
+                target: target,
+                biome: transitionalBiome,
+                criterion: {
+                    type: 'biolith:all_of',
+                    criteria: [
+                        adjacency,
+                        {
+                            type: 'biolith:not',
+                            // NEAR_INTERIOR = ratioMax(CENTER, 0.2f).
+                            criterion: { type: 'biolith:ratio', target: 'center', max: 0.2 }
+                        }
+                    ]
+                }
+            })
+        }
+
+        addTransition(firstBiome, {
+            type: 'biolith:neighbor',
+            biome: secondBiome
+        })
+        addTransition(secondBiome, {
+            type: 'biolith:neighbor',
+            biome: firstBiome
+        })
+        addTransition(secondBiome, {
+            type: 'biolith:alternate',
+            biome: transitionalBiome,
+            alternate: firstBiome
+        })
+        addTransition(firstBiome, {
+            type: 'biolith:alternate',
+            biome: transitionalBiome,
+            alternate: secondBiome
+        })
+    },
+    // biomeParameterTarget is a data parameter name, e.g. 'peaks_valleys' or 'humidity'.
+    edgeBiome: function (interiorBiome, edgeBiome, biomeParameterTarget) {
+        const nearBorder = { type: 'biolith:ratio', target: 'edge', max: 0.2 }
+        const nearInterior = { type: 'biolith:ratio', target: 'center', max: 0.2 }
+
+        this.BIOME_PLACEMENT.sub_biomes.push({
+            dimension: 'minecraft:overworld',
+            target: interiorBiome,
+            biome: edgeBiome,
+            criterion: {
+                type: 'biolith:all_of',
+                criteria: [
+                    { type: 'biolith:deviation', parameter: biomeParameterTarget, min: 0.05 },
+                    {
+                        type: 'biolith:any_of',
+                        criteria: [
+                            {
+                                type: 'biolith:all_of',
+                                criteria: [nearBorder, { type: 'biolith:not', criterion: nearInterior }]
+                            },
+                            { // BEACHSIDE
+                                type: 'biolith:all_of',
+                                criteria: [nearBorder, { type: 'biolith:neighbor', biome: '#minecraft:is_beach' }]
+                            },
+                            { // OCEANSIDE
+                                type: 'biolith:all_of',
+                                criteria: [nearBorder, { type: 'biolith:neighbor', biome: '#minecraft:is_ocean' }]
+                            },
+                            {
+                                type: 'biolith:all_of',
+                                criteria: [nearBorder, { type: 'biolith:neighbor', biome: '#minecraft:is_river' }]
+                            }
+                        ]
+                    }
+                ]
+            }
+        })
+    },
+    clearingBiome: function (interiorBiome, clearingBiome) {
+        this.BIOME_PLACEMENT.sub_biomes.push({
+            dimension: 'minecraft:overworld',
+            target: interiorBiome,
+            biome: clearingBiome,
+            criterion: {
+                type: 'biolith:all_of',
+                criteria: [
+                    { type: 'biolith:deviation', parameter: 'peaks_valleys', min: 0.05 },
+                    { type: 'biolith:ratio', target: 'center', max: 0.2 },
+                    {
+                        type: 'biolith:not',
+                        criterion: { type: 'biolith:ratio', target: 'edge', max: 0.2 }
+                    }
+                ]
+            }
+        })
+    }
 }

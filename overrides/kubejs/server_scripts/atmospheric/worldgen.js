@@ -2,12 +2,160 @@
 function worldgen_Atmospheric(e) {
 
     // Disable all biomes
-    // disableBlueprintBiome(e, 'atmospheric:aspen')
-    // disableBlueprintBiome(e, 'atmospheric:dunes_and_scrubland')
-    // disableBlueprintBiome(e, 'atmospheric:kousa')
+    disableBlueprintBiome(e, 'atmospheric:aspen')
+    disableBlueprintBiome(e, 'atmospheric:dunes_and_scrubland')
+    disableBlueprintBiome(e, 'atmospheric:kousa')
     disableBlueprintBiome(e, 'atmospheric:laurel')
-    // disableBlueprintBiome(e, 'atmospheric:rainforest')
-    // disableBlueprintBiome(e, 'atmospheric:spiny_thicket')
+    disableBlueprintBiome(e, 'atmospheric:rainforest')
+    disableBlueprintBiome(e, 'atmospheric:spiny_thicket')
+
+    // dunes
+    BIOLITH.BIOME_PLACEMENT.replacements.push(
+        {
+            dimension: 'minecraft:overworld',
+            target: 'minecraft:desert',
+            biome: 'atmospheric:dunes',
+            proportion: 0.5
+        },
+    )
+    BIOLITH.BIOME_PLACEMENT.sub_biomes.push(
+        {
+            dimension: 'minecraft:overworld',
+            target: 'atmospheric:dunes',
+            biome: 'atmospheric:flourishing_dunes',
+            criterion: {
+                type: 'biolith:any_of',
+                criteria: [
+                    { type: 'biolith:neighbor', biome: '#minecraft:is_river' },
+                    { type: 'biolith:neighbor', biome: '#minecraft:is_forest' },
+                    { type: 'biolith:neighbor', biome: '#c:is_wet' }
+                ]
+            }
+        },
+        {
+            dimension: 'minecraft:overworld',
+            target: 'atmospheric:dunes',
+            biome: 'atmospheric:scrubland',
+            criterion: {
+                type: 'biolith:any_of',
+                criteria: [
+                    { type: 'biolith:neighbor', biome: '#minecraft:is_savanna' },
+                    { type: 'biolith:neighbor', biome: '#c:is_swamp' }
+                ]
+            }
+        },
+        {
+            dimension: 'minecraft:overworld',
+            target: 'atmospheric:scrubland',
+            biome: 'atmospheric:snowy_scrubland',
+            criterion: {
+                type: 'biolith:neighbor',
+                biome: '#c:is_snowy',
+            }
+        },
+        {
+            dimension: 'minecraft:overworld',
+            target: 'atmospheric:dunes',
+            biome: 'atmospheric:petrified_dunes',
+            criterion: {
+                type: 'biolith:all_of',
+                criteria: [
+                    { type: 'biolith:neighbor', biome: '#minecraft:is_forest' },
+                    { type: 'biolith:value', parameter: 'weirdness', min: 0.7 },
+                ]
+            }
+        },
+        {
+            dimension: 'minecraft:overworld',
+            target: 'atmospheric:dunes',
+            biome: 'atmospheric:rocky_dunes',
+            criterion: {
+                type: 'biolith:value',
+                parameter: 'peaks_valleys',
+                min: 0.4
+            },
+        },
+    )
+
+
+    // kousa
+    BIOLITH.BIOME_PLACEMENT.replacements.push(
+        {
+            dimension: 'minecraft:overworld',
+            target: 'minecraft:snowy_taiga',
+            biome: 'atmospheric:kousa_jungle',
+            proportion: 0.1
+        },
+    )
+
+
+    // rainforest
+    BIOLITH.BIOME_PLACEMENT.replacements.push(
+        {
+            dimension: 'minecraft:overworld',
+            target: 'minecraft:jungle',
+            biome: 'atmospheric:rainforest',
+            proportion: 0.3
+        }
+    )
+    BIOLITH.BIOME_PLACEMENT.sub_biomes.push(
+        {
+            dimension: 'minecraft:overworld',
+            target: 'atmospheric:rainforest',
+            biome: 'atmospheric:rainforest_basin',
+            criterion: {
+                type: 'biolith:value',
+                parameter: 'peaks_valleys',
+                max: -0.3
+            },
+        },
+        {
+            dimension: 'minecraft:overworld',
+            target: 'atmospheric:rainforest',
+            biome: 'atmospheric:sparse_rainforest',
+            criterion: {
+                type: 'biolith:value',
+                parameter: 'weirdness',
+                min: 0.0
+            },
+        },
+        {
+            dimension: 'minecraft:overworld',
+            target: 'atmospheric:sparse_rainforest',
+            biome: 'atmospheric:sparse_rainforest_basin',
+            criterion: {
+                type: 'biolith:value',
+                parameter: 'peaks_valleys',
+                max: -0.3
+            },
+        },
+    )
+    BIOLITH.transitionalBiome('atmospheric:rainforest', 'minecraft:river', 'atmospheric:rainforest_basin')
+    BIOLITH.transitionalBiome('atmospheric:rainforest', 'nomansland:lush_river', 'atmospheric:rainforest_basin')
+    BIOLITH.transitionalBiome('atmospheric:sparse_rainforest', 'minecraft:river', 'atmospheric:sparse_rainforest_basin')
+    BIOLITH.transitionalBiome('atmospheric:sparse_rainforest', 'nomansland:lush_river', 'atmospheric:sparse_rainforest_basin')
+
+
+    // spiny thicket
+    BIOLITH.transitionalBiome('minecraft:desert', 'atmospheric:dunes', 'atmospheric:spiny_thicket')
+    BIOLITH.transitionalBiome('atmospheric:dunes', 'minecraft:desert', 'atmospheric:spiny_thicket')
+
+
+    replaceEffects(e, [
+        'atmospheric:dunes',
+        'atmospheric:flourishing_dunes',
+        'atmospheric:petrified_dunes',
+        'atmospheric:rocky_dunes',
+        'atmospheric:scrubland',
+        // 'atmospheric:snowy_scrubland',
+    ], {
+        // fog_color: 15527891,
+        foliage_color: 12762457,
+        grass_color: 14663027,
+        sky_color: 12113081,
+        water_color: 4106959,
+        water_fog_color: 3048361
+    }, 'dunes')
 
     /*
     removeFeatures(e, [

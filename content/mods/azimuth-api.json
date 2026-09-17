@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "RpH8tmT1",
       "slug": "azimuth-api",
-      "versionId": "T4qf29AQ",
-      "versionNumber": "1.4.3",
-      "filename": "azimuth-1.4.3.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/RpH8tmT1/versions/T4qf29AQ/azimuth-1.4.3.jar",
-      "sha1": "8d69e1505346d6f7108db2f9d191e6fdea516e96",
-      "sha512": "d273cbeed71a1ef4a1fc1bb1327644273dde989721a45e11fff4497dcbdd0812f2ef9555a6fbaf480e4f16462eafe7dc73308c18ed7742176330ec0e85ae8285",
-      "fileSize": 143479
+      "versionId": "82WgkpfK",
+      "versionNumber": "1.4.8",
+      "filename": "azimuth-1.4.8.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/RpH8tmT1/versions/82WgkpfK/azimuth-1.4.8.jar",
+      "sha1": "329b649c23a84dcbcbc2172df38a5d87afe94cf1",
+      "sha512": "9faf97c9b6eb38bf3187977e660e89530c2a6e862f50380b4628e839d89cee27f1b32ff94d1283200796d816d3325c2dbd00a0d3f49898a50c3f235e0b02038c",
+      "fileSize": 142919
     }
   },
   "dependents": [

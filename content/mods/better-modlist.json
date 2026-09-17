@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "sbpqhzIG",
       "slug": "better-modlist",
-      "versionId": "ecClLUKT",
-      "versionNumber": "21.1.0",
-      "filename": "better_modlist-21.1.0.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/sbpqhzIG/versions/ecClLUKT/better_modlist-21.1.0.jar",
-      "sha1": "d3a1899f3976f04d7ce567f6e450ec1548a8b187",
-      "sha512": "ca0d3c9529dc2da108c6fdfe63f0f7f7261b71bfc132a5e8b2745e9e324c254a0ecd5f7140b8b44c50ca516185470c6dab778b9259122aa4ea32440f22bad04b",
-      "fileSize": 818709
+      "versionId": "XavNSFnf",
+      "versionNumber": "21.1.1",
+      "filename": "better_modlist-21.1.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/sbpqhzIG/versions/XavNSFnf/better_modlist-21.1.1.jar",
+      "sha1": "8dce8539dd11941ad48a0c8c8c9876b54a65f575",
+      "sha512": "cabcf78010f1d1ef599184a515704d84984c1eddcb41fd1bc77ee709cc804ea5a6ff25810e4a5a8c26dd0acd785fde7c4d05222dca850f02dabf9cd7f07138ae",
+      "fileSize": 818245
     }
   },
   "dependents": [],

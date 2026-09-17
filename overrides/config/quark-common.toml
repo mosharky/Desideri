@@ -331,7 +331,7 @@
 	"Ambient Discs" = true
 	"Ancient Tomes" = false
 	"Beacon Redirection" = true
-	"Bottled Cloud" = true
+	"Bottled Cloud" = false
 	"Color Runes" = false
 	"Endermosh Music Disc" = true
 	"Parrot Eggs" = true

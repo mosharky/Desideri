@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "wCbFXJKH",
       "slug": "darker-depths",
-      "versionId": "TTBfgVnW",
-      "versionNumber": "2.1.5-1.21.1",
-      "filename": "darkerdepths-2.1.5.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/wCbFXJKH/versions/TTBfgVnW/darkerdepths-2.1.5.jar",
-      "sha1": "303aa74594ad5e8b353361a01bbadcaaa766f11e",
-      "sha512": "db79576bb8c5625c0f7bf3692a5dfa15ba136bee780bc44b6cd649c41af4089094321aadcba98932643adf26b211197143fe8c1ba1cce524172e79aa30e67a70",
-      "fileSize": 2113705
+      "versionId": "yzhGIe6b",
+      "versionNumber": "2.1.6-1.21.1",
+      "filename": "darkerdepths-2.1.6.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/wCbFXJKH/versions/yzhGIe6b/darkerdepths-2.1.6.jar",
+      "sha1": "748a1c3694df35ae8373dc293725e3aff13e9831",
+      "sha512": "cb9aca36142d3baa1ec948fef4596a31a9324b4bf83e000c3d2b72ba5da98533e04fdb5fe2f2fecbe6063583a0a3b4b99b1b9a673b52e537c5b703e46f2c6db4",
+      "fileSize": 2118195
     }
   },
   "dependents": [],

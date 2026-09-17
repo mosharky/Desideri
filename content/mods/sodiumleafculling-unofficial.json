@@ -1,5 +1,5 @@
 {
-  "name": "SodiumLeafCulling-Unofficial",
+  "name": "Sodium Leaf Culling Unofficial",
   "side": "auto",
   "explicit": true,
   "disabled": false,
@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "xtym7fz7",
       "slug": "sodiumleafculling-unofficial",
-      "versionId": "DRC9JbfV",
-      "versionNumber": "neoforge-1.21.1-2.0.0",
-      "filename": "sodiumleafculling-neoforge-2.0.0-1.21.1.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/xtym7fz7/versions/DRC9JbfV/sodiumleafculling-neoforge-2.0.0-1.21.1.jar",
-      "sha1": "f7b175a433ed30bb41e25a31adbd49105dbfb11d",
-      "sha512": "7b1611461a77fad7aad7b3b2f29dbbb919738e6dfd99ddd706ec6af90301fae25da56d904a832679c50460116e4b3dc4ba1ffa31177d0f7f475ddfead76ed335",
-      "fileSize": 224785
+      "versionId": "7mGFwqgi",
+      "versionNumber": "3.1.1+mc1.21.1-neoforge",
+      "filename": "slc_unofficial-neoforge-3.1.1+1.21.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/xtym7fz7/versions/7mGFwqgi/slc_unofficial-neoforge-3.1.1%2B1.21.1.jar",
+      "sha1": "708393c36ccd81ec8619d902ebc6508f917df74f",
+      "sha512": "2e257a79e42238a21c25815d20868282dda2a77f068e611ec93c31024ac255264aaf178de784ce733e70e0ba82842a2f831d8d2e218317a3998e2942383e793b",
+      "fileSize": 223689
     }
   },
   "dependents": [],

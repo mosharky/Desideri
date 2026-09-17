@@ -33,6 +33,7 @@ function worldgen_Core(e) {
     ])
     const loaded = new Set()
     biomeModifiersToRemove.forEach(modifier => {
+        aa
         const [mod, id] = modifier.split(':')
         if (!loaded.has(mod) && Platform.isLoaded(mod)) {
             loaded.add(mod)
@@ -95,6 +96,223 @@ function worldgen_Core(e) {
         ]
     })
 
+
+    // ℹ️ savanna biomes overhaul (courtesy of nature's spirit) ℹ️
+    const savannaOverhaul = () => {
+        replaceEffects(e, ['minecraft:savanna', 'minecraft:savanna_plateau', 'minecraft:windswept_savanna'], {
+            water_color: 3902136,
+            water_fog_color: 2388383,
+        })
+
+        // adding windswept flowering acacia
+        registerFeature(e, CONFIGURED, 'minecraft:trees_savanna', {
+            type: 'minecraft:random_selector',
+            config: {
+                default: 'minecraft:oak_checked',
+                features: [
+                    { chance: 0.8, feature: 'minecraft:acacia_checked' },
+                    { chance: 0.1, feature: 'windswept:flowering_acacia_checked' }
+                ]
+            }
+        })
+        registerFeature(e, PLACED, 'minecraft:trees_savanna', {
+            feature: 'minecraft:trees_savanna',
+            placement: [
+                { type: 'minecraft:count', count: 1 },
+                { type: 'minecraft:rarity_filter', chance: 40 },
+                { type: 'minecraft:in_square' },
+                { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+                { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+                { type: 'minecraft:biome' }
+            ]
+        })
+        registerFeature(e, PLACED, 'minecraft:trees_savanna_dense', {
+            feature: 'minecraft:trees_savanna',
+            placement: [
+                { type: 'minecraft:count', count: 6 },
+                { type: 'minecraft:in_square' },
+                { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+                { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+                { type: 'minecraft:biome' }
+            ]
+        })
+
+        // new features
+        registerFeature(e, PLACED, 'kubejs:trees_savanna_noise', {
+            feature: 'minecraft:trees_savanna',
+            placement: [
+                {
+                    type: 'minecraft:noise_based_count',
+                    noise_factor: 300,
+                    noise_offset: 0,
+                    noise_to_count_ratio: 5
+                },
+                { type: 'minecraft:in_square' },
+                { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+                { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+                { type: 'minecraft:biome' }
+            ]
+        })
+        addFeatures(e, 'kubejs:trees_savanna_noise', 'minecraft:savanna', VEGETAL_DECORATION, 'trees_savanna_noise')
+
+        registerFeature(e, CONFIGURED, 'kubejs:patch_savanna_oat_grass', {
+            type: 'minecraft:flower',
+            config: {
+                feature: {
+                    feature: {
+                        type: 'minecraft:simple_block',
+                        config: {
+                            to_place: {
+                                type: 'minecraft:noise_provider',
+                                noise: {
+                                    amplitudes: [1],
+                                    firstOctave: 0
+                                },
+                                scale: 0.030833334,
+                                seed: 2445,
+                                states: [
+                                    { Name: 'minecraft:air' },
+                                    { Name: 'nomansland:oat_grass' },
+                                    { Name: 'nomansland:oat_grass' },
+                                    { Name: 'nomansland:oat_grass' },
+                                    { Name: 'nomansland:oat_grass' },
+                                    { Name: 'nomansland:oat_grass' },
+                                    { Name: 'minecraft:air' }
+                                ]
+                            }
+                        }
+                    },
+                    placement: [
+                        {
+                            type: 'minecraft:block_predicate_filter',
+                            predicate: { type: 'minecraft:matching_blocks', blocks: 'minecraft:air' }
+                        }
+                    ]
+                },
+                tries: 300,
+                xz_spread: 9,
+                y_spread: 1
+            }
+        })
+        registerFeature(e, PLACED, 'kubejs:patch_savanna_oat_grass', {
+            feature: 'kubejs:patch_savanna_oat_grass',
+            placement: [
+                {
+                    type: 'minecraft:noise_based_count',
+                    noise_factor: 20,
+                    noise_offset: 0,
+                    noise_to_count_ratio: 10
+                },
+                { type: 'minecraft:rarity_filter', chance: 2 },
+                { type: 'minecraft:in_square' },
+                { type: 'minecraft:heightmap', heightmap: 'MOTION_BLOCKING' },
+                { type: 'minecraft:biome' }
+            ]
+        })
+        addFeatures(e, 'kubejs:patch_savanna_oat_grass', [
+            'minecraft:savanna',
+            'minecraft:savanna_plateau',
+            'minecraft:windswept_savanna'
+        ], VEGETAL_DECORATION, 'patch_savanna_oat_grass')
+    }
+    savannaOverhaul()
+
+
+    // ℹ️ birch tree and biomes overhaul ℹ️
+    const birchOverhaul = () => {
+        const birch = getFeatureJson('atmospheric', CONFIGURED, 'atmospheric:aspen')
+        // change to green leaves and birch log
+        birch.config.foliage_provider.state.Name = 'minecraft:birch_leaves'
+        birch.config.trunk_provider = {
+            type: 'minecraft:simple_state_provider',
+            state: {
+                Name: 'minecraft:birch_log',
+                Properties: { axis: 'y' }
+            }
+        }
+        // make shorter
+        birch.config.trunk_placer.base_height = 7
+        birch.config.trunk_placer.height_rand_a = 3
+        birch.config.trunk_placer.height_rand_b = 4
+        registerFeature(e, CONFIGURED, 'minecraft:birch', birch)
+
+        const birch_bees_005 = global.deepCopy(birch)
+        birch_bees_005.config.decorators.push({ type: 'minecraft:beehive', probability: 0.05 })
+        registerFeature(e, CONFIGURED, 'minecraft:birch_bees_005', birch_bees_005)
+
+        const birch_bees_002 = global.deepCopy(birch)
+        birch_bees_002.config.decorators.push({ type: 'minecraft:beehive', probability: 0.02 })
+        registerFeature(e, CONFIGURED, 'minecraft:birch_bees_002', birch_bees_002)
+
+        const birch_bees_0002 = global.deepCopy(birch)
+        birch_bees_0002.config.decorators.push({ type: 'minecraft:beehive', probability: 0.002 })
+        registerFeature(e, CONFIGURED, 'minecraft:birch_bees_0002', birch_bees_0002)
+
+        const yellow_birch = global.deepCopy(birch)
+        yellow_birch.config.foliage_provider.state.Name = 'nomansland:yellow_birch_leaves'
+        registerFeature(e, CONFIGURED, 'nomansland:yellow_birch', yellow_birch)
+
+        const super_birch = global.deepCopy(birch)
+        super_birch.config.trunk_placer.base_height = 13
+        super_birch.config.trunk_placer.height_rand_a = 5
+        super_birch.config.trunk_placer.height_rand_b = 6
+        super_birch.config.decorators.push({
+            type: 'windswept:branch',
+            minHeight: 2,
+            state: {
+                state: {
+                    Name: 'minecraft:birch_log',
+                    Properties: { axis: 'y' }
+                }
+            }
+        })
+
+        const super_birch_bees = global.deepCopy(super_birch)
+        super_birch_bees.config.decorators.push({ type: 'minecraft:beehive', probability: 1.0 })
+        registerFeature(e, CONFIGURED, 'minecraft:super_birch_bees', super_birch_bees)
+
+        const super_birch_bees_0002 = global.deepCopy(super_birch)
+        super_birch_bees_0002.config.decorators.push({ type: 'minecraft:beehive', probability: 0.002 })
+        registerFeature(e, CONFIGURED, 'minecraft:super_birch_bees_0002', super_birch_bees_0002)
+
+        const super_yellow_birch_bees_0002 = global.deepCopy(super_birch_bees_0002)
+        super_yellow_birch_bees_0002.config.foliage_provider.state.Name = 'nomansland:yellow_birch_leaves'
+        registerFeature(e, CONFIGURED, 'kubejs:super_yellow_birch_bees_0002', super_yellow_birch_bees_0002)
+        registerFeature(e, PLACED, 'kubejs:super_yellow_birch_bees_0002', {
+            feature: 'kubejs:super_yellow_birch_bees_0002',
+            placement: [wouldSurvive('minecraft:birch_sapling')]
+        })
+
+        // old growth forest trees
+        registerFeature(e, CONFIGURED, 'minecraft:birch_tall', {
+            type: 'minecraft:random_selector',
+            config: {
+                default: 'minecraft:birch_bees_0002',
+                features: [
+                    { chance: 0.3, feature: 'minecraft:super_birch_bees_0002' },
+                    { chance: 0.6, feature: 'kubejs:super_yellow_birch_bees_0002' }
+                ]
+            }
+        })
+
+        // change regular forest trees
+        registerFeature(e, CONFIGURED, 'minecraft:trees_birch_and_oak', {
+            type: 'minecraft:random_selector',
+            config: {
+                default: 'minecraft:oak_bees_0002',
+                features: [
+                    { chance: 0.2, feature: 'minecraft:birch_bees_0002' },
+                    { chance: 0.1, feature: 'nomansland:yellow_birch_checked' },
+                    { chance: 0.3, feature: 'minecraft:fancy_oak_bees_0002' },
+                ]
+            }
+        })
+    }
+    birchOverhaul()
+
+
+
+
     /*
     // ⚠️⚠️⚠️⚠️⚠️ Vanilla feature overrides ⚠️⚠️⚠️⚠️⚠️
     // remove maple from NML & replace pine with fir
@@ -147,8 +365,9 @@ function worldgen_Core(e) {
             ]
         }
     })
+    */
 
-    // ⚠️ REVERTING NML CHANGES TO VANILLA FEATURES ⚠️
+    // ⚠️ REVERTING/CHANGING NML CHANGES TO VANILLA FEATURES ⚠️
     const thisFunctionExistsSoYouCanCollapseIt = () => {
         // revert cherry trees to vanilla shape
         registerFeature(e, CONFIGURED, 'minecraft:cherry_bees_005', {
@@ -481,7 +700,6 @@ function worldgen_Core(e) {
         })
     }
     thisFunctionExistsSoYouCanCollapseIt()
-    */
 }
 
 

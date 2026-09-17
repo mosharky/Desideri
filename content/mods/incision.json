@@ -8,12 +8,12 @@
     "curseforge": {
       "id": "1501949",
       "slug": "incision",
-      "versionId": "8222828",
-      "versionNumber": "incision-1.0.11- BETA-neoforge-1.21.1.jar",
-      "filename": "incision-1.0.11-neoforge-1.21.1.jar",
-      "downloadUrl": "https://edge.forgecdn.net/files/8222/828/incision-1.0.11-neoforge-1.21.1.jar",
-      "sha1": "fc05d58534e5a71df9bf92abef1a396a8ee2eeca",
-      "fileSize": 3525175
+      "versionId": "8658948",
+      "versionNumber": "incision-1.0.12-neoforge-1.21.1.jar",
+      "filename": "incision-1.0.12-neoforge-1.21.1.jar",
+      "downloadUrl": "https://edge.forgecdn.net/files/8658/948/incision-1.0.12-neoforge-1.21.1.jar",
+      "sha1": "80e1746897aa05fdf7d7d033a9e7d97d93bd8d6c",
+      "fileSize": 3615049
     }
   },
   "dependents": [],

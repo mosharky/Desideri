@@ -1,0 +1,23 @@
+{
+  "name": "Not Enough Crashes",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "yM94ont6",
+      "slug": "notenoughcrashes",
+      "versionId": "alR8L7vF",
+      "versionNumber": "4.4.9+1.21.1-neoforge",
+      "filename": "notenoughcrashes-neoforge-4.4.9+1.21.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/yM94ont6/versions/alR8L7vF/notenoughcrashes-neoforge-4.4.9%2B1.21.1.jar",
+      "sha1": "4108c653e3e0d54a6df3c5354a752ea0ea801ffe",
+      "sha512": "912c31c6e806e457a501742d668b82b70f03d5cdbb722f09da27ba19f3408f236b1704ccf9ed4a2bee82cc272ba78671bfe1fd8b46baefef1ac4ee56d703f04f",
+      "fileSize": 598916
+    }
+  },
+  "dependents": [],
+  "clientSide": "optional",
+  "serverSide": "optional"
+}

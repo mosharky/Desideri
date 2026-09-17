@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "p8RJPJIC",
       "slug": "ixeris",
-      "versionId": "5fkEzcb9",
-      "versionNumber": "4.6.2+1.21.1-neoforge",
-      "filename": "Ixeris-4.6.2+1.21.1-neoforge.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/p8RJPJIC/versions/5fkEzcb9/Ixeris-4.6.2%2B1.21.1-neoforge.jar",
-      "sha1": "e63382006d713d0bc24000821d256a17c624e438",
-      "sha512": "e1d5514f94aed80c8bcf09b0dfe1b9dd6b11273e112b9eb6e3365ec8685b314ae20f6d4d1edd7c2b1f4b3138f0f2e15a2a3d661ae8a81f3229c23bca65ab4310",
-      "fileSize": 681754
+      "versionId": "w7GJlPMp",
+      "versionNumber": "4.6.5+1.21.1-neoforge",
+      "filename": "Ixeris-4.6.5+1.21.1-neoforge.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/p8RJPJIC/versions/w7GJlPMp/Ixeris-4.6.5%2B1.21.1-neoforge.jar",
+      "sha1": "390d3b9f0486d6637109683913f22a958d870af2",
+      "sha512": "e0dc4c12d6e0abc2a0153edf8fc1a0f11bfdea29f3a9e6b18df2a4c47a4c648707d3da31ff1fdc8c584b40e702a6cbea283326d9a1f07365605c14658134914f",
+      "fileSize": 685836
     }
   },
   "dependents": [],

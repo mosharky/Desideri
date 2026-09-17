@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "tabs": {},
+  "deleted_advancements": {},
+  "derived_presentation": {
+    "aeronautics:root": {
+      "title": "Create Aeronautics",
+      "icon": "aeronautics:white_envelope",
+      "background": "aeronautics:textures/gui/advancement.png"
+    },
+    "brewinandchewin:main/root": {
+      "title": "Brewin\u0027 and Chewin\u0027",
+      "icon": "brewinandchewin:beer",
+      "background": "minecraft:textures/block/spruce_planks.png"
+    },
+    "create:root": {
+      "title": "Welcome to Create",
+      "icon": "create:brass_hand",
+      "background": "create:textures/gui/advancements.png"
+    },
+    "creaturefeature:root": {
+      "title": "Creature Feature.",
+      "icon": "creaturefeature:sleeping_powder",
+      "background": "creaturefeature:textures/gui/eeper_advancement.png"
+    },
+    "darkerdepths:story/root": {
+      "title": "Darker Depths",
+      "icon": "darkerdepths:glowshroom",
+      "background": "darkerdepths:textures/block/duskrock.png"
+    },
+    "farmersdelight:main/root": {
+      "title": "Farmer\u0027s Delight",
+      "icon": "farmersdelight:cooking_pot",
+      "background": "minecraft:textures/block/bricks.png"
+    },
+    "fieldguide:root": {
+      "title": "Field Guide",
+      "icon": "minecraft:spyglass",
+      "background": "minecraft:textures/block/oak_log.png"
+    },
+    "simulated:root": {
+      "title": "Create Simulated",
+      "icon": "simulated:contraption_diagram",
+      "background": "simulated:textures/gui/advancement.png"
+    },
+    "minecraft:adventure/root": {
+      "title": "Adventure",
+      "icon": "minecraft:map",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+    }
+  }
+}

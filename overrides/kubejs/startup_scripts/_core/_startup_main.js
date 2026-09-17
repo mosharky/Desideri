@@ -65,6 +65,8 @@ function postInit() {
     removals_AnotherFurniture()
     // removals_Twigs()
     removals_BitsNBobs()
+    removals_BlockBox()
+    removals_NoMansDelight()
     
     removals_Core_Final()
 

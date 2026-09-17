@@ -1,0 +1,22 @@
+{
+  "name": "Backpacked",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "curseforge",
+  "sources": {
+    "curseforge": {
+      "id": "352835",
+      "slug": "backpacked",
+      "versionId": "7866688",
+      "versionNumber": "Backpacked 3.0.5",
+      "filename": "backpacked-neoforge-1.21.1-3.0.5.jar",
+      "downloadUrl": "https://edge.forgecdn.net/files/7866/688/backpacked-neoforge-1.21.1-3.0.5.jar",
+      "sha1": "5c610383fc803d62825a2111e16ea01680bf25d9",
+      "fileSize": 1282359
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

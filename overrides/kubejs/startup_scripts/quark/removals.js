@@ -52,6 +52,9 @@ function removals_Quark() {
         'quark:iron_button',
         'quark:gold_button',
         'quark:moss_paste',
+        'quark:bottled_cloud',
+        'quark:cloud',
+        'quark:sturdy_stone'
     ])
 
     global.ITEM_SWAPPER.set('quark:crab_leg', 'spawn:coastal_crab_claw')

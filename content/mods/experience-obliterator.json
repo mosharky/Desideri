@@ -1,0 +1,23 @@
+{
+  "name": "Experience Obliterator",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "TmZqgslV",
+      "slug": "experience-obliterator",
+      "versionId": "XYrLjuFc",
+      "versionNumber": "1.0.1-1.21.1-neoforge",
+      "filename": "experience_obliterator-neoforge-1.21.1-1.0.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/TmZqgslV/versions/XYrLjuFc/experience_obliterator-neoforge-1.21.1-1.0.1.jar",
+      "sha1": "37cbe6f5bb5b88c67ecac5e31ac1ac328e4e1f25",
+      "sha512": "bcacd11dc10618db6a7a5e971075ee5bf91e10a2eee7d3ff5c3b09b970f4ca9f5deff1feb2bde45d2adbb35ccadd7486da0b229e918c25243895f11814dc9c64",
+      "fileSize": 166872
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

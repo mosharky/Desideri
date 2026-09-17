@@ -1,25 +1,24 @@
 {
-  "name": "Geckolib",
+  "name": "GeckoLib",
   "side": "auto",
   "explicit": false,
   "disabled": false,
-  "preferred": "modrinth",
+  "preferred": "curseforge",
   "sources": {
-    "modrinth": {
-      "id": "8BmcQJ2H",
+    "curseforge": {
+      "id": "388172",
       "slug": "geckolib",
-      "versionId": "tPkJmim6",
-      "versionNumber": "4.9.2",
-      "filename": "geckolib-neoforge-1.21.1-4.9.2.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tPkJmim6/geckolib-neoforge-1.21.1-4.9.2.jar",
-      "sha1": "14c64013cadee7d28f3685f94350f9a4d2ec6d86",
-      "sha512": "c91012b16cc40c8f48f69b78cb8e2e5c006486ae2431fbd289dfc01be7a4217294becea22d83a155d6b32b3969450df871352a3695e1452168b84f41355f7b9e",
-      "fileSize": 630584
+      "versionId": "8893490",
+      "versionNumber": "NeoForge 1.21.1 4.9.3",
+      "filename": "geckolib-neoforge-1.21.1-4.9.3.jar",
+      "downloadUrl": "https://edge.forgecdn.net/files/8893/490/geckolib-neoforge-1.21.1-4.9.3.jar",
+      "sha1": "5cfe835472a5c5457ae9ac192d9d7b317454d5ac",
+      "fileSize": 634531
     }
   },
   "dependents": [
-    "wCbFXJKH"
+    "1501949"
   ],
   "clientSide": "required",
-  "serverSide": "optional"
+  "serverSide": "required"
 }

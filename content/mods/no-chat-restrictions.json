@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "z440MEwJ",
       "slug": "no-chat-restrictions",
-      "versionId": "GtCgmBXp",
-      "versionNumber": "NeoForge-MC1.21.11-v1.0.0",
-      "filename": "NoChatRestrictions-NeoForge-MC1.21.11-v1.0.0.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/z440MEwJ/versions/GtCgmBXp/NoChatRestrictions-NeoForge-MC1.21.11-v1.0.0.jar",
-      "sha1": "9e564afb3c2e69fecf401f54f51f4bce335aea28",
-      "sha512": "81593fd6b77b7957645c0349df38098107684a6e20d1e9824453a7d42b0456f64892d65416e6b073edf863aa047c54335cdae48a707bb87b4f8eaa3580e54a31",
-      "fileSize": 9116
+      "versionId": "W4xlmhAG",
+      "versionNumber": "NeoForge-MC1.21.11-v1.0.2",
+      "filename": "NoChatRestrictions-NeoForge-MC1.21.11-v1.0.2.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/z440MEwJ/versions/W4xlmhAG/NoChatRestrictions-NeoForge-MC1.21.11-v1.0.2.jar",
+      "sha1": "f1287060af0efbd5e85de052be9d550709561ab1",
+      "sha512": "6f9308b06c882b1e0e9b39790be1fe42b5a35c8b534319aaa326b88240c356a53e34866f601778fd74d7973e609285974897761212305224ac4f49126085359c",
+      "fileSize": 10508
     }
   },
   "dependents": [],

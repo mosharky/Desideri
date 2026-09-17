@@ -1,0 +1,23 @@
+{
+  "name": "Farmer's Respite Unofficial Port",
+  "side": "auto",
+  "explicit": true,
+  "disabled": false,
+  "preferred": "modrinth",
+  "sources": {
+    "modrinth": {
+      "id": "AioQLjKj",
+      "slug": "farmers-respite-unofficial-port",
+      "versionId": "aChm7DAW",
+      "versionNumber": "3.0.1",
+      "filename": "farmersrespite-1.21.1-3.0.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/AioQLjKj/versions/aChm7DAW/farmersrespite-1.21.1-3.0.1.jar",
+      "sha1": "9da31eaa6ac8fcfae8d4d53323aa04ad11f054b0",
+      "sha512": "6b3b8a6b862cde8cf9089945020c61be18ae4f644b7fe9e24e2458d30100512e042fe7bd7637b58cad8bc11bc3415dc610931dc56329f54595b5ded16d77c8f8",
+      "fileSize": 673199
+    }
+  },
+  "dependents": [],
+  "clientSide": "required",
+  "serverSide": "required"
+}

@@ -8,12 +8,12 @@
     "curseforge": {
       "id": "1091339",
       "slug": "alltheleaks",
-      "versionId": "8553655",
-      "versionNumber": "alltheleaks-1.1.11+1.21.1-neoforge.jar",
-      "filename": "alltheleaks-1.1.11+1.21.1-neoforge.jar",
-      "downloadUrl": "https://edge.forgecdn.net/files/8553/655/alltheleaks-1.1.11%2b1.21.1-neoforge.jar",
-      "sha1": "f94d617b2e887e4bee6f54377c0a931bae823032",
-      "fileSize": 540482
+      "versionId": "8648639",
+      "versionNumber": "alltheleaks-1.1.12+1.21.1-neoforge.jar",
+      "filename": "alltheleaks-1.1.12+1.21.1-neoforge.jar",
+      "downloadUrl": "https://edge.forgecdn.net/files/8648/639/alltheleaks-1.1.12%2b1.21.1-neoforge.jar",
+      "sha1": "d69b9e98e957418ca0ab768b79983e68ffbfcd49",
+      "fileSize": 562895
     }
   },
   "dependents": [],

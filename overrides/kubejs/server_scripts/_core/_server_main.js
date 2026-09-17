@@ -4,6 +4,9 @@
 // https://github.com/kube-mods/kubejs/issues/1135#issuecomment-4683058051
 RecipeViewerEvents.removeCategories(e => {
     e.remove('woodworks:sawmill')
+    e.remove('create:fan_smoking')
+    e.remove('create:fan_blasting')
+    e.remove('create:fan_haunting')
 })
 
 ServerEvents.tags('item', e => {
@@ -17,9 +20,14 @@ ServerEvents.tags('item', e => {
 
 ServerEvents.tags('block', e => {
     blockTags_Core(e)
-    // blockTags_SnowRealMagic(e)
-    // blockTags_BountifulFares(e)
+    blockTags_SnowRealMagic(e)
+    blockTags_BountifulFares(e)
     blockTags_FieldGuide(e)
+    blockTags_Create(e)
+})
+
+ServerEvents.tags('fluid', e => {
+    fluidTags_Create(e)
 })
 
 ServerEvents.tags('entity_type', e => {
@@ -83,6 +91,7 @@ ServerEvents.recipes(e => {
     recipes_MinersDelight(e)
     recipes_AbnormalsDelight(e)
     recipes_Spawn(e)
+    recipes_Galosphere(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.set.forEach(removal => {
@@ -116,18 +125,23 @@ ServerEvents.generateData('after_mods', e => {
     worldgen_Environmental(e)
     worldgen_Neapolitan(e)
     worldgen_CavernsAndChasms(e)
-    // worldgen_Galosphere(e)
+    worldgen_Galosphere(e)
     // worldgen_MyNethersDelight(e)
     // worldgen_NaturesSpirit(e)
-    // worldgen_Oreganized(e)
-    // worldgen_SnowySpirit(e)
-    // worldgen_FarmersDelight(e)
-    // worldgen_BountifulFares(e)
-    // worldgen_NoMansLand(e)
+    worldgen_Oreganized(e)
+    worldgen_SnowySpirit(e)
+    worldgen_FarmersDelight(e)
+    worldgen_BountifulFares(e)
+    worldgen_NoMansLand(e)
     // worldgen_ArtsAndCrafts(e)
-    // worldgen_Embers(e)
-    // worldgen_Malum(e)
+    worldgen_Embers(e)
+    worldgen_Malum(e)
     worldgen_Windswept(e)
+    worldgen_Naturalist(e)
+    worldgen_UpgradeAquatic(e)
+
+    // this has to be last
+    worldgen_Biolith(e)
 
     structures_Core(e)
 
@@ -147,6 +161,10 @@ LootJS.lootTables(e => {
 
     const noBlocks = e.modifyLootTables(/(?!.*:blocks\/).*/)
     lootRemovals_Core_NoBlocks(noBlocks)
+})
+
+LootJS.modifiers(e => {
+    lootModifiers_Galosphere(e)
 })
 
 

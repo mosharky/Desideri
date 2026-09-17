@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "XaDC71GB",
       "slug": "lithostitched",
-      "versionId": "qPASucBM",
-      "versionNumber": "1.7.13-neoforge-21.1",
-      "filename": "lithostitched-1.7.13-neoforge-21.1.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/XaDC71GB/versions/qPASucBM/lithostitched-1.7.13-neoforge-21.1.jar",
-      "sha1": "771a104dde071e16e67c7cd3149f7c3015375483",
-      "sha512": "04409013edce65678d02489a7b830ba7d5e18e7c705243c8208f52661da62e7e337a09fe2797c85d7a00bc66cb50949b157b267afd216e7b900ddde9849dff32",
-      "fileSize": 852541
+      "versionId": "xDAotknu",
+      "versionNumber": "1.8.0+beta6-neoforge-21.1",
+      "filename": "lithostitched-1.8.0+beta6-neoforge-21.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/XaDC71GB/versions/xDAotknu/lithostitched-1.8.0%2Bbeta6-neoforge-21.1.jar",
+      "sha1": "b8526bb7fcfb844ce91513ab349c408dd1a8279e",
+      "sha512": "d3654fdab95ca5b929778a21fb30c2124f6f66e3c6067af23595301800d797f584dd099ce046f8ae288a6084e92c46a161a8238d19ac793bd3bface2b3b2eef8",
+      "fileSize": 978169
     }
   },
   "dependents": [],

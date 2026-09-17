@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "VsM5EDoI",
       "slug": "blueprint",
-      "versionId": "LMGtMapI",
-      "versionNumber": "8.1.1",
-      "filename": "blueprint-1.21.1-8.1.1.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/VsM5EDoI/versions/LMGtMapI/blueprint-1.21.1-8.1.1.jar",
-      "sha1": "afe7842dbb10435917e5fb576be21883aaeba6f2",
-      "sha512": "44929a5a312a5dcc06603b8a36ca2a31e495c40efa89ec8c647353d3d3c56b12b0eb0d2bcfad454821df55168a0f3e84d485e73da5ba286d4723f96d298b8b18",
-      "fileSize": 1202822
+      "versionId": "FHOjk8Ez",
+      "versionNumber": "8.2.0",
+      "filename": "blueprint-1.21.1-8.2.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/VsM5EDoI/versions/FHOjk8Ez/blueprint-1.21.1-8.2.0.jar",
+      "sha1": "b947d5faef872a3f4c856a814c994d70f2065666",
+      "sha512": "0b523c2d53a56676286ddd13adbe65b1a24f5af6040dbec6af9a38cc535b7ba2531a1879afb7a496c407683eacbfbed22701053861a5fd12271b08ac93239db4",
+      "fileSize": 1214507
     }
   },
   "dependents": [

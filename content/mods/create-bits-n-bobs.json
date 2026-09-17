@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "T8bvmqVZ",
       "slug": "create-bits-n-bobs",
-      "versionId": "qJ2wZ6WX",
-      "versionNumber": "2.1.15-beta",
-      "filename": "bits_n_bobs-2.1.15-beta.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/T8bvmqVZ/versions/qJ2wZ6WX/bits_n_bobs-2.1.15-beta.jar",
-      "sha1": "6b2d5ee0f19918387a581e041ee0748af6990473",
-      "sha512": "65f803bae922c17f83e4227c1f811508044adf826fb1bfb09c78abb40c036424546356c502ea80083de527bb0ead4aeae7069d8b938d84ec518647fb0c69b313",
-      "fileSize": 2768502
+      "versionId": "eqN5R6vl",
+      "versionNumber": "2.3.1",
+      "filename": "bits_n_bobs-2.3.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/T8bvmqVZ/versions/eqN5R6vl/bits_n_bobs-2.3.1.jar",
+      "sha1": "12325ea9e0e36ac15243d2d3dff9d591839c94b1",
+      "sha512": "60b35ac2103562770bcd26f3788794e8b41eac8f9710eefde725cab0d03aa44a205c6e74eea1008c60e2efb60f9bc7b7c10cd9f05b0fa225920048283847f1b5",
+      "fileSize": 2501525
     }
   },
   "dependents": [],

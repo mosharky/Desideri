@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "kCbtgaek",
       "slug": "manual-labour",
-      "versionId": "a3matl2D",
-      "versionNumber": "1.1.0-1.21.1",
-      "filename": "manual_labour-1.21.1-1.1.0.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/kCbtgaek/versions/a3matl2D/manual_labour-1.21.1-1.1.0.jar",
-      "sha1": "47c1b2e19bbf3126fe2ad8ea13efc3bf2bdc8c9d",
-      "sha512": "4d8bd42bd1f0d7d587b6a8f92f9aa5ba2c80097d13e59418bdf019b644f09379a941435f8bda0ecfd8a0c0d3be6dd97233fd6341edafe979dbab22ed12359285",
-      "fileSize": 588273
+      "versionId": "wtVCyKqb",
+      "versionNumber": "2.4.0-1.21.1",
+      "filename": "manual_labour-1.21.1-2.4.0.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/kCbtgaek/versions/wtVCyKqb/manual_labour-1.21.1-2.4.0.jar",
+      "sha1": "5186e60bb5ddd2760b177d437b060e54c3675485",
+      "sha512": "cc5e27660204a108df6ad840193e0c72982edfb0ef765a4e102fad15ca414512e87aa2af485d743d9f93321178805fe941ddc3b8f672fad45c78cbd1c54f2bfb",
+      "fileSize": 2359016
     }
   },
   "dependents": [],

@@ -1,6 +1,8 @@
 function removals_Windswept() {
     global.REMOVALS.add([
         /windswept:.*icicle.*/,
+        /windswept:packed_ice_brick.*/,
+        'windswept:chiseled_packed_ice_bricks',
         // /windswept:.*leaf_pile/,
         // 'windswept:gingerbread_block',
         // 'windswept:glazed_gingerbread_block',

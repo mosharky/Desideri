@@ -1,8 +1,5 @@
 /** @param {$KubeDataGenerator} e  */
 function worldgen_Windswept(e) {
-    // Disable icicles
-    removeBiomeModifier(e, 'windswept:add_feature/icicles')
-
     // Disable Lavendar and Tundra biomes
     disableBlueprintBiome(e, 'windswept:chestnut')
     disableBlueprintBiome(e, 'windswept:lavender')
@@ -10,6 +7,11 @@ function worldgen_Windswept(e) {
     disableBlueprintBiome(e, 'windswept:savanna')
     disableBlueprintBiome(e, 'windswept:tundra')
 
+    removeBiomeModifier(e, 'windswept:add_feature/icicles')
+    // re-implemented in core/worldgen
+    removeBiomeModifier(e, 'windswept:add_feature/rare_flowering_acacia_trees')
+    // TODO: find a home for this
+    removeBiomeModifier(e, 'windswept:add_feature/sandy_sprouts')
 
     /*
     addFeatures(e, [

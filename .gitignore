@@ -54,4 +54,10 @@ config/spark/tmp-client/
 cherishedworlds-favorites.dat
 .probe/
 .vscode/probe.code-snippets
+cache/
+# config
 config/sodium-fingerprint.json
+config/emi-accelerator/stack-cache.emic
+config/emi-accelerator/reload-timings.json
+config/asyncparticles/asyncparticles-mixin.properties
+config/fabric/indigo-renderer.properties

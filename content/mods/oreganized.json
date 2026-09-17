@@ -8,13 +8,13 @@
     "modrinth": {
       "id": "2FJutzEL",
       "slug": "oreganized",
-      "versionId": "IfqSv0rv",
-      "versionNumber": "5.1.2",
-      "filename": "Oreganized 1.21.1-5.1.2.jar",
-      "downloadUrl": "https://cdn.modrinth.com/data/2FJutzEL/versions/IfqSv0rv/Oreganized%201.21.1-5.1.2.jar",
-      "sha1": "8088b583285249607903f8cbc3f0d0e44fc51675",
-      "sha512": "ef7689c85a7098597746c6e5171712a248c5f952ba8b70d3c2d8ce74164bf0dbbe555b17d6ce5a07b29de6e56a056f2a6afc040b03b490f25cadb0dd561d09b5",
-      "fileSize": 3244954
+      "versionId": "wmlOifL1",
+      "versionNumber": "5.2.1",
+      "filename": "Oreganized 1.21.1-5.2.1.jar",
+      "downloadUrl": "https://cdn.modrinth.com/data/2FJutzEL/versions/wmlOifL1/Oreganized%201.21.1-5.2.1.jar",
+      "sha1": "e4e06be302a31438757ad3fd7e5f0620b8e3324d",
+      "sha512": "954dc5749a76d537281cd7008e48dcef5bdf0fc5fd37a440b2c01514de9a5345ce8d2a433e70e4b2829411324dd7731fba08bd9c55c02de63b9fddf165038b9b",
+      "fileSize": 5590601
     }
   },
   "dependents": [],
