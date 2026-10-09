@@ -47,6 +47,46 @@
       "title": "Adventure",
       "icon": "minecraft:map",
       "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+    },
+    "minecraft:story/root": {
+      "title": "Minecraft",
+      "icon": "minecraft:grass_block",
+      "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "minecraft:husbandry/root": {
+      "title": "Husbandry",
+      "icon": "minecraft:hay_block",
+      "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
+    },
+    "minecraft:nether/root": {
+      "title": "Nether",
+      "icon": "minecraft:red_nether_bricks",
+      "background": "minecraft:textures/gui/advancements/backgrounds/nether.png"
+    },
+    "minecraft:end/root": {
+      "title": "The End",
+      "icon": "minecraft:end_stone",
+      "background": "minecraft:textures/gui/advancements/backgrounds/end.png"
+    },
+    "bountifulfares:bountiful_fares": {
+      "title": "Bountiful Fares",
+      "icon": "bountifulfares:passion_fruit",
+      "background": "minecraft:textures/block/farmland_moist.png"
+    },
+    "incision:calciumlegos": {
+      "title": "Calcium Legos",
+      "icon": "incision:molar_carrion",
+      "background": "minecraft:textures/block/stone.png"
+    },
+    "incision:momsspagetti": {
+      "title": "Mom\u0027s Spagetti",
+      "icon": "incision:intestine",
+      "background": "minecraft:textures/block/stone.png"
+    },
+    "incision:tonightsthenight": {
+      "title": "Tonight\u0027s The Night",
+      "icon": "incision:smear",
+      "background": "minecraft:textures/block/stone.png"
     }
   }
 }

@@ -5,13 +5,15 @@ Platform.setModName('eidolon_repraised', 'Eidolon')
 Platform.setModName('embers', 'Embers')
 // Platform.setModName('incision', 'Incision')
 
+constructWoodTypes()
+
 function postInit() {
     // console.log($WoodTypeRegistry.getTypes())
     // console.log($EveryCompat.getCompatMods())
     // console.log($EveryCompat.getDependencies())
     // console.log($ModEntriesConfigs.isEntryEnabled("atmospheric:yucca", "woodworks:chest"))
     
-    constructWoodTypes()
+    validateWodTypes()
 
     // Adding items to global.REMOVALS and global swaps
     removals_Core()
@@ -76,7 +78,6 @@ function postInit() {
     // Virtual blockwsap (without using the blockswap mod)
     processSwappers()
 }
-
 // For reloading
 if (global.INITIALIZED) postInit()
 

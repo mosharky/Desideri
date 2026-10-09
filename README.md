@@ -1,6 +1,6 @@
 # Desideri
 
-**Minecraft 1.21.1 · neoforge 21.1.250**, 179 mods (3 dependencies)
+**Minecraft 1.21.1 · neoforge 21.1.250**, 176 mods (3 dependencies)
 
 ## Contents
 
@@ -32,10 +32,10 @@
 - [Bookshelf](https://modrinth.com/project/bookshelf-lib) `21.1.81`
 - [Bountiful Fares](https://modrinth.com/project/bountiful-fares) `3.0.12`
 - [Brewin' And Chewin'](https://modrinth.com/project/brewin-and-chewin) `4.5.0+1.21.1-neoforge`
-- [Caverns & Chasms](https://modrinth.com/project/caverns-and-chasms) `3.0.0`
+- [Caverns & Chasms](https://modrinth.com/project/caverns-and-chasms) `3.0.1`
 - [Chalk](https://modrinth.com/project/chalk-mod) `2.0.2`
 - [Change of Cart](https://modrinth.com/project/change-of-cart) `3.0.0`
-- [Cirrus](https://modrinth.com/project/cirrus) `1.3.0`
+- [Cirrus](https://modrinth.com/project/cirrus) `1.4.1`
 - [Clayworks](https://modrinth.com/project/clayworks) `4.0.3`
 - [ClickThrough Plus](https://modrinth.com/project/clickthrough+) `3.5.0+1.21.1`
 - [Cloth Config API](https://modrinth.com/project/cloth-config) `15.0.140+neoforge`
@@ -78,7 +78,6 @@
 - [FerriteCore](https://modrinth.com/project/ferrite-core) `7.0.3-neoforge`
 - [Field Guide](https://modrinth.com/project/field-guide) `1.16.0-1.21.1-neoforge`
 - [Flerovium](https://modrinth.com/project/flerovium) `1.1.2`
-- [Forgified Fabric API](https://modrinth.com/project/forgified-fabric-api) `0.116.15+2.3.5+1.21.1`
 - Framework `Framework 0.13.11` (curseforge)
 - [Fzzy Config](https://modrinth.com/project/fzzy-config) `0.7.6+1.21+neoforge`
 - [Gallery](https://modrinth.com/project/gallery) `2.0.1`
@@ -132,7 +131,7 @@
 - [NoisiumForked](https://modrinth.com/project/noisiumforked) `2.7.0+mc1.21-1.21.1`
 - [Not Enough Crashes](https://modrinth.com/project/notenoughcrashes) `4.4.9+1.21.1-neoforge`
 - [Not Enough Recipe Book [NERB]](https://modrinth.com/project/notenoughrecipebook) `0.4.3`
-- [Oreganized](https://modrinth.com/project/oreganized) `5.2.1`
+- [Oreganized](https://modrinth.com/project/oreganized) `5.3.0`
 - [oωo (owo-lib)](https://modrinth.com/project/owo-lib) `0.12.15.5-beta.1+1.21`
 - [Patchouli](https://modrinth.com/project/patchouli) `1.21.1-93-neoforge`
 - [Placebo](https://modrinth.com/project/placebo) `1.21.1-9.9.2`
@@ -146,7 +145,6 @@
 - [Reliable EMI (REMI)](https://modrinth.com/project/reliable-emi) `4.6.8-1.21.1-neoforge`
 - [Reliable Requiem](https://modrinth.com/project/reliable-requiem) `1.3.0-1.21.1-neoforge`
 - [Rhino](https://modrinth.com/project/rhino) `2101.2.8-build.91+Rhino-1.21`
-- [Roxy](https://modrinth.com/project/roxy) `0.3.0-neoforge+mc1.21.1`
 - [Sable](https://modrinth.com/project/sable) `2.0.5+mc1.21.1`
 - [Scholar](https://modrinth.com/project/scholar) `1.2.5`
 - [Screenshot to Clipboard](https://modrinth.com/project/screenshot-to-clipboard) `1.0.10+neoforge`
@@ -172,7 +170,6 @@
 - [TooManyRecipeViewers](https://modrinth.com/project/tmrv) `0.9.0+mc.21.1`
 - [Tree Physics](https://modrinth.com/project/tree-physics) `neoforge-2.4`
 - [Upgrade Aquatic](https://modrinth.com/project/upgrade-aquatic) `7.0.1`
-- [voxy](https://modrinth.com/project/voxy) `0.2.16-beta`
 - [Windswept](https://modrinth.com/project/windswept) `4.0.2`
 - [Windswept Delights](https://modrinth.com/project/windswept-delights) `2.0.1`
 - [Woodworks](https://modrinth.com/project/woodworks) `4.0.2`

@@ -33,7 +33,6 @@ function worldgen_Core(e) {
     ])
     const loaded = new Set()
     biomeModifiersToRemove.forEach(modifier => {
-        aa
         const [mod, id] = modifier.split(':')
         if (!loaded.has(mod) && Platform.isLoaded(mod)) {
             loaded.add(mod)
@@ -313,7 +312,6 @@ function worldgen_Core(e) {
 
 
 
-    /*
     // ⚠️⚠️⚠️⚠️⚠️ Vanilla feature overrides ⚠️⚠️⚠️⚠️⚠️
     // remove maple from NML & replace pine with fir
     registerFeature(e, CONFIGURED, 'minecraft:trees_taiga', {
@@ -322,11 +320,13 @@ function worldgen_Core(e) {
             default: 'minecraft:spruce_checked',
             features: [
                 { chance: 0.33333334, feature: 'minecraft:pine_checked' },
-                { chance: 0.1, feature: 'natures_spirit:fir_checked' }
+                { chance: 0.2, feature: 'nomansland:pine_checked' },  // 'fir'
+                { chance: 0.2, feature: 'windswept:pine_checked' }  // instead of 
             ]
         }
     })
 
+    /*
     // add frosty fir trees to groves
     registerFeature(e, CONFIGURED, 'minecraft:trees_grove', {
         type: 'minecraft:random_selector',
@@ -335,33 +335,6 @@ function worldgen_Core(e) {
             features: [
                 { chance: 0.33, feature: 'nomansland:frosted_spruce_alt_checked' },
                 { chance: 0.1, feature: 'natures_spirit:frosty_fir_checked' }
-            ]
-        }
-    })
-
-    // redwood trees in mega taigas
-    registerFeature(e, CONFIGURED, 'minecraft:trees_old_growth_pine_taiga', {
-        type: 'minecraft:random_selector',
-        config: {
-            default: 'minecraft:spruce_checked',
-            features: [
-                { chance: 0.025, feature: 'minecraft:mega_spruce_checked' },
-                { chance: 0.4, feature: 'minecraft:mega_pine_checked' },
-                { chance: 0.05, feature: 'minecraft:pine_checked' },
-                { chance: 0.1, feature: 'natures_spirit:large_redwood_checked' },
-                { chance: 0.1, feature: 'natures_spirit:redwood_checked' },
-            ]
-        }
-    })
-    registerFeature(e, CONFIGURED, 'minecraft:trees_old_growth_spruce_taiga', {
-        type: 'minecraft:random_selector',
-        config: {
-            default: 'minecraft:spruce_checked',
-            features: [
-                { chance: 0.5, feature: 'minecraft:mega_spruce_checked' },
-                { chance: 0.1, feature: 'minecraft:pine_checked' },
-                { chance: 0.2, feature: 'natures_spirit:large_redwood_checked' },
-                { chance: 0.05, feature: 'natures_spirit:redwood_checked' },
             ]
         }
     })
@@ -687,6 +660,251 @@ function worldgen_Core(e) {
                     type: 'minecraft:straight_trunk_placer',
                     base_height: 5,
                     height_rand_a: 2,
+                    height_rand_b: 0
+                },
+                trunk_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_log',
+                        Properties: { axis: 'y' }
+                    }
+                }
+            }
+        })
+        registerFeature(e, CONFIGURED, 'minecraft:fancy_oak', {
+            type: 'minecraft:tree',
+            config: {
+                decorators: [],
+                dirt_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: { Name: 'minecraft:dirt' }
+                },
+                foliage_placer: {
+                    type: 'minecraft:fancy_foliage_placer',
+                    height: 4,
+                    offset: 4,
+                    radius: 2
+                },
+                foliage_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_leaves',
+                        Properties: {
+                            distance: '7',
+                            persistent: 'false',
+                            waterlogged: 'false'
+                        }
+                    }
+                },
+                force_dirt: false,
+                ignore_vines: true,
+                minimum_size: {
+                    type: 'minecraft:two_layers_feature_size',
+                    limit: 0,
+                    lower_size: 0,
+                    min_clipped_height: 4,
+                    upper_size: 0
+                },
+                trunk_placer: {
+                    type: 'minecraft:fancy_trunk_placer',
+                    base_height: 6,
+                    height_rand_a: 10,
+                    height_rand_b: 0
+                },
+                trunk_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_log',
+                        Properties: { axis: 'y' }
+                    }
+                }
+            }
+        })
+        registerFeature(e, CONFIGURED, 'minecraft:fancy_oak_bees', {
+            type: 'minecraft:tree',
+            config: {
+                decorators: [{ type: 'minecraft:beehive', probability: 1 },],
+                dirt_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: { Name: 'minecraft:dirt' }
+                },
+                foliage_placer: {
+                    type: 'minecraft:fancy_foliage_placer',
+                    height: 4,
+                    offset: 4,
+                    radius: 2
+                },
+                foliage_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_leaves',
+                        Properties: {
+                            distance: '7',
+                            persistent: 'false',
+                            waterlogged: 'false'
+                        }
+                    }
+                },
+                force_dirt: false,
+                ignore_vines: true,
+                minimum_size: {
+                    type: 'minecraft:two_layers_feature_size',
+                    limit: 0,
+                    lower_size: 0,
+                    min_clipped_height: 4,
+                    upper_size: 0
+                },
+                trunk_placer: {
+                    type: 'minecraft:fancy_trunk_placer',
+                    base_height: 6,
+                    height_rand_a: 10,
+                    height_rand_b: 0
+                },
+                trunk_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_log',
+                        Properties: { axis: 'y' }
+                    }
+                }
+            }
+        })
+        registerFeature(e, CONFIGURED, 'minecraft:fancy_oak_bees_005', {
+            type: 'minecraft:tree',
+            config: {
+                decorators: [{ type: 'minecraft:beehive', probability: 0.05 },],
+                dirt_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: { Name: 'minecraft:dirt' }
+                },
+                foliage_placer: {
+                    type: 'minecraft:fancy_foliage_placer',
+                    height: 4,
+                    offset: 4,
+                    radius: 2
+                },
+                foliage_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_leaves',
+                        Properties: {
+                            distance: '7',
+                            persistent: 'false',
+                            waterlogged: 'false'
+                        }
+                    }
+                },
+                force_dirt: false,
+                ignore_vines: true,
+                minimum_size: {
+                    type: 'minecraft:two_layers_feature_size',
+                    limit: 0,
+                    lower_size: 0,
+                    min_clipped_height: 4,
+                    upper_size: 0
+                },
+                trunk_placer: {
+                    type: 'minecraft:fancy_trunk_placer',
+                    base_height: 6,
+                    height_rand_a: 10,
+                    height_rand_b: 0
+                },
+                trunk_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_log',
+                        Properties: { axis: 'y' }
+                    }
+                }
+            }
+        })
+        registerFeature(e, CONFIGURED, 'minecraft:fancy_oak_bees_0002', {
+            type: 'minecraft:tree',
+            config: {
+                decorators: [{ type: 'minecraft:beehive', probability: 0.002 },],
+                dirt_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: { Name: 'minecraft:dirt' }
+                },
+                foliage_placer: {
+                    type: 'minecraft:fancy_foliage_placer',
+                    height: 4,
+                    offset: 4,
+                    radius: 2
+                },
+                foliage_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_leaves',
+                        Properties: {
+                            distance: '7',
+                            persistent: 'false',
+                            waterlogged: 'false'
+                        }
+                    }
+                },
+                force_dirt: false,
+                ignore_vines: true,
+                minimum_size: {
+                    type: 'minecraft:two_layers_feature_size',
+                    limit: 0,
+                    lower_size: 0,
+                    min_clipped_height: 4,
+                    upper_size: 0
+                },
+                trunk_placer: {
+                    type: 'minecraft:fancy_trunk_placer',
+                    base_height: 6,
+                    height_rand_a: 10,
+                    height_rand_b: 0
+                },
+                trunk_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_log',
+                        Properties: { axis: 'y' }
+                    }
+                }
+            }
+        })
+        registerFeature(e, CONFIGURED, 'minecraft:fancy_oak_bees_002', {
+            type: 'minecraft:tree',
+            config: {
+                decorators: [{ type: 'minecraft:beehive', probability: 0.02 },],
+                dirt_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: { Name: 'minecraft:dirt' }
+                },
+                foliage_placer: {
+                    type: 'minecraft:fancy_foliage_placer',
+                    height: 4,
+                    offset: 4,
+                    radius: 2
+                },
+                foliage_provider: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'minecraft:oak_leaves',
+                        Properties: {
+                            distance: '7',
+                            persistent: 'false',
+                            waterlogged: 'false'
+                        }
+                    }
+                },
+                force_dirt: false,
+                ignore_vines: true,
+                minimum_size: {
+                    type: 'minecraft:two_layers_feature_size',
+                    limit: 0,
+                    lower_size: 0,
+                    min_clipped_height: 4,
+                    upper_size: 0
+                },
+                trunk_placer: {
+                    type: 'minecraft:fancy_trunk_placer',
+                    base_height: 6,
+                    height_rand_a: 10,
                     height_rand_b: 0
                 },
                 trunk_provider: {

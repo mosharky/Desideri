@@ -2,7 +2,7 @@
 function worldgen_Environmental(e) {
 
     // Disable all biomes
-    disableBlueprintBiome(e, 'environmental:blossom')
+    // disableBlueprintBiome(e, 'environmental:blossom')
     disableBlueprintBiome(e, 'environmental:marsh')
     disableBlueprintBiome(e, 'environmental:pine_barrens')
 
@@ -52,13 +52,12 @@ function worldgen_Environmental(e) {
     )
 
     replaceEffects(e, 'environmental:marsh', {
-        grass_color_modifier: 'swamp',
-        grass_color: 0,
-        fog_color: 10996903,
-        foliage_color: 6975545,
+        grass_color: 8893516,
+        fog_color: 12906239,
+        foliage_color: 8230207,
         sky_color: 7715315,
-        water_color: 5536348,
-        water_fog_color: 2897190
+        water_color: 3902136,
+        water_fog_color: 2388383
     })
 
     // Disable biome modifiers

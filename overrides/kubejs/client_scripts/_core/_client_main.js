@@ -25,4 +25,5 @@ ClientEvents.generateAssets('after_mods', e => {
     clientData_REMI(e)
     clientData_Quark(e)
     clientData_Polytone(e)
+    clientData_SnowRealMagic(e)
 })

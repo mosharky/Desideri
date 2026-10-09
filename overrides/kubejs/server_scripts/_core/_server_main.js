@@ -4,6 +4,7 @@
 // https://github.com/kube-mods/kubejs/issues/1135#issuecomment-4683058051
 RecipeViewerEvents.removeCategories(e => {
     e.remove('woodworks:sawmill')
+    e.remove('create:milling')
     e.remove('create:fan_smoking')
     e.remove('create:fan_blasting')
     e.remove('create:fan_haunting')
@@ -92,6 +93,7 @@ ServerEvents.recipes(e => {
     recipes_AbnormalsDelight(e)
     recipes_Spawn(e)
     recipes_Galosphere(e)
+    recipes_Windswept(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.set.forEach(removal => {
@@ -108,6 +110,7 @@ ServerEvents.loaded(e => {
     e.server.gameRules.set('spawnRadius', 0)
     e.server.gameRules.set('disableElytraMovementCheck', true)
     if (global.DEBUG_MODE) {
+        e.server.runCommandSilent('time set noon')
         e.server.gameRules.set('doDaylightCycle', false)
         e.server.gameRules.set('doWeatherCycle', false)
     }
@@ -153,6 +156,7 @@ LootJS.lootTables(e => {
     lootTables_SootyChimneys(e)
     lootTables_Naturalist(e)
     lootTables_Spawn(e)
+    lootTables_NoMansLand(e)
 
     const all = e.modifyLootTables(/.*/)
     lootRemovals_Core(all)

@@ -1,5 +1,6 @@
 /** @param {$KubeDataGenerator} e  */
 function worldgen_NoMansLand(e) {
+    /*
     BIOLITH.BIOME_PLACEMENT.sub_biomes.push(
         {
             dimension: 'minecraft:overworld',
@@ -11,6 +12,7 @@ function worldgen_NoMansLand(e) {
             }
         },
     )
+    */
 
     // trees
     removeBiomeModifier(e, 'nomansland:add_biome_trees/trees_old_growth_birch')
@@ -181,22 +183,20 @@ function worldgen_NoMansLand(e) {
     registerFeature(e, PLACED, 'nomansland:oak_apple_01', { feature: 'minecraft:oak', placement: [wouldSurvive('minecraft:oak_sapling')] })
     registerFeature(e, PLACED, 'nomansland:oak_apple_005', { feature: 'minecraft:oak', placement: [wouldSurvive('minecraft:oak_sapling')] })
 
-    // remove maple & replace pine with fir
-    /*
-    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_snowy_taiga', {
+    // windswept chestnut trees in NML biomes
+    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_old_growth_forest', {
         type: 'minecraft:random_selector',
         config: {
-            default: 'minecraft:spruce_checked',
+            default: 'minecraft:fancy_oak_bees_0002',
             features: [
-                { chance: 0.2, feature: 'minecraft:pine_checked' },
-                { chance: 0.2, feature: 'natures_spirit:fir_checked' },
-                { chance: 0.1, feature: 'natures_spirit:frosty_fir_checked' },
-                { chance: 0.05, feature: 'nomansland:frosted_spruce_checked' },
-                { chance: 0.05, feature: 'nomansland:frosted_spruce_alt_checked' }
+                { chance: 0.3, feature: 'nomansland:walnut_checked' },
+                { chance: 0.3, feature: 'kubejs:chestnut_checked' },
+                { chance: 0.1, feature: 'windswept:pine_checked' },
+                { chance: 0.05, feature: 'minecraft:birch_checked' },
+                { chance: 0.05, feature: 'nomansland:small_walnut_checked' }
             ]
         }
     })
-    */
 
     // environmental duckweed placement for NML
     registerFeature(e, CONFIGURED, 'nomansland:patch_duckweed', {

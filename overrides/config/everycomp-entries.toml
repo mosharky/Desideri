@@ -243,6 +243,14 @@
 			pine = true
 			flowering_acacia = true
 
+		[types.leaves_type.lollygag]
+			dead = true
+			aspen = true
+			birch = true
+			pear = true
+			flowering_pear = true
+			oak = true
+
 		[entries.stone_type.create]
 			small_brick_wall = false
 			cut_wall = false

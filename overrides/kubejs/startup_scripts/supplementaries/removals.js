@@ -9,7 +9,8 @@ function removals_Supplementaries() {
         'supplementaries:gold_door',
         'supplementaries:gold_trapdoor',
         'supplementaries:gold_gate',
-        /supplementaries:lapis_brick.*/
+        /supplementaries:lapis_brick.*/,
+        'supplementaries:flint_block',
     ])
 
     global.BLOCK_SWAPPER.set('supplementaries:sconce', 'nomansland:sconce_torch')

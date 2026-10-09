@@ -16,6 +16,9 @@ function recipes_NoMansLand(e) {
         C: '#c:flour'
     }).id('nomansland:food/fruit_cake')
 
+    RECIPES.Workstone(e, ['nomansland:pine_nuts', RECIPES.ChancedResult('nomansland:pine_nuts', 1, 0.5)], 'windswept:pinecone')
+    e.recipes.create.milling(['2x nomansland:pine_nuts', CreateItem.of('nomansland:pine_nuts', 0.5)], 'windswept:pinecone')
+    
     // theres an error on this recipe bruh and i cant use kubejs deilght
     /*
     e.custom({

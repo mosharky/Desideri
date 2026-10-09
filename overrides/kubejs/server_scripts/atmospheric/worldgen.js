@@ -72,7 +72,7 @@ function worldgen_Atmospheric(e) {
             criterion: {
                 type: 'biolith:value',
                 parameter: 'peaks_valleys',
-                min: 0.4
+                min: 0.7
             },
         },
     )

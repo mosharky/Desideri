@@ -23,7 +23,7 @@ function recipes_BountifulFares(e) {
     ].forEach(recipe => e.replaceInput({ id: recipe }, 'minecraft:wheat', '#c:flour'))
     e.replaceInput({ output: /.*(cake|gateau|tart|pie|scones|cookie)/ }, 'minecraft:wheat', '#c:flour')
 
-    shaped_EasyCookie(e, 'bountifulfares:walnut_cookie', 'bountifulfares:walnut', true)
+    RECIPES.Cookie(e, 'bountifulfares:walnut_cookie', 'bountifulfares:walnut', true)
 
     // removing cringe milling recipes
     e.remove({ id: 'bountifulfares:coconut_coir_from_coconut_milling' })  // for natures spirit coconut recipe

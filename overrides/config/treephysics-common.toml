@@ -1,14 +1,14 @@
 #treephysics.config.despawn_time.tooltip
 # Default: 144000
 # Range: > -1
-despawn_time = 144000
+despawn_time = 36000
 #treephysics.config.small_tree_maximum.tooltip
 # Default: 5
 # Range: > 1
 small_tree_maximum = 5
 #treephysics.config.despawn_behavior.tooltip
 #Allowed Values: NO_DESPAWN, DESPAWN_SMALL, DESPAWN_ALL
-despawn_behavior = "DESPAWN_SMALL"
+despawn_behavior = "DESPAWN_ALL"
 #treephysics.config.drop_items_on_despawn.tooltip
 drop_items_on_despawn = false
 #treephysics.config.rooted_dirt_generation.tooltip
@@ -25,7 +25,7 @@ requires_axe = false
 prevent_interacting_with_trees = false
 #treephysics.config.leaf_walking_behavior.tooltip
 #Allowed Values: NEVER, ALWAYS, IN_SUB_LEVELS, IN_WORLD
-leaf_walking_behavior = "ALWAYS"
+leaf_walking_behavior = "IN_SUB_LEVELS"
 #treephysics.config.leaf_walking_speed.tooltip
 # Default: 0.67
 # Range: 0.0 ~ 1.0
