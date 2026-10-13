@@ -1,25 +1,25 @@
-filename = 'remi-neoforge-1.21.1-4.1.0.jar'
+filename = 'remi-neoforge-1.21.1-4.7.12.jar'
 name = 'Reliable EMI'
 side = ''
 x-prismlauncher-loaders = [ 'neoforge' ]
 x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '4.1.0-1.21.1-neoforge'
+x-prismlauncher-version-number = '4.7.12-1.21.1-neoforge'
 
 [download]
-hash = 'ccde376fabfedca72c9d111f9d9b0cf76558e071876dad056d71a8a856f66dfad863e54ed959f2ef2fce02a919dd2390b093271de21a7ebd6d71359bcfe2be7d'
+hash = '53f277848356d0c4e8027b97b7ea30b39ea85556d3043e525e248c9408ad9f4b659e71ac78d16adfd3d85c580355b7be5794ff90df98865d5f9173abd13f9cee'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/N9WucjHL/versions/T5yUhqG3/remi-neoforge-1.21.1-4.1.0.jar'
+url = 'https://cdn.modrinth.com/data/N9WucjHL/versions/2TeI2Zyn/remi-neoforge-1.21.1-4.7.12.jar'
 
 [update.modrinth]
 mod-id = 'N9WucjHL'
-version = 'T5yUhqG3'
-
-[[x-prismlauncher-dependencies]]
-addonId = '1eAoo2KR'
-type = 'REQUIRED'
+version = '2TeI2Zyn'
 
 [[x-prismlauncher-dependencies]]
 addonId = 'fRiHVvU7'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1eAoo2KR'
 type = 'REQUIRED'

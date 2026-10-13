@@ -34,11 +34,11 @@
 	#If the bayou is enabled
 	bayou = true
 	#If the bog is enabled
-	bog = true
+	bog = false
 	#If the prairie is enabled
 	prairie = false
 	#If the lavender field is enabled
-	lavenderField = false
+	lavenderField = true
 	#If the blackwater river sub-biome is enabled
 	blackwaterRiver = true
 	#If the lush river sub-biome is enabled

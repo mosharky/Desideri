@@ -1,0 +1,2 @@
+#Adds the Bloviator from Cloud Storage. Only has an effect when Citadel is installed.
+Bloviator = true

@@ -23,7 +23,7 @@ function recipes_Core(e) {
     e.remove({ id: 'minecraft:bread' })
     e.remove({ id: 'minecraft:pumpkin_pie' })
     e.remove({ id: 'minecraft:cake' })
-    shaped_EasyCookie(e, 'minecraft:cookie', 'neapolitan:chocolate_bar', true)
+    RECIPES.Cookie(e, 'minecraft:cookie', 'neapolitan:chocolate_bar', true)
 
     // Logs into chests
     for (const [mod, woodTypes] of Object.entries(global.WOOD_TYPES)) {

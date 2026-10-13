@@ -26,6 +26,8 @@ function clientData_EMI(e) {
         'eidolon_repraised:crucible',
         'eidolon_repraised:worktable',
         'eidolon_repraised:rituals',
+        'manual_labour:workstone',
+        'manual_labour:millstone',
     ]
     const afterDefault = [
         'create:automatic_shapeless',

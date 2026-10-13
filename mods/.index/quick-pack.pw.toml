@@ -1,18 +1,18 @@
-filename = 'quick-pack-neoforge-1.4.0+1.21.1.jar'
+filename = 'quick-pack-neoforge-1.5.1+1.21.1.jar'
 name = 'quick-pack'
 side = ''
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'neoforge' ]
 x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'neoforge-1.4.0+1.21.1'
+x-prismlauncher-version-number = 'neoforge-1.5.1+1.21.1'
 
 [download]
-hash = '02f6bed8c9bd5d49ee2d085e2f9c4a11e7e4b2f59caee7159adadc226c83f14902ffd983e69516242e9e5b64ee536cec304459594e3d0f7f2b41f14f337f884b'
+hash = '0021daad4ffd4ff9d7ac29316ef6b8f3fecbdc1b08f793f9333304a5b07a5da48ba0eb60d529404e313258009f76dd56cc0789f5865a32fe440ca1db9ba5db16'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/pSISfJ4O/versions/bKdqc6Wf/quick-pack-neoforge-1.4.0%2B1.21.1.jar'
+url = 'https://cdn.modrinth.com/data/pSISfJ4O/versions/yXZgoajP/quick-pack-neoforge-1.5.1%2B1.21.1.jar'
 
 [update.modrinth]
 mod-id = 'pSISfJ4O'
-version = 'bKdqc6Wf'
+version = 'yXZgoajP'

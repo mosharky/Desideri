@@ -1,25 +1,25 @@
-filename = 'windswept_delights-1.21.1-2.0.1.jar'
+filename = 'windswept_delights-1.21.1-2.0.2.jar'
 name = 'Windswept Delights'
-side = 'both'
+side = ''
 x-prismlauncher-loaders = [ 'neoforge' ]
 x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '2.0.1'
+x-prismlauncher-version-number = '2.0.2'
 
 [download]
-hash = '873b3a5f1636d47c130bfb5f0c83725ffbafe2e6f0ddfc0712f282ffd4dac51ca92dd89bc22eb760043c4983c6d74498acdb08677c14407480336750d382f63a'
+hash = 'baf1da3d443e2a42d9cf417c51ff78a1686776d54eee3ca4ede0eee36a478a22caea492c9c4d4b59aae4f1c87f39e02ec5353c8ad0bd753434a40c25d324c0f5'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/IXcelib9/versions/EgrZiO89/windswept_delights-1.21.1-2.0.1.jar'
+url = 'https://cdn.modrinth.com/data/IXcelib9/versions/NF0C0Fj9/windswept_delights-1.21.1-2.0.2.jar'
 
 [update.modrinth]
 mod-id = 'IXcelib9'
-version = 'EgrZiO89'
-
-[[x-prismlauncher-dependencies]]
-addonId = 'R2OftAxM'
-type = 'REQUIRED'
+version = 'NF0C0Fj9'
 
 [[x-prismlauncher-dependencies]]
 addonId = 'l0h5MtkA'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'R2OftAxM'
 type = 'REQUIRED'

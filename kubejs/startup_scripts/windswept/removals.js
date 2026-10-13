@@ -1,6 +1,15 @@
 function removals_Windswept() {
     global.REMOVALS.add([
         /windswept:.*icicle.*/,
+        /windswept:packed_ice_brick.*/,
+        'windswept:chiseled_packed_ice_bricks',
+        'windswept:lavender_tea',
+        'windswept:lavender',
+        'windswept:lavender_thatch',
+        'windswept:lavender_thatch_slab',
+        'windswept:lavender_thatch_stairs',
+        'windswept:lupine',
+        'windswept:snowy_sprouts',
         // /windswept:.*leaf_pile/,
         // 'windswept:gingerbread_block',
         // 'windswept:glazed_gingerbread_block',
@@ -8,6 +17,7 @@ function removals_Windswept() {
         // /windswept:.*gingerbread_brick.*/,
     ])
 
+    global.ITEM_SWAPPER.set('windswept:lavender', 'nomansland:lavender_bush')
     // global.ITEM_SWAPPER.set('windswept:icicles', 'immersive_weathering:icicle')
 
     /*

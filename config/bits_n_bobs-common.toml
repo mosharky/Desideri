@@ -75,3 +75,10 @@
 		#.
 		#Ability for the player to create chain drives on components that are not dedicated for chains (i.e. not flanged)
 		undedicatedCogwheelChainDrives = true
+
+#.
+#Options to help improve the behaviour of Bits 'n' Bobs alongside other mods. (Opt-in)
+[compatabilityOptions]
+	#.
+	#Suppresses wooden cogwheels from other mods in favour of Bits 'n' Bobs' behaviour system. Intended for Create: Encased but may work with other mods with proper tags.
+	suppressExternalWoodenCogwheels = true

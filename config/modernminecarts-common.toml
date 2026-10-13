@@ -47,3 +47,19 @@ copper_rail_recipe_yield = 6
 # Default: 12
 # Range: 1 ~ 64
 powered_rail_recipe_yield = 12
+#Maximum speed for directed powered rails.
+#Allowed range: 0.01 - 1.6
+# Default: 0.4
+# Range: 0.01 ~ 1.6
+directed_powered_rail_speed = 0.4
+#Maximum speed for powered furnace minecarts.
+#Allowed range: 0.01 - 1.6
+# Default: 0.4
+# Range: 0.01 ~ 1.6
+furnace_minecart_speed = 0.4
+#If true, directed powered rails can be placed and used.
+enable_directed_powered_rail = true
+#How many directed powered rails the recipe crafts.
+# Default: 12
+# Range: 1 ~ 64
+directed_powered_rail_recipe_yield = 12

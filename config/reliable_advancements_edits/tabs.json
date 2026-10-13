@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "tabs": {},
+  "deleted_advancements": {},
+  "derived_presentation": {
+    "aeronautics:root": {
+      "title": "Create Aeronautics",
+      "icon": "aeronautics:white_envelope",
+      "background": "aeronautics:textures/gui/advancement.png"
+    },
+    "brewinandchewin:main/root": {
+      "title": "Brewin\u0027 and Chewin\u0027",
+      "icon": "brewinandchewin:beer",
+      "background": "minecraft:textures/block/spruce_planks.png"
+    },
+    "create:root": {
+      "title": "Welcome to Create",
+      "icon": "create:brass_hand",
+      "background": "create:textures/gui/advancements.png"
+    },
+    "creaturefeature:root": {
+      "title": "Creature Feature.",
+      "icon": "creaturefeature:sleeping_powder",
+      "background": "creaturefeature:textures/gui/eeper_advancement.png"
+    },
+    "darkerdepths:story/root": {
+      "title": "Darker Depths",
+      "icon": "darkerdepths:glowshroom",
+      "background": "darkerdepths:textures/block/duskrock.png"
+    },
+    "farmersdelight:main/root": {
+      "title": "Farmer\u0027s Delight",
+      "icon": "farmersdelight:cooking_pot",
+      "background": "minecraft:textures/block/bricks.png"
+    },
+    "fieldguide:root": {
+      "title": "Field Guide",
+      "icon": "minecraft:spyglass",
+      "background": "minecraft:textures/block/oak_log.png"
+    },
+    "simulated:root": {
+      "title": "Create Simulated",
+      "icon": "simulated:contraption_diagram",
+      "background": "simulated:textures/gui/advancement.png"
+    },
+    "minecraft:adventure/root": {
+      "title": "Adventure",
+      "icon": "minecraft:map",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+    },
+    "minecraft:story/root": {
+      "title": "Minecraft",
+      "icon": "minecraft:grass_block",
+      "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "minecraft:husbandry/root": {
+      "title": "Husbandry",
+      "icon": "minecraft:hay_block",
+      "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
+    },
+    "minecraft:nether/root": {
+      "title": "Nether",
+      "icon": "minecraft:red_nether_bricks",
+      "background": "minecraft:textures/gui/advancements/backgrounds/nether.png"
+    },
+    "minecraft:end/root": {
+      "title": "The End",
+      "icon": "minecraft:end_stone",
+      "background": "minecraft:textures/gui/advancements/backgrounds/end.png"
+    },
+    "bountifulfares:bountiful_fares": {
+      "title": "Bountiful Fares",
+      "icon": "bountifulfares:passion_fruit",
+      "background": "minecraft:textures/block/farmland_moist.png"
+    },
+    "incision:calciumlegos": {
+      "title": "Calcium Legos",
+      "icon": "incision:molar_carrion",
+      "background": "minecraft:textures/block/stone.png"
+    },
+    "incision:momsspagetti": {
+      "title": "Mom\u0027s Spagetti",
+      "icon": "incision:intestine",
+      "background": "minecraft:textures/block/stone.png"
+    },
+    "incision:tonightsthenight": {
+      "title": "Tonight\u0027s The Night",
+      "icon": "incision:smear",
+      "background": "minecraft:textures/block/stone.png"
+    }
+  }
+}

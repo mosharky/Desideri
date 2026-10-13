@@ -1,20 +1,20 @@
-filename = 'better_modlist-21.1.0.jar'
+filename = 'better_modlist-21.1.4.jar'
 name = 'Better ModList'
 side = ''
 x-prismlauncher-loaders = [ 'neoforge' ]
 x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '21.1.0'
+x-prismlauncher-version-number = '21.1.4'
 
 [download]
-hash = 'ca0d3c9529dc2da108c6fdfe63f0f7f7261b71bfc132a5e8b2745e9e324c254a0ecd5f7140b8b44c50ca516185470c6dab778b9259122aa4ea32440f22bad04b'
+hash = '932ab8d8b095fd3ce5a61d1ce9103174e36bf5b1ce2975b24b5722965f0755be20c6d4d9501f42b4b692317b87f0b36a21cfcefd258e2f00fcfd9665de71fbbe'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/sbpqhzIG/versions/ecClLUKT/better_modlist-21.1.0.jar'
+url = 'https://cdn.modrinth.com/data/sbpqhzIG/versions/ZID4kkto/better_modlist-21.1.4.jar'
 
 [update.modrinth]
 mod-id = 'sbpqhzIG'
-version = 'ecClLUKT'
+version = 'ZID4kkto'
 
 [[x-prismlauncher-dependencies]]
 addonId = 'KUZAAwdD'

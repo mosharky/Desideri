@@ -1,10 +1,19 @@
 /** @param {$KubeDataGenerator} e  */
 function worldgen_NoMansLand(e) {
-    
-    removeBiomeModifier(e, 'nomansland:spawns/deer/spawn_deer_forest')
-    removeBiomeModifier(e, 'nomansland:spawns/deer/spawn_deer_taiga')
-
     /*
+    BIOLITH.BIOME_PLACEMENT.sub_biomes.push(
+        {
+            dimension: 'minecraft:overworld',
+            target: 'minecraft:beach',
+            biome: 'nomansland:mud_beach',
+            criterion: {
+                type: 'biolith:neighbor',
+                biome: '#c:is_swamp',
+            }
+        },
+    )
+    */
+
     // trees
     removeBiomeModifier(e, 'nomansland:add_biome_trees/trees_old_growth_birch')
     removeBiomeModifier(e, 'nomansland:add_biome_trees/trees_sunflower_plains')
@@ -15,8 +24,10 @@ function worldgen_NoMansLand(e) {
     removeBiomeModifier(e, 'nomansland:add_feature_addition/has_frosted_grass_forest_tag_features')
     removeBiomeModifier(e, 'nomansland:add_feature_addition/has_frosted_grass_plains_tag_features')
     // removeBiomeModifier(e, 'nomansland:add_feature_addition/has_icicles_tag_features')
-    // removeBiomeModifier(e, 'nomansland:add_feature_addition/has_oat_grass_tag_features')
+    removeBiomeModifier(e, 'nomansland:add_feature_addition/has_oat_grass_tag_features')
     // spawns
+    removeBiomeModifier(e, 'nomansland:spawns/deer/spawn_deer_forest')
+    removeBiomeModifier(e, 'nomansland:spawns/deer/spawn_deer_taiga')
     // misc
     removeBiomeModifier(e, 'nomansland:add_patch_barrel_cactus_normal')
     removeBiomeModifier(e, 'nomansland:add_patch_grass_snowy')
@@ -24,36 +35,31 @@ function worldgen_NoMansLand(e) {
     removeBiomeModifier(e, 'nomansland:add_patch_hearty_succulent')
     removeBiomeModifier(e, 'nomansland:add_patch_succulent_normal')
     removeBiomeModifier(e, 'nomansland:add_patch_dried_grass_mycelium')
-    removeBiomeModifier(e, 'nomansland:add_crag_rock')
+    // removeBiomeModifier(e, 'nomansland:add_crag_rock')
     // vanilla biome changes
     // removeBiomeModifier(e, 'nomansland:birch_forest/change_color')
-    // removeBiomeModifier(e, 'nomansland:birch_forest/remove_features')
+    removeBiomeModifier(e, 'nomansland:birch_forest/remove_features')
     // removeBiomeModifier(e, 'nomansland:old_growth_birch_forest/change_color')
-    // removeBiomeModifier(e, 'nomansland:old_growth_birch_forest/remove_features')
+    removeBiomeModifier(e, 'nomansland:old_growth_birch_forest/remove_features')
     // removeBiomeModifier(e, 'nomansland:bamboo_jungle/change_color')
     // removeBiomeModifier(e, 'nomansland:jungle/change_color')
     // removeBiomeModifier(e, 'nomansland:sparse_jungle/change_color')
-    // removeBiomeModifier(e, 'nomansland:savanna/change_color')
-    // removeBiomeModifier(e, 'nomansland:savanna/remove_features')
-    // removeBiomeModifier(e, 'nomansland:savanna_plateau/change_color')
-    // removeBiomeModifier(e, 'nomansland:savanna_plateau/remove_features')
-    // removeBiomeModifier(e, 'nomansland:windswept_savanna/change_color')
-    // removeBiomeModifier(e, 'nomansland:windswept_savanna/remove_features')
+    removeBiomeModifier(e, 'nomansland:savanna/change_color')
+    removeBiomeModifier(e, 'nomansland:savanna_plateau/change_color')
+    removeBiomeModifier(e, 'nomansland:windswept_savanna/change_color')
 
     // snowy taiga would have the same effects as grove
     removeBiomeModifier(e, 'nomansland:snowy_taiga/change_color')
-    e.json('kubejs:lithostitched/worldgen_modifier/replace_effects/snowy_taiga', {
-        type: 'lithostitched:replace_effects',
-        biomes: 'minecraft:snowy_taiga',
-        effects: {
-            fog_color: 15200511,
-            foliage_color: 10205860,
-            grass_color: 10205860,
-            sky_color: 7715315,
-            water_color: 4220592,
-            water_fog_color: 2771621
-        }
+    replaceEffects(e, 'minecraft:snowy_taiga', {
+        fog_color: 15200511,
+        foliage_color: 10205860,
+        grass_color: 10205860,
+        sky_color: 7715315,
+        water_color: 4220592,
+        water_fog_color: 2771621
     })
+
+
 
     // keep new flowers
     removeBiomeModifier(e, 'nomansland:sunflower_plains/remove_features')
@@ -70,6 +76,7 @@ function worldgen_NoMansLand(e) {
 
 
     // Pine replacement
+    /*
     const pine = getFeatureJson('environmental', CONFIGURED, 'environmental:pine')
     const tall_pine = getFeatureJson('environmental', CONFIGURED, 'environmental:tall_pine')
     registerFeature(e, CONFIGURED, 'nomansland:baby_pine', pine)
@@ -77,13 +84,53 @@ function worldgen_NoMansLand(e) {
     registerFeature(e, CONFIGURED, 'nomansland:large_frosted_pine', tall_pine)
     registerFeature(e, CONFIGURED, 'nomansland:large_pine', tall_pine)
     registerFeature(e, CONFIGURED, 'nomansland:pine', pine)
+    */
 
     // Willow replacement
-    const willow_tree = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:willow_tree')
-    registerFeature(e, CONFIGURED, 'nomansland:small_willow', willow_tree)
-    registerFeature(e, CONFIGURED, 'nomansland:willow', willow_tree)
-    registerFeature(e, CONFIGURED, 'nomansland:towering_willow', willow_tree)
-    registerFeature(e, CONFIGURED, 'nomansland:towering_willow_moss', willow_tree)
+    const willow = getFeatureJson('nomansland', CONFIGURED, 'nomansland:willow')
+    willow.config.decorators.push({ type: 'environmental:hanging_willow_leaves' })
+    registerFeature(e, CONFIGURED, 'nomansland:willow', willow)
+    registerFeature(e, CONFIGURED, 'minecraft:swamp_oak', willow)
+
+    const small_willow = getFeatureJson('nomansland', CONFIGURED, 'nomansland:small_willow')
+    small_willow.config.decorators.push({ type: 'environmental:hanging_willow_leaves' })
+    registerFeature(e, CONFIGURED, 'nomansland:small_willow', small_willow)
+
+    // new weeping willow tree from environmental; used in blackwater river
+    const weeping_willow = getFeatureJson('environmental', CONFIGURED, 'environmental:weeping_willow')
+    weeping_willow.config.foliage_provider.state.Name = 'nomansland:willow_leaves'
+    weeping_willow.config.trunk_provider.state.Name = 'nomansland:willow_log'
+    registerFeature(e, CONFIGURED, 'kubejs:weeping_willow', weeping_willow)
+    registerFeature(e, PLACED, 'kubejs:weeping_willow_checked', {
+        feature: 'kubejs:weeping_willow',
+        placement: [wouldSurvive('nomansland:willow_sapling')]
+    })
+
+    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_blackwater', {
+        type: 'minecraft:random_selector',
+        config: {
+            default: 'nomansland:willow_checked',
+            features: [
+                { chance: 0.3, feature: 'kubejs:weeping_willow_checked' },
+                { chance: 0.2, feature: 'nomansland:small_willow_checked' },
+                { chance: 0.3, feature: 'minecraft:mangrove_checked' }
+            ]
+        }
+    })
+
+    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_swamp', {
+        type: 'minecraft:random_selector',
+        config: {
+            default: 'nomansland:willow_checked',
+            features: [
+                { chance: 0.2, feature: 'kubejs:weeping_willow_checked' },
+                { chance: 0.2, feature: 'nomansland:small_willow_checked' },
+            ]
+        }
+    })
+
+
+
 
     // Bountiful Fares walnuts on NML walnut trees
     const small_walnut_prototype = getFeatureJson('nomansland', CONFIGURED, 'nomansland:small_walnut_prototype')
@@ -123,11 +170,11 @@ function worldgen_NoMansLand(e) {
     // Integrating features
     // Flora
     // lavender biome features
-    addFeatures(e, [
-        copyPasteFeature(e, 'nomansland', PLACED, 'nomansland:flower_patches/flowers_lavender_field'),
-        copyPasteFeature(e, 'nomansland', PLACED, 'nomansland:patch_lavender_bush'),
-        copyPasteFeature(e, 'nomansland', PLACED, 'nomansland:patch_lavender_bush_sparse'),
-    ], 'natures_spirit:lavender_fields', VEGETAL_DECORATION)
+    // addFeatures(e, [
+    // copyPasteFeature(e, 'nomansland', PLACED, 'nomansland:flower_patches/flowers_lavender_field'),
+    // copyPasteFeature(e, 'nomansland', PLACED, 'nomansland:patch_lavender_bush'),
+    // copyPasteFeature(e, 'nomansland', PLACED, 'nomansland:patch_lavender_bush_sparse'),
+    // ], 'natures_spirit:lavender_fields', VEGETAL_DECORATION)
 
 
     // replace oak apple trees with NS/vanilla version
@@ -136,22 +183,21 @@ function worldgen_NoMansLand(e) {
     registerFeature(e, PLACED, 'nomansland:oak_apple_01', { feature: 'minecraft:oak', placement: [wouldSurvive('minecraft:oak_sapling')] })
     registerFeature(e, PLACED, 'nomansland:oak_apple_005', { feature: 'minecraft:oak', placement: [wouldSurvive('minecraft:oak_sapling')] })
 
-    // remove maple & replace pine with fir
-    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_snowy_taiga', {
+    // windswept chestnut trees in NML biomes
+    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_old_growth_forest', {
         type: 'minecraft:random_selector',
         config: {
-            default: 'minecraft:spruce_checked',
+            default: 'minecraft:fancy_oak_bees_0002',
             features: [
-                { chance: 0.2, feature: 'minecraft:pine_checked' },
-                { chance: 0.2, feature: 'natures_spirit:fir_checked' },
-                { chance: 0.1, feature: 'natures_spirit:frosty_fir_checked' },
-                { chance: 0.05, feature: 'nomansland:frosted_spruce_checked' },
-                { chance: 0.05, feature: 'nomansland:frosted_spruce_alt_checked' }
+                { chance: 0.3, feature: 'nomansland:walnut_checked' },
+                { chance: 0.3, feature: 'kubejs:chestnut_checked' },
+                { chance: 0.1, feature: 'windswept:pine_checked' },
+                { chance: 0.05, feature: 'minecraft:birch_checked' },
+                { chance: 0.05, feature: 'nomansland:small_walnut_checked' }
             ]
         }
     })
-    */
-/*
+
     // environmental duckweed placement for NML
     registerFeature(e, CONFIGURED, 'nomansland:patch_duckweed', {
         type: 'minecraft:random_patch',
@@ -232,5 +278,4 @@ function worldgen_NoMansLand(e) {
             y_spread: 3
         }
     })
-    */
 }

@@ -1,11 +1,9 @@
 function constructWoodTypes() {
-    if (global.DEBUG_MODE) console.log('Constructing wood types..')
     Object.keys(woodTypesToConstruct).forEach(mod => {
         global.WOOD_TYPES[mod] = {}
         global.DISABLED_WOOD_TYPES[mod] = {}
 
         Object.keys(woodTypesToConstruct[mod]).forEach(woodType => {
-            if (global.DEBUG_MODE) console.log(`Constructing "${mod}:${woodType}"`)
             if (woodTypesToConstruct[mod][woodType]) {
                 global.WOOD_TYPES[mod][woodType] = {}
             } else {
@@ -14,6 +12,7 @@ function constructWoodTypes() {
 
             let logSuffix = '_log', woodSuffix = '_wood', barkSuffix = '_bark', plankSuffix = ''
             let logPrefix = '', woodPrefix = ''
+            let boatType = 'boat'
             switch (woodType) {
                 case 'warped': case 'crimson': case 'soulblight': {
                     logSuffix = '_stem'
@@ -37,6 +36,10 @@ function constructWoodTypes() {
                 case 'runewood': case 'soulwood': {
                     woodSuffix = ''
                     plankSuffix = '_planks'
+                    break
+                }
+                case 'bamboo': case 'red_bamboo': case 'date': {
+                    boatType = 'raft'
                     break
                 }
             }
@@ -147,8 +150,8 @@ function constructWoodTypes() {
                     button:                 mod + ':' + woodType + plankSuffix + '_button',
                     sign:                   mod + ':' + woodType + '_sign',
                     hanging_sign:           mod + ':' + woodType + '_hanging_sign',
-                    boat:                   mod + ':' + woodType + '_boat',
-                    chest_boat:             mod + ':' + woodType + '_chest_boat',
+                    boat:                   mod + ':' + woodType + '_' + boatType,
+                    chest_boat:             mod + ':' + woodType + '_chest_' + boatType,
                 },
                 woodworks: {
                     chest:                  woodworksCompatId + woodType + '_chest',
@@ -175,7 +178,7 @@ function constructWoodTypes() {
                 },
                 supplementaries: {
                     way_sign:               supplementariesCompatId + 'way_sign_' + woodType,
-                    cannon_boat:            supplementariesCompatId + 'cannon_boat_' + woodType,
+                    cannon_boat:            supplementariesCompatId + 'cannon_' + boatType + '_' + woodType,
                     // item_shelf:             suppSquaredCompatId + 'item_shelf_' + woodType,
                 },
                 // immersive_weathering: {
@@ -205,29 +208,6 @@ function constructWoodTypes() {
                 }
             }
 
-            // Lazy final try for stem/hyphae differentiation in case i missed something
-            // if (!Item.exists(woodTypeObj.immersive_weathering.bark)) {
-                // woodTypeObj.immersive_weathering.bark = immersiveWeatheringCompatId + woodType + '_scales'
-            // }
-            if (!Item.exists(woodTypeObj.minecraft.log)) {
-                woodTypeObj.minecraft.log               = mod + ':' + logPrefix + woodType + '_stem'
-                woodTypeObj.minecraft.wood              = mod + ':' + woodPrefix + woodType + '_hyphae'
-                woodTypeObj.minecraft.stripped_log      = mod + ':stripped_' + woodType + '_stem'
-                woodTypeObj.minecraft.stripped_wood     = mod + ':stripped_' + woodType + '_hyphae'
-            }
-
-            // Raft fallback
-            if (!Item.exists(woodTypeObj.minecraft.boat)) {
-                woodTypeObj.minecraft.boat              = mod + ':' + woodType + '_raft'
-            }
-            if (!Item.exists(woodTypeObj.minecraft.chest_boat)) {
-                woodTypeObj.minecraft.chest_boat        = mod + ':' + woodType + '_chest_raft'
-            }
-            if (!Item.exists(woodTypeObj.supplementaries.cannon_boat)) {
-                woodTypeObj.supplementaries.cannon_boat = supplementariesCompatId + 'cannon_raft_' + woodType
-            }
-
-
             // Adjusting for edge cases
             switch (woodType) {
                 case 'oak': {
@@ -240,9 +220,12 @@ function constructWoodTypes() {
                     break
                 }
                 case 'bamboo': {
-                    woodTypeObj.woodworks.chest         = 'woodworks:bamboo_closet'
-                    woodTypeObj.woodworks.trapped_chest = 'woodworks:trapped_bamboo_closet'
+                    woodTypeObj.woodworks.chest                 = 'woodworks:bamboo_closet'
+                    woodTypeObj.woodworks.trapped_chest         = 'woodworks:trapped_bamboo_closet'
                     break
+                }
+                case 'date': {
+                    woodTypeObj.supplementaries.cannon_boat     = 'supplementaries:cannon_boat_date'
                 }
                 case 'poise': {
                     // woodTypeObj.quark.hollow_log        = 'everycomp:q/endergetic/hollow_poise_log'  // bruh
@@ -281,29 +264,48 @@ function constructWoodTypes() {
                 }
             }
 
-            // Debug
-            for (const [entrySetMod, entries] of Object.entries(woodTypeObj)) {
-                for (const [entryName, entryId] of Object.entries(entries)) {
-                    if (entryId != undefined && !Item.exists(entryId)) {
-                        if (global.DEBUG_MODE && woodTypesToConstruct[mod][woodType]) {
-                            console.warn(`    DOESN'T EXIST: ${entryName}: "${entryId}"`)
-                        }
-                        
-                        woodTypeObj[entrySetMod][entryName] = undefined
-                    }
-                }
-            }
 
             // Finalization
             if (woodTypesToConstruct[mod][woodType]) {
                 global.WOOD_TYPES[mod][woodType] = woodTypeObj
             } else {
                 global.DISABLED_WOOD_TYPES[mod][woodType] = woodTypeObj
-                global.REMOVALS.add(woodTypeObj)
             }
-
-            if (global.DEBUG_MODE) console.log(`    Constructed "${mod}:${woodType}"`)
         })
     })
-    if (global.DEBUG_MODE) console.log('Finished constructing wood types!')
+}
+
+
+// ran in postInit() so we can check for Item.exists()
+function validateWodTypes() {
+    let i = 0
+    if (global.DEBUG_MODE) console.log('Validating wood types..')
+
+    const constructedWoods = [global.WOOD_TYPES, global.DISABLED_WOOD_TYPES].forEach(constructed => {
+        for (const [mod, woodTypes] of Object.entries(constructed)) {
+            for (const [woodType, woodTypeObj] of Object.entries(woodTypes)) {
+                if (global.DEBUG_MODE) console.log(`Validating "${mod}:${woodType}"`)
+                for (const [entrySetMod, entries] of Object.entries(woodTypeObj)) {
+                    // Debug
+                    for (const [entryName, entryId] of Object.entries(entries)) {
+                        if (entryId != undefined && !Item.exists(entryId)) {
+                            if (global.DEBUG_MODE && woodTypesToConstruct[mod][woodType]) {
+                                console.warn(`    DOESN'T EXIST: ${entryName}: "${entryId}"`)
+                            }
+
+                            woodTypeObj[entrySetMod][entryName] = undefined
+                        } 
+                        else if (entryId != undefined && i == 1) {
+                            global.REMOVALS.add(entryId)
+                        }
+                    }
+                }
+
+                if (global.DEBUG_MODE) console.log(`    Validated "${mod}:${woodType}"`)
+            }
+        }
+        i++
+    })
+
+    if (global.DEBUG_MODE) console.log('Finished validating wood types!')
 }

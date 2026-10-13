@@ -1,21 +1,33 @@
-filename = 'reliable_requiem-neoforge-1.21.1-1.2.0.jar'
+filename = 'reliable_requiem-2.0.0+1.21.1-neoforge.jar'
 name = 'Reliable Requiem'
 side = ''
 x-prismlauncher-loaders = [ 'neoforge' ]
-x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '1.2.0-1.21.1-neoforge'
+x-prismlauncher-version-number = '2.0.0+1.21.1-neoforge'
 
 [download]
-hash = 'cc1beda73eb12caac9e6f166f814a949d8f08b134fe21d0bd572ed82cbd792c8c409aca2ca0b11528b79e724bd4d46eb88eadf2a9e5849ad6d207a683167c421'
+hash = '8bea8aa9a711d23f14a548f9c1995118c10c6527aaa59f94fc812b26ff68321f43f9fcd8cd0a42e86421ea2ad91d362932ab49e7fae3a83facdbf2e72909c1bf'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/a744zhJU/versions/BqOBl5PG/reliable_requiem-neoforge-1.21.1-1.2.0.jar'
+url = 'https://cdn.modrinth.com/data/a744zhJU/versions/DiVOmGgF/reliable_requiem-2.0.0%2B1.21.1-neoforge.jar'
 
 [update.modrinth]
 mod-id = 'a744zhJU'
-version = 'BqOBl5PG'
+version = 'DiVOmGgF'
 
 [[x-prismlauncher-dependencies]]
-addonId = '9s6osm5g'
+addonId = 'jtmvUHXj'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '4RfZdduG'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'vvuO3ImH'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1eAoo2KR'
 type = 'OPTIONAL'

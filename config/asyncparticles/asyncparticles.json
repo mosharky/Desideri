@@ -17,6 +17,7 @@
     "failPerSecLimit": 5,
     "failBehavior": "RAISE_CRASH",
     "suppressCME": false,
+    "syncAnimationClasses": [],
     "syncParticleClasses": []
   },
   "rendering": {
@@ -24,6 +25,7 @@
     "gpuAcceleration": true,
     "appendNewParticlesToRenderer": true,
     "computeExecutionStage": "LEVEL_RENDERING",
+    "tickRendererOnMainThread": false,
     "cullWeathers": true
   },
   "valkyrienSkies": {

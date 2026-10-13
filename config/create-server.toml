@@ -38,7 +38,7 @@
 	maxFireworkIngredientsInCrafter = 9
 	#.
 	#Allow any stonecutting recipes to be processed by a Mechanical Saw.
-	allowStonecuttingOnSaw = true
+	allowStonecuttingOnSaw = false
 	#.
 	#Allow Spouts to interact with Casting Tables and Basins from Tinkers' Construct.
 	allowCastingBySpout = true

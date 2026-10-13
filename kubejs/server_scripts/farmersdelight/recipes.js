@@ -15,8 +15,8 @@ function recipes_FarmersDelight(e) {
     e.replaceInput({ id: 'neapolitan:banana_bread' }, 'minecraft:wheat', '#c:foods/dough')
     e.replaceInput({ id: 'abnormals_delight:pumpkin_bread' }, 'minecraft:wheat', '#c:foods/dough')
 
-    shaped_EasyCookie(e, 'farmersdelight:sweet_berry_cookie', 'minecraft:sweet_berries', true)
-    shaped_EasyCookie(e, 'farmersdelight:honey_cookie', 'minecraft:honey_bottle', true)
+    RECIPES.Cookie(e, 'farmersdelight:sweet_berry_cookie', 'minecraft:sweet_berries', true)
+    RECIPES.Cookie(e, 'farmersdelight:honey_cookie', 'minecraft:honey_bottle', true)
 
     // duplicate recipes
     e.remove({ id: 'farmersdelight:cake_from_milk_bottle' })

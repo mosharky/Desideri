@@ -13,9 +13,12 @@ function hideItem_Core(e) {
 /** @param {$RemoveEntriesKubeEvent} e  */
 function hideItemCompletely_Core(e) {
     if (!global.DEBUG_MODE) {
-        e.remove(global.REMOVALS.arr.concat([
-            // /excavated_variants:.*/,
-        ]))
+        e.remove(global.REMOVALS.arr)
+        // other mods' debug items
+        e.remove([
+            'teallib:mannequin',
+            'azimuth:ponder_coordinate'
+        ])
     }
 }
 

@@ -1,20 +1,20 @@
-filename = 'music-and-melody-21.1-r4.0-neoforge.jar'
-name = 'Music and Melody'
-side = 'both'
+filename = 'music-and-melody-21.1-r4.3-neoforge.jar'
+name = 'Music And Melody'
+side = ''
 x-prismlauncher-loaders = [ 'neoforge' ]
 x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '21.1-r4.0-neoforge'
+x-prismlauncher-version-number = '21.1-r4.3-neoforge'
 
 [download]
-hash = 'b45959b20911225be47f00978f4b3f62672e6b2c2594a2a9cab44aa4f75a677dbebd171b985f26ece87ed9387cbe49f134aa5888b9f28068a31ed2fd5949dbcf'
+hash = 'b681216353bb2ab724c80ac0d9cf70be5fc9babf28ed3c94d4f21a799c8f3841388d271f2fbf06f41633446a8822c11810852f3e50a156c308591aba3d781a3d'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/dpNZjlVi/versions/sdBrfBU0/music-and-melody-21.1-r4.0-neoforge.jar'
+url = 'https://cdn.modrinth.com/data/dpNZjlVi/versions/rRfCdGZd/music-and-melody-21.1-r4.3-neoforge.jar'
 
 [update.modrinth]
 mod-id = 'dpNZjlVi'
-version = 'sdBrfBU0'
+version = 'rRfCdGZd'
 
 [[x-prismlauncher-dependencies]]
 addonId = '9s6osm5g'

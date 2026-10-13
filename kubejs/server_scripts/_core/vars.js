@@ -135,34 +135,103 @@ function prettyItem(item) {
 // ===================== RECIPE FUNCTIONS =====================
 
 
-/**
- * @param {$RecipesKubeEvent} e 
- * @param {String} output 
- * @param {String} mainIngredient 
- * @param {Boolean} outputSameAsRecipeId - if the output's item id is the same as the recipe id
- */
-function shaped_EasyCake(e, output, mainIngredient, outputSameAsRecipeId) {
-    if (outputSameAsRecipeId) e.remove({ id: output })
-    return e.shaped(output, [
-        'ABA',
-        'CDC',
-        'EEE'
-    ], {
-        A: mainIngredient,
-        B: '#c:milk',
-        C: 'minecraft:sugar',
-        D: '#c:eggs',
-        E: '#c:flour'
-    })
-}
+const RECIPES = {
+    UTILS: {
+        /**
+         * @param {Array<String> | String | Object} items 
+         * @returns {Array<String> | String | Object}
+         */
+        ItemsToJson: function (items) {
+            if (items instanceof Array) {
+                let arr = []
+                items.forEach(item => arr.push(this.ItemsToJson(item)))
+                return arr
+            }
+            else if (typeof items == 'string') {
+                if (/\dx /.test(items)) {
+                    let split = items.split('x ')
+                    let count = split[0]
+                    let id = split[1]
+                    return Item.of(id, count)
+                }
+                else return Item.of(items)
+            }
+            // assumes its an object or has been converted to the Item class
+            return items
+        },
+        /**
+         * @param {Array<String> | String} ingredients 
+         * @returns {Array<String> | String}
+         */
+        IngredientsToJson: function (ingredients) {
+            if (ingredients instanceof Array) {
+                let arr = []
+                ingredients.forEach(ingredient => arr.push(Ingredient.of(ingredient)))
+                return arr
+            }
+            // if string
+            return Ingredient.of(ingredients)
+        }
+    },
+    /**
+     * Helper function for JSON recipes that can take a chanced result
+     * @param {String} id - Item ID
+     * @param {Number} count - Amount of result
+     * @param {Number} chance - Percent chance as a decimal
+     * @returns {Object} JSON object
+     */
+    ChancedResult: function (id, count, chance) {
+        return {id: id, count: count, chance: chance}
+    },
+    /**
+     * @param {$RecipesKubeEvent} e 
+     * @param {String} output 
+     * @param {String} mainIngredient 
+     * @param {Boolean} outputSameAsRecipeId - if the output's item id is the same as the recipe id
+     */
+    Cake: function (e, output, mainIngredient, outputSameAsRecipeId) {
+        if (outputSameAsRecipeId) e.remove({ id: output })
+        return e.shaped(output, [
+            'ABA',
+            'CDC',
+            'EEE'
+        ], {
+            A: mainIngredient,
+            B: '#c:milk',
+            C: 'minecraft:sugar',
+            D: '#c:eggs',
+            E: '#c:flour'
+        })
+    },
+    /**
+     * @param {$RecipesKubeEvent} e 
+     * @param {String} output 
+     * @param {String} mainIngredient 
+     * @param {Boolean} outputSameAsRecipeId - if the output's item id is the same as the recipe id
+     */
+    Cookie: function (e, output, mainIngredient, outputSameAsRecipeId) {
+        if (outputSameAsRecipeId) e.remove({ id: output })
+        return e.shaped(Item.of(output, 8), ['ABA'], { A: '#c:flour', B: mainIngredient })
+    },
+    /**
+     * @param {$RecipesKubeEvent} e 
+     * @param {Array<String> | String} outputs 
+     * @param {Array<String> | String} inputs 
+     * @returns {$KubeRecipe}
+     */
+    Workstone: function (e, outputs, inputs) {
+        const recipeObj = {
+            type: 'manual_labour:workstone',
+            ingredients: [[], { tag: 'manual_labour:hammers' }],
+            results: []
+        }
 
-/**
- * @param {$RecipesKubeEvent} e 
- * @param {String} output 
- * @param {String} mainIngredient 
- * @param {Boolean} outputSameAsRecipeId - if the output's item id is the same as the recipe id
- */
-function shaped_EasyCookie(e, output, mainIngredient, outputSameAsRecipeId) {
-    if (outputSameAsRecipeId) e.remove({ id: output })
-    return e.shaped(Item.of(output, 8), ['ABA'], { A: '#c:flour', B: mainIngredient })
+        if (outputs instanceof Array) recipeObj.results = this.UTILS.ItemsToJson(outputs)
+        else recipeObj.results.push(this.UTILS.ItemsToJson(outputs))
+
+        if (inputs instanceof Array) recipeObj.ingredients[0] = this.UTILS.IngredientsToJson(inputs)
+        else recipeObj.ingredients[0].push(this.UTILS.IngredientsToJson(inputs))
+
+        return e.custom(recipeObj)
+    }
 }

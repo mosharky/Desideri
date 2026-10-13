@@ -4,6 +4,10 @@
 // https://github.com/kube-mods/kubejs/issues/1135#issuecomment-4683058051
 RecipeViewerEvents.removeCategories(e => {
     e.remove('woodworks:sawmill')
+    e.remove('create:milling')
+    e.remove('create:fan_smoking')
+    e.remove('create:fan_blasting')
+    e.remove('create:fan_haunting')
 })
 
 ServerEvents.tags('item', e => {
@@ -17,9 +21,14 @@ ServerEvents.tags('item', e => {
 
 ServerEvents.tags('block', e => {
     blockTags_Core(e)
-    // blockTags_SnowRealMagic(e)
-    // blockTags_BountifulFares(e)
+    blockTags_SnowRealMagic(e)
+    blockTags_BountifulFares(e)
     blockTags_FieldGuide(e)
+    blockTags_Create(e)
+})
+
+ServerEvents.tags('fluid', e => {
+    fluidTags_Create(e)
 })
 
 ServerEvents.tags('entity_type', e => {
@@ -75,7 +84,7 @@ ServerEvents.recipes(e => {
     recipes_Create(e)
     recipes_NoMansLand(e)
     // recipes_Autumnity(e)
-    recipes_Embers(e)
+    // recipes_Embers(e)
     recipes_Naturalist(e)
     // recipes_Everycomp(e)
     // recipes_Aether(e)
@@ -83,6 +92,8 @@ ServerEvents.recipes(e => {
     recipes_MinersDelight(e)
     recipes_AbnormalsDelight(e)
     recipes_Spawn(e)
+    recipes_Galosphere(e)
+    recipes_Windswept(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.set.forEach(removal => {
@@ -99,6 +110,7 @@ ServerEvents.loaded(e => {
     e.server.gameRules.set('spawnRadius', 0)
     e.server.gameRules.set('disableElytraMovementCheck', true)
     if (global.DEBUG_MODE) {
+        e.server.runCommandSilent('time set noon')
         e.server.gameRules.set('doDaylightCycle', false)
         e.server.gameRules.set('doWeatherCycle', false)
     }
@@ -116,18 +128,23 @@ ServerEvents.generateData('after_mods', e => {
     worldgen_Environmental(e)
     worldgen_Neapolitan(e)
     worldgen_CavernsAndChasms(e)
-    // worldgen_Galosphere(e)
+    worldgen_Galosphere(e)
     // worldgen_MyNethersDelight(e)
     // worldgen_NaturesSpirit(e)
-    // worldgen_Oreganized(e)
-    // worldgen_SnowySpirit(e)
-    // worldgen_FarmersDelight(e)
-    // worldgen_BountifulFares(e)
-    // worldgen_NoMansLand(e)
+    worldgen_Oreganized(e)
+    worldgen_SnowySpirit(e)
+    worldgen_FarmersDelight(e)
+    worldgen_BountifulFares(e)
+    worldgen_NoMansLand(e)
     // worldgen_ArtsAndCrafts(e)
     // worldgen_Embers(e)
-    // worldgen_Malum(e)
+    worldgen_Malum(e)
     worldgen_Windswept(e)
+    worldgen_Naturalist(e)
+    worldgen_UpgradeAquatic(e)
+
+    // this has to be last
+    worldgen_Biolith(e)
 
     structures_Core(e)
 
@@ -139,6 +156,7 @@ LootJS.lootTables(e => {
     lootTables_SootyChimneys(e)
     lootTables_Naturalist(e)
     lootTables_Spawn(e)
+    lootTables_NoMansLand(e)
 
     const all = e.modifyLootTables(/.*/)
     lootRemovals_Core(all)
@@ -147,6 +165,10 @@ LootJS.lootTables(e => {
 
     const noBlocks = e.modifyLootTables(/(?!.*:blocks\/).*/)
     lootRemovals_Core_NoBlocks(noBlocks)
+})
+
+LootJS.modifiers(e => {
+    lootModifiers_Galosphere(e)
 })
 
 

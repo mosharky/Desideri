@@ -10,6 +10,21 @@ function data_ClutterNoMore(e) {
         remixWoodCNM_Json.add[stem] = variants.filter(item => { return item != undefined })
     }
 
+
+    addition('farmersdelight:rope_fence', [
+        'farmersdelight:rope_fence_gate',
+    ])
+
+    // colours
+    global.COLOURS.forEach(colour => {
+        addition(`create:${colour}_seat`, [
+            `bits_n_bobs:${colour}_chair`,
+            `another_furniture:${colour}_sofa`
+        ])
+    })
+
+
+    // wooden shit
     for (const [mod, woodTypes] of Object.entries(global.WOOD_TYPES)) {
         for (const [woodType, woodTypeObj] of Object.entries(woodTypes)) {
             addition(woodTypeObj.minecraft.planks, [
@@ -43,7 +58,7 @@ function data_ClutterNoMore(e) {
             ])
 
             addition(woodTypeObj.woodworks.chest, [
-                woodTypeObj.woodworks.trapped_chest,
+                // woodTypeObj.woodworks.trapped_chest,
                 woodTypeObj.farmersdelight.cabinet,
                 woodTypeObj.another_furniture.drawer,
             ])

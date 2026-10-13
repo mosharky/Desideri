@@ -87,6 +87,15 @@ global.readJson = (mod, location, type) => {
     else return global.json2json(KJSTweaks.readJsonFromMod(mod, location, type))
 }
 
+/**
+ * Return a new object with the same parameters
+ * @param {Object} obj - object to copy
+ * @returns {Object} fully new/copied object
+ */
+global.deepCopy = (obj) => {
+    return JSON.parse(JSON.stringify(obj))
+}
+
 // Collect all strings in a nested object with recursion
 function collectStrings(obj) {
     const result = []
