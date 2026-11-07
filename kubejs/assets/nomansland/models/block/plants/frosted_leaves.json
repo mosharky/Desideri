@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "top": "kubejs:block/frosted_leaves_top",
+        "side": "kubejs:block/frosted_leaves_side",
+        "bottom": "kubejs:block/frosted_leaves_bottom"
+    }
+}

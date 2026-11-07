@@ -24,25 +24,24 @@ ClientEvents.lang('en_us', e => {
     // rename('moreminecarts:hologram_rail', 'Holograph Rail')
 
 
-    /*
     // No Man's Land
+    // pine to fir
     for (const blockSet of Object.values(global.WOOD_TYPES.nomansland.pine)) {
         for (const block of Object.values(blockSet)) {
             let name = Item.of(block).displayName.string.replace('[', '').replace(']', '')
-            if (block != undefined) rename(block, name.replace('Pine', 'Larch'))
+            if (block != undefined) rename(block, name.replace('Pine', 'Fir'))
+            console.log(`${block} - ${name.replace('Pine', 'Fir')}`)
         }
     }
-    */
-
-
-    // rename('nomansland:stripped_pine_palisade', 'Stripped Larch Palisade')
-    // rename('nomansland:pine_palisade', 'Larch Palisade')
-    // rename('nomansland:stripped_spiked_pine_palisade', 'Stripped Larch Palisade')
-    // rename('nomansland:spiked_pine_palisade', 'Larch Palisade')
-    // rename('nomansland:pine_seat', 'Larch Seat')
-
+    rename('nomansland:pine_leaves', 'Fir Leaves')
+    rename('nomansland:pine_sapling', 'Fir Cone')
+    rename('nomansland:stripped_pine_palisade', 'Stripped Fir Palisade')
+    rename('nomansland:pine_palisade', 'Fir Palisade')
+    rename('nomansland:stripped_spiked_pine_palisade', 'Stripped Fir Palisade')
+    rename('nomansland:spiked_pine_palisade', 'Fir Palisade')
+    rename('nomansland:pine_seat', 'Fir Seat')
+    rename('nomansland:pine_pickets', 'Fir Pickets')
     rename('nomansland:pancake', 'Maple-Glazed Pancake')
-
 
     // Naturalist
     rename('naturalist:clam_spawn_egg', 'Treasure Clam Spawn Egg')

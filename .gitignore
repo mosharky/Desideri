@@ -119,6 +119,8 @@ imgui.ini
 ponders_watched.json
 ponders_watched_azimuth.json
 user-prefs.json
+polytone_popup.json
+hec_cape.json
 
 # dev environment stuff
 /.probe/

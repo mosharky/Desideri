@@ -3,16 +3,26 @@ function biomeTags_Neapolitan(e) {
     // e.removeAll('neapolitan:has_animal/chimpanzee')
     e.removeAll('neapolitan:spawns_strawberry_rabbits')
 
+    e.removeAll('neapolitan:banana_plant_requires_sand')
+    e.add('neapolitan:banana_plant_requires_sand', [
+        'nomansland:tropical_beach',
+        'spawn:rocky_shore'
+    ])
+
     e.add('neapolitan:has_feature/banana_plant/common', [
         'natures_spirit:bamboo_wetlands',
         'natures_spirit:tropical_woods',
     ])
     e.add('neapolitan:has_feature/banana_plant/uncommon', [
-        'natures_spirit:tropical_shores',
-    ])
-    e.add('neapolitan:has_feature/banana_plant/rare', [
         'natures_spirit:sparse_tropical_woods',
     ])
+    e.removeAll('neapolitan:has_feature/banana_plant/rare')
+    e.add('neapolitan:has_feature/banana_plant/rare', [
+        'natures_spirit:tropical_shores',
+        'nomansland:tropical_beach',
+        'spawn:rocky_shore',
+    ])
+
     e.add('neapolitan:has_feature/adzuki_sprouts', [
         'natures_spirit:maple_woodlands',
         'natures_spirit:wisteria_forest',

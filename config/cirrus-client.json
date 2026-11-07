@@ -29,7 +29,7 @@
     "hideLightningCloudFlashes": false,
     "lightningCloudFlashOpacity": 0.75,
     "lowerLayerStyle": "fast",
-    "lowerLayerHeightOffset": 64.0,
+    "lowerLayerHeightOffset": 0.0,
     "lowerLayerSpeed": 2.0,
     "lowerLayerOpacity": 0.25,
     "upperLayerEnabled": true,

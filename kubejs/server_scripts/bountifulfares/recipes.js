@@ -1,16 +1,10 @@
 /** @param {$RecipesKubeEvent} e  */
 function recipes_BountifulFares(e) {
-    // bountiful fares flour > create
-    e.recipes.create.milling([
-        'bountifulfares:flour',
-        CreateItem.of('2x bountifulfares:flour', 0.25),
-        CreateItem.of('minecraft:wheat_seeds', 0.25)
-    ], 'minecraft:wheat')
-
     // coconut
     // e.replaceInput({}, 'bountifulfares:coconut', 'natures_spirit:coconut')
     // e.remove({ id: 'bountifulfares:coconut_half_from_coconut' })
     // e.recipes.farmersdelight.cutting('natures_spirit:coconut', '#c:tools/knife', '2x bountifulfares:coconut_half')
+    e.remove({ type: 'bountifulfares:milling' })
 
     // recipes should use flour!
     const replaceWheatRecipes = [
@@ -34,11 +28,13 @@ function recipes_BountifulFares(e) {
     e.remove({ id: /minecraft:.*_ore_milling/, type: 'bountifulfares:milling' })
 
     // halve all outputs
+    /*
     e.forEachRecipe({ type: 'bountifulfares:milling' }, recipe => {
         const json = global.json2json(recipe.originalJson)
         json.result_count = Math.ceil(json.result_count / 2)  // round up
         e.custom(json).id(recipe.getId())
     })
+    */
 
     // e.custom({
     //     type: 'bountifulfares:milling',

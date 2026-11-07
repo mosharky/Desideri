@@ -1,3 +1,9 @@
+function itemTags_Environmental(e) {
+    e.add('environmental:yak_food', [
+        'supplementaries:flax'
+    ])
+}
+
 /** @param {$TagKubeEvent} e */
 function entityTags_Environmental(e) {
     /*
@@ -31,10 +37,6 @@ function entityTags_Environmental(e) {
         'natures_spirit:cattail'
     ])
     */
-
-    e.add('environmental:yak_food', [
-        'supplementaries:flax'
-    ])
 }
 
 /** @param {$TagKubeEvent} e */

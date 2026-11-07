@@ -4,5 +4,7 @@ function removals_AbundantAtmosphere() {
         'abundant_atmosphere:chiseled_mud_bricks',
         'abundant_atmosphere:stone_brazier',
         'abundant_atmosphere:soul_stone_brazier',
+        'abundant_atmosphere:midnight_lily',
+        'abundant_atmosphere:leaf_pile',
     ])
 }

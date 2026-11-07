@@ -330,9 +330,6 @@
 		[entries.wood_type.envelope]
 			pigeonhole = true
 
-		[entries.wood_type.backpacked]
-			backpack_shelf = true
-
 		[entries.leaves_type.quark]
 			hedge = true
 			leaf_carpet = false

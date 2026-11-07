@@ -321,7 +321,20 @@ function worldgen_Core(e) {
             features: [
                 { chance: 0.33333334, feature: 'minecraft:pine_checked' },
                 { chance: 0.2, feature: 'nomansland:pine_checked' },  // 'fir'
-                { chance: 0.2, feature: 'windswept:pine_checked' }  // instead of 
+                { chance: 0.2, feature: 'windswept:pine_checked' }  // instead of red maple
+            ]
+        }
+    })
+
+    registerFeature(e, CONFIGURED, 'minecraft:trees_windswept_hills', {
+        type: 'minecraft:random_selector',
+        config: {
+            default: 'minecraft:oak_checked',
+            features: [
+                { chance: 0.3, feature: 'nomansland:pine_checked' },
+                { chance: 0.3, feature: 'windswept:pine_checked' },
+                { chance: 0.1, feature: 'nomansland:large_pine_checked' },
+                { chance: 0.1, feature: 'minecraft:fancy_oak_checked' }
             ]
         }
     })

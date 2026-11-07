@@ -14,5 +14,6 @@ function recipes_Create(e) {
     e.remove({ id: 'create:smoking/bread' })
     e.remove({ id: 'create:smelting/bread' })
     e.remove({ id: 'create:campfire_cooking/bread' })
+    e.remove({ id: 'create:milling/wheat' })
     e.remove({ id: 'minecraft:bread' })
 }

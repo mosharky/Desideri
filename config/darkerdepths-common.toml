@@ -19,7 +19,7 @@
 		temperature_min = 0.5
 		# Default: 0.9
 		# Range: -2.0 ~ 2.0
-		temperature_max = 0.9
+		temperature_max = 1.0
 		# Default: -0.8
 		# Range: -2.0 ~ 2.0
 		humidity_min = -0.8
@@ -140,7 +140,7 @@
 
 ["Biome Fog"]
 	#Enable/disable Darker Depths biome fog adjustments:
-	biome_fog = true
+	biome_fog = false
 
 	["Biome Fog"."Glowshroom Forest"]
 		#Min fog distance:

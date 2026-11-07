@@ -1,18 +1,16 @@
 /** @param {$KubeDataGenerator} e  */
 function worldgen_NoMansLand(e) {
-    /*
+    // tropical beach
+    // spawn:rocky_shore replaces every beach with temperature >= 0.2 (vanilla temp band 3).
+    // Within that band, jungles (and rainforests, which replace them) take humidity >= 0.1.
     BIOLITH.BIOME_PLACEMENT.sub_biomes.push(
         {
             dimension: 'minecraft:overworld',
-            target: 'minecraft:beach',
-            biome: 'nomansland:mud_beach',
-            criterion: {
-                type: 'biolith:neighbor',
-                biome: '#c:is_swamp',
-            }
-        },
+            target: 'spawn:rocky_shore',
+            biome: 'nomansland:tropical_beach',
+            criterion: { type: 'biolith:value', parameter: 'humidity', min: 0.1 }
+        }
     )
-    */
 
     // trees
     removeBiomeModifier(e, 'nomansland:add_biome_trees/trees_old_growth_birch')
@@ -85,6 +83,50 @@ function worldgen_NoMansLand(e) {
     registerFeature(e, CONFIGURED, 'nomansland:large_pine', tall_pine)
     registerFeature(e, CONFIGURED, 'nomansland:pine', pine)
     */
+    // Changes to NML biome trees
+    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_badlands', {
+        type: 'minecraft:random_selector',
+        config: {
+            default: 'nomansland:small_walnut_checked',
+            features: [
+                { chance: 0.1, feature: 'nomansland:walnut_checked' },
+                { chance: 0.3, feature: 'windswept:pine_checked' },
+                { chance: 0.1, feature: 'nomansland:pine_checked' },
+                { chance: 0.2, feature: 'nomansland:autumnal_oak_checked' },
+                { chance: 0.1, feature: 'nomansland:large_autumnal_oak_checked' },
+            ]
+        }
+    })
+
+    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_boreal_forest', {
+        type: 'minecraft:random_selector',
+        config: {
+            default: 'windswept:pine_checked',
+            features: [
+                { chance: 0.235, feature: 'nomansland:fancy_spruce_checked' },
+                { chance: 0.225, feature: 'nomansland:large_pine_checked' },
+                { chance: 0.05, feature: 'minecraft:fancy_oak_checked' },
+                { chance: 0.15, feature: 'nomansland:large_autumnal_oak_checked' },
+                { chance: 0.25, feature: 'nomansland:autumnal_oak_checked' },
+                { chance: 0.28, feature: 'nomansland:red_maple_checked' },
+                { chance: 0.25, feature: 'minecraft:oak_checked' }
+            ]
+        }
+    })
+
+    registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_dark_taiga', {
+        type: 'minecraft:random_selector',
+        config: {
+            default: 'nomansland:fancy_spruce_checked',
+            features: [
+                { chance: 0.2, feature: 'nomansland:large_fancy_spruce_checked' },
+                { chance: 0.2, feature: 'nomansland:pine_checked' },
+                { chance: 0.2, feature: 'nomansland:large_pine_checked' },
+                { chance: 0.1, feature: 'nomansland:small_walnut_checked' },
+                { chance: 0.1, feature: 'kubejs:chestnut_checked' }
+            ]
+        }
+    })
 
     // Willow replacement
     const willow = getFeatureJson('nomansland', CONFIGURED, 'nomansland:willow')

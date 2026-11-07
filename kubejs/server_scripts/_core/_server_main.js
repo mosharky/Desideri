@@ -16,6 +16,7 @@ ServerEvents.tags('item', e => {
     itemTags_Naturalist(e)
     itemTags_FieldGuide(e)
     itemTags_ClutterNoMore(e)
+    itemTags_Environmental(e)
     // itemTags_Aether(e)
 })
 
@@ -56,6 +57,7 @@ ServerEvents.tags('worldgen/biome', e => {
     biomeTags_Malum(e)
     biomeTags_Incision(e)
     biomeTags_Spawn(e)
+    biomeTags_AbundantAtmosphere(e)
 
     // these changes need to load way later
     biomeTags_Core(e)
@@ -142,6 +144,8 @@ ServerEvents.generateData('after_mods', e => {
     worldgen_Windswept(e)
     worldgen_Naturalist(e)
     worldgen_UpgradeAquatic(e)
+    worldgen_Spawn(e)
+    worldgen_AbundantAtmosphere(e)
 
     // this has to be last
     worldgen_Biolith(e)
